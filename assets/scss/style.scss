@@ -1,0 +1,16 @@
+@import "bases/website.scss";
+@import "bases/colors.scss";
+@import "bases/typography.scss";
+
+@import "utils/variables.scss";
+@import "utils/extensions.scss";
+@import "utils/helpers.scss";
+
+@import "layout/header.scss";
+@import "layout/offcanvas.scss";
+@import "layout/footer.scss";
+
+@import "components/buttons.scss";
+@import "components/cards.scss";
+
+@import "pages/home.scss";

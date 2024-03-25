@@ -1,0 +1,64 @@
+.header {
+    .infos {
+        width: 15%;
+        z-index: 9;
+
+        @media screen and (max-width: $mobile) {
+            width: 60% !important;
+        }
+
+        @media screen and (max-width: $tablet) {
+            width: 30%;
+        }
+
+        .a-principal {
+            .logo {
+                width: 15%;
+                margin-right: 10px;
+
+                @media screen and (max-width: $mobile) {
+                    width: 25% !important;
+                    margin-right: 5px !important;
+                }
+
+                @media screen and (max-width: $tablet) {
+                    width: 30%;
+                    margin-right: 0px;
+                }
+            }
+
+            .website {
+                margin-top: 10px;
+
+                @media screen and (max-width: $mobile-xs) {
+                    display: none;
+                }
+
+                @media screen and (max-width: $tablet) {
+                    margin-top: 15px;
+                }
+
+            }
+        }
+
+        .button-menu {
+            font-size: 1.2em;
+
+            @media screen and (max-width: $tablet) {
+                margin-top: 4px;
+            }
+        }
+    }
+
+    .infos-s {
+        @media screen and (max-width: $mobile-xs) {
+            width: 45% !important;
+        }
+
+        #logo {
+            @media screen and (max-width: $mobile-xs) {
+                width: 65% !important;
+            }
+        }
+    }
+}

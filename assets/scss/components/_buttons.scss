@@ -1,0 +1,22 @@
+.btn {
+    padding: $twenty;
+    font-size: 1em;
+    @extend %size-btn;
+    transition: all 0.3s ease;
+    font-family: $text;
+}
+
+.btn-pure {
+    color: $hope-light;
+    background-color: $pure;
+
+    &:hover, 
+    &:active, 
+    &:focus {
+        color: $pure;
+        border-radius: 0px;
+        border-top: 1px solid $pure;
+        border-bottom: 1px solid $pure;
+        background-color: transparent;
+    }
+}

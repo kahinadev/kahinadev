@@ -1,0 +1,49 @@
+.offcanvas {
+    border: $none !important;
+    backdrop-filter: blur(15px);
+
+    .close {
+        top: 3px;
+        font-size: 1.3em;
+    }
+
+    .offcanvas-body {
+        text-align: left !important;
+
+        nav {
+            padding-top: 40px;
+
+            .nav-item {
+                margin-bottom: 5px;
+                transition: all 0.5s ease;
+
+                .nav-link {
+                    @extend %nav-link;
+
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        color: $hope-light;
+                        font-weight: 800;
+                        padding-left: 10px;
+                        transition: all 0.5s ease;
+
+                        .dropdown-divider {
+                            border-top: 2px solid $hope-light;
+                        }
+                    }
+
+                    .dropdown-divider {
+                        padding: 10px 0;
+                        border-top: 0.3px solid $hope-medium;
+                    }
+                }
+            }
+
+        }
+
+        .reseaux {
+            bottom: 30px;
+        }
+    }
+}

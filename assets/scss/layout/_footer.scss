@@ -1,0 +1,84 @@
+footer {
+    padding: 80px 0;
+
+    @media screen and (max-width: $mobile) {
+        padding: 80px 10px;
+    }
+
+    .logo-footer {
+        @media screen and (max-width: $mobile) {
+            margin-bottom: 5%;
+        }
+
+        img {
+            width: 13%;
+
+            @media screen and (max-width: $mobile) {
+                width: 20%;
+            }
+        }
+
+        .website {
+            font-size: 1.5em;
+            margin-top: 30px;
+            margin-left: 5px;
+
+            @media screen and (max-width: $mobile) {
+                margin-top: 25px;
+            }
+        }
+    }
+
+    h5,
+    h6 {
+        font-size: 1.3em;
+        font-weight: 700;
+    }
+
+    .res-title,
+    h6 {
+        @media screen and (max-width: $mobile) {
+            margin-top: 5%;
+        }
+    }
+
+    p,
+    a {
+        @extend %text;
+        font-size: 1.2em !important;
+    }
+
+    a {
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $hope-dark;
+        }
+    }
+}
+
+.languages {
+    right: 15px;
+    bottom: 15px;
+    font-size: 0.9em;
+
+    .btn-language {
+        border-radius: 50% !important;
+
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: $pure;
+        }
+    }
+
+    .dropdown-menu {
+        text-align: center;
+        border: none !important;
+
+        .nav-link {
+            @extend %size-btn;
+        }
+    }
+}

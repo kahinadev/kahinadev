@@ -1,0 +1,69 @@
+@import "../utils/variables.scss";
+@import "../bases/typography.scss";
+
+// POSITION 
+
+.fixed {
+    position: $fixed;
+}
+
+.absolute {
+    position: $absolute;
+}
+
+.absolute-right {
+    right: 3px;
+    position: absolute;
+}
+
+.relative {
+    position: $relative;
+}
+
+// TRANSFORM
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+// FONT-SIZE
+
+.twelve {
+    font-size: $twelve;
+}
+
+// PADDING 
+
+.pa-2 {
+    padding: $twenty;
+}
+
+.pa-top-0 {
+    padding-top: 0px;
+}
+
+// RADIUS 
+
+.radius {
+    border-radius: $radius;
+}
+
+.radius-bottom {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: $radius;
+}
+
+// WIDTH 
+
+.w-twenty {
+    width: $twenty;
+}
+
+// BORDER
+
+.border-p-l {
+    padding-left: 10%;
+    border-left: 1px solid $pure;
+}

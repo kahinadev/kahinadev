@@ -1,0 +1,93 @@
+.introduction {
+    @media screen and (max-width: $mobile) {
+        padding: 0px !important;
+    }
+
+    img {
+        @media screen and (max-width: $mobile) {
+            height: 710px !important;
+        }
+
+        @media screen and (max-width: $tablet) {
+            height: 900px;
+        }
+    }
+
+    .cnt-int {
+        z-index: 2;
+        position: relative;
+
+        @media screen and (max-width: $mobile) {
+            top: 25% !important;
+        }
+
+        @media screen and (max-width: $tablet) {
+            position: absolute;
+            top: 20%;
+        }
+
+        h1 {
+            margin-left: -50%;
+
+            @media screen and (max-width: $mobile) {
+                margin-left: 5% !important;
+            }
+
+            @media screen and (max-width: $tablet) {
+                margin-left: 10%;
+            }
+
+            br {
+                display: none;
+
+                @media screen and (max-width: $mobile) {
+                    display: none !important;
+                }
+
+                @media screen and (max-width: $tablet) {
+                    display: block;
+                }
+            }
+
+            .br {
+                display: none;
+
+                @media screen and (max-width: $mobile) {
+                    display: block !important;
+                }
+            }
+        }
+
+        .content {
+            padding: 10% 10% 0 10%;
+
+            @media screen and (max-width: $tablet) {
+                padding: 10% 15% 0 15%;
+            }
+        }
+    }
+}
+
+.about-sec,
+.contact {
+    .cnt-a {
+        margin-top: 5%;
+
+        @media screen and (max-width: $tablet) {
+            margin-top: 10%;
+        }
+    }
+}
+
+.selection-projects {
+    .align-items-center {
+        margin-bottom: 5%;
+
+        .text-end {
+            @media screen and (max-width: $mobile) {
+                margin: 5% 0;
+                text-align: left !important;
+            }
+        }
+    }
+}

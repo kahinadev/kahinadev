@@ -1,0 +1,40 @@
+.card {
+    border: $none !important;
+
+    .title {
+        font-size: 2em;
+        font-weight: $f600;
+        margin-bottom: 5%;
+        padding: 0 0 15px 15px;
+        border-left: 2px solid $hope-medium;
+        border-bottom: 2px solid $hope-medium;
+
+        @media screen and (max-width: $mobile) {
+            font-size: 1.8em !important;
+        }
+    }
+}
+
+.card-project {
+    @media screen and (max-width: $mobile) {
+        margin-bottom: 5%;
+    }
+
+    .name {
+        width: 90%;
+        margin-top: -15%;
+        margin-left: 5%;
+        backdrop-filter: blur(15px);
+        background-color: #133613c4;
+
+        @media screen and (max-width: $tablet) {
+            margin-top: -25%;
+        }
+
+        .title-project {
+            font-size: 1.3em;
+            font-weight: $f600;
+            font-family: $text;
+        }
+    }
+}

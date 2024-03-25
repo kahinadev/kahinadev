@@ -1,0 +1,26 @@
+@import "../bases/colors.scss";
+@import "../bases/typography.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    user-select: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $hope-dark;
+}
+
+section {
+    padding: $eighty $zero;
+
+    @media screen and (max-width: $mobile) {
+        padding: $eighty 10px;
+    }
+}
+
+img {
+    @extend %img;
+}

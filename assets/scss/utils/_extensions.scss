@@ -1,0 +1,83 @@
+@import "../utils/variables.scss";
+@import "../utils/helpers.scss";
+
+// TYPOGRAPHY
+
+%stroke {
+    color: transparent;
+    letter-spacing: 1px;
+    text-transform: $uppercase;
+    font-family: $title;
+}
+
+%stroke-dark {
+    @extend %stroke; 
+    text-stroke: 1px $hope-dark; 
+    -webkit-text-stroke: 1px $hope-dark;
+
+    &:hover,
+    &:focus,
+    &:active {
+        text-stroke: 1px $hope-dark;
+        -webkit-text-stroke: 1px $hope-dark;
+    }
+}
+
+%stroke-pure {
+    @extend %stroke; 
+    text-stroke: 1px $pure;
+    -webkit-text-stroke: 1px $pure;
+
+    &:hover,
+    &:focus,
+    &:active {
+        text-stroke: 1px $pure;
+        -webkit-text-stroke: 1px $pure;
+    }
+}
+
+// IMAGES
+
+%img {
+    width: 100%;
+    object-fit: cover;
+    @extend %radius;
+}
+
+// RADIUS
+
+%radius {
+    border-radius: $radius;
+}
+
+// TYPOGRAPHY 
+
+%text {
+    font-size: 1.8em;
+    font-weight: $f400;
+    font-family: $text;
+
+    strong {
+        font-weight: $f600;
+    }
+
+    @media screen and (max-width: $mobile) {
+        font-size: 1.5em !important;
+    }
+}
+
+// HEADER NAV LINK
+
+%nav-link {
+    color: $pure;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: $text;
+}
+
+// BUTTONS 
+
+%size-btn {
+    font-weight: 800;
+    text-transform: uppercase;
+}

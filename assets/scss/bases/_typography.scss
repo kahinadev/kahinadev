@@ -1,0 +1,46 @@
+@import "../bases/colors.scss";
+@import "../utils/variables.scss";
+
+$title: "Aclonica", sans-serif;
+$text: "Rajdhani", sans-serif;
+
+.title-stroke-dark {
+    @extend %stroke-dark;
+}
+
+.title-stroke-pure {
+    @extend %stroke-pure;
+}
+
+h1 {
+    font-size: 6.5em;
+
+    @media screen and (max-width: $mobile) {
+        font-size: 3.5em !important;
+    }
+
+    @media screen and (max-width: $tablet) {
+       font-size: 5em;
+    }
+}
+
+h2 {
+    font-size: 5em;
+
+    @media screen and (max-width: $mobile) {
+        font-size: 3em !important;
+    }
+}
+
+h3 {
+    font-size: 4.8rem;
+
+    @media screen and (max-width: $mobile) {
+        font-size: 3em !important;
+    }
+}
+
+p { 
+    @extend %text;
+    text-align: justify;
+}
