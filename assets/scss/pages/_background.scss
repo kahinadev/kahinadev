@@ -1,0 +1,70 @@
+.int-parcours {
+    padding-top: 0px;
+
+    .bg-pure,
+    .bg-hope-medium {
+        padding: 10%;
+    }
+
+    .bg-pure {
+        top: $zero;
+        width: 60%;
+        z-index: -2;
+        height: 400px;
+
+        @media screen and (max-width: $tablet) {
+            height: 500px;
+        }
+    }
+
+    .bg-hope-medium {
+        margin-top: 20%;
+        margin-bottom: 5%;
+
+        @media screen and (max-width: $tablet) {
+            margin-top: 50%;
+        }
+
+
+        h1 {
+            @media screen and (max-width: $mobile) {
+                font-size: 2.5em !important;
+            }
+        }
+
+        .title-s {
+            @media screen and (max-width: $mobile) {
+                font-size: 2.3em !important;
+            }
+        }
+    }
+
+    .btn {
+        width: 50%;
+
+        @media screen and (max-width: $mobile) {
+            width: 100% !important;
+        }
+    }
+}
+
+.formations,
+.experiences {
+    padding-bottom: 0%;
+}
+
+.formations,
+.experiences,
+.skills {
+
+    h2 {
+        font-size: 4.3em;
+        font-weight: 600;
+        font-family: $text;
+
+        @media screen and (max-width: $mobile) {
+            font-size: 3em !important;
+            margin: 10% 0 !important;
+        }
+    }
+}

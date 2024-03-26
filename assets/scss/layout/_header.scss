@@ -28,14 +28,14 @@
             }
 
             .website {
-                margin-top: 10px;
+                margin-top: 5px;
 
                 @media screen and (max-width: $mobile-xs) {
                     display: none;
                 }
 
                 @media screen and (max-width: $tablet) {
-                    margin-top: 15px;
+                    margin-top: 18px;
                 }
 
             }
@@ -45,8 +45,12 @@
             font-size: 1.2em;
             margin-top: 4px;
 
+            @media screen and (max-width: $mobile) {
+                margin-top: 15px !important;
+            }
+
             @media screen and (max-width: $tablet) {
-                margin-top: 10px;
+                margin-top: 12px;
             }
         }
     }

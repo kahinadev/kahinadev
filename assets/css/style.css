@@ -601,7 +601,7 @@ p {
   }
 }
 .header .infos .a-principal .website {
-  margin-top: 10px;
+  margin-top: 5px;
 }
 @media screen and (max-width: 320px) {
   .header .infos .a-principal .website {
@@ -610,16 +610,21 @@ p {
 }
 @media screen and (max-width: 1024px) {
   .header .infos .a-principal .website {
-    margin-top: 15px;
+    margin-top: 18px;
   }
 }
 .header .infos .button-menu {
   font-size: 1.2em;
   margin-top: 4px;
 }
+@media screen and (max-width: 480px) {
+  .header .infos .button-menu {
+    margin-top: 15px !important;
+  }
+}
 @media screen and (max-width: 1024px) {
   .header .infos .button-menu {
-    margin-top: 10px;
+    margin-top: 12px;
   }
 }
 @media screen and (max-width: 320px) {
@@ -753,6 +758,15 @@ footer a:hover, footer a:focus, footer a:active {
   background-color: transparent;
 }
 
+.btn-pure-all {
+  color: #7F9570;
+  background-color: #EFF1EF;
+}
+.btn-pure-all:hover, .btn-pure-all:active, .btn-pure-all:focus {
+  color: #7F9570;
+  background-color: #EFF1EF;
+}
+
 .card {
   border: none !important;
 }
@@ -799,8 +813,33 @@ footer a:hover, footer a:focus, footer a:active {
 }
 
 .card-value,
-.card-qualitie {
+.card-qualitie,
+.card-parcours {
   background-color: transparent;
+}
+
+.card-parcours {
+  padding: 5%;
+  margin-top: 5%;
+}
+.card-parcours h3 {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+@media screen and (max-width: 480px) {
+  .card-parcours h3 {
+    font-size: 1.3em !important;
+  }
+}
+.card-parcours h4,
+.card-parcours p {
+  font-size: 1.3em;
+}
+@media screen and (max-width: 480px) {
+  .card-parcours h4,
+.card-parcours p {
+    font-size: 1.2em !important;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -973,6 +1012,128 @@ footer a:hover, footer a:focus, footer a:active {
 .qualities .border-t {
   margin-top: 15%;
   margin-bottom: 10%;
+}
+
+.int-services {
+  padding: 20% 0;
+}
+@media screen and (max-width: 480px) {
+  .int-services {
+    padding: 40% 0 0 0 !important;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .int-services {
+    padding: 40% 0 20% 0;
+  }
+}
+.int-services h2 {
+  font-size: 1.8em;
+  font-weight: 600;
+  font-family: "Rajdhani", sans-serif;
+}
+@media screen and (max-width: 480px) {
+  .int-services h2 {
+    font-size: 1.4em !important;
+  }
+}
+
+.services .service {
+  margin-bottom: 5%;
+}
+.services .service .border-p-l {
+  margin-left: 5%;
+}
+@media screen and (max-width: 480px) {
+  .services .service .border-p-l {
+    margin-left: 0% !important;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .services .service .border-p-l {
+    margin-top: 10%;
+  }
+}
+.services .service .second-p {
+  margin-right: 5%;
+}
+.services .service h3 {
+  font-size: 3em;
+  font-weight: 600;
+  margin-bottom: 5%;
+  font-family: "Rajdhani", sans-serif;
+}
+@media screen and (max-width: 480px) {
+  .services .service h3 {
+    font-size: 1.8em !important;
+  }
+}
+
+.int-parcours {
+  padding-top: 0px;
+}
+.int-parcours .bg-pure,
+.int-parcours .bg-hope-medium {
+  padding: 10%;
+}
+.int-parcours .bg-pure {
+  top: 0px;
+  width: 60%;
+  z-index: -2;
+  height: 400px;
+}
+@media screen and (max-width: 1024px) {
+  .int-parcours .bg-pure {
+    height: 500px;
+  }
+}
+.int-parcours .bg-hope-medium {
+  margin-top: 20%;
+  margin-bottom: 5%;
+}
+@media screen and (max-width: 1024px) {
+  .int-parcours .bg-hope-medium {
+    margin-top: 50%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .int-parcours .bg-hope-medium h1 {
+    font-size: 2.5em !important;
+  }
+}
+@media screen and (max-width: 480px) {
+  .int-parcours .bg-hope-medium .title-s {
+    font-size: 2.3em !important;
+  }
+}
+.int-parcours .btn {
+  width: 50%;
+}
+@media screen and (max-width: 480px) {
+  .int-parcours .btn {
+    width: 100% !important;
+  }
+}
+
+.formations,
+.experiences {
+  padding-bottom: 0%;
+}
+
+.formations h2,
+.experiences h2,
+.skills h2 {
+  font-size: 4.3em;
+  font-weight: 600;
+  font-family: "Rajdhani", sans-serif;
+}
+@media screen and (max-width: 480px) {
+  .formations h2,
+.experiences h2,
+.skills h2 {
+    font-size: 3em !important;
+    margin: 10% 0 !important;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

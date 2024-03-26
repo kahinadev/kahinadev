@@ -1,0 +1,53 @@
+.int-services {
+    padding: 20% 0;
+
+    @media screen and (max-width: $mobile) {
+        padding: 40% 0 0 0 !important;
+    }
+
+    @media screen and (max-width: $tablet) {
+        padding: 40% 0 20% 0;
+    }
+
+    h2 {
+        font-size: 1.8em;
+        font-weight: 600;
+        font-family: $text;
+
+        @media screen and (max-width: $mobile) {
+            font-size: 1.4em !important;
+        }
+    }
+}
+
+.services {
+    .service {
+        margin-bottom: 5%;
+        .border-p-l {
+            margin-left: 5%;
+
+            @media screen and (max-width: $mobile) {
+                margin-left: 0% !important;
+            }
+
+            @media screen and (max-width: $tablet) {
+                margin-top: 10%;
+            }
+        }
+
+        .second-p {
+            margin-right: 5%;
+        }
+
+        h3 {
+            font-size: 3em;
+            font-weight: 600;
+            margin-bottom: 5%;
+            font-family: $text;
+
+            @media screen and (max-width: $mobile) {
+                font-size: 1.8em !important;
+            }
+        }
+    }
+}

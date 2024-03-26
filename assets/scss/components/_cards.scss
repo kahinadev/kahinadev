@@ -45,6 +45,30 @@
 }
 
 .card-value,
-.card-qualitie {
+.card-qualitie,
+.card-parcours {
     background-color: transparent;
+}
+
+.card-parcours {
+    padding: 5%;
+    margin-top: 5%;
+
+    h3 {
+        font-size: 1.5em;
+        font-weight: 700;
+
+        @media screen and (max-width: $mobile) {
+            font-size: 1.3em !important;
+        }
+    }
+
+    h4,
+    p {
+        font-size: 1.3em;
+
+        @media screen and (max-width: $mobile) {
+            font-size: 1.2em !important;
+        }
+    }
 }
