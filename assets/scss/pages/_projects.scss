@@ -1,0 +1,135 @@
+.title-project {
+    margin-bottom: 15%;
+
+    .image-one {
+        top: 0px;
+        left: 0px;
+
+        img {
+            @media screen and (max-width: $mobile) {
+                height: 300px !important;
+            }
+        }
+    }
+
+    h1 {
+        margin-top: 20%;
+        transition: all 0.5s ease;
+
+        &:hover,
+        &:focus,
+        &:active {
+            transform: scale(1.2);
+            text-stroke: 3px $pure;
+            -webkit-text-stroke: 3px $pure;
+        }
+
+        @media screen and (max-width: $tablet) {
+            margin-top: 50%;
+        }
+
+        .br {
+            display: none;
+
+            @media screen and (max-width: $tablet) {
+                display: block !important;
+            }
+        }
+    }
+
+    .image-two {
+        right: 0px;
+        margin-top: -10%;
+        transition: all .5s ease-in-out;
+
+        img {
+            @media screen and (max-width: $mobile) {
+                height: 280px !important;
+            }
+        }
+    }
+
+    .image-one,
+    .image-two {
+        z-index: -1;
+
+        @media screen and (max-width: $mobile) {
+            width: 67% !important;
+        }
+
+        @media screen and (max-width: $tablet) {
+            width: 50%;
+        }
+
+        img {
+            height: 600px;
+        }
+    }
+}
+
+.project {
+
+    h2,
+    h3,
+    h4,
+    h5 {
+        font-weight: 700;
+        font-family: $text;
+    }
+
+    h2 {
+        font-size: 2em;
+        padding-bottom: 30px;
+        border-bottom: 2px solid $hope-light;
+
+        @media screen and (max-width: $mobile) {
+            font-size: 1.8em !important;
+        }
+    }
+
+    h3 {
+        font-size: 1.8em;
+
+        @media screen and (max-width: $mobile) {
+            font-size: 1.6em !important;
+        }
+    }
+
+    h4,
+    h5 {
+        font-size: 1.3em;
+        font-weight: 700;
+
+        @media screen and (max-width: $mobile) {
+            font-size: 1.6em !important;
+        }
+    }
+
+    p {
+        font-size: 1.5em;
+    }
+
+    .img-project {
+        margin-bottom: 5%;
+    }
+
+    .posititon-sticky {
+        p {
+            font-size: 1.2em;
+        }
+    }
+
+    .infos-project {
+        margin: 10% 0;
+        border: 1px solid $pure;
+
+        a {
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: $hope-medium;
+            }
+        }
+    }
+}

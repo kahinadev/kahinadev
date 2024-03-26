@@ -32,3 +32,32 @@
         background-color: $pure;
     }
 }
+
+.btn-hope-medium {
+    color: $pure;
+    background-color: $hope-medium;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: $hope-medium;
+        border-radius: 0px;
+        border-top: 1px solid $hope-medium;
+        border-bottom: 1px solid $hope-medium;
+        background-color: transparent;
+    }
+}
+.btn-beige {
+    color: $hope-dark;
+    background-color: $beige;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: $beige;
+        border-radius: 0px;
+        border-top: 1px solid $beige;
+        border-bottom: 1px solid $beige;
+        background-color: transparent;
+    }
+}

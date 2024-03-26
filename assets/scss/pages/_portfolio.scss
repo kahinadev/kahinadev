@@ -25,7 +25,8 @@
             }
     
             @media screen and (max-width: $mobile) {
-                margin-top: 15%;
+                margin-top: 10%;
+                font-size: 3em !important;
             }
     
             @media screen and (max-width: $tablet-m) {
@@ -40,6 +41,15 @@
             @media screen and (max-width: $mobile) {
                font-size: 1.2em !important;
             }
+        }
+    }
+}
+
+.portfolio {
+    h3 {
+
+        @media screen and (max-width: $mobile) {
+            font-size: 1.2em !important;
         }
     }
 }
