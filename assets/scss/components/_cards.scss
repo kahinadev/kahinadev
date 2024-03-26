@@ -37,6 +37,16 @@
             font-family: $text;
         }
     }
+
+    .content-project {
+        &:hover,
+        &:focus,
+        &:active {
+            h3 {
+                color: $hope-medium;
+            }
+        }
+    }
 }
 
 .card-value {

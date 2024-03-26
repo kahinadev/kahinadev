@@ -1,0 +1,45 @@
+.int-portfolio {
+    img {
+        @media screen and (max-width: $mobile) {
+            margin-top: 30%;
+        }
+    }
+    .titles {
+        padding-left: 20px;
+    
+        @media screen and (max-width: $tablet-m) {
+            padding-left: 5px;
+        }
+    
+        h1 {
+            br {
+                display: none;
+    
+                @media screen and (max-width: $mobile) {
+                    display: none !important;
+                }
+    
+                @media screen and (max-width: $tablet-m) {
+                    display: block;
+                }
+            }
+    
+            @media screen and (max-width: $mobile) {
+                margin-top: 15%;
+            }
+    
+            @media screen and (max-width: $tablet-m) {
+                font-size: 4.5em;
+            }
+        }
+    
+        h2 {
+            font-size: 1.5em;
+            font-weight: 600;
+
+            @media screen and (max-width: $mobile) {
+               font-size: 1.2em !important;
+            }
+        }
+    }
+}

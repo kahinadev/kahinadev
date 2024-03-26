@@ -806,6 +806,9 @@ footer a:hover, footer a:focus, footer a:active {
   font-weight: 600;
   font-family: "Rajdhani", sans-serif;
 }
+.card-project .content-project:hover h3, .card-project .content-project:focus h3, .card-project .content-project:active h3 {
+  color: #4A6D4A;
+}
 
 .card-value {
   border-radius: 0px;
@@ -1133,6 +1136,52 @@ footer a:hover, footer a:focus, footer a:active {
 .skills h2 {
     font-size: 3em !important;
     margin: 10% 0 !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .int-portfolio img {
+    margin-top: 30%;
+  }
+}
+.int-portfolio .titles {
+  padding-left: 20px;
+}
+@media screen and (max-width: 991px) {
+  .int-portfolio .titles {
+    padding-left: 5px;
+  }
+}
+.int-portfolio .titles h1 br {
+  display: none;
+}
+@media screen and (max-width: 480px) {
+  .int-portfolio .titles h1 br {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 991px) {
+  .int-portfolio .titles h1 br {
+    display: block;
+  }
+}
+@media screen and (max-width: 480px) {
+  .int-portfolio .titles h1 {
+    margin-top: 15%;
+  }
+}
+@media screen and (max-width: 991px) {
+  .int-portfolio .titles h1 {
+    font-size: 4.5em;
+  }
+}
+.int-portfolio .titles h2 {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+@media screen and (max-width: 480px) {
+  .int-portfolio .titles h2 {
+    font-size: 1.2em !important;
   }
 }
 
