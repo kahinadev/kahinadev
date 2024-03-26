@@ -6,6 +6,7 @@
     img {
         @media screen and (max-width: $mobile) {
             height: 710px !important;
+            z-index: -1 !important;
         }
 
         @media screen and (max-width: $tablet) {
@@ -58,12 +59,26 @@
             }
         }
 
+        .br-en {
+            display: none;
+
+            @media screen and (max-width: $mobile) {
+                display: block !important;
+            }
+        }
+
         .content {
             padding: 10% 10% 0 10%;
 
             @media screen and (max-width: $tablet) {
                 padding: 10% 15% 0 15%;
             }
+        }
+    }
+
+    .cnt-int-en {
+        @media screen and (max-width: $mobile) {
+            top: 20% !important;
         }
     }
 }

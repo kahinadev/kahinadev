@@ -4,7 +4,7 @@
         z-index: 9;
 
         @media screen and (max-width: $mobile) {
-            width: 60% !important;
+            width: 65% !important;
         }
 
         @media screen and (max-width: $tablet) {
@@ -43,9 +43,10 @@
 
         .button-menu {
             font-size: 1.2em;
+            margin-top: 4px;
 
             @media screen and (max-width: $tablet) {
-                margin-top: 4px;
+                margin-top: 10px;
             }
         }
     }

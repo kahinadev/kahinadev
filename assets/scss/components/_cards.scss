@@ -10,7 +10,7 @@
         border-bottom: 2px solid $hope-medium;
 
         @media screen and (max-width: $mobile) {
-            font-size: 1.8em !important;
+            font-size: 1.6em !important;
         }
     }
 }
@@ -37,4 +37,14 @@
             font-family: $text;
         }
     }
+}
+
+.card-value {
+    border-radius: 0px;
+    border-bottom: 1px solid $pure !important;
+}
+
+.card-value,
+.card-qualitie {
+    background-color: transparent;
 }

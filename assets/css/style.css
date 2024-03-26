@@ -118,7 +118,6 @@ p {
   margin: 0;
   padding: 0;
   cursor: pointer;
-  user-select: none;
   scroll-behavior: smooth;
 }
 
@@ -127,7 +126,7 @@ body {
 }
 
 section {
-  padding: 80px 0px;
+  padding: 120px 0px;
 }
 @media screen and (max-width: 480px) {
   section {
@@ -577,7 +576,7 @@ p {
 }
 @media screen and (max-width: 480px) {
   .header .infos {
-    width: 60% !important;
+    width: 65% !important;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -616,10 +615,11 @@ p {
 }
 .header .infos .button-menu {
   font-size: 1.2em;
+  margin-top: 4px;
 }
 @media screen and (max-width: 1024px) {
   .header .infos .button-menu {
-    margin-top: 4px;
+    margin-top: 10px;
   }
 }
 @media screen and (max-width: 320px) {
@@ -721,6 +721,7 @@ footer a:hover, footer a:focus, footer a:active {
 .languages {
   right: 15px;
   bottom: 15px;
+  z-index: 10;
   font-size: 0.9em;
 }
 .languages .btn-language {
@@ -765,7 +766,7 @@ footer a:hover, footer a:focus, footer a:active {
 }
 @media screen and (max-width: 480px) {
   .card .title {
-    font-size: 1.8em !important;
+    font-size: 1.6em !important;
   }
 }
 
@@ -792,6 +793,16 @@ footer a:hover, footer a:focus, footer a:active {
   font-family: "Rajdhani", sans-serif;
 }
 
+.card-value {
+  border-radius: 0px;
+  border-bottom: 1px solid #EFF1EF !important;
+}
+
+.card-value,
+.card-qualitie {
+  background-color: transparent;
+}
+
 @media screen and (max-width: 480px) {
   .introduction {
     padding: 0px !important;
@@ -800,6 +811,7 @@ footer a:hover, footer a:focus, footer a:active {
 @media screen and (max-width: 480px) {
   .introduction img {
     height: 710px !important;
+    z-index: -1 !important;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -856,12 +868,25 @@ footer a:hover, footer a:focus, footer a:active {
     display: block !important;
   }
 }
+.introduction .cnt-int .br-en {
+  display: none;
+}
+@media screen and (max-width: 480px) {
+  .introduction .cnt-int .br-en {
+    display: block !important;
+  }
+}
 .introduction .cnt-int .content {
   padding: 10% 10% 0 10%;
 }
 @media screen and (max-width: 1024px) {
   .introduction .cnt-int .content {
     padding: 10% 15% 0 15%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .introduction .cnt-int-en {
+    top: 20% !important;
   }
 }
 
@@ -884,6 +909,70 @@ footer a:hover, footer a:focus, footer a:active {
     margin: 5% 0;
     text-align: left !important;
   }
+}
+
+.about .bg-hope-medium {
+  top: 0px;
+  width: 50%;
+  z-index: -2;
+  height: 500px;
+  margin-left: 10%;
+}
+@media screen and (max-width: 480px) {
+  .about .bg-hope-medium {
+    width: 60%;
+    margin-left: 0%;
+  }
+}
+.about img {
+  width: 55%;
+  height: 700px;
+  margin-bottom: 5%;
+}
+@media screen and (max-width: 480px) {
+  .about img {
+    height: 380px !important;
+    margin: 20% 0 15% 0;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .about img {
+    width: 80%;
+    height: 580px;
+    margin-bottom: 10%;
+  }
+}
+
+.goal img {
+  width: 28%;
+  right: 6%;
+  height: 840px;
+  margin-top: -35%;
+}
+@media screen and (max-width: 480px) {
+  .goal img {
+    width: 69% !important;
+    right: 0% !important;
+    height: 300px !important;
+    margin-top: -6% !important;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .goal img {
+    width: 34%;
+    right: -1%;
+    margin-top: -70%;
+  }
+}
+
+.values .border-sec,
+.qualities .border-sec {
+  margin-bottom: 10%;
+}
+.values .border-t,
+.qualities .border-t {
+  margin-top: 15%;
+  margin-bottom: 10%;
 }
 
 /*# sourceMappingURL=style.css.map */

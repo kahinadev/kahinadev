@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     cursor: pointer;
-    user-select: none;
+    // user-select: none;
     scroll-behavior: smooth;
 }
 
@@ -14,7 +14,7 @@ body {
 }
 
 section {
-    padding: $eighty $zero;
+    padding: 120px $zero;
 
     @media screen and (max-width: $mobile) {
         padding: $eighty 10px;
