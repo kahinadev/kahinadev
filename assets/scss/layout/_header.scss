@@ -1,10 +1,10 @@
 .header {
     .infos {
         width: 15%;
-        z-index: 9;
+        z-index: 12;
 
         @media screen and (max-width: $mobile) {
-            width: 65% !important;
+            width: 75% !important;
         }
 
         @media screen and (max-width: $tablet) {
@@ -17,7 +17,7 @@
                 margin-right: 10px;
 
                 @media screen and (max-width: $mobile) {
-                    width: 25% !important;
+                    width: 20% !important;
                     margin-right: 5px !important;
                 }
 
@@ -34,6 +34,10 @@
                     display: none;
                 }
 
+                @media screen and (max-width: $mobile) {
+                    margin-top: 15px !important;
+                }
+
                 @media screen and (max-width: $tablet) {
                     margin-top: 18px;
                 }
@@ -46,7 +50,7 @@
             margin-top: 4px;
 
             @media screen and (max-width: $mobile) {
-                margin-top: 15px !important;
+                margin-top: 10px !important;
             }
 
             @media screen and (max-width: $tablet) {

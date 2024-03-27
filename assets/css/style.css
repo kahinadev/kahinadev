@@ -572,11 +572,11 @@ p {
 
 .header .infos {
   width: 15%;
-  z-index: 9;
+  z-index: 12;
 }
 @media screen and (max-width: 480px) {
   .header .infos {
-    width: 65% !important;
+    width: 75% !important;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -590,7 +590,7 @@ p {
 }
 @media screen and (max-width: 480px) {
   .header .infos .a-principal .logo {
-    width: 25% !important;
+    width: 20% !important;
     margin-right: 5px !important;
   }
 }
@@ -608,6 +608,11 @@ p {
     display: none;
   }
 }
+@media screen and (max-width: 480px) {
+  .header .infos .a-principal .website {
+    margin-top: 15px !important;
+  }
+}
 @media screen and (max-width: 1024px) {
   .header .infos .a-principal .website {
     margin-top: 18px;
@@ -619,7 +624,7 @@ p {
 }
 @media screen and (max-width: 480px) {
   .header .infos .button-menu {
-    margin-top: 15px !important;
+    margin-top: 10px !important;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -733,7 +738,7 @@ footer a:hover, footer a:focus, footer a:active {
   border-radius: 50% !important;
 }
 .languages .btn-language:hover, .languages .btn-language:active, .languages .btn-language:focus {
-  background-color: #EFF1EF;
+  background-color: #EFF1EF !important;
 }
 .languages .dropdown-menu {
   text-align: center;
@@ -1046,7 +1051,7 @@ footer a:hover, footer a:focus, footer a:active {
 }
 @media screen and (max-width: 480px) {
   .int-services {
-    padding: 40% 0 0 0 !important;
+    padding: 60% 0 40% 0 !important;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -1150,7 +1155,7 @@ footer a:hover, footer a:focus, footer a:active {
 .formations h2,
 .experiences h2,
 .skills h2 {
-  font-size: 4.3em;
+  font-size: 3.5em;
   font-weight: 600;
   font-family: "Rajdhani", sans-serif;
 }
@@ -1158,7 +1163,7 @@ footer a:hover, footer a:focus, footer a:active {
   .formations h2,
 .experiences h2,
 .skills h2 {
-    font-size: 3em !important;
+    font-size: 2.5em !important;
     margin: 10% 0 !important;
   }
 }
@@ -1219,23 +1224,22 @@ footer a:hover, footer a:focus, footer a:active {
 .title-project {
   margin-bottom: 15%;
 }
+@media screen and (max-width: 480px) {
+  .title-project {
+    margin-bottom: 35% !important;
+  }
+}
 .title-project .image-one {
   top: 0px;
   left: 0px;
 }
 @media screen and (max-width: 480px) {
   .title-project .image-one img {
-    height: 300px !important;
+    height: 390px !important;
   }
 }
 .title-project h1 {
   margin-top: 20%;
-  transition: all 0.5s ease;
-}
-.title-project h1:hover, .title-project h1:focus, .title-project h1:active {
-  transform: scale(1.2);
-  text-stroke: 3px #EFF1EF;
-  -webkit-text-stroke: 3px #EFF1EF;
 }
 @media screen and (max-width: 1024px) {
   .title-project h1 {
@@ -1257,7 +1261,7 @@ footer a:hover, footer a:focus, footer a:active {
 }
 @media screen and (max-width: 480px) {
   .title-project .image-two img {
-    height: 280px !important;
+    height: 380px !important;
   }
 }
 .title-project .image-one,
@@ -1303,7 +1307,7 @@ footer a:hover, footer a:focus, footer a:active {
 }
 @media screen and (max-width: 480px) {
   .project h3 {
-    font-size: 1.6em !important;
+    font-size: 1.4em !important;
   }
 }
 .project h4,
@@ -1314,17 +1318,27 @@ footer a:hover, footer a:focus, footer a:active {
 @media screen and (max-width: 480px) {
   .project h4,
 .project h5 {
-    font-size: 1.6em !important;
+    font-size: 1.2em !important;
   }
 }
 .project p {
   font-size: 1.5em;
+}
+@media screen and (max-width: 480px) {
+  .project p {
+    font-size: 1.2em !important;
+  }
 }
 .project .img-project {
   margin-bottom: 5%;
 }
 .project .posititon-sticky p {
   font-size: 1.2em;
+}
+@media screen and (max-width: 480px) {
+  .project .posititon-sticky p {
+    font-size: 1.1em !important;
+  }
 }
 .project .infos-project {
   margin: 10% 0;

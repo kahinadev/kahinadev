@@ -2,7 +2,7 @@
     padding: 20% 0;
 
     @media screen and (max-width: $mobile) {
-        padding: 40% 0 0 0 !important;
+        padding: 60% 0 40% 0 !important;
     }
 
     @media screen and (max-width: $tablet) {
@@ -23,6 +23,7 @@
 .services {
     .service {
         margin-bottom: 5%;
+
         .border-p-l {
             margin-left: 5%;
 
