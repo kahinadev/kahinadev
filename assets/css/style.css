@@ -477,4 +477,17 @@ footer a {
   border-bottom: none !important;
 }
 
+.introduction {
+  height: 90vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-attachment: scroll;
+  background-attachment: fixed;
+  background-image: url("../../../kahinadev/assets/img/home/bg-home.png");
+}
+.introduction h1 {
+  margin-top: 10rem;
+}
+
 /*# sourceMappingURL=style.css.map */
