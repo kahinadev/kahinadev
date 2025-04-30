@@ -1,0 +1,180 @@
+.border-top {
+  border-top: 1px solid #2C231E !important;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #2C231E !important;
+}
+
+.border-left {
+  border-left: 1px solid #2C231E !important;
+}
+
+.border-right {
+  border-right: 1px solid #2C231E !important;
+}
+
+.bg-light {
+  background-color: #EBE7E0 !important;
+}
+
+.bg-dark {
+  background-color: #2C231E !important;
+}
+
+.bg-primary {
+  background-color: #C5B7AA !important;
+}
+
+.bg-secondary {
+  background-color: #C8D1C7 !important;
+}
+
+.btn-secondary {
+  background-color: #C8D1C7 !important;
+}
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
+  color: #2C231E !important;
+}
+
+.text-justify {
+  text-align: justify !important;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  color: #2C231E;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  width: 100%;
+  font-weight: 300 !important;
+  line-height: 0.9em !important;
+  word-wrap: break-word;
+  letter-spacing: 0.5px !important;
+  font-family: "Arapey", serif !important;
+}
+
+h1 {
+  font-size: 145px;
+}
+@media (max-width: 576px) {
+  h1 {
+    font-size: 65px !important;
+  }
+}
+@media (max-width: 1480px) {
+  h1 {
+    font-size: 100px;
+  }
+}
+
+h2 {
+  font-size: 110px;
+}
+@media (max-width: 576px) {
+  h2 {
+    font-size: 60px !important;
+  }
+}
+@media (max-width: 1480px) {
+  h2 {
+    font-size: 100px;
+  }
+}
+
+h3 {
+  font-size: 105px;
+}
+@media (max-width: 576px) {
+  h3 {
+    font-size: 50px !important;
+  }
+}
+@media (max-width: 1480px) {
+  h3 {
+    font-size: 80px;
+  }
+}
+
+h4 {
+  font-size: 85px;
+}
+
+h5 {
+  font-size: 30px;
+}
+
+h6 {
+  font-size: 26px;
+}
+
+p,
+a {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.6em;
+  letter-spacing: 0.3px;
+  font-family: "Work Sans", sans-serif;
+}
+
+.subtitle {
+  font-size: 30px;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.1em;
+  letter-spacing: 0.3px;
+  font-family: "Arapey", serif !important;
+}
+@media (max-width: 480px) {
+  .subtitle {
+    font-size: 20px !important;
+  }
+}
+
+strong {
+  font-weight: 600;
+}
+
+.full {
+  width: 100%;
+}
+
+@media (max-width: 320px) {
+  .primary-title {
+    font-size: 40px !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .secondary-title {
+    font-size: 35px !important;
+  }
+}
+
+.border {
+  border: 1px solid #2C231E !important;
+}
+
+.bg-accent {
+  background-color: #9B6A5D !important;
+}
+
+/*# sourceMappingURL=style.css.map */
