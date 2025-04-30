@@ -309,6 +309,60 @@ footer a {
   margin-right: 10px;
 }
 
+.offcanvas {
+  width: 100% !important;
+  padding: 5rem;
+  background-color: #EBE7E0;
+}
+@media (max-width: 768px) {
+  .offcanvas {
+    padding: 2rem !important;
+  }
+}
+.offcanvas .offcanvas-header .offcanvas-title {
+  font-size: 30px;
+}
+.offcanvas .offcanvas-header .offcanvas-title,
+.offcanvas .offcanvas-header .btn-menu {
+  white-space: nowrap;
+}
+.offcanvas .offcanvas-body {
+  padding: 10rem 0;
+}
+@media (max-width: 480px) {
+  .offcanvas .offcanvas-body {
+    padding: 5rem 0 !important;
+  }
+}
+.offcanvas .offcanvas-body .nav-link {
+  font-size: 50px;
+  color: #2C231E;
+  font-weight: 400;
+  line-height: 1.3em;
+  letter-spacing: 0.5px;
+  font-family: "Work Sans", sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 480px) {
+  .offcanvas .offcanvas-body .nav-link {
+    font-size: 40px !important;
+  }
+}
+.offcanvas .offcanvas-body .nav-link:hover, .offcanvas .offcanvas-body .nav-link:focus, .offcanvas .offcanvas-body .nav-link:active {
+  color: #9B6A5D !important;
+  opacity: 1 !important;
+  font-weight: 800 !important;
+}
+.offcanvas .offcanvas-body .nav-link:hover {
+  transform: scale(0.7) !important;
+}
+.offcanvas .offcanvas-footer .reseaux a {
+  margin-right: 10px;
+}
+.offcanvas .offcanvas-footer .reseaux a i {
+  font-size: 30px;
+}
+
 .line {
   width: 1px;
   height: 100%;

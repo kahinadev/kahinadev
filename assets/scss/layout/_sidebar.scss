@@ -1,0 +1,50 @@
+.offcanvas {
+    width: 100% !important;
+    padding: 5rem;
+    background-color: $background-color;
+
+    @include respond-to(lg) {
+        padding: 2rem !important;
+    }
+
+    .offcanvas-header {
+
+        .offcanvas-title {
+            font-size: 30px;
+        }
+
+        .offcanvas-title,
+        .btn-menu {
+            white-space: nowrap;
+        }
+    }
+
+    .offcanvas-body {
+        padding: 10rem 0;
+
+        @include respond-to(sm) {
+            padding: 5rem 0 !important;
+        }
+
+        .nav-link {
+            @include links;
+
+            &:hover {
+                transform: scale(0.7) !important;
+            }
+        }
+    }
+
+    .offcanvas-footer {
+        .reseaux {
+            a {
+                margin-right: 10px;
+
+                i {
+                    font-size: $size-extra;
+                }
+            }
+        }
+    }
+
+}
