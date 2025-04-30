@@ -2,25 +2,18 @@
 // INTRODUCTION
 // ========================================
 .introduction {
-    height: 100vh;
+    padding: 20rem 8rem;
     @include bg-image;
     background-attachment: fixed;
     background-image: url("../../../kahinadev/assets/img/home/bg-home.png");
 
     @include respond-to(sm) {
+        padding: 10rem 3rem !important;
         background-attachment: scroll !important;
     }
 
-    h1 {
-        margin-top: 10rem;
-
-        @include respond-to(sm) {
-            margin-top: 10rem !important;
-        }
-
-        @include respond-to(xl) {
-            margin-top: 15rem;
-        }
+    @include respond-to(xl) {
+        background-attachment: initial !important;
     }
 }
 
