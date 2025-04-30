@@ -1,7 +1,68 @@
 // ========================================
 // GENERAL
 // ========================================
+.navbar-brand,
+.offcanvas-title {
+    @include title;
+}
 
 // ========================================
 // NAVBAR
 // ========================================
+.navbar {
+    .border-right {
+        @include respond-to(sm) {
+            border-right: $none !important;
+        }
+    }
+
+    .border-left {
+        @include respond-to(xl) {
+            border-left: $none !important;
+        }
+    }
+
+    .brand {
+        width: 20%;
+        height: 77px;
+
+        @include respond-to(xl) {
+            width: 50% !important;
+        }
+
+        @include respond-to(xxxl) {
+            width: 35%;
+        }
+
+        .navbar-brand {
+            font-size: 30px;
+            line-height: 1.5em !important;
+
+            @include respond-to(sm) {
+                font-size: 30px !important;
+                line-height: 1.5em !important;
+            }
+        }
+    }
+
+    #brand {
+        @include respond-to(sm) {
+            width: $full !important;
+            border-bottom: $border !important;
+        }
+    }
+
+    .button-menu {
+        width: 26%;
+        padding-left: 5rem;
+        padding-right: 5rem;
+
+        @include respond-to(sm) {
+            width: $full !important;
+        }
+
+        @include respond-to(xl) {
+            width: 50%;
+        }
+    }
+}

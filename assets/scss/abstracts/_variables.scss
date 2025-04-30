@@ -70,7 +70,7 @@ $padding-button: 12px 24px;
 $padding-button-menu-mobile: 23px;
 $padding-button-menu-desktop: 3rem;
 
-$padding-modal-mobile: 1.5rem 2rem;
+$padding-modal-mobile: 1.5rem;
 
 $padding-section-mobile: 5rem 3rem; 
 $padding-section-tablet: 8rem 5rem; 
@@ -84,15 +84,20 @@ $border-none: none;
 $border: 1px solid $text-color; 
 
 // ========================================
+// BOTH : LOCATION & LANGUAGES
+// ========================================
+
+$margin-btn: 10px; 
+$left-btn: 1rem;
+$z-index-btn: 100;
+
+// ========================================
 // LANGUAGES
 // ========================================
 
 $width-flag: 20px; 
 $height-flag: 20px; 
-$margin-flag: 10px; 
 
-$z-index-btn: 100;
-$left-btn-languages: 1rem;
 $bottom-btn-languages: 1rem;
 
 $size-icon-drop-languages: 5px; 

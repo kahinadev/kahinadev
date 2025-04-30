@@ -1,0 +1,17 @@
+.modal {
+    .modal-content {
+        border-radius: $zero !important;
+
+        @include respond-to(sm) {
+            padding: $padding-modal-mobile !important;
+
+            h5 {
+                font-size: 24px !important;
+            }
+        }
+
+        .modal-header {
+            border-bottom: $none !important;
+        }
+    }
+}

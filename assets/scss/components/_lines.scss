@@ -1,0 +1,47 @@
+// ========================================
+// GENERAL
+// ========================================
+.line {
+    width: 1px;
+    height: $full;
+    position: fixed;
+    background-color: $text-color;
+}
+
+// ========================================
+// LEFT
+// ========================================
+.line-left {
+    left: $line-left-desktop;
+
+    @include respond-to(sm) {
+        left: $line-left-tablet;
+    }
+
+    &:nth-child(2) {
+        left: $line-left-tablet;
+
+        @include respond-to(sm) {
+            left: $line-left-mobile;
+        }
+    }
+}
+
+// ========================================
+// RIGHT
+// ========================================
+.line-right {
+    right: $line-right-desktop;
+
+    @include respond-to(sm) {
+        right: $line-right-tablet;
+    }
+
+    &:nth-child(4) {
+        right: $line-right-tablet;
+
+        @include respond-to(sm) {
+            right: $line-right-mobile;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+// ========================================
+// FOOTER 
+// ========================================
+footer {
+    a {
+        font-size: 20px;
+    }
+
+    .border-right {
+        @include respond-to(xl) {
+            border-right: $none !important;
+            border-bottom: $border !important;
+        }
+    }
+}
+
+.reseaux {
+    i {
+        font-size: 25px;
+        margin-right: 10px;
+    }
+}

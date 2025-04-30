@@ -1,0 +1,39 @@
+// ========================================
+// GENERAL
+// ========================================
+.btn {
+    font-size: $size-small;
+    font-weight: $font-weight-medium;
+    padding: $padding-button;
+    color: $text-color;
+    text-align: center;
+    border: $border;
+    border-radius: 0px !important;
+    letter-spacing: $spacing-large;
+    text-transform: uppercase;
+    font-family: $font-text;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+
+    i {
+        margin-left: 5px;
+        color: $accent-color;
+        font-size: $size-small !important;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $background-color;
+        background-color: $text-color;
+        transition: all 0.3s ease-in-out !important;
+
+        i {
+            color: $accent-color;
+        }
+    }
+}
+
+// ========================================
+// GENERAL
+// ========================================

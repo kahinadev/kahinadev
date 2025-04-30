@@ -2,6 +2,50 @@
 // GENERAL
 // ========================================
 
+*,
+*::before,
+*::after {
+    margin: $zero;
+    padding: $zero;
+    box-sizing: border-box;
+}
+
+body {
+    color: $text-color;
+    cursor: pointer;
+    scroll-behavior: smooth;
+    background-color: $background-color;
+    font-family: $font-text;
+}
+
+html,
+body {
+    height: $full;
+    overflow-x: $overflow-hidden;
+}
+
+section {
+    padding: $padding-section-desktop;
+
+    @include respond-to(sm) {
+        padding: $padding-section-mobile !important;
+    }
+
+    @include respond-to(xl) {
+        padding: $padding-section-tablet;
+    }
+}
+
+ul,
+ol {
+    list-style: $none;
+}
+
+a {
+    text-decoration: $none;
+    color: inherit;
+}
+
 // ========================================
 // IMAGE
 // ========================================

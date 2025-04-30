@@ -22,6 +22,11 @@
 // BACKGROUND BUTTON
 // ========================================
 
+.btn-dark {
+    color: $background-color !important;
+    background-color: $text-color !important;
+}
+
 .btn-secondary {
     background-color: $secondary-color !important;
 

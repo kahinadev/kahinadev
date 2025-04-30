@@ -1,0 +1,48 @@
+// ========================================
+// LOCATION
+// ========================================
+
+.btn-location,
+.btn-languages {
+    left: $left-btn;
+    z-index: $z-index-btn;
+}
+
+// ========================================
+// LOCATION
+// ========================================
+
+.btn-location {
+    bottom: 5rem;
+
+    .fa-map-pin {
+        font-size: 18px !important;
+        margin-right: $margin-btn;
+    }
+}
+
+// ========================================
+// LANGUAGES
+// ========================================
+
+.btn-languages {
+    left: $left-btn;
+    bottom: $bottom-btn-languages;
+    border: $border !important;
+    background-color: $background-color !important;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $text-color !important;
+    }
+}
+
+// ========================================
+// FLAG LANGUAGES
+// ========================================
+.flag {
+    width: $width-flag;
+    height: $height-flag;
+    margin-right: $margin-btn;
+}
