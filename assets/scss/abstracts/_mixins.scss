@@ -1,0 +1,173 @@
+// ========================================
+// RESPONSIVE
+// ========================================
+
+@mixin respond-to($breakpoint) {
+    @if $breakpoint ==xs {
+        @media (max-width: #{$breakpoint-xs}) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==sm {
+        @media (max-width: #{$breakpoint-sm}) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==md {
+        @media (max-width: #{$breakpoint-md}) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==lg {
+        @media (max-width: #{$breakpoint-lg}) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==xl {
+        @media (max-width: #{$breakpoint-xl}) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==xxl {
+        @media (max-width: #{$breakpoint-xxl}) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==xxxl {
+        @media (max-width: #{$breakpoint-xxxl}) {
+            @content;
+        }
+    }
+}
+
+// ========================================
+// BORDER
+// ========================================
+
+@mixin border-position($position) {
+    .border-#{$position} {
+        border-#{$position}: 1px solid #2C231E !important;
+    }
+}
+
+@include border-position(top);
+@include border-position(bottom);
+@include border-position(left);
+@include border-position(right);
+
+
+// ========================================
+// FONTS
+// ========================================
+
+@mixin font-title {
+    font-family: $font-title !important;
+}
+
+@mixin font-text {
+    font-family: $font-text;
+}
+
+// ========================================
+// TITLE
+// ========================================
+
+@mixin title {
+    width: $full;
+    font-weight: $font-weight-light !important;
+    line-height: $line-height-title !important;
+    word-wrap: break-word;
+    letter-spacing: $spacing-medium !important;
+    @include font-title;
+}
+
+// ========================================
+// SUBTITLE
+// ========================================
+
+@mixin subtitle {
+    font-size: $size-extra;
+    font-weight: $font-weight-medium;
+    font-style: italic;
+    line-height: $line-height-subtitle;
+    @include spacing-small;
+    @include font-title;
+
+    @include respond-to(sm) {
+        font-size: 20px !important;
+    }
+}
+
+// ========================================
+// TEXT
+// ========================================
+
+@mixin text {
+    font-size: $size-medium;
+    font-weight: $font-weight-light;
+    line-height: $line-height-text;
+    @include spacing-small;
+    @include font-text;
+}
+
+
+// ========================================
+// LINKS
+// ========================================
+
+@mixin links {
+    font-size: 50px;
+    color: $text-color;
+    font-weight: $font-weight-regular;
+    line-height: 1.3em;
+    letter-spacing: $spacing-medium;
+    @include font-text;
+    transition: all 0.3s ease-in-out;
+
+    @include respond-to(sm) {
+        font-size: 40px !important;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $accent-color !important;
+        opacity: 1 !important;
+        font-weight: 800 !important;
+    }
+}
+
+// ========================================
+// SPACING
+// ========================================
+
+@mixin spacing-small {
+    letter-spacing: $spacing-small;
+}
+
+// ========================================
+// CENTER
+// ========================================
+
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// ========================================
+// BACKGROUND IMAGE
+// ========================================
+
+@mixin bg-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: scroll;
+}

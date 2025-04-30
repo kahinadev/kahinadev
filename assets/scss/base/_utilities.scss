@@ -1,0 +1,39 @@
+// ========================================
+// FULL
+// ========================================
+
+.full {
+    width: 100%;
+}
+
+// ========================================
+// TITLES
+// ========================================
+
+.primary-title {
+    @include respond-to(xs) {
+        font-size: 40px !important;
+    }
+}
+
+.secondary-title {
+    @include respond-to(xs) {
+        font-size: 35px !important;
+    }
+}
+
+// ========================================
+// BORDER
+// ========================================
+
+.border {
+    border: $border !important;
+}
+
+// ========================================
+// BACKGROUND SECTION
+// ========================================
+
+.bg-accent {
+    background-color: $accent-color !important;
+}

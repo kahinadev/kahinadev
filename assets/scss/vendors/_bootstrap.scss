@@ -1,0 +1,41 @@
+// ========================================
+// BACKGROUND SECTION
+// ========================================
+
+.bg-light {
+    background-color: $background-color !important;
+}
+
+.bg-dark {
+    background-color: $text-color !important;
+}
+
+.bg-primary {
+    background-color: $primary-color !important;
+}
+
+.bg-secondary {
+    background-color: $secondary-color !important;
+}
+
+// ========================================
+// BACKGROUND BUTTON
+// ========================================
+
+.btn-secondary {
+    background-color: $secondary-color !important;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $text-color !important;
+    }
+}
+
+// ========================================
+// ALIGN 
+// ========================================
+
+.text-justify {
+    text-align: justify !important;
+}

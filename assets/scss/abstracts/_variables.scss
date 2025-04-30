@@ -1,0 +1,129 @@
+// ========================================
+// COLORS
+// ========================================
+
+$primary-color: #C5B7AA; 
+$secondary-color: #C8D1C7;
+$background-color: #EBE7E0;
+$text-color: #2C231E;
+$accent-color:#9B6A5D;
+
+// ========================================
+// SPACINGS
+// ========================================
+
+$spacing-small: 0.3px;
+$spacing-medium: 0.5px;
+$spacing-large: 0.8px;
+
+// ========================================
+// SIZE
+// ========================================
+
+$size-small: 13px; 
+$size-medium: 18px;
+$size-large: 22px; 
+$size-extra: 30px;
+
+// ========================================
+// BREAKPOINTS
+// ========================================
+
+$breakpoint-xs: 320px; 
+$breakpoint-sm: 480px;
+$breakpoint-md: 576px; 
+$breakpoint-lg: 768px; 
+$breakpoint-xl: 992px; 
+$breakpoint-xxl: 1280px; 
+$breakpoint-xxxl: 1480px;
+
+// ========================================
+// NONE & FULL
+// ========================================
+
+$zero: 0; 
+$full: 100%; 
+$none: none;
+
+// ========================================
+// FONTS
+// ========================================
+
+$font-text: "Work Sans", sans-serif;
+$font-title: "Arapey", serif;
+
+$font-weight-light: 300; 
+$font-weight-regular: 400; 
+$font-weight-medium: 500; 
+$font-weight-semibold: 600;
+
+$line-height-text: 1.6em;
+$line-height-title: 0.9em; 
+$line-height-subtitle: 1.1em;
+
+// ========================================
+// PADDING
+// ========================================
+
+$padding-button: 12px 24px;
+
+$padding-button-menu-mobile: 23px;
+$padding-button-menu-desktop: 3rem;
+
+$padding-modal-mobile: 1.5rem 2rem;
+
+$padding-section-mobile: 5rem 3rem; 
+$padding-section-tablet: 8rem 5rem; 
+$padding-section-desktop: 11rem 8rem;
+
+// ========================================
+// BORDER
+// ========================================
+
+$border-none: none; 
+$border: 1px solid $text-color; 
+
+// ========================================
+// LANGUAGES
+// ========================================
+
+$width-flag: 20px; 
+$height-flag: 20px; 
+$margin-flag: 10px; 
+
+$z-index-btn: 100;
+$left-btn-languages: 1rem;
+$bottom-btn-languages: 1rem;
+
+$size-icon-drop-languages: 5px; 
+
+// ========================================
+// OVERFLOW
+// ========================================
+
+$overflow-hidden: hidden; 
+
+// ========================================
+// CURSOR
+// ========================================
+
+$width-cursor-default: 30px;
+$height-cursor-default: 30px;
+
+$width-cursor-small: 20px; 
+$height-cursor-small: 20px;
+
+$width-cursor-large: 80px;
+$height-cursor-large: 80px;
+
+// ========================================
+// LINES
+// ========================================
+
+$line-left-mobile: 10px;
+$line-left-tablet: 30px; 
+$line-left-desktop: 50px;
+
+$line-right-mobile: 10px;
+$line-right-tablet: 30px;
+$line-right-desktop: 50px;

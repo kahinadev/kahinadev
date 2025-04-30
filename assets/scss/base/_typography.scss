@@ -1,0 +1,90 @@
+// ========================================
+// TITLES
+// ========================================
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include title;
+}
+
+// ========================================
+// SIZE TITLES
+// ========================================
+
+h1 {
+    font-size: 145px;
+
+    @include respond-to(md) {
+        font-size: 65px !important;
+    }
+
+    @include respond-to(xxxl) {
+        font-size: 100px;
+    }
+}
+
+
+h2 {
+    font-size: 110px;
+
+    @include respond-to(md) {
+        font-size: 60px !important;
+    }
+
+    @include respond-to(xxxl) {
+        font-size: 100px;
+    }
+}
+
+h3 {
+    font-size: 105px;
+
+    @include respond-to(md) {
+        font-size: 50px !important;
+    }
+
+    @include respond-to(xxxl) {
+        font-size: 80px;
+    }
+}
+
+h4 {
+    font-size: 85px;
+}
+
+h5 {
+    font-size: 30px; 
+}
+
+h6 {
+    font-size: 26px;
+}
+
+// ========================================
+// TEXT & LINKS
+// ========================================
+
+p,
+a {
+    @include text;
+}
+
+// ========================================
+// SUBTITLE
+// ========================================
+
+.subtitle {
+    @include subtitle;
+}
+
+// ========================================
+// WEIGHT
+// ========================================
+
+strong {
+    font-weight: $font-weight-semibold;
+}
