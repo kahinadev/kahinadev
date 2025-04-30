@@ -24,7 +24,35 @@
 // ========================================
 // PROJECTS SELECTION
 // ========================================
+.projects-selection {
+    padding: $zero $padding-projects-selection-desktop !important;
 
-// ========================================
-// NAVBAR
-// ========================================
+    @include respond-to(sm) {
+        padding: $zero $padding-projects-selection-mobile !important;
+    }
+
+    .container {
+        padding-top: 11rem;
+
+        @include respond-to(sm) {
+            padding-top: 5rem !important;
+            padding-left: 1.7rem !important;
+            padding-right: 1.7rem !important;
+        }
+
+        @include respond-to(xl) {
+            text-align: center;
+            margin-bottom: 8rem !important;
+            padding: 8rem 3rem 0 3rem;
+        }
+
+        .btn-dark {
+            @include respond-to(sm) {
+                margin-bottom: -3rem !important;
+            }
+            @include respond-to(xl) {
+                margin-top: 1rem;
+            }
+        }
+    }
+}
