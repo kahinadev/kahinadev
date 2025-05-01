@@ -4,7 +4,7 @@
     background-color: $background-color;
 
     @include respond-to(lg) {
-        padding: 2rem !important;
+        padding: 2rem  2rem 3rem 2rem !important;
     }
 
     .offcanvas-header {
@@ -41,6 +41,7 @@
                 margin-right: 10px;
 
                 i {
+                    color: $text-color !important;
                     font-size: $size-extra;
                 }
             }

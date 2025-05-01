@@ -433,7 +433,7 @@ footer .copyright {
 }
 @media (max-width: 768px) {
   .offcanvas {
-    padding: 2rem !important;
+    padding: 2rem 2rem 3rem 2rem !important;
   }
 }
 .offcanvas .offcanvas-header .offcanvas-title {
@@ -477,6 +477,7 @@ footer .copyright {
   margin-right: 10px;
 }
 .offcanvas .offcanvas-footer .reseaux a i {
+  color: #2C231E !important;
   font-size: 30px;
 }
 
