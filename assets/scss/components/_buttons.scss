@@ -17,19 +17,17 @@
 
     i {
         margin-left: 5px;
-        color: $accent-color;
+        color: $accent-color !important;
         font-size: $size-small !important;
     }
 
     &:hover,
     &:focus,
     &:active {
-        color: $background-color;
-        background-color: $text-color;
         transition: all 0.3s ease-in-out !important;
 
         i {
-            color: $accent-color;
+            color: $accent-color !important;
         }
     }
 }

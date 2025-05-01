@@ -110,7 +110,7 @@
 
 @mixin text {
     font-size: $size-medium;
-    font-weight: $font-weight-light;
+    font-weight: $font-weight-regular;
     line-height: $line-height-text;
     @include spacing-small;
     @include font-text;
@@ -170,4 +170,13 @@
     background-repeat: no-repeat;
     background-position: top center;
     background-attachment: scroll;
+}
+
+// ========================================
+// HEADER & FOOTER
+// ========================================
+
+@mixin header-footer {
+    z-index: 1;
+    position: relative;
 }

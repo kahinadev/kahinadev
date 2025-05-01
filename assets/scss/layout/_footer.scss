@@ -1,22 +1,78 @@
 // ========================================
 // FOOTER 
 // ========================================
+
 footer {
-    a {
-        font-size: 20px;
+    .subtitle {
+        font-size: 20px !important;
     }
 
-    .border-right {
-        @include respond-to(xl) {
-            border-right: $none !important;
+    a,
+    p {
+        font-size: 15px;
+
+        i {
+            color: $text-color !important;
+            font-size: 20px !important;
+        }
+    }
+
+    .reseaux,
+    .projects {
+        @include respond-to(sm) {
+            display: flex;
+            text-align: center !important;
+            flex-direction: column !important;
+        }
+
+        br {
+            @include respond-to(sm) {
+                display: none;
+            }
+        }
+    }
+
+    .infos {
+        @include respond-to(sm) {
+            border-top: $border !important;
+            border-left: $border-none !important;
+            border-right: $border-none !important;
             border-bottom: $border !important;
+        }
+    }
+
+    .projects {
+        text-align: end;
+    }
+
+    .reseaux,
+    .res-p {
+        @include respond-to(sm) {
+            display: $none !important;
+        }
+    }
+
+    .reseaux-second {
+        display: $none;
+
+        @include respond-to(sm) {
+            margin-bottom: 1rem !important;
+            text-align: center !important;
+            display: block !important;
+        }
+    }
+
+    .copyright {
+        padding: 3rem 0 2rem 0;
+
+        @include respond-to(sm) {
+            padding: 3rem !important;
         }
     }
 }
 
 .reseaux {
     i {
-        font-size: 25px;
-        margin-right: 10px;
+        font-size: $size-icon;
     }
 }

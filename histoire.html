@@ -38,14 +38,25 @@
         <div class="line line-right"></div>
     </div>
 
-    <header id="header" class="header bg-light border-top border-bottom" role="banner" aria-label="Header">
-        <nav class="navbar navbar-expand-lg p-0" role="navigation" aria-label="Navigation">
-            <div class="container-fluid d-flex justify-content-between aligns-items-center">
-                <div id="brand" class="brand py-3 border-right text-center">
+    <header id="header" class="header border-top border-bottom" role="banner" aria-label="Header">
+        <div class="location bg-light">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 p-3 border-bottom text-center">
+                        <p class="mt-3 text-uppercase btn p-0">
+                            <i class="fa-solid fa-map-pin"></i> Basée sur paris & disponible
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar bg-light navbar-expand-lg p-0" role="navigation" aria-label="Navigation">
+            <div class="container p-0 d-flex justify-content-between aligns-items-center">
+                <div id="brand" class="brand py-3 border-right">
                     <a class="navbar-brand text-uppercase" href="index.html" data-cursor="small">Kahina Dev</a>
                 </div>
                 <div class="button-menu py-3 border-left" id="button-menu">
-                    <a class="btn d-flex justify-content-center align-items-center" data-bs-toggle="offcanvas"
+                    <a class="btn btn-dark d-flex justify-content-center align-items-center" data-bs-toggle="offcanvas"
                         href="#offcanvasExample" role="button" aria-controls="offcanvasExample" data-cursor="small">
                         Menu <i class="fa-solid fa-circle"></i>
                     </a>
@@ -56,7 +67,7 @@
             aria-labelledby="offcanvasExampleLabel">
             <div class="offcanvas-header d-flex aligns-items-center">
                 <h5 class="offcanvas-title text-uppercase" id="offcanvasExampleLabel">Menu</h5>
-                <button type="button" class="btn d-flex align-items-center" data-bs-dismiss="offcanvas"
+                <button type="button" class="btn btn-dark d-flex align-items-center" data-bs-dismiss="offcanvas"
                     aria-label="Close" data-cursor="small">
                     Fermer <i class="fa-solid fa-circle"></i>
                 </button>
@@ -75,7 +86,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="sevices.html" class="nav-link text-uppercase" aria-label="sServices"
+                        <a href="sevices.html" class="nav-link text-uppercase" aria-label="Services"
                             data-cursor="small">
                             Services
                         </a>
@@ -334,24 +345,39 @@
     </main>
 
     <footer id="footer" class="footer border-bottom" role="contentinfo" aria-label="Footer">
-        <div class="bg-secondary p-5 border-top border-bottom">
+        <div class="bg-dark p-5 border-top border-bottom">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <h5 class="text-uppercase">Collaborons ensemble</h5>
-                        <a href="mailto:kahinadev@gmail.com" class="btn mt-3" data-cursor="small">
+                        <a href="mailto:kahinadev@gmail.com" class="btn btn-light mt-3" data-cursor="small">
                             Prendre contact <i class="fa-solid fa-circle"></i>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="other">
-            <div class="container-fluid">
+        <div class="other bg-light">
+            <div class="container">
                 <div class="row">
-                    <div class="col-lg-4 col-md-12 py-5 border-right text-center">
-                        <h6 class="text-uppercase mb-5">Kahina Ouali</h6>
+                    <div class="col-lg-3 col-md-4 col-sm-12 py-5 res-p">
                         <div class="reseaux">
+                            <a href="services.html/#developpement" class="text-uppercase" data-cursor="small">
+                                <strong>Développement</strong>
+                            </a>
+                            <br>
+                            <a href="services.html/#webdesign" class="text-uppercase" data-cursor="small">
+                                <strong>Web design</strong>
+                            </a>
+                            <br>
+                            <a href="services.html/#refonte" class="text-uppercase" data-cursor="small">
+                                <strong>Refonte</strong>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-4 col-sm-12 p-5 border-right border-left text-center infos">
+                        <h6 class="text-uppercase">Kahina Dev</h6>
+                        <div class="d-flex justify-content-center mt-3 mb-3">
                             <a href="https://github.com/kahinadev" data-cursor="small">
                                 <i class="fa-brands fa-github"></i>
                             </a>
@@ -362,43 +388,53 @@
                                 <i class="fa-brands fa-codepen"></i>
                             </a>
                         </div>
-                        <p class="subtitle text-uppercase mt-5">Développeuse web</p>
+                        <p class="text-uppercase">
+                            <strong>Développeuse web</strong>
+                        </p>
                     </div>
-                    <div class="col-lg-4 col-md-12 py-5 border-right text-center">
-                        <h6 class="text-uppercase mb-3">Services</h6>
-                        <ul class="list-unstyled">
-                            <li>
-                                <a href="services.html/#developpement" data-cursor="small">
-                                    Développement web
-                                </a>
-                            </li>
-                            <li>
-                                <a href="services.html/#webdesign" data-cursor="small">
-                                    Web design
-                                </a>
-                            </li>
-                            <li>
-                                <a href="services.html/#refonte" data-cursor="small">
-                                    Refonte
-                                </a>
-                            </li>
-                        </ul>
+                    <div class="col-lg-3 col-md-4 col-sm-12 py-5">
+                        <div class="reseaux-second">
+                            <a href="services.html/#developpement" class="text-uppercase" data-cursor="small">
+                                <strong>Développement</strong>
+                            </a>
+                            <br>
+                            <a href="services.html/#webdesign" class="text-uppercase" data-cursor="small">
+                                <strong>Web design</strong>
+                            </a>
+                            <br>
+                            <a href="services.html/#refonte" class="text-uppercase" data-cursor="small">
+                                <strong>Refonte</strong>
+                            </a>
+                        </div>
+                        <div class="projects">
+                            <a href="#" class="text-uppercase" data-cursor="small">
+                                <strong>ThreeDragons</strong>
+                            </a>
+                            <br>
+                            <a href="#" class="text-uppercase" data-cursor="small">
+                                <strong>KanirGarden</strong>
+                            </a>
+                            <br>
+                            <a href="#" class="text-uppercase" data-cursor="small">
+                                <strong>ThunderWolf</strong>
+                            </a>
+                        </div>
                     </div>
-                    <div class="col-lg-4 col-md-12 py-5 text-center">
-                        <h6 class="text-uppercase mb-3">Copyright</h6>
-                        <p>
-                            © 2023 / 2025 Kahina Ouali <br> - Tous droits réservés
+                </div>
+            </div>
+        </div>
+        <div class="copyright border-top bg-light">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p class="text-uppercase copyright__text">
+                            <strong>© 2023 / 2025 Kahina Ouali - Tous droits réservés</strong>
                         </p>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-
-    <button type="button" class="btn btn-dark btn-location position-fixed" aria-label="Localisation : France"
-        data-cursor="small">
-        <i class="fa-solid fa-map-pin"></i> À Paris
-    </button>
 
     <button type="button" class="btn btn-languages position-fixed d-flex align-items-center" data-bs-toggle="modal"
         data-bs-target="#exampleModal" data-cursor="small">

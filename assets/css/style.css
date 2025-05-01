@@ -81,9 +81,18 @@
   background-color: #C8D1C7 !important;
 }
 
-.btn-dark {
+.btn-dark:hover, .btn-dark:focus, .btn-dark:active {
   color: #EBE7E0 !important;
   background-color: #2C231E !important;
+}
+
+.btn-light {
+  color: #EBE7E0 !important;
+  border: 1px solid #EBE7E0 !important;
+}
+.btn-light:hover, .btn-light:focus, .btn-light:active {
+  color: #2C231E !important;
+  background-color: #EBE7E0 !important;
 }
 
 .btn-secondary {
@@ -141,6 +150,11 @@ ol {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+i {
+  color: #9B6A5D;
+  margin-right: 10px;
 }
 
 img {
@@ -231,7 +245,7 @@ h6 {
 p,
 a {
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.6em;
   letter-spacing: 0.3px;
   font-family: "Work Sans", sans-serif;
@@ -279,6 +293,11 @@ strong {
   background-color: #9B6A5D !important;
 }
 
+.header {
+  z-index: 1;
+  position: relative;
+}
+
 .navbar-brand,
 .offcanvas-title {
   width: 100%;
@@ -289,33 +308,27 @@ strong {
   font-family: "Arapey", serif !important;
 }
 
-@media (max-width: 480px) {
-  .navbar .container-fluid {
-    padding: 0 !important;
-  }
+.location p {
+  border: none !important;
+  font-size: 15.5px !important;
 }
-@media (max-width: 480px) {
-  .navbar .border-right {
-    border-right: none !important;
-  }
-}
-@media (max-width: 992px) {
-  .navbar .border-left {
-    border-left: none !important;
-  }
+
+.navbar .brand,
+.navbar .button-menu {
+  width: 20%;
 }
 .navbar .brand {
-  width: 20%;
   height: 77px;
+}
+@media (max-width: 480px) {
+  .navbar .brand {
+    padding-left: 24.5px;
+  }
 }
 @media (max-width: 992px) {
   .navbar .brand {
-    width: 50% !important;
-  }
-}
-@media (max-width: 1480px) {
-  .navbar .brand {
-    width: 35%;
+    width: 50%;
+    padding-left: 2rem;
   }
 }
 .navbar .brand .navbar-brand {
@@ -324,45 +337,93 @@ strong {
 }
 @media (max-width: 480px) {
   .navbar .brand .navbar-brand {
-    font-size: 30px !important;
-    line-height: 1.5em !important;
-  }
-}
-@media (max-width: 480px) {
-  .navbar #brand {
-    width: 100% !important;
-    border-bottom: 1px solid #2C231E !important;
+    font-size: 23px !important;
+    line-height: 1.8em !important;
   }
 }
 .navbar .button-menu {
-  width: 26%;
   padding-left: 5rem;
-  padding-right: 5rem;
 }
 @media (max-width: 480px) {
   .navbar .button-menu {
-    width: 100% !important;
+    padding-right: 24.5px;
+    padding-left: 2rem !important;
   }
 }
 @media (max-width: 992px) {
   .navbar .button-menu {
     width: 50%;
+    border-left: none !important;
   }
 }
-
-footer a {
-  font-size: 20px;
+.navbar .button-menu .btn i {
+  margin-top: -2px;
 }
-@media (max-width: 992px) {
-  footer .border-right {
+
+footer .subtitle {
+  font-size: 20px !important;
+}
+footer a,
+footer p {
+  font-size: 15px;
+}
+footer a i,
+footer p i {
+  color: #2C231E !important;
+  font-size: 20px !important;
+}
+@media (max-width: 480px) {
+  footer .reseaux,
+  footer .projects {
+    display: flex;
+    text-align: center !important;
+    flex-direction: column !important;
+  }
+}
+@media (max-width: 480px) {
+  footer .reseaux br,
+  footer .projects br {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  footer .infos {
+    border-top: 1px solid #2C231E !important;
+    border-left: none !important;
     border-right: none !important;
     border-bottom: 1px solid #2C231E !important;
+  }
+}
+footer .projects {
+  text-align: end;
+}
+@media (max-width: 480px) {
+  footer .reseaux,
+  footer .res-p {
+    display: none !important;
+  }
+}
+footer .reseaux-second {
+  display: none;
+}
+@media (max-width: 480px) {
+  footer .reseaux-second {
+    margin-bottom: 1rem !important;
+    text-align: center !important;
+    display: block !important;
+  }
+}
+footer .copyright {
+  padding: 3rem 0 2rem 0;
+}
+@media (max-width: 480px) {
+  footer .copyright {
+    padding: 3rem !important;
   }
 }
 
 .reseaux i {
   font-size: 25px;
-  margin-right: 10px;
 }
 
 .offcanvas {
@@ -456,7 +517,7 @@ footer a {
   font-size: 1.5rem !important;
   font-weight: 400 !important;
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.6em;
   letter-spacing: 0.3px;
   font-family: "Work Sans", sans-serif;
@@ -558,16 +619,14 @@ footer a {
 }
 .btn i {
   margin-left: 5px;
-  color: #9B6A5D;
+  color: #9B6A5D !important;
   font-size: 13px !important;
 }
 .btn:hover, .btn:focus, .btn:active {
-  color: #EBE7E0;
-  background-color: #2C231E;
   transition: all 0.3s ease-in-out !important;
 }
 .btn:hover i, .btn:focus i, .btn:active i {
-  color: #9B6A5D;
+  color: #9B6A5D !important;
 }
 
 .card {

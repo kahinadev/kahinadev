@@ -1,43 +1,47 @@
 // ========================================
 // GENERAL
 // ========================================
+.header {
+   @include header-footer; 
+}
+
 .navbar-brand,
 .offcanvas-title {
     @include title;
 }
 
 // ========================================
+// GENERAL
+// ========================================
+
+.location {
+    p {
+        border: $border-none !important;
+        font-size: 15.5px !important;
+    }
+}
+
+// ========================================
 // NAVBAR
 // ========================================
+
 .navbar {
-    .container-fluid {
-        @include respond-to(sm) {
-            padding: $zero !important;
-        }
-    }
 
-    .border-right {
-        @include respond-to(sm) {
-            border-right: $none !important;
-        }
-    }
-
-    .border-left {
-        @include respond-to(xl) {
-            border-left: $none !important;
-        }
+    .brand,
+    .button-menu {
+        width: 20%;
     }
 
     .brand {
-        width: 20%;
         height: 77px;
 
-        @include respond-to(xl) {
-            width: 50% !important;
+        @include respond-to(sm) {
+            padding-left: 24.5px;
         }
 
-        @include respond-to(xxxl) {
-            width: 35%;
+        @include respond-to (xl) {
+            width: 50%;
+            padding-left: 2rem;
         }
 
         .navbar-brand {
@@ -45,30 +49,29 @@
             line-height: 1.5em !important;
 
             @include respond-to(sm) {
-                font-size: 30px !important;
-                line-height: 1.5em !important;
+                font-size: 23px !important;
+                line-height: 1.8em !important;
             }
         }
     }
 
-    #brand {
-        @include respond-to(sm) {
-            width: $full !important;
-            border-bottom: $border !important;
-        }
-    }
-
     .button-menu {
-        width: 26%;
         padding-left: 5rem;
-        padding-right: 5rem;
 
         @include respond-to(sm) {
-            width: $full !important;
+            padding-right: 24.5px;
+            padding-left: 2rem !important;
         }
 
         @include respond-to(xl) {
             width: 50%;
+            border-left: $border-none !important;
+        }
+
+        .btn {
+            i {
+                margin-top: -2px;
+            }
         }
     }
 }
