@@ -2,12 +2,41 @@
 // BACKGROUND SECTION
 // ========================================
 
+.bg-light,
+.bg-primary,
+.bg-secondary {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    a,
+    p, 
+    span {
+        color: $text-color !important;
+    }
+}
+
 .bg-light {
     background-color: $background-color !important;
 }
 
-.bg-dark {
+.bg-dark,
+.bg-accent {
     background-color: $text-color !important;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    a,
+    p, 
+    span {
+        color: $background-color;
+    }
 }
 
 .bg-primary {

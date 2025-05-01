@@ -15,15 +15,11 @@
     left: $line-left-desktop;
 
     @include respond-to(sm) {
-        left: $line-left-tablet;
+        left: $line-left-mobile !important;
     }
 
-    &:nth-child(2) {
+    @include respond-to(xl) {
         left: $line-left-tablet;
-
-        @include respond-to(sm) {
-            left: $line-left-mobile;
-        }
     }
 }
 
@@ -34,14 +30,10 @@
     right: $line-right-desktop;
 
     @include respond-to(sm) {
-        right: $line-right-tablet;
+        right: $line-right-mobile !important;
     }
 
-    &:nth-child(4) {
+    @include respond-to(xl) {
         right: $line-right-tablet;
-
-        @include respond-to(sm) {
-            right: $line-right-mobile;
-        }
     }
 }

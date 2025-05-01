@@ -38,12 +38,8 @@
         }
     }
 
-    &:nth-of-type(3) {
-        border-right: $border-none !important;
-
-        @include respond-to(sm) {
-            border-top: $border-none !important;
-        }
+    &:nth-last-child {
+        border: $border-none !important;
     }
 
     &__content {
@@ -93,4 +89,8 @@
             opacity: 1;
         }
     }
+}
+
+.third {
+    border-right: $border-none !important;
 }

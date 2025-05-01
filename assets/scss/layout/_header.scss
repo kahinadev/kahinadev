@@ -10,6 +10,12 @@
 // NAVBAR
 // ========================================
 .navbar {
+    .container-fluid {
+        @include respond-to(sm) {
+            padding: $zero !important;
+        }
+    }
+
     .border-right {
         @include respond-to(sm) {
             border-right: $none !important;

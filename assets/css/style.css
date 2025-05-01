@@ -14,12 +14,63 @@
   border-right: 1px solid #2C231E !important;
 }
 
+.bg-light h1,
+.bg-light h2,
+.bg-light h3,
+.bg-light h4,
+.bg-light h5,
+.bg-light h6,
+.bg-light a,
+.bg-light p,
+.bg-light span,
+.bg-primary h1,
+.bg-primary h2,
+.bg-primary h3,
+.bg-primary h4,
+.bg-primary h5,
+.bg-primary h6,
+.bg-primary a,
+.bg-primary p,
+.bg-primary span,
+.bg-secondary h1,
+.bg-secondary h2,
+.bg-secondary h3,
+.bg-secondary h4,
+.bg-secondary h5,
+.bg-secondary h6,
+.bg-secondary a,
+.bg-secondary p,
+.bg-secondary span {
+  color: #2C231E !important;
+}
+
 .bg-light {
   background-color: #EBE7E0 !important;
 }
 
-.bg-dark {
+.bg-dark,
+.bg-accent {
   background-color: #2C231E !important;
+}
+.bg-dark h1,
+.bg-dark h2,
+.bg-dark h3,
+.bg-dark h4,
+.bg-dark h5,
+.bg-dark h6,
+.bg-dark a,
+.bg-dark p,
+.bg-dark span,
+.bg-accent h1,
+.bg-accent h2,
+.bg-accent h3,
+.bg-accent h4,
+.bg-accent h5,
+.bg-accent h6,
+.bg-accent a,
+.bg-accent p,
+.bg-accent span {
+  color: #EBE7E0;
 }
 
 .bg-primary {
@@ -78,7 +129,7 @@ section {
 }
 @media (max-width: 992px) {
   section {
-    padding: 8rem 5rem;
+    padding: 8rem 7rem;
   }
 }
 
@@ -128,7 +179,7 @@ h1 {
 }
 @media (max-width: 576px) {
   h1 {
-    font-size: 65px !important;
+    font-size: 60px !important;
   }
 }
 @media (max-width: 1480px) {
@@ -142,12 +193,12 @@ h2 {
 }
 @media (max-width: 576px) {
   h2 {
-    font-size: 52px !important;
+    font-size: 59px !important;
   }
 }
 @media (max-width: 1480px) {
   h2 {
-    font-size: 100px;
+    font-size: 90px;
   }
 }
 
@@ -238,6 +289,11 @@ strong {
   font-family: "Arapey", serif !important;
 }
 
+@media (max-width: 480px) {
+  .navbar .container-fluid {
+    padding: 0 !important;
+  }
+}
 @media (max-width: 480px) {
   .navbar .border-right {
     border-right: none !important;
@@ -429,36 +485,30 @@ footer a {
 }
 
 .line-left {
-  left: 50px;
+  left: 60px;
 }
 @media (max-width: 480px) {
   .line-left {
-    left: 30px;
+    left: 30px !important;
   }
 }
-.line-left:nth-child(2) {
-  left: 30px;
-}
-@media (max-width: 480px) {
-  .line-left:nth-child(2) {
-    left: 10px;
+@media (max-width: 992px) {
+  .line-left {
+    left: 52px;
   }
 }
 
 .line-right {
-  right: 50px;
+  right: 60px;
 }
 @media (max-width: 480px) {
   .line-right {
-    right: 30px;
+    right: 30px !important;
   }
 }
-.line-right:nth-child(4) {
-  right: 30px;
-}
-@media (max-width: 480px) {
-  .line-right:nth-child(4) {
-    right: 10px;
+@media (max-width: 992px) {
+  .line-right {
+    right: 52px;
   }
 }
 
@@ -554,13 +604,8 @@ footer a {
     border-top: none !important;
   }
 }
-.card-project:nth-of-type(3) {
-  border-right: none !important;
-}
-@media (max-width: 480px) {
-  .card-project:nth-of-type(3) {
-    border-top: none !important;
-  }
+.card-project:nth-last-child {
+  border: none !important;
 }
 .card-project__content {
   z-index: 2;
@@ -596,6 +641,10 @@ footer a {
 }
 .card-project:hover .card-project__overlay, .card-project:focus .card-project__overlay, .card-project:active .card-project__overlay {
   opacity: 1;
+}
+
+.third {
+  border-right: none !important;
 }
 
 .modal .modal-content {
@@ -654,13 +703,63 @@ footer a {
 @media (max-width: 992px) {
   .projects-selection .container {
     text-align: center;
-    padding: 8rem 5rem;
+    padding: 8rem 7rem;
   }
 }
 @media (max-width: 480px) {
   .projects-selection .container br {
     display: none !important;
   }
+}
+
+@media (max-width: 480px) {
+  .about h1 br {
+    display: none !important;
+  }
+}
+
+.career__title, .career__content {
+  padding: 11rem 8rem;
+}
+@media (max-width: 480px) {
+  .career__title, .career__content {
+    padding: 5rem 2rem !important;
+  }
+}
+@media (max-width: 480px) {
+  .career .container-fluid {
+    padding: 0rem 2.7rem !important;
+  }
+}
+@media (max-width: 480px) {
+  .career .container-fluid .border-right {
+    border-right: none !important;
+  }
+}
+@media (max-width: 480px) {
+  .career__title {
+    text-align: center !important;
+  }
+}
+@media (max-width: 992px) {
+  .career__title {
+    border-bottom: 1px solid #2C231E !important;
+  }
+}
+.career__content__title {
+  font-weight: 400 !important;
+  font-size: 28px !important;
+}
+
+.sticky-col {
+  position: sticky;
+  top: 2rem;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+.sticky-col.is-hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 /*# sourceMappingURL=style.css.map */

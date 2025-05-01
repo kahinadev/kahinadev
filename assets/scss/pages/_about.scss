@@ -1,0 +1,71 @@
+// ========================================
+// ABOUT
+// ========================================
+.about {
+    h1 {
+        br {
+            @include respond-to(sm) {
+                display: $none !important;
+            }
+        }
+    }
+}
+
+// ========================================
+// CAREER
+// ========================================
+.career {
+
+    &__title,
+    &__content {
+        padding: $padding-section-desktop;
+
+        @include respond-to(sm) {
+            padding: 5rem 2rem !important;
+        }
+    }
+
+    .container-fluid {
+        @include respond-to(sm) {
+            padding: 0rem 2.7rem !important;
+        }
+
+        .border-right {
+            @include respond-to(sm) {
+                border-right: $border-none !important;
+            }
+        }
+    }
+
+    &__title {
+        @include respond-to(sm) {
+            text-align: center !important;
+        }
+
+        @include respond-to(xl) {
+            border-bottom: $border !important;
+        }
+    }
+
+    &__content {
+        &__title {
+            font-weight: 400 !important;
+            font-size: 28px !important;
+        }
+    }
+}
+
+// ========================================
+// STICKY
+// ========================================
+.sticky-col {
+    position: sticky;
+    top: 2rem;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+
+    &.is-hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
