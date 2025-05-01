@@ -484,6 +484,7 @@ footer a {
 @media (max-width: 480px) {
   .card-project:nth-of-type(1), .card-project:nth-of-type(2) {
     border-right: none !important;
+    border-bottom: none !important;
   }
 }
 @media (max-width: 480px) {
@@ -580,30 +581,24 @@ footer a {
   }
 }
 .projects-selection .container {
-  padding-top: 11rem;
+  padding: 11rem 8rem;
 }
 @media (max-width: 480px) {
   .projects-selection .container {
-    padding-top: 5rem !important;
-    padding-left: 1.7rem !important;
-    padding-right: 1.7rem !important;
+    padding: 5rem 1.7rem !important;
+    margin-bottom: 1rem !important;
   }
 }
 @media (max-width: 992px) {
   .projects-selection .container {
     text-align: center;
-    margin-bottom: 8rem !important;
-    padding: 8rem 3rem 0 3rem;
+    margin-bottom: 8rem;
+    padding: 8rem 5rem;
   }
 }
 @media (max-width: 480px) {
-  .projects-selection .container .btn-dark {
-    margin-bottom: -3rem !important;
-  }
-}
-@media (max-width: 992px) {
-  .projects-selection .container .btn-dark {
-    margin-top: 1rem;
+  .projects-selection .container br {
+    display: none !important;
   }
 }
 

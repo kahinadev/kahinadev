@@ -24,21 +24,22 @@
         border-left: $none !important;
 
         @include respond-to(sm) {
-            border-right: $none !important;
+            border-right: $border-none!important;
+            border-bottom: $border-none !important;
         }
     }
 
     &:nth-of-type(2) {
         @include respond-to(sm) {
-            border-top: $none !important;
+            border-top: $border-none !important;
         }
     }
 
     &:nth-of-type(3) {
-        border-right: $none !important;
+        border-right: $border-none !important;
 
         @include respond-to(sm) {
-            border-top: $none !important;
+            border-top: $border-none !important;
         }
     }
 

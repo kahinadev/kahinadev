@@ -32,26 +32,22 @@
     }
 
     .container {
-        padding-top: 11rem;
+        padding: $padding-section-desktop;
 
         @include respond-to(sm) {
-            padding-top: 5rem !important;
-            padding-left: 1.7rem !important;
-            padding-right: 1.7rem !important;
+            padding: 5rem 1.7rem !important;
+            margin-bottom: 1rem !important;
         }
 
         @include respond-to(xl) {
             text-align: center;
-            margin-bottom: 8rem !important;
-            padding: 8rem 3rem 0 3rem;
+            margin-bottom: 8rem;
+            padding: $padding-section-tablet;
         }
 
-        .btn-dark {
+        br {
             @include respond-to(sm) {
-                margin-bottom: -3rem !important;
-            }
-            @include respond-to(xl) {
-                margin-top: 1rem;
+                display: $none !important;
             }
         }
     }
