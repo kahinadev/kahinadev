@@ -12,7 +12,7 @@
         background-attachment: scroll !important;
     }
 
-    @include respond-to(xl) {
+    @include respond-to(xxl) {
         background-attachment: initial !important;
     }
 }

@@ -24,8 +24,11 @@
         border-left: $none !important;
 
         @include respond-to(sm) {
-            border-right: $border-none!important;
             border-bottom: $border-none !important;
+        }
+
+        @include respond-to(xl) {
+            border-right: $border-none !important;
         }
     }
 
