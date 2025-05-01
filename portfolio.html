@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mon portfolio - Kahina Dev</title>
+
+    <meta name="description"
+        content="Développeuse web passionnée, je crée des sites modernes & responsives. Disponible pour un poste ou une alternance.">
+    <meta name="keywords"
+        content="développeuse web, portfolio développeuse, alternance développement web, recherche alternance développeuse, 
+                web développeuse front-end, intégratrice web, création site web, développeuse freelance, développeuse junior, 
+                site responsive, HTML CSS JavaScript, développeuse full stack, design web, développeuse en alternance, développeuse disponible">
+
+    <!-- Icon -->
+
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="lines d-flex">
+        <div class="line line-left"></div>
+        <div class="line line-right"></div>
+    </div>
+
+    <header id="header" class="header border-top border-bottom" role="banner" aria-label="Header">
+        <div class="location bg-light">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 p-3 border-bottom text-center">
+                        <p class="mt-3 text-uppercase btn p-0">
+                            <i class="fa-solid fa-map-pin"></i> Basée sur paris & disponible
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar bg-light navbar-expand-lg p-0" role="navigation" aria-label="Navigation">
+            <div class="container p-0 d-flex justify-content-between aligns-items-center">
+                <div id="brand" class="brand py-3 border-right">
+                    <a class="navbar-brand text-uppercase" href="index.html" data-cursor="small">Kahina Dev</a>
+                </div>
+                <div class="button-menu py-3 border-left" id="button-menu">
+                    <a class="btn btn-dark d-flex justify-content-center align-items-center" data-bs-toggle="offcanvas"
+                        href="#offcanvasExample" role="button" aria-controls="offcanvasExample" data-cursor="small">
+                        Menu <i class="fa-solid fa-circle"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+            aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header d-flex aligns-items-center">
+                <h5 class="offcanvas-title text-uppercase" id="offcanvasExampleLabel">Menu</h5>
+                <button type="button" class="btn btn-dark d-flex align-items-center" data-bs-dismiss="offcanvas"
+                    aria-label="Close" data-cursor="small">
+                    Fermer <i class="fa-solid fa-circle"></i>
+                </button>
+            </div>
+            <div class="offcanvas-body text-center">
+                <ul class="list-unstyled">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link text-uppercase" aria-label="Accueil" data-cursor="small">
+                            Accueil
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="histoire.html" class="nav-link text-uppercase" aria-label="Histoire"
+                            data-cursor="small">
+                            Histoire
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sevices.html" class="nav-link text-uppercase" aria-label="Services"
+                            data-cursor="small">
+                            Services
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="portfolio.html" class="nav-link text-uppercase" aria-label="Portfolio"
+                            data-cursor="small">
+                            Portfolio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="mailto:kahinaouali.pro@gmail.com" class="nav-link text-uppercase" aria-label="Contact"
+                            data-cursor="small">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="offcanvas-footer d-flex justify-content-center aligns-items-center">
+                <div class="reseaux">
+                    <a href="https://github.com/kahinadev" data-cursor="small">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/kahinaouali/" data-cursor="small">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://codepen.io/kahina-dev" data-cursor="small">
+                        <i class="fa-brands fa-codepen"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main" class="main" role="main" aria-label="Main">
+        <section class="projects-selection bg-light" aria-label="Projets">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-12 col-md-12 text-center">
+                        <h1 class="text-uppercase secondary-title">
+                            Projets en cours
+                        </h1>
+                        <h2 class="subtitle text-uppercase">Des projets qui prennent forme, <br> étape par étape</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid bg-light">
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 col-sm-12 p-0">
+                        <a class="card card-project border-top border-right p-5 align-items-center justify-content-center"
+                            data-cursor="large">
+                            <div class="card-project__overlay"></div>
+                            <img src="assets/img/projects/mockup-mobile-threedragons.png" class="card-project__img"
+                                alt="Mockup du projet TheeDragons" aria-label="Mockup du projet TheeDragons">
+                            <div class="card-project__content text-center">
+                                <h3 class="card-project__title text-uppercase">ThreeDragons</h3>
+                                <p class="card-project__status text-uppercase">#En cours</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12 p-0">
+                        <a class="card card-project border-top border-right p-5 align-items-center justify-content-center"
+                            data-cursor="large">
+                            <div class="card-project__overlay"></div>
+                            <img src="assets/img/projects/projet-kanirgarden.png" class="card-project__img"
+                                alt="Image provisoire du projet KanirGarden"
+                                aria-label="Image provisoire du projet KanirGarden">
+                            <div class="card-project__content text-center">
+                                <h3 class="card-project__title text-uppercase">KanirGarden</h3>
+                                <p class="card-project__status text-uppercase">#En cours</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12 p-0">
+                        <a class="card card-project border-top p-5 align-items-center justify-content-center third"
+                            data-cursor="large">
+                            <div class="card-project__overlay"></div>
+                            <img src="assets/img/projects/img-provisoire-thunderwolf.png" class="card-project__img"
+                                alt="Image provisoire du projet ThunderWolf"
+                                aria-label="Image provisoire du projet ThunderWolf">
+                            <div class="card-project__content text-center">
+                                <h3 class="card-project__title text-uppercase">ThunderWolf</h3>
+                                <p class="card-project__status text-uppercase">#En cours</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="footer border-bottom" role="contentinfo" aria-label="Footer">
+        <div class="bg-dark p-5 border-top border-bottom">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h5 class="text-uppercase">Collaborons ensemble</h5>
+                        <a href="mailto:kahinadev@gmail.com" class="btn btn-light mt-3" data-cursor="small">
+                            Prendre contact <i class="fa-solid fa-circle"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="other bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-12 col-sm-12 py-5 services-p">
+                        <div class="services">
+                            <a href="services.html/#developpement" class="text-uppercase" data-cursor="small">
+                                <strong>Développement</strong>
+                            </a>
+                            <br>
+                            <a href="services.html/#webdesign" class="text-uppercase" data-cursor="small">
+                                <strong>Web design</strong>
+                            </a>
+                            <br>
+                            <a href="services.html/#refonte" class="text-uppercase" data-cursor="small">
+                                <strong>Refonte</strong>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 p-5 border-right border-left infos">
+                        <h6 class="text-uppercase">Kahina Dev</h6>
+                        <div class="reseaux d-flex justify-content-center mt-3 mb-3" id="reseaux">
+                            <a href="https://github.com/kahinadev" data-cursor="small">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/kahinaouali/" data-cursor="small">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://codepen.io/kahina-dev" data-cursor="small">
+                                <i class="fa-brands fa-codepen"></i>
+                            </a>
+                        </div>
+                        <p class="text-uppercase">
+                            <strong>Développeuse web</strong>
+                        </p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 py-5">
+                        <div class="services-second">
+                            <a href="services.html/#developpement" class="text-uppercase" data-cursor="small">
+                                <strong>Développement</strong>
+                            </a>
+                            <br>
+                            <a href="services.html/#webdesign" class="text-uppercase" data-cursor="small">
+                                <strong>Web design</strong>
+                            </a>
+                            <br>
+                            <a href="services.html/#refonte" class="text-uppercase" data-cursor="small">
+                                <strong>Refonte</strong>
+                            </a>
+                        </div>
+                        <div class="projects">
+                            <a href="#" class="text-uppercase" data-cursor="small">
+                                <strong>ThreeDragons</strong>
+                            </a>
+                            <br>
+                            <a href="#" class="text-uppercase" data-cursor="small">
+                                <strong>KanirGarden</strong>
+                            </a>
+                            <br>
+                            <a href="#" class="text-uppercase" data-cursor="small">
+                                <strong>ThunderWolf</strong>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright border-top bg-light">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p class="text-uppercase copyright__text">
+                            <strong>© 2023 / 2025 Kahina Ouali - Tous droits réservés</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button type="button" class="btn btn-languages position-fixed d-flex align-items-center" data-bs-toggle="modal"
+        data-bs-target="#exampleModal" data-cursor="small">
+        <img src="assets/img/icon/flag/french-flag.png" class="flag" alt="Drapeau français"
+            aria-label="Drapeau français">
+        Français
+        <i class="fa-solid fa-angle-up"></i>
+    </button>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-light p-5">
+                <div class="modal-header">
+                    <h5 class="modal-title text-uppercase" id="exampleModalLabel">Langues</h5>
+                    <button type="button" class="btn btn-dark btn-menu d-flex align-items-center"
+                        data-bs-dismiss="modal" aria-label="Close" data-cursor="small">
+                        Fermer <i class="fa-solid fa-circle"></i>
+                    </button>
+                </div>
+                <div class="modal-body ">
+                    <a href="en/portfolio.html" class="btn btn-secondary full" data-cursor="small">
+                        <img src="assets/img/icon/flag/american-flag.png" class="flag" alt="Drapeau américain"
+                            aria-label="Drapeau américain">
+                        Anglais
+                    </a>
+                    <a href="portfolio.html" class="btn btn-secondary full mt-3" data-cursor="small">
+                        <img src="assets/img/icon/flag/french-flag.png" class="flag" alt="Drapeau français"
+                            aria-label="Drapeau français">
+                        Français
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js"
+        integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+"
+        crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/93f593ecee.js" crossorigin="anonymous"></script>
+
+    <script src="assets/js/fixed.js"></script>
+</body>
+
+</html>
