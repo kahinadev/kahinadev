@@ -1,0 +1,57 @@
+// ========================================
+// GENERAL
+// ========================================
+#loader {
+    top: $zero;
+    left: $zero;
+    width: $full;
+    height: $full;
+    z-index: 10000;
+    position: fixed;
+    flex-direction: column;
+    @include center;
+    color: $text-color;
+    background-color: $background-color;
+}
+
+// ========================================
+// GREETINGS
+// ========================================
+.text-container {
+    z-index: 2;
+    position: relative;
+
+    .greeting {
+        font-size: 5rem;
+        @include title;
+
+        @include respond-to(sm) {
+            font-size: 3rem !important;
+        }
+    }
+
+    .counter {
+        font-size: 1.5rem !important;
+        font-weight: $font-weight-regular !important;
+        @include text;
+    }
+}
+
+#greeting {
+    opacity: 1;
+    transition: opacity 0.8s ease;
+}
+
+
+// ========================================
+// ANIMATION
+// ========================================
+#background-animation {
+    top: $zero;
+    left: $full;
+    width: $full;
+    height: $full;
+    z-index: 1;
+    position: absolute;
+    transition: all 1s ease;
+}
