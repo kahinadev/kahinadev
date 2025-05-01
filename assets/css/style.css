@@ -193,7 +193,7 @@ h1 {
 }
 @media (max-width: 576px) {
   h1 {
-    font-size: 60px !important;
+    font-size: 55px !important;
   }
 }
 @media (max-width: 1480px) {
@@ -373,44 +373,78 @@ footer p i {
   font-size: 20px !important;
 }
 @media (max-width: 480px) {
-  footer .reseaux,
+  footer .services,
+  footer .projects {
+    text-align: center !important;
+  }
+}
+@media (max-width: 992px) {
+  footer .services,
   footer .projects {
     display: flex;
-    text-align: center !important;
     flex-direction: column !important;
   }
 }
-@media (max-width: 480px) {
-  footer .reseaux br,
+@media (max-width: 992px) {
+  footer .services br,
   footer .projects br {
     display: none;
   }
 }
+@media (max-width: 992px) {
+  footer .services-second,
+  footer .projects {
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+  }
+}
+footer .infos {
+  text-align: center;
+}
 @media (max-width: 480px) {
   footer .infos {
-    border-top: 1px solid #2C231E !important;
-    border-left: none !important;
-    border-right: none !important;
+    text-align: center !important;
     border-bottom: 1px solid #2C231E !important;
+  }
+}
+@media (max-width: 992px) {
+  footer .infos {
+    text-align: left;
+    border-left: none !important;
   }
 }
 footer .projects {
   text-align: end;
 }
-@media (max-width: 480px) {
-  footer .reseaux,
-  footer .res-p {
+@media (max-width: 992px) {
+  footer .services,
+  footer .services-p {
     display: none !important;
   }
 }
-footer .reseaux-second {
+footer .services-second {
   display: none;
 }
 @media (max-width: 480px) {
-  footer .reseaux-second {
-    margin-bottom: 1rem !important;
+  footer .services-second {
     text-align: center !important;
+  }
+}
+@media (max-width: 992px) {
+  footer .services-second {
+    margin-bottom: 1rem !important;
+    text-align: end;
     display: block !important;
+  }
+}
+@media (max-width: 992px) {
+  footer .reseaux {
+    justify-content: left !important;
+  }
+}
+@media (max-width: 480px) {
+  footer #reseaux {
+    justify-content: center !important;
   }
 }
 footer .copyright {
@@ -733,7 +767,7 @@ footer .copyright {
 }
 @media (max-width: 480px) {
   .introduction {
-    padding: 10rem 3rem !important;
+    padding: 12rem 3rem 10rem 3rem !important;
     background-attachment: scroll !important;
   }
 }
@@ -808,7 +842,7 @@ footer .copyright {
 }
 .career__content__title {
   font-weight: 400 !important;
-  font-size: 28px !important;
+  font-size: 25.3px !important;
 }
 
 .sticky-col {

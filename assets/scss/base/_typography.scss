@@ -19,7 +19,7 @@ h1 {
     font-size: 145px;
 
     @include respond-to(md) {
-        font-size: 60px !important;
+        font-size: 55px !important;
     }
 
     @include respond-to(xxxl) {

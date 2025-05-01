@@ -17,27 +17,43 @@ footer {
         }
     }
 
-    .reseaux,
+    .services,
     .projects {
         @include respond-to(sm) {
-            display: flex;
             text-align: center !important;
+        }
+
+        @include respond-to(xl) {
+            display: flex;
             flex-direction: column !important;
         }
 
         br {
-            @include respond-to(sm) {
-                display: none;
+            @include respond-to(xl) {
+                display: $none;
             }
         }
     }
 
+    .services-second, 
+    .projects {
+        @include respond-to(xl) {
+            padding-left: 3rem !important;
+            padding-right: 3rem !important;
+        }
+    }
+
     .infos {
+        text-align: center;
+
         @include respond-to(sm) {
-            border-top: $border !important;
-            border-left: $border-none !important;
-            border-right: $border-none !important;
+            text-align: center !important;
             border-bottom: $border !important;
+        }
+
+        @include respond-to(xl) {
+            text-align: left;
+            border-left: $border-none !important;
         }
     }
 
@@ -45,20 +61,36 @@ footer {
         text-align: end;
     }
 
-    .reseaux,
-    .res-p {
-        @include respond-to(sm) {
+    .services,
+    .services-p {
+        @include respond-to(xl) {
             display: $none !important;
         }
     }
 
-    .reseaux-second {
+    .services-second {
         display: $none;
 
         @include respond-to(sm) {
-            margin-bottom: 1rem !important;
             text-align: center !important;
+        }
+
+        @include respond-to(xl) {
+            margin-bottom: 1rem !important;
+            text-align: end;
             display: block !important;
+        }
+    }
+
+    .reseaux {
+        @include respond-to(xl) {
+            justify-content: left !important;
+        }
+    }
+
+    #reseaux {
+        @include respond-to(sm) {
+            justify-content: center !important;
         }
     }
 
