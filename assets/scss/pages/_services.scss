@@ -1,0 +1,41 @@
+.list-services {
+    &__column {
+        padding: 6rem 3rem;
+
+        @include respond-to(sm) {
+            padding: $padding-section-mobile !important;
+        }
+
+        &:nth-of-type(1) {
+            @include respond-to(xl) {
+                border-bottom: $border;
+            }
+        }
+
+        &:nth-of-type(2) {
+            @include respond-to(sm) {
+                border-right: $border-none !important;
+                border-bottom: $border !important;
+            }
+
+            @include respond-to(xl) {
+                border-left: $border-none !important;
+            }
+        }
+    }
+
+    &__content {}
+
+    &__title {
+        i {
+            font-size: 35px;
+        }
+
+        h3 {
+            font-size: 50px;
+            @include respond-to(sm) {
+                font-size: 35px !important;
+            }
+        }
+    }
+}

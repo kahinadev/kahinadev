@@ -21,11 +21,7 @@
 // PROJECTS SELECTION
 // ========================================
 .projects-selection {
-    padding: $zero $padding-projects-selection-desktop !important;
-
-    @include respond-to(sm) {
-        padding: $zero $padding-projects-selection-mobile !important;
-    }
+    padding: $zero !important;
 
     .container {
         padding: $padding-section-desktop;

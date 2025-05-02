@@ -1,6 +1,7 @@
 .offcanvas {
     width: 100% !important;
     padding: 5rem;
+    z-index: 1100 !important;
     background-color: $background-color;
 
     @include respond-to(lg) {

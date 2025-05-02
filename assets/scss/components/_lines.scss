@@ -5,6 +5,7 @@
     width: 1px;
     height: $full;
     position: fixed;
+    z-index: -11;
     background-color: $text-color;
 }
 
