@@ -1,0 +1,43 @@
+@use "variables" as *;
+
+// =======================================
+// RESPONSIVE
+// =======================================
+
+@mixin respond-to($breakpoint) {
+    $bp: map-get($breakpoints, $breakpoint);
+
+    @if $bp !=null {
+        @media (max-width: $bp) {
+            @content;
+        }
+    }
+
+    @else {
+        @warn "Breakpoint `#{$breakpoint}` non défini dans $breakpoints !";
+    }
+}
+
+// =======================================
+// BORDER
+// =======================================
+
+@mixin border-position(
+    $position, $color: var(--text), 
+    $width: 1px, $style: solid) {
+
+    @if $position ==all {
+        border: #{$width} #{$style} #{$color} !important;
+    }
+
+    @else {
+        border-#{$position}: #{$width} #{$style} #{$color} !important;
+    }
+    
+}
+
+@each $pos in $border-positions {
+    .border-#{$pos} {
+        @include border-position($pos);
+    }
+}

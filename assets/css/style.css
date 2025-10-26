@@ -1,0 +1,79 @@
+.border-top {
+  border-top: 1px solid var(--text) !important;
+}
+
+.border-bottom {
+  border-bottom: 1px solid var(--text) !important;
+}
+
+.border-left {
+  border-left: 1px solid var(--text) !important;
+}
+
+.border-right {
+  border-right: 1px solid var(--text) !important;
+}
+
+.border-all {
+  border: 1px solid var(--text) !important;
+}
+
+.theme-light {
+  --text: #1f1b14;
+  --background: #ddd9e8;
+  --primary: #b1a8cd;
+  --secondary: #766a95;
+  --accent: #2b2037;
+}
+
+.theme-dark {
+  --text: #ebe7e0;
+  --background: #1b1726;
+  --primary: #3c3257;
+  --secondary: #766a95;
+  --accent: #d3c8df;
+}
+
+body {
+  color: var(--text);
+  background-color: var(--background);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.logo.is-light #logo-dark,
+.logo.is-light #icon-sun,
+#theme-toggle.is-light #logo-dark,
+#theme-toggle.is-light #icon-sun {
+  opacity: 0;
+}
+.logo.is-light #logo-light,
+.logo.is-light #icon-moon,
+#theme-toggle.is-light #logo-light,
+#theme-toggle.is-light #icon-moon {
+  opacity: 1;
+}
+
+.logo,
+#theme-toggle {
+  position: relative;
+}
+.logo #logo-dark,
+.logo #icon-sun,
+#theme-toggle #logo-dark,
+#theme-toggle #icon-sun {
+  opacity: 1;
+}
+.logo #logo-light,
+.logo #icon-moon,
+#theme-toggle #logo-light,
+#theme-toggle #icon-moon {
+  opacity: 0;
+}
+.logo #logo-light,
+#theme-toggle #logo-light {
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+/*# sourceMappingURL=style.css.map */

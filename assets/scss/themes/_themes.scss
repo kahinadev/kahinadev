@@ -1,0 +1,60 @@
+@use "../abstracts/variables" as *;
+
+// =======================================
+// GENERAL
+// ======================================= 
+
+@each $mode, $palette in $colors {
+    .theme-#{$mode} {
+        @each $key, $value in $palette {
+            --#{$key}: #{$value};
+        }
+    }
+}
+
+body {
+    color: var(--text);
+    background-color: var(--background);
+    transition: background-color $transition-theme, color $transition-theme;
+}
+
+// =======================================
+// LOGO & BUTTON SWITCH
+// ======================================= 
+
+.logo,
+#theme-toggle {
+    &.is-light {
+
+        #logo-dark,
+        #icon-sun {
+            opacity: $zero;
+        }
+
+        #logo-light,
+        #icon-moon {
+            opacity: 1;
+        }
+    }
+}
+
+.logo,
+#theme-toggle {
+    position: $relative;
+
+    #logo-dark, 
+    #icon-sun {
+        opacity: 1;
+    }
+
+    #logo-light, 
+    #icon-moon {
+        opacity: $zero;
+    }
+
+    #logo-light {
+        top: $zero;
+        left: $zero;
+        position: $absolute;
+    }
+}
