@@ -1,0 +1,21 @@
+// =================== IMPORT VARIABLE ===========
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.vertical-line {
+    top: $zero;
+    width: 1px;
+    height: $full;
+    z-index: -2;
+    position: $absolute;
+    background-color: var(--text);
+}
+
+.vertical-line-left {
+    left: 17%;
+}
+
+.vertical-line-right {
+    right: 17%;
+}

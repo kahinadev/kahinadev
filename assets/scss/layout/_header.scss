@@ -1,0 +1,60 @@
+// ===============================================
+// HEADER
+// ===============================================
+
+// =========== VARIABLES & MIXINS ===========
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// =========== GENERAL ===========
+
+.header {
+    @include respond-to(sm) {
+        min-height: $height-header-mobile !important;
+    }
+
+    @include respond-to(lg) {
+        min-height: $height-header-tablet;
+        background-color: var(--background) !important;
+    }
+
+    .brand-n-theme {
+        @include respond-to(sm) {
+            width: 60% !important;
+        }
+
+        @include respond-to(lg) {
+            border-right: 1px solid var(--text);
+        }
+
+        .brand,
+        .btn-toggle {
+            width: 50%;
+        }
+
+        .logo {
+            transition: opacity $transition-theme;
+        }
+    }
+
+    .menu {
+        @include respond-to(sm) {
+            width: 40% !important;
+            padding: 0rem !important;
+            border-right: $none !important;
+        }
+
+        @include respond-to(lg) {
+            text-align: center;
+            padding: 4.4rem 2rem;
+            border-right: 1px solid var(--text);
+        }
+    }
+
+    .contact {
+        @include respond-to(sm) {
+            display: $none !important;
+        }
+    }
+}

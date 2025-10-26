@@ -1,0 +1,29 @@
+// ===============================================
+// BASE
+// ===============================================
+
+// =================== IMPORT ====================
+
+@use "../abstracts/variables" as *;
+
+// =================== BODY ======================
+
+body {
+    color: var(--text);
+    background-color: var(--background);
+    transition: background-color $transition-theme, color $transition-theme;
+}
+
+html,
+body {
+    min-height: 100vh;
+    overflow-x: $overflow-hidden;
+}
+
+// =================== IMAGE ======================
+
+img {
+    width: $full;
+    height: auto;
+    object-fit: cover;
+}

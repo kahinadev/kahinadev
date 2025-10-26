@@ -1,25 +1,21 @@
-// =======================================
-// THEMES
-// =======================================
+// =========== THEMES ===========
 
 $colors: (
-    light: (text: #1f1b14,
-        background: #ddd9e8,
+    light: (text: #11101e,
+        background: #eeecf3,
         primary: #b1a8cd,
         secondary: #766a95,
         accent: #2b2037,
     ),
-    dark: (text: #ebe7e0,
-        background: #1b1726,
-        primary: #3c3257,
+    dark: (text: #E3E2EF,
+        background: #0f0d14,
+        primary: #3d3359,
         secondary: #766a95,
-        accent: #d3c8df,
+        accent: #d4c9e0,
     ),
 );
 
-// =======================================
-// RESPONSIVE
-// =======================================
+// =========== RESPONSIVE ===========
 
 $breakpoints: (
     xs: 0,
@@ -31,30 +27,41 @@ $breakpoints: (
     xxxl: 1600px
 );
 
-// =======================================
-// BORDER
-// =======================================
+// =========== BORDER ===========
 
 $border-positions: top, bottom, left, right, all;
 
-// =======================================
-// ANIMATIONS
-// =======================================
+// =========== ANIMATIONS ===========
 
 $transition-theme: 0.3s ease;
 
-// ========================================
-// NONE & FULL
-// ========================================
+// =========== NONE & FULL ===========
 
-$zero: 0; 
-$full: 100%; 
+$zero: 0;
+$block: block;
+$full: 100%;
 $none: none;
 
-// =======================================
-// POSITION
-// ======================================= 
+// =========== POSITION ===========
 
 $fixed: fixed;
-$absolute: absolute; 
+$absolute: absolute;
 $relative: relative;
+
+// =========== OVERFLOW ===========
+
+$overflow-hidden: hidden;
+
+// =========== FONTS ===========
+
+$font-title: "Cyber cipher", sans-serif;
+$font-text: "Orbitron", sans-serif;
+
+// =========== PADDING ===========
+
+$k-padding-s: 2rem;
+
+// =========== HEADER ===========
+
+$height-header-mobile: 90px;
+$height-header-tablet: 120px;

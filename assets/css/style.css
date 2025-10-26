@@ -19,19 +19,19 @@
 }
 
 .theme-light {
-  --text: #1f1b14;
-  --background: #ddd9e8;
+  --text: #11101e;
+  --background: #eeecf3;
   --primary: #b1a8cd;
   --secondary: #766a95;
   --accent: #2b2037;
 }
 
 .theme-dark {
-  --text: #ebe7e0;
-  --background: #1b1726;
-  --primary: #3c3257;
+  --text: #E3E2EF;
+  --background: #0f0d14;
+  --primary: #3d3359;
   --secondary: #766a95;
-  --accent: #d3c8df;
+  --accent: #d4c9e0;
 }
 
 body {
@@ -40,40 +40,315 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.logo.is-light #logo-dark,
-.logo.is-light #icon-sun,
+.brand.is-light #logo-dark,
+#theme-toggle.is-light #logo-dark {
+  display: none;
+}
+.brand.is-light #logo-light,
+#theme-toggle.is-light #logo-light {
+  display: block;
+}
+.brand.is-light #logo-dark,
+.brand.is-light #icon-sun,
 #theme-toggle.is-light #logo-dark,
 #theme-toggle.is-light #icon-sun {
-  opacity: 0;
+  display: none !important;
 }
-.logo.is-light #logo-light,
-.logo.is-light #icon-moon,
+.brand.is-light #logo-light,
+.brand.is-light #icon-moon,
 #theme-toggle.is-light #logo-light,
 #theme-toggle.is-light #icon-moon {
-  opacity: 1;
+  display: block !important;
 }
 
-.logo,
+.brand,
 #theme-toggle {
   position: relative;
 }
-.logo #logo-dark,
-.logo #icon-sun,
+.brand #logo-dark,
+.brand #icon-sun,
 #theme-toggle #logo-dark,
 #theme-toggle #icon-sun {
-  opacity: 1;
+  display: block;
 }
-.logo #logo-light,
-.logo #icon-moon,
+.brand #logo-light,
+.brand #icon-moon,
 #theme-toggle #logo-light,
 #theme-toggle #icon-moon {
-  opacity: 0;
+  display: none;
 }
-.logo #logo-light,
+.brand #logo-light,
 #theme-toggle #logo-light {
   top: 0;
   left: 0;
   position: absolute;
+}
+
+#theme-toggle i {
+  font-size: 30px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--text);
+  background-color: var(--background);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html,
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@font-face {
+  font-family: "Cyber cipher";
+  src: url("../../assets/fonts/title/CyberCipher.woff2") format("woff2"), url("../../assets/fonts/title/CyberCipher.woff") format("woff");
+}
+@font-face {
+  font-family: "Orbitron";
+  src: url("../../assets/fonts/text/Orbitron-Regular.woff2") format("woff2"), url("../../assets/fonts/text/Orbitron-Regular.woff") format("woff");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Orbitron";
+  src: url("../../assets/fonts/text/Orbitron-Medium.woff2") format("woff2"), url("../../assets/fonts/text/Orbitron-Medium.woff") format("woff");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Orbitron";
+  src: url("../../assets/fonts/text/Orbitron-SemiBold.woff2") format("woff2"), url("../../assets/fonts/text/Orbitron-SemiBold.woff") format("woff");
+  font-weight: 600;
+}
+h1,
+h2,
+h3 {
+  font-size: 1.8rem;
+  color: var(--text);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: "Cyber cipher", sans-serif;
+}
+@media screen and (min-width: 768px) {
+  h1,
+  h2,
+  h3 {
+    font-size: 3.5rem;
+  }
+}
+
+h2 {
+  font-size: 1.6rem;
+  color: var(--text);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: "Cyber cipher", sans-serif;
+}
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 3.2rem;
+  }
+}
+
+h3 {
+  font-size: 1.4rem;
+  color: var(--text);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: "Cyber cipher", sans-serif;
+}
+@media screen and (min-width: 768px) {
+  h3 {
+    font-size: 3rem;
+  }
+}
+
+p,
+a {
+  font-size: 0.8rem;
+  color: var(--text);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.8;
+  font-family: "Orbitron", sans-serif;
+}
+@media screen and (min-width: 768px) {
+  p,
+  a {
+    font-size: 1rem;
+  }
+}
+
+.k-padding-s {
+  padding: 2rem;
+}
+
+@media (max-width: 576px) {
+  .header {
+    min-height: 90px !important;
+  }
+}
+@media (max-width: 992px) {
+  .header {
+    min-height: 120px;
+    background-color: var(--background) !important;
+  }
+}
+@media (max-width: 576px) {
+  .header .brand-n-theme {
+    width: 60% !important;
+  }
+}
+@media (max-width: 992px) {
+  .header .brand-n-theme {
+    border-right: 1px solid var(--text);
+  }
+}
+.header .brand-n-theme .brand,
+.header .brand-n-theme .btn-toggle {
+  width: 50%;
+}
+.header .brand-n-theme .logo {
+  transition: opacity 0.3s ease;
+}
+@media (max-width: 576px) {
+  .header .menu {
+    width: 40% !important;
+    padding: 0rem !important;
+    border-right: none !important;
+  }
+}
+@media (max-width: 992px) {
+  .header .menu {
+    text-align: center;
+    padding: 4.4rem 2rem;
+    border-right: 1px solid var(--text);
+  }
+}
+@media (max-width: 576px) {
+  .header .contact {
+    display: none !important;
+  }
+}
+
+.btn {
+  font-size: 20px;
+  color: var(--text);
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  font-family: "Cyber cipher", sans-serif;
+}
+
+.vertical-line {
+  top: 0;
+  width: 1px;
+  height: 100%;
+  z-index: -2;
+  position: absolute;
+  background-color: var(--text);
+}
+
+.vertical-line-left {
+  left: 17%;
+}
+
+.vertical-line-right {
+  right: 17%;
+}
+
+.navbar .menu .navbar-toggler .toggler-icon i {
+  color: var(--text);
+  font-size: 30px;
+}
+@media screen and (max-width: 320px) {
+  .navbar .menu .navbar-toggler .toggler-icon i {
+    margin-left: -9px !important;
+  }
+}
+.navbar .menu .nav-item .nav-link {
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 1.4px;
+}
+@media (max-width: 992px) {
+  .navbar .menu .nav-item .nav-link {
+    font-size: 22px;
+  }
+}
+@media (max-width: 576px) {
+  .navbar .menu .navbar-collapse {
+    width: 60% !important;
+  }
+}
+@media (max-width: 992px) {
+  .navbar .menu .navbar-collapse {
+    top: 0;
+    left: 0;
+    width: 42%;
+    z-index: 6;
+    height: 100%;
+    position: fixed;
+    border-right: 1px solid var(--text);
+    background-color: var(--background);
+  }
+  .navbar .menu .navbar-collapse .navbar-nav {
+    padding: 15rem 2rem;
+  }
+}
+
+.language,
+.tech-stack {
+  bottom: 0;
+  width: 17%;
+  position: fixed;
+}
+.language .flag,
+.language i,
+.tech-stack .flag,
+.tech-stack i {
+  margin-right: 10px;
+}
+@media (max-width: 768px) {
+  .language span,
+  .tech-stack span {
+    display: none !important;
+  }
+}
+
+.language {
+  left: 0;
+  position: fixed;
+}
+.language .flag {
+  height: 20px;
+  width: 20px;
+}
+
+.tech-stack {
+  right: 0;
+}
+@media (max-width: 576px) {
+  .tech-stack i {
+    margin-right: 0 !important;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

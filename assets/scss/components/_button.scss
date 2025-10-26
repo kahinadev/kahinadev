@@ -1,0 +1,13 @@
+// =================== IMPORT VARIABLE ===========
+
+@use "../abstracts/variables" as *;
+
+
+
+.btn {
+    font-size: 20px;
+    color: var(--text);
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    font-family: $font-title;
+}

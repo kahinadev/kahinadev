@@ -1,0 +1,60 @@
+// ===============================================
+// BASE
+// ===============================================
+
+// =================== IMPORT VARIABLE ===========
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// =================== IMPORT FONTS ==============
+
+@font-face {
+    font-family: "Cyber cipher";
+    src: url('../../assets/fonts/title/CyberCipher.woff2') format('woff2'),
+        url('../../assets/fonts/title/CyberCipher.woff') format('woff');
+}
+
+@font-face {
+    font-family: "Orbitron";
+    src: url('../../assets/fonts/text/Orbitron-Regular.woff2') format('woff2'),
+        url('../../assets/fonts/text/Orbitron-Regular.woff') format('woff');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Orbitron";
+    src: url('../../assets/fonts/text/Orbitron-Medium.woff2') format('woff2'),
+        url('../../assets/fonts/text/Orbitron-Medium.woff') format('woff');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Orbitron";
+    src: url('../../assets/fonts/text/Orbitron-SemiBold.woff2') format('woff2'),
+        url('../../assets/fonts/text/Orbitron-SemiBold.woff') format('woff');
+    font-weight: 600;
+}
+
+// =================== TITLES ==============
+
+h1,
+h2,
+h3 {
+    @include title;
+}
+
+h2 {
+    @include title(1.6rem, 3.2rem);
+}
+
+h3 {
+    @include title(1.4rem, 3rem);
+}
+
+// =================== TEXT ==============
+
+p,
+a {
+    @include text;
+}

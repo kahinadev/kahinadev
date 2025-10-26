@@ -1,0 +1,43 @@
+// =================== IMPORT VARIABLE ===========
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+
+.language,
+.tech-stack {
+    bottom: $zero;
+    width: 17%;
+    position: $fixed;
+
+    .flag,
+    i {
+        margin-right: 10px;
+    }
+
+    span {
+        @include respond-to(md) {
+            display: none !important;
+        }
+    }
+}
+
+.language {
+    left: $zero;
+    position: $fixed;
+
+    .flag {
+        height: 20px;
+        width: 20px;
+    }
+}
+
+.tech-stack {
+    right: $zero;
+
+    i {
+        @include respond-to(sm) {
+            margin-right: $zero !important;
+        }
+    }
+}

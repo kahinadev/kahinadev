@@ -1,0 +1,65 @@
+// ===============================================
+// NAVBAR
+// ===============================================
+
+// =========== VARIABLES & MIXINS ===========
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// =========== GENERAL ===========
+
+.navbar {
+    .menu {
+        // =========== BUTTON MENU ===========
+
+        .navbar-toggler {
+            .toggler-icon {
+                i {
+                    color: var(--text);
+                    font-size: 30px;
+
+                    @media screen and (max-width: 320px) {
+                        margin-left: -9px !important;
+                    }
+                }
+            }
+        }
+
+        // =========== LINKS ===========
+
+        .nav-item {
+            .nav-link {
+                color: var(--text);
+                font-size: 15px;
+                font-weight: 500;
+                letter-spacing: 1.4px;
+
+                @include respond-to(lg) {
+                    font-size: 22px;
+                }
+            }
+        }
+
+        .navbar-collapse {
+            @include respond-to(sm) {
+                width: 60% !important;
+            }
+
+            @include respond-to(lg) {
+                top: $zero;
+                left: $zero;
+                width: 42%;
+                z-index: 6;
+                height: $full;
+                position: $fixed;
+                border-right: 1px solid var(--text);
+                background-color: var(--background);
+
+                .navbar-nav {
+                    padding: 15rem 2rem;
+                }
+            }
+        }
+    }
+}

@@ -1,8 +1,10 @@
+// ===============================================
+// RESPONSIVE
+// ===============================================
+
 @use "variables" as *;
 
-// =======================================
-// RESPONSIVE
-// =======================================
+// =================== RESPONSIVE ==============
 
 @mixin respond-to($breakpoint) {
     $bp: map-get($breakpoints, $breakpoint);
@@ -18,12 +20,9 @@
     }
 }
 
-// =======================================
-// BORDER
-// =======================================
+// =================== BORDER ==============
 
-@mixin border-position(
-    $position, $color: var(--text), 
+@mixin border-position($position, $color: var(--text),
     $width: 1px, $style: solid) {
 
     @if $position ==all {
@@ -33,11 +32,40 @@
     @else {
         border-#{$position}: #{$width} #{$style} #{$color} !important;
     }
-    
+
 }
 
 @each $pos in $border-positions {
     .border-#{$pos} {
         @include border-position($pos);
+    }
+}
+
+// =================== TITLE ==============
+
+@mixin title ($size-mobile: 1.8rem, $size-desktop: 3.5rem, $spacing: 1px) {
+    font-size: $size-mobile;
+    color: var(--text);
+    letter-spacing: $spacing;
+    text-transform: uppercase;
+    font-family: $font-title;
+
+    @media screen and (min-width: 768px) {
+        font-size: $size-desktop;
+    }
+}
+
+// =================== TEXT ==============
+
+@mixin text ($size-mobile: 0.8rem, $size-desktop: 1rem, $weight: 400, $spacing: 0.8, $line-height: 1) {
+    font-size: $size-mobile;
+    color: var(--text);
+    font-weight: $weight;
+    line-height: $line-height;
+    letter-spacing: $spacing;
+    font-family: $font-text;
+
+    @media screen and (min-width: 768px) {
+        font-size: $size-desktop;
     }
 }

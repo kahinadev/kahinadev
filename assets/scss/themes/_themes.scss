@@ -22,39 +22,53 @@ body {
 // LOGO & BUTTON SWITCH
 // ======================================= 
 
-.logo,
+.brand,
 #theme-toggle {
     &.is-light {
 
+        #logo-dark {
+            display: none;
+        }
+
+        #logo-light {
+            display: block;
+        }
+
         #logo-dark,
         #icon-sun {
-            opacity: $zero;
+            display: $none !important;
         }
 
         #logo-light,
         #icon-moon {
-            opacity: 1;
+            display: $block !important;
         }
     }
 }
 
-.logo,
+.brand,
 #theme-toggle {
     position: $relative;
 
-    #logo-dark, 
+    #logo-dark,
     #icon-sun {
-        opacity: 1;
+        display: $block;
     }
 
-    #logo-light, 
+    #logo-light,
     #icon-moon {
-        opacity: $zero;
+        display: $none;
     }
 
     #logo-light {
         top: $zero;
         left: $zero;
         position: $absolute;
+    }
+}
+
+#theme-toggle {
+    i {
+        font-size: 30px;
     }
 }
