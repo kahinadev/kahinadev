@@ -92,24 +92,103 @@
     <div class="tech-stack border-top">
         <a type="button" class="btn bg-transparent k-padding-s d-flex justify-content-center align-items-center"
             data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-            <i class="fa-solid fa-qrcode"></i>
-            <span>Stack</span>
+            <i class="fa-solid fa-code"></i>
+            <span>Tech Stack</span>
         </a>
     </div>
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content k-padding-s">
+                <div class="modal-header p-0 d-flex justify-content-between align-items-center">
+                    <h5 class="text-uppercase"><i class="fa-solid fa-code"></i> Tech stack</h5>
+                    <button type="button" class="btn close p-0" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
                 </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Understood</button>
+                <div class="modal-body p-0 mt-3">
+                    <div class="row row-cols-1 row-cols-md-3 g-2 mb-3" role="tablist">
+                        <div class="col nav-item text-center" role="presentation">
+                            <a class="nav-link active w-100 border-all text-uppercase" id="code-tab"
+                                data-bs-toggle="tab" data-bs-target="#code-pane" type="button" role="tab"
+                                aria-controls="code-pane" aria-selected="true">
+                                Code
+                            </a>
+                        </div>
+                        <div class="col nav-item text-center" role="presentation">
+                            <a class="nav-link w-100 border-all text-uppercase" id="lowcode-tab" data-bs-toggle="tab"
+                                data-bs-target="#lowcode-pane" type="button" role="tab" aria-controls="lowcode-pane"
+                                aria-selected="false">
+                                Low / No code
+                            </a>
+                        </div>
+                        <div class="col nav-item text-center" role="presentation">
+                            <a class="nav-link w-100 border-all text-uppercase" id="design-tab" data-bs-toggle="tab"
+                                data-bs-target="#design-pane" type="button" role="tab" aria-controls="design-pane"
+                                aria-selected="false">
+                                Design
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="code-pane" role="tabpanel"
+                            aria-labelledby="code-tab">
+                            <div class="row row-cols-2 row-cols-md-4 g-3 text-center mt-3">
+                                <div class="col">
+                                    <p class="skill-item border-all text-uppercase">HTML</p>
+                                </div>
+                                <div class="col">
+                                    <p class="skill-item border-all text-uppercase">CSS</p>
+                                </div>
+                                <div class="col">
+                                    <p class="skill-item border-all text-uppercase">SASS</p>
+                                </div>
+                                <div class="col">
+                                    <p class="skill-item border-all text-uppercase">Js</p>
+                                </div>
+                                <div class="col">
+                                    <p class="skill-item border-all text-uppercase">PHP</p>
+                                </div>
+                                <div class="col">
+                                    <p class="skill-item border-all text-uppercase">MySQL</p>
+                                </div>
+                                <div class="col">
+                                    <p class="skill-item border-all text-uppercase">Symfony</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="lowcode-pane" role="tabpanel" aria-labelledby="lowcode-tab">
+                            <div class="row row-cols-2 row-cols-md-4 g-3 text-center mt-3">
+                                <div class="col">
+                                    <p class="skill-item border-all text-uppercase">WordPress</p>
+                                </div>
+                                <div class="col">
+                                    <p class="skill-item border-all text-uppercase">Shopify</p>
+                                </div>
+                                <div class="col">
+                                    <p class="skill-item border-all text-uppercase">Framer</p>
+                                </div>
+                                <div class="col">
+                                    <p class="skill-item border-all text-uppercase">Airtable</p>
+                                </div>
+                                <div class="col">
+                                    <p class="skill-item border-all text-uppercase">Ksaar</p>
+                                </div>
+                                <div class="col">
+                                    <p class="skill-item border-all text-uppercase">Grist</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="design-pane" role="tabpanel" aria-labelledby="design-tab">
+                            <div class="row row-cols-2 row-cols-md-4 g-3 text-center mt-3">
+                                <div class="col">
+                                    <p class="skill-item border-all text-uppercase">Figma</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>

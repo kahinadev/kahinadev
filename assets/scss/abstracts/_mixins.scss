@@ -22,7 +22,7 @@
 
 // =================== BORDER ==============
 
-@mixin border-position($position, $color: var(--text),
+@mixin border-position($position, $color: var(--border),
     $width: 1px, $style: solid) {
 
     @if $position ==all {
@@ -57,7 +57,7 @@
 
 // =================== TEXT ==============
 
-@mixin text ($size-mobile: 0.8rem, $size-desktop: 1rem, $weight: 400, $spacing: 0.8, $line-height: 1) {
+@mixin text ($size-mobile: 0.8rem, $size-desktop: 1rem, $weight: 300, $spacing: 0.8px, $line-height: 1) {
     font-size: $size-mobile;
     color: var(--text);
     font-weight: $weight;

@@ -1,4 +1,8 @@
-// =================== IMPORT VARIABLE ===========
+// ===============================================
+// lANGUAGE & STACK
+// ===============================================
+
+// =========== IMPORT VARIABLES & MIXINS ===========
 
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
@@ -9,15 +13,29 @@
     bottom: $zero;
     width: 17%;
     position: $fixed;
+    background-color: var(--background);
+
+    a {
+        &:hover,
+        &:focus,
+        &:active {
+            border: $none !important;
+        }
+    }
 
     .flag,
     i {
         margin-right: 10px;
+
+        @include respond-to(lg) {
+            font-size: 25px;
+            margin-right: $zero !important;
+        }
     }
 
     span {
-        @include respond-to(md) {
-            display: none !important;
+        @include respond-to(lg) {
+            display: $none !important;
         }
     }
 }
@@ -34,10 +52,4 @@
 
 .tech-stack {
     right: $zero;
-
-    i {
-        @include respond-to(sm) {
-            margin-right: $zero !important;
-        }
-    }
 }

@@ -1,3 +1,7 @@
+// ===============================================
+// VARIABLES
+// ===============================================
+
 // =========== THEMES ===========
 
 $colors: (
@@ -6,12 +10,14 @@ $colors: (
         primary: #b1a8cd,
         secondary: #766a95,
         accent: #2b2037,
+        border: #11101ea5,
     ),
     dark: (text: #E3E2EF,
         background: #0f0d14,
         primary: #3d3359,
         secondary: #766a95,
         accent: #d4c9e0,
+        border: #e3e1efa5,
     ),
 );
 
