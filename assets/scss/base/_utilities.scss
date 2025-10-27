@@ -8,7 +8,7 @@
 // =========== PADDING ===========
 
 .k-padding-s {
-    padding: $k-padding-s;
+    padding: $k-padding-s !important;
 }
 
 .k-padding-m {
@@ -46,6 +46,19 @@
     @include respond-to(sm) {
         margin-bottom: 3rem !important;
     }
+}
+
+// =========== FULL ===========
+
+.w-full {
+    width: $full !important;
+}
+
+// =========== POSITION ===========
+
+.s-relative-index {
+    z-index: 7;
+    position: relative !important;
 }
 
 // =========== SUBTITLE ===========

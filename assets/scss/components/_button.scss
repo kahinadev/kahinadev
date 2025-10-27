@@ -5,11 +5,28 @@
 
 
 .btn {
-    font-size: 20px;
+    font-size: 17px;
     color: var(--text);
     letter-spacing: 1.6px;
-    text-align: center;
-    padding: $k-padding-s;
+    text-align: center !important;
+    padding: 1rem 2rem;
     text-transform: uppercase;
+    border-radius: $zero !important;
     font-family: $font-title;
+    transition: all 0.3s ease-in-out !important;
+
+    i {
+        display: $none;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: var(--secondary);
+
+        i {
+            display: $block !important;
+            margin-left: 15px;
+        }
+    }
 }
