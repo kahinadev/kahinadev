@@ -5,6 +5,7 @@
 // =================== IMPORT ====================
 
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 // =================== BODY ======================
 
@@ -19,6 +20,16 @@ body {
     min-height: 100vh;
     overflow-x: $overflow-hidden;
 }
+
+section {
+    .container {
+        position: relative;
+        width: calc(100% - 34%);
+    }
+}
+
+
+
 
 // =================== IMAGE ======================
 

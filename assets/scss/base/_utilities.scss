@@ -3,9 +3,59 @@
 // ======================================= 
 
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 // =========== PADDING ===========
 
 .k-padding-s {
     padding: $k-padding-s;
+}
+
+.k-padding-m {
+    padding: $k-padding-m;
+
+    @include respond-to(sm) {
+        padding: $k-padding-s !important;
+    }
+}
+
+.k-padding-section {
+    padding: $k-padding-section;
+
+    @include respond-to(sm) {
+        padding: $k-padding-section-s !important;
+    }
+}
+
+// =========== MARGIN ===========
+
+.mt-5 {
+    margin-top: 5rem;
+}
+
+.mb-5 {
+    margin-bottom: 5rem;
+}
+
+.mb-8 {
+    margin-bottom: 8rem;
+}
+
+.mb-5,
+.mb-8 {
+    @include respond-to(sm) {
+        margin-bottom: 3rem !important;
+    }
+}
+
+// =========== SUBTITLE ===========
+
+.subtitle {
+    @include subtitle;
+}
+
+// =========== TEXT ===========
+
+.text-justify {
+    text-align: justify;
 }

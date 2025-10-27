@@ -43,21 +43,45 @@
 
 // =================== TITLE ==============
 
-@mixin title ($size-mobile: 1.8rem, $size-desktop: 3.5rem, $spacing: 1px) {
-    font-size: $size-mobile;
+@mixin title ($size-mobile: 3rem, $size-tablet: 5.8rem, $size-desktop: 7.5rem, $spacing: 1px) {
     color: var(--text);
+    word-break: break-word;
     letter-spacing: $spacing;
     text-transform: uppercase;
     font-family: $font-title;
 
-    @media screen and (min-width: 768px) {
-        font-size: $size-desktop;
+    @include respond-to(sm) {
+        font-size: $size-mobile !important;
+    }
+
+    @include respond-to(lg) {
+        font-size: $size-tablet;
+    }
+
+    @media screen and (min-width: 1600px) {
+        font-size: $size-desktop !important;
+    }
+}
+
+// =================== SUBTITLE ==============
+
+@mixin subtitle ($size-mobile: 1rem, $size-desktop: 1.6rem, $spacing: 1.6px) {
+    color: var(--text);
+    font-size: $size-mobile;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    font-weight: 800 !important;
+    letter-spacing: $spacing;
+    text-transform: uppercase;
+
+    @media screen and (min-width: 1600px) {
+        font-size: $size-desktop !important;
     }
 }
 
 // =================== TEXT ==============
 
-@mixin text ($size-mobile: 0.8rem, $size-desktop: 1rem, $weight: 300, $spacing: 0.8px, $line-height: 1) {
+@mixin text ($size-mobile: 0.8rem, $size-desktop: 1rem, $weight: 300, $spacing: 0.8px, $line-height: 1.3) {
     font-size: $size-mobile;
     color: var(--text);
     font-weight: $weight;

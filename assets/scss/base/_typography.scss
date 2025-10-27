@@ -48,19 +48,19 @@ h6 {
 }
 
 h2 {
-    @include title(1.6rem, 3.2rem);
+    @include title(2.6rem, 5.6rem, 2.8rem);
 }
 
 h3 {
-    @include title(1.4rem, 3rem);
+    @include title(1.4rem, 5.4rem, 2.4rem);
 }
 
 h4 {
-    @include title(1.2rem, 2.8rem);
+    @include title(1.2rem, 5.2rem, 2.2rem);
 }
 
 h5 {
-    @include title(1rem, 2.6rem)
+    @include title(1rem, 2rem, 2rem)
 }
 
 // =================== TEXT ==============

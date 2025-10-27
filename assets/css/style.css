@@ -18,6 +18,10 @@
   border: 1px solid var(--border) !important;
 }
 
+.bg-dark {
+  background-color: var(--background) !important;
+}
+
 .theme-light {
   --text: #11101e;
   --background: #eeecf3;
@@ -114,6 +118,11 @@ body {
   overflow-x: hidden;
 }
 
+section .container {
+  position: relative;
+  width: 66%;
+}
+
 img {
   width: 100%;
   height: auto;
@@ -145,72 +154,132 @@ h3,
 h4,
 h5,
 h6 {
-  font-size: 1.8rem;
   color: var(--text);
+  word-break: break-word;
   letter-spacing: 1px;
   text-transform: uppercase;
   font-family: "Cyber cipher", sans-serif;
 }
-@media screen and (min-width: 768px) {
+@media (max-width: 576px) {
   h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    font-size: 3.5rem;
+    font-size: 3rem !important;
+  }
+}
+@media (max-width: 992px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 5.8rem;
+  }
+}
+@media screen and (min-width: 1600px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 7.5rem !important;
   }
 }
 
 h2 {
-  font-size: 1.6rem;
   color: var(--text);
+  word-break: break-word;
   letter-spacing: 1px;
   text-transform: uppercase;
   font-family: "Cyber cipher", sans-serif;
 }
-@media screen and (min-width: 768px) {
+@media (max-width: 576px) {
   h2 {
-    font-size: 3.2rem;
+    font-size: 2.6rem !important;
+  }
+}
+@media (max-width: 992px) {
+  h2 {
+    font-size: 5.6rem;
+  }
+}
+@media screen and (min-width: 1600px) {
+  h2 {
+    font-size: 2.8rem !important;
   }
 }
 
 h3 {
-  font-size: 1.4rem;
   color: var(--text);
+  word-break: break-word;
   letter-spacing: 1px;
   text-transform: uppercase;
   font-family: "Cyber cipher", sans-serif;
 }
-@media screen and (min-width: 768px) {
+@media (max-width: 576px) {
   h3 {
-    font-size: 3rem;
+    font-size: 1.4rem !important;
+  }
+}
+@media (max-width: 992px) {
+  h3 {
+    font-size: 5.4rem;
+  }
+}
+@media screen and (min-width: 1600px) {
+  h3 {
+    font-size: 2.4rem !important;
   }
 }
 
 h4 {
-  font-size: 1.2rem;
   color: var(--text);
+  word-break: break-word;
   letter-spacing: 1px;
   text-transform: uppercase;
   font-family: "Cyber cipher", sans-serif;
 }
-@media screen and (min-width: 768px) {
+@media (max-width: 576px) {
   h4 {
-    font-size: 2.8rem;
+    font-size: 1.2rem !important;
+  }
+}
+@media (max-width: 992px) {
+  h4 {
+    font-size: 5.2rem;
+  }
+}
+@media screen and (min-width: 1600px) {
+  h4 {
+    font-size: 2.2rem !important;
   }
 }
 
 h5 {
-  font-size: 1rem;
   color: var(--text);
+  word-break: break-word;
   letter-spacing: 1px;
   text-transform: uppercase;
   font-family: "Cyber cipher", sans-serif;
 }
-@media screen and (min-width: 768px) {
+@media (max-width: 576px) {
   h5 {
-    font-size: 2.6rem;
+    font-size: 1rem !important;
+  }
+}
+@media (max-width: 992px) {
+  h5 {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 1600px) {
+  h5 {
+    font-size: 2rem !important;
   }
 }
 
@@ -219,7 +288,7 @@ a {
   font-size: 0.8rem;
   color: var(--text);
   font-weight: 300;
-  line-height: 1;
+  line-height: 1.3;
   letter-spacing: 0.8px;
   font-family: "Orbitron", sans-serif;
 }
@@ -232,6 +301,62 @@ a {
 
 .k-padding-s {
   padding: 2rem;
+}
+
+.k-padding-m {
+  padding: 4rem;
+}
+@media (max-width: 576px) {
+  .k-padding-m {
+    padding: 2rem !important;
+  }
+}
+
+.k-padding-section {
+  padding: 180px 0px;
+}
+@media (max-width: 576px) {
+  .k-padding-section {
+    padding: 80px 0px !important;
+  }
+}
+
+.mt-5 {
+  margin-top: 5rem;
+}
+
+.mb-5 {
+  margin-bottom: 5rem;
+}
+
+.mb-8 {
+  margin-bottom: 8rem;
+}
+
+@media (max-width: 576px) {
+  .mb-5,
+  .mb-8 {
+    margin-bottom: 3rem !important;
+  }
+}
+
+.subtitle {
+  color: var(--text);
+  font-size: 1rem;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  font-weight: 800 !important;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 1600px) {
+  .subtitle {
+    font-size: 1.6rem !important;
+  }
+}
+
+.text-justify {
+  text-align: justify;
 }
 
 @media (max-width: 576px) {
@@ -286,6 +411,8 @@ a {
   font-size: 20px;
   color: var(--text);
   letter-spacing: 1.6px;
+  text-align: center;
+  padding: 2rem;
   text-transform: uppercase;
   font-family: "Cyber cipher", sans-serif;
 }
@@ -295,7 +422,7 @@ a {
   width: 1px;
   height: 100%;
   z-index: -2;
-  position: absolute;
+  position: fixed;
   background-color: var(--border);
 }
 
@@ -394,6 +521,39 @@ a {
   font-size: 15px;
 }
 
+.moving {
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.moving__track {
+  gap: 2rem;
+  white-space: nowrap;
+  will-change: transform;
+  animation: move linear 3s infinite;
+}
+.moving__item {
+  font-size: 22px;
+  font-weight: 500;
+}
+.moving__item:hover, .moving__item:focus, .moving__item:active {
+  color: var(--accent);
+  transition: color 0.3s ease;
+}
+
+@keyframes move {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .moving__track {
+    animation: none;
+  }
+}
 .language,
 .tech-stack {
   bottom: 0;
@@ -418,7 +578,7 @@ a {
   .language i,
   .tech-stack .flag,
   .tech-stack i {
-    font-size: 25px;
+    font-size: 19px;
     margin-right: 0 !important;
   }
 }
@@ -440,6 +600,30 @@ a {
 
 .tech-stack {
   right: 0;
+}
+
+.introduction {
+  padding-bottom: 0px !important;
+}
+@media (max-width: 576px) {
+  .introduction .btn-intro {
+    margin-top: 2rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .about .image {
+    border-right: none !important;
+    border-bottom: 1px solid var(--border) !important;
+  }
+}
+.about .image img {
+  height: 730px;
+}
+@media (max-width: 576px) {
+  .about .image img {
+    height: 280px !important;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

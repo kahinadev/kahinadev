@@ -1,0 +1,36 @@
+// ===============================================
+// MOVING
+// ===============================================
+
+// =========== VARIABLES & MIXINS ===========
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+
+.introduction {
+    padding-bottom: 0px !important;
+
+    .btn-intro {
+        @include respond-to(sm) {
+            margin-top: 2rem !important;
+        }
+    }
+}
+
+.about {
+    .image {
+        @include respond-to(sm) {
+            border-right: $none !important;
+            border-bottom: 1px solid var(--border) !important;
+        }
+
+        img {
+            height: 730px;
+
+            @include respond-to(sm) {
+                height: 280px !important;
+            }
+        }
+    }
+}

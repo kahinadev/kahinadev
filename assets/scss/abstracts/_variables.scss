@@ -40,6 +40,8 @@ $border-positions: top, bottom, left, right, all;
 // =========== ANIMATIONS ===========
 
 $transition-theme: 0.3s ease;
+$speed-moving: 400;
+$duration-moving: 3s; 
 
 // =========== NONE & FULL ===========
 
@@ -66,6 +68,10 @@ $font-text: "Orbitron", sans-serif;
 // =========== PADDING ===========
 
 $k-padding-s: 2rem;
+$k-padding-m: 4rem;
+
+$k-padding-section-s: 80px 0px;
+$k-padding-section: 180px 0px;
 
 // =========== HEADER ===========
 

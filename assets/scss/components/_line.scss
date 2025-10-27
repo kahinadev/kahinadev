@@ -8,7 +8,7 @@
     width: 1px;
     height: $full;
     z-index: -2;
-    position: $absolute;
+    position: $fixed;
     background-color: var(--border);
 }
 

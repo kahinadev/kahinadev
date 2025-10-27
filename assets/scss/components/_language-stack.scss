@@ -28,7 +28,7 @@
         margin-right: 10px;
 
         @include respond-to(lg) {
-            font-size: 25px;
+            font-size: 19px;
             margin-right: $zero !important;
         }
     }

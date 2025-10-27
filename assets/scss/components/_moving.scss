@@ -1,0 +1,53 @@
+// ===============================================
+// MOVING
+// ===============================================
+
+// =========== VARIABLES & MIXINS ===========
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// =========== GENERAL ===========
+
+.moving {
+    width: $full;
+    overflow: $overflow-hidden;
+    box-sizing: border-box;
+
+    &__track {
+        gap: 2rem;
+        white-space: nowrap;
+        will-change: transform;
+        animation: move linear $duration-moving infinite;
+    }
+
+    &__item {
+        font-size: 22px;
+        font-weight: 500;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: var(--accent);
+            transition: color $transition-theme;
+        }
+    }
+}
+
+// =========== KEYFRAMES ===========
+
+@keyframes move {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .moving__track {
+        animation: none;
+    }
+}
