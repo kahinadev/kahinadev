@@ -43,7 +43,7 @@
 
 // =================== TITLE ==============
 
-@mixin title ($size-mobile: 3rem, $size-tablet: 5.8rem, $size-desktop: 7.5rem, $spacing: 1px) {
+@mixin title ($size-mobile: 3.6rem, $size-tablet: 5.8rem, $size-desktop: 7.5rem, $spacing: 1px) {
     color: var(--text);
     word-break: break-word;
     letter-spacing: $spacing;
@@ -58,14 +58,14 @@
         font-size: $size-tablet;
     }
 
-    @media screen and (min-width: 1600px) {
+    @media screen and (min-width: 1200px) {
         font-size: $size-desktop !important;
     }
 }
 
 // =================== SUBTITLE ==============
 
-@mixin subtitle ($size-mobile: 1rem, $size-desktop: 1.6rem, $spacing: 1.6px) {
+@mixin subtitle ($size-mobile: 1.3rem, $size-desktop: 1.6rem, $spacing: 1.6px) {
     color: var(--text);
     font-size: $size-mobile;
     overflow-wrap: break-word;
@@ -74,14 +74,14 @@
     letter-spacing: $spacing;
     text-transform: uppercase;
 
-    @media screen and (min-width: 1600px) {
+    @media screen and (min-width: 1200px) {
         font-size: $size-desktop !important;
     }
 }
 
 // =================== TEXT ==============
 
-@mixin text ($size-mobile: 0.8rem, $size-desktop: 1rem, $weight: 300, $spacing: 0.8px, $line-height: 1.3) {
+@mixin text ($size-mobile: 0.9rem, $size-desktop: 1rem, $weight: 300, $spacing: 0.8px, $line-height: 1.3) {
     font-size: $size-mobile;
     color: var(--text);
     font-weight: $weight;
@@ -90,6 +90,6 @@
     font-family: $font-text;
 
     @media screen and (min-width: 768px) {
-        font-size: $size-desktop;
+        font-size: $size-desktop !important;
     }
 }

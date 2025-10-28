@@ -14,7 +14,7 @@
         min-height: $height-header-mobile !important;
     }
 
-    @include respond-to(lg) {
+    @include respond-to(xxl) {
         z-index: 9;
         position: $relative;
         min-height: $height-header-tablet;
@@ -37,6 +37,11 @@
 
         .logo {
             transition: opacity $transition-theme;
+        }
+
+        .btn-toggle {
+            border: $none !important;
+            background-color: transparent !important;
         }
     }
 

@@ -25,12 +25,16 @@ section {
     .container {
         position: relative;
         width: calc(100% - 34%);
+
+        @include respond-to(sm) {
+            width: calc(100% - 10%) !important;
+        }
+
+        @include respond-to(xxl) {
+            width: calc(100% - 20%);
+        }
     }
 }
-
-
-
-
 // =================== IMAGE ======================
 
 img {

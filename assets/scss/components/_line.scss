@@ -14,8 +14,24 @@
 
 .vertical-line-left {
     left: 17%;
+
+    @include respond-to(sm) {
+        left: 5% !important;
+    }
+
+    @include respond-to(xxl) {
+        left: 10%;
+    }
 }
 
 .vertical-line-right {
     right: 17%;
+
+    @include respond-to(sm) {
+        right: 5% !important;
+    }
+
+    @include respond-to(xxl) {
+        right: 10%;
+    }
 }

@@ -2,7 +2,7 @@
 // lANGUAGE & STACK
 // ===============================================
 
-// =========== IMPORT VARIABLES & MIXINS ===========
+// =========== VARIABLES & MIXINS ===========
 
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
@@ -21,6 +21,10 @@
         &:focus,
         &:active {
             border: $none !important;
+
+            i {
+                margin-left: 0 !important;
+            }
         }
     }
 

@@ -1,8 +1,12 @@
-// =================== IMPORT VARIABLE ===========
+// ===============================================
+// BUTTON
+// ===============================================
+
+// =========== IMPORT VARIABLES & MIXINS ===========
 
 @use "../abstracts/variables" as *;
 
-
+// =========== GENERAL ===========
 
 .btn {
     font-size: 17px;
@@ -22,11 +26,7 @@
     &:hover,
     &:focus,
     &:active {
+        color: var(--text);
         background-color: var(--secondary);
-
-        i {
-            display: $block !important;
-            margin-left: 15px;
-        }
     }
 }
