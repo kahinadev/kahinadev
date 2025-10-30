@@ -28,6 +28,12 @@
         }
     }
 
+    .btn-toggle {
+        @include respond-to(sm, max) {
+            margin-left: -2rem;
+        }
+    }
+
     .nav-brand {
         @include respond-to(sm, max) {
             padding: $k-padding-l $k-padding-m !important;
@@ -36,7 +42,7 @@
 
     .nav-menu {
         @include respond-to(sm, max) {
-            width: 30%;
+            width: 34%;
         }
     }
 }

@@ -416,13 +416,18 @@ a {
   }
 }
 @media (max-width: 576px) {
+  .header .btn-toggle {
+    margin-left: -2rem;
+  }
+}
+@media (max-width: 576px) {
   .header .nav-brand {
     padding: 3rem 2rem !important;
   }
 }
 @media (max-width: 576px) {
   .header .nav-menu {
-    width: 30%;
+    width: 34%;
   }
 }
 
@@ -742,6 +747,7 @@ a {
 }
 .list-project li:hover img, .list-project li:focus img, .list-project li:active img {
   opacity: 1;
+  z-index: 5;
   transform: translate(-50%, -50%) scale(1);
 }
 .list-project__content {
