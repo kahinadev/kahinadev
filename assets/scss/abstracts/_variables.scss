@@ -9,15 +9,15 @@ $colors: (
         background: #eeecf3,
         primary: #b1a8cd,
         secondary: #766a95,
-        accent: #2b2037,
-        border: #11101ea5,
+        accent: #443257,
+        border: #11101e8b,
     ),
     dark: (text: #E3E2EF,
         background: #0f0d14,
         primary: #3d3359,
         secondary: #766a95,
         accent: #d4c9e0,
-        border: #e3e1efa5,
+        border: #e3e1ef8b,
     ),
 );
 
@@ -28,20 +28,22 @@ $breakpoints: (
     sm: 576px,
     md: 768px,
     lg: 992px,
-    xl: 1200px,
-    xxl: 1400px,
-    xxxl: 1600px
+    xl: 1110px,
+    xxl: 1280px,
+    xxxl: 1400px
 );
 
 // =========== BORDER ===========
 
+$border: 1px solid var(--border);
 $border-positions: top, bottom, left, right, all;
 
-// =========== ANIMATIONS ===========
+// =========== ANIMATION ===========
 
-$transition-theme: 0.3s ease;
 $speed-moving: 400;
 $duration-moving: 3s; 
+$transition-card: background-color 0.3s ease, padding 0.3s ease;
+$transition-theme: background-color 0.3s ease, color 0.3s ease;
 
 // =========== NONE & FULL ===========
 
@@ -67,13 +69,10 @@ $font-text: "Orbitron", sans-serif;
 
 // =========== PADDING ===========
 
-$k-padding-s: 2rem;
-$k-padding-m: 4rem;
-
-$k-padding-section-s: 80px 0px;
-$k-padding-section: 180px 0px;
-
-// =========== HEADER ===========
-
-$height-header-mobile: 90px;
-$height-header-tablet: 120px;
+$k-padding-s: 1rem; 
+$k-padding-m: 2rem; 
+$k-padding-l: 3rem;
+$k-padding-xl: 4rem;
+$k-padding-section-mobile: 5rem $k-padding-s;
+$k-padding-section-tablet: 12rem $k-padding-m; 
+$k-padding-section-desktop: 12rem $k-padding-s; 

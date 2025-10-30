@@ -1,8 +1,13 @@
-@use "../abstracts/variables" as *;
-
 // =======================================
-// GENERAL
+// THEMES
 // ======================================= 
+
+// =========== VARIABLES ===========
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// =========== LOOP ===========
 
 @each $mode, $palette in $colors {
     .theme-#{$mode} {
@@ -12,64 +17,43 @@
     }
 }
 
+// =========== BODY STYLES ===========
+
 body {
     color: var(--text);
     background-color: var(--background);
-    transition: background-color $transition-theme, color $transition-theme;
+    transition: $transition-theme;
 }
 
-// =======================================
-// LOGO & BUTTON SWITCH
-// ======================================= 
+// =========== BRAND & BUTTON ===========
 
-.brand,
-#theme-toggle {
-    &.is-light {
-
-        #logo-dark {
-            display: none;
-        }
-
-        #logo-light {
-            display: block;
-        }
-
-        #logo-dark,
-        #icon-sun {
-            display: $none !important;
-        }
-
-        #logo-light,
-        #icon-moon {
-            display: $block !important;
-        }
-    }
-}
-
-.brand,
 #theme-toggle {
     position: $relative;
 
-    #logo-dark,
+    i {
+        color: var(--text);
+        font-size: 38px;
+
+        @include respond-to(sm, max) {
+            font-size: 36px !important;
+        }
+    }
+
     #icon-sun {
         display: $block;
     }
 
-    #logo-light,
     #icon-moon {
         display: $none;
     }
 
-    #logo-light {
-        top: $zero;
-        left: $zero;
-        position: $absolute;
-    }
-}
+    &.is-light {
+        #icon-sun {
+            display: $none !important;
+        }
 
-#theme-toggle {
-    i {
-        font-size: 30px;
-        color: var(--text);
+        #icon-moon {
+            display: $block !important;
+        }
     }
 }

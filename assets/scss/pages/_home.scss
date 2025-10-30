@@ -1,5 +1,5 @@
 // ===============================================
-// MOVING
+// HOME
 // ===============================================
 
 // =========== VARIABLES & MIXINS ===========
@@ -7,34 +7,35 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-
-.introduction {
-    padding-bottom: 0px !important;
-
-    .btn-intro {
-        @include respond-to(sm) {
-            margin-top: 2rem !important;
-        }
-    }
-}
+// =========== GENERAL ===========
 
 .about {
     .image {
-        @include respond-to(lg) {
+        @include respond-to(sm, max) {
             border-right: $none !important;
-            border-bottom: 1px solid var(--border) !important;
         }
 
-        img {
-            height: 700px;
+    }
 
-            @include respond-to(sm) {
-                height: 280px !important;
+    &__image {
+        height: 700px;
+
+        @include respond-to(sm, max) {
+            height: 300px !important;
+        }
+
+        @include respond-to(xxl, max) {
+            height: 480px;
+        }
+    }
+
+    .about-me {
+        @include respond-to(xxl, max) {
+            width: $full !important;
+
+            @include respond-to(xxl, max) {
+                border-top: $border !important;
             }
-
-             @include respond-to(lg) {
-                height: 480px;
-             }
         }
     }
 }

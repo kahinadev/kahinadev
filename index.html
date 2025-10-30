@@ -21,25 +21,26 @@
 </head>
 
 <body class="theme-dark">
-    <div class="vertical-line vertical-line-left"></div>
-    <div class="vertical-line vertical-line-right"></div>
-    <header class="header border-bottom" id="header">
+    <div class="vertical-line vertical-line-left position-fixed top-0"></div>
+    <div class="vertical-line vertical-line-middle position-fixed top-0"></div>
+    <div class="vertical-line vertical-line-right position-fixed top-0"></div>
+    <header class="header border-bottom bg-dark k-index-sec" aria-label="Header">
         <nav class="navbar navbar-expand-lg p-0">
             <div class="container-fluid p-0">
-                <div class="col-lg-2 col-md-5 col-sm-2 d-flex align-items-center brand-n-theme">
-                    <a class="brand text-decoration-none k-padding-s border-right" href="index.html">
-                        <img id="logo-dark" class="logo" src="assets/img/logo/logo-theme-dark.webp" alt="Logo"
-                            aria-label="Logo">
-                        <img id="logo-light" class="logo" src="assets/img/logo/logo-theme-light.webp" alt="Logo"
-                            aria-label="Logo">
+                <div class="col-lg-1 col-md-3 col-sm-2 border-right k-pad-l text-center nav-brand">
+                    <a id="brand" class="brand text-decoration-none text-uppercase" href="index.html">
+                        KA
                     </a>
-                    <button id="theme-toggle" class="btn-toggle" aria-label="Changer de thème">
+                </div>
+                <div class="col-lg-1 col-md-2 border-right k-pad-xl">
+                    <button id="theme-toggle" class="btn-toggle bg-transparent border-0 w-full"
+                        aria-label="Changer de thème">
                         <i id="icon-sun" class="fa-regular fa-sun"></i>
                         <i id="icon-moon" class="fa-regular fa-moon"></i>
                     </button>
                 </div>
-                <div class="col-lg-8 col-md-3 col-sm-8 menu">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                <div class="col-lg-10 col-md-7 text-end p-0 nav-menu">
+                    <button class="navbar-toggler k-pad-xl border-left" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                         <span class="toggler-icon">
@@ -47,101 +48,98 @@
                         </span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mx-auto mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link text-uppercase" href="index.html">Accueil</a>
+                        <ul class="navbar-nav ml-auto mb-lg-0 w-100 align-items-center">
+                            <li class="nav-item flex-fill text-center border-right k-pad-xl">
+                                <a class="nav-link text-uppercase" href="histoire.html">Histoire</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-uppercase" href="index.html">Histoire</a>
+                            <li class="nav-item flex-fill text-center border-right k-pad-xl">
+                                <a class="nav-link text-uppercase" href="services.html">Services</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-uppercase" href="index.html">Services</a>
+                            <li class="nav-item flex-fill text-center border-right k-pad-xl">
+                                <a class="nav-link text-uppercase" href="projets.html">Projets</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-uppercase" href="index.html">Projets</a>
+                            <li class="nav-item flex-fill text-center border-right k-pad-xl">
+                                <a class="nav-link text-uppercase" href="contact.html">Contact</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-uppercase" href="index.html">Contact</a>
+                            <li class="nav-item flex-fill text-center k-pad-xl">
+                                <a class="nav-link nav-link-tech d-flex justify-content-center align-items-center text-uppercase"
+                                    type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                    <i class="fa-solid fa-code"></i>
+                                    <span>Stack</span>
+                                </a>
                             </li>
                         </ul>
                     </div>
-                </div>
-                <div class="col-lg-2 col-md-4 contact">
-                    <a href="contact.html" class="nav-link btn text-center">
-                        <span>Commencer</span>
-                    </a>
                 </div>
             </div>
         </nav>
     </header>
 
-    <main class="main" role="main">
-        <section class="introduction k-padding-section">
-            <div class="container">
+    <main class="main">
+        <section class="introduction" aria-label="Introduction">
+            <div class="container container-sec">
                 <div class="row">
-                    <div class="col-md-12 text-center">
-                        <h1>Kahina Ouali</h1>
-                        <p class="subtitle">Développeuse <br> full stack</p>
-                        <p class="text-uppercase mb-8">Basé en Ile-de-France</p>
+                    <div class="col-md-12 text-center k-pad-sec">
+                        <h1 class="text-uppercase">Kahina OUALI</h1>
+                        <p class="subtitle text-uppercase">Développeuse full stack<br> orientée design</p>
                     </div>
-                    <div class="col-md-12 p-0 border-top mt-5 btn-intro">
-                        <a href="#a-propos" class="btn w-100 k-padding-s">
+                    <div class="col-md-12 p-0 text-center">
+                        <a href="#a-propos" class="btn btn-h w-full border-top border-bottom k-pad-m">
                             Commencer
                         </a>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="moving s-relative-index border-top border-bottom k-padding-s bg-dark">
-            <div class="moving__track d-flex align-items-center" id="movingTrack">
-                <div class="moving__content" id="movingContent">
-                    <p class="moving__item text-uppercase mt-3 mb-3">
-                        Salut <i class="fa-regular fa-hand-peace"></i> Hello
-                        <i class="fa-regular fa-hand-peace"></i> Hola <i class="fa-regular fa-hand-peace"></i>
-                        안녕하세요 <i class="fa-regular fa-hand-peace"></i> Salut <i class="fa-regular fa-hand-peace"></i>
-                        Hello
-                        <i class="fa-regular fa-hand-peace"></i> Hola <i class="fa-regular fa-hand-peace"></i>
-                        안녕하세요 <i class="fa-regular fa-hand-peace"></i>
-                        Salut <i class="fa-regular fa-hand-peace"></i> Hello
-                        <i class="fa-regular fa-hand-peace"></i> Hola <i class="fa-regular fa-hand-peace"></i>
-                        안녕하세요 <i class="fa-regular fa-hand-peace"></i>
-                        Salut <i class="fa-regular fa-hand-peace"></i> Hello
-                        <i class="fa-regular fa-hand-peace"></i> Hola <i class="fa-regular fa-hand-peace"></i>
-                        안녕하세요 <i class="fa-regular fa-hand-peace"></i>
-                        Salut <i class="fa-regular fa-hand-peace"></i> Hello
-                        <i class="fa-regular fa-hand-peace"></i> Hola <i class="fa-regular fa-hand-peace"></i>
-                        안녕하세요 <i class="fa-regular fa-hand-peace"></i>
-                        Salut <i class="fa-regular fa-hand-peace"></i> Hello
-                        <i class="fa-regular fa-hand-peace"></i> Hola <i class="fa-regular fa-hand-peace"></i>
-                        안녕하세요 <i class="fa-regular fa-hand-peace"></i>
-                    </p>
+        <section class="moving" aria-label="Texte qui bouge">
+            <div class="container container sec border-bottom">
+                <div class="moving__track d-flex align-items-center" id="movingTrack">
+                    <div class="moving__content k-pad-l" id="movingContent">
+                        <p class="moving__item text-uppercase mt-3">
+                            Salut <i class="fa-solid fa-circle"></i> Hello
+                            <i class="fa-solid fa-circle"></i> Hola <i class="fa-solid fa-circle"></i>
+                            안녕하세요 <i class="fa-solid fa-circle"></i>
+                            Salut <i class="fa-solid fa-circle"></i> Hello
+                            <i class="fa-solid fa-circle"></i> Hola <i class="fa-solid fa-circle"></i>
+                            안녕하세요 <i class="fa-solid fa-circle"></i>
+                            Salut <i class="fa-solid fa-circle"></i> Hello
+                            <i class="fa-solid fa-circle"></i> Hola <i class="fa-solid fa-circle"></i>
+                            안녕하세요 <i class="fa-solid fa-circle"></i> Salut <i class="fa-solid fa-circle"></i> Hello
+                            <i class="fa-solid fa-circle"></i> Hola <i class="fa-solid fa-circle"></i>
+                            안녕하세요 <i class="fa-solid fa-circle"></i>
+                            Salut <i class="fa-solid fa-circle"></i> Hello
+                            <i class="fa-solid fa-circle"></i> Hola <i class="fa-solid fa-circle"></i>
+                            안녕하세요 <i class="fa-solid fa-circle"></i>
+                            Salut <i class="fa-solid fa-circle"></i> Hello
+                            <i class="fa-solid fa-circle"></i> Hola <i class="fa-solid fa-circle"></i>
+                            안녕하세요 <i class="fa-solid fa-circle"></i>
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="about" id="a-propos">
-            <div class="container">
+        <section id="a-propos" class="about" aria-label="A propos">
+            <div class="container container-sec border-bottom">
                 <div class="row">
-                    <div class="col-lg-6 col-md-12 border-right p-0 image">
-                        <img src="assets/img/me/IMG_2939.jpeg" alt="Photo de moi" aria-label="Photo de moi">
+                    <div class="col-lg-6 col-md-6 p-0 image border-right">
+                        <img src="assets/img/me/IMG_2939.jpeg" class="about__image"
+                            alt="Photo de moi personnalisé avec l'IA" aria-label="Photo de moi personnalisé avec l'IA">
                     </div>
-                    <div class="col-lg-6 col-md-12 p-0">
-                        <div class="k-padding-m">
-                            <h2 class="mt-3">À propos</h2>
-                            <p class="subtitle mb-3">Quelques mots sur moi</p>
-                            <p class="mt-3 mb-3 text-justify">
-                                Je m'appelle Kahina, développeuse web passionnée par la création d’expériences
-                                numériques à
-                                la fois intuitives, esthétiques et cohérentes. J’aime concevoir des interfaces où la
-                                technique rencontre la créativité, en accordant une attention particulière aux détails
+                    <div class="col-lg-6 col-md-12 about-me">
+                        <div class="about__content k-pad-l">
+                            <h2 class="text-uppercase mt-5">À propos</h2>
+                            <p class="subtitle text-uppercase">Qui suis-je ?</p>
+                            <p class="mt-3 text-justify">
+                                Je m'appelle Kahina, développeuse web de 26 ans. Je suis passionnée par la création
+                                d’expériences
+                                numériques à la fois intuitives, esthétiques et cohérentes.
+                                <br>
+                                <br>
+                                J’aime concevoir des interfaces où la technique rencontre la créativité, en accordant
+                                une attention particulière aux détails
                                 qui rendent chaque projet unique.
-                                <br>
-                                <br>
-                                Mon parcours m’a permis d’affiner ma vision du web : un espace d’expression où l’on peut
-                                transformer des idées en expériences vivantes et engageantes. Chaque projet que je
-                                réalise
-                                raconte une histoire : celle d’un équilibre entre rigueur, imagination et émotion.
                             </p>
-                            <a href="a-propos.html" class="btn border-all w-full mt-3">
+                            <a href="histoire.html" class="btn btn-h w-full border-all mt-3 k-pad-s mb-5" aria-label="Button de la page histoire">
                                 En savoir plus
                             </a>
                         </div>
@@ -149,79 +147,92 @@
                 </div>
             </div>
         </section>
-        <section class="services border-top border-bottom">
-            <div class="container">
+        <section class="services" aria-label="Services">
+            <div class="container container-sec p-0">
                 <div class="row">
-                    <div class="col-md-12 k-padding-s text-center">
-                        <h3>Services</h3>
+                    <div class="col-md-12 text-center k-pad-xl">
+                        <h3 class="text-uppercase mt-3">Services</h3>
+                        <p class="subtitle text-uppercase">Ce que je propose</p>
                     </div>
-                    <div class="col-lg-6 col-md-12 border-top p-0">
-                        <a href="developpement.html" class="card card-service bg-transparent text-decoration-none">
-                            <div class="card-number text-center border-right border-bottom k-padding-s">
-                                <h4>01</h4>
+                    <div class="col-lg-6 col-md-6 p-0 border-top border-right">
+                        <a href="services.html/#developpement" class="card card-service text-decoration-none" aria-label="Card du service de developpement">
+                            <div
+                                class="card-service__number text-center align-items-center k-pad-m border-right border-bottom">
+                                <h4 class="text-uppercase">01</h4>
                             </div>
-                            <div class="card-title" id="card-title">
-                                <p class="subtitle"><i class="fa-solid fa-terminal"></i> Développement</p>
+                            <div class="card-service__title" id="card-service-title">
+                                <p class="subtitle text-uppercase">
+                                    <i class="fa-solid fa-terminal"></i> Développement
+                                </p>
                             </div>
-                            <div class="card-text">
+                            <div class="card-service__text k-pad-l">
                                 <p class="text-justify">
                                     Des sites modernes, performants et pensés pour évoluer avec votre activité. Chaque
                                     projet allie design soigné, rapidité et sécurité pour garantir une expérience fluide
-                                    et durable. Les technologies utilisées sont fiables et évolutives, offrant des
+                                    et durable.<br> Les technologies utilisées sont fiables et évolutives, offrant des
                                     solutions web pérennes et simples à gérer au quotidien.
                                 </p>
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-6 col-md-12 border-top p-0">
-                        <a href="design.html" class="card card-service bg-transparent text-decoration-none">
-                            <div class="card-number text-center border-right border-bottom k-padding-s">
-                                <h4>02</h4>
+                    <div class="col-lg-6 col-md-6 p-0 border-top">
+                        <a href="services.html/#design" class="card card-service text-decoration-none" aria-label="Card du service de design">
+                            <div
+                                class="card-service__number text-center align-items-center k-pad-m border-right border-bottom">
+                                <h4 class="text-uppercase">02</h4>
                             </div>
-                            <div class="card-title" id="card-title">
-                                <p class="subtitle"><i class="fa-solid fa-swatchbook"></i> Design</p>
+                            <div class="card-service__title" id="card-service-title">
+                                <p class="subtitle text-uppercase">
+                                    <i class="fa-solid fa-swatchbook"></i> Design
+                                </p>
                             </div>
-                            <div class="card-text">
+                            <div class="card-service__text k-pad-l">
                                 <p class="text-justify">
                                     Des interfaces élégantes et intuitives qui valorisent votre identité et vos
                                     services. Chaque maquette combine esthétique, cohérence et simplicité d’usage, pour
-                                    une navigation fluide sur tous les supports. L’objectif : créer une expérience
-                                    visuelle harmonieuse et mémorable qui renforce votre image de marque.
+                                    une navigation fluide sur tous les supports.
                                 </p>
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-6 col-md-12 border-top p-0">
-                        <a href="refonte.html" class="card card-service bg-transparent text-decoration-none">
-                            <div class="card-number text-center border-right border-bottom k-padding-s">
-                                <h4>03</h4>
+                    <div class="col-lg-6 col-md-6 p-0 border-top border-right">
+                        <a href="services.html/#refonte" class="card card-service text-decoration-none" aria-label="Card du service de refonte">
+                            <div
+                                class="card-service__number text-center align-items-center k-pad-m border-right border-bottom">
+                                <h4 class="text-uppercase">03</h4>
                             </div>
-                            <div class="card-title" id="card-title">
-                                <p class="subtitle"><i class="fa-solid fa-repeat"></i> Refonte</p>
+                            <div class="card-service__title" id="card-service-title">
+                                <p class="subtitle text-uppercase">
+                                    <i class="fa-solid fa-repeat"></i> Refonte
+                                </p>
                             </div>
-                            <div class="card-text">
+                            <div class="card-service__text k-pad-l">
                                 <p class="text-justify">
                                     Une refonte permet de redonner vie à votre site et de l’adapter aux standards
                                     actuels du web. Après une analyse complète de l’existant, le design, la structure et
-                                    les contenus sont repensés pour plus de performance et de cohérence. Le résultat :
+                                    les contenus sont repensés pour plus de performance et de cohérence.<br> Le résultat
+                                    :
                                     un site modernisé, attractif et aligné avec vos objectifs.
                                 </p>
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-6 col-md-12 border-top p-0">
-                        <a href="seo.html" class="card card-service bg-transparent text-decoration-none">
-                            <div class="card-number text-center border-right border-bottom k-padding-s">
-                                <h4>04</h4>
+                    <div class="col-lg-6 col-md-6 p-0 border-top">
+                        <a href="services.html/#seo" class="card card-service text-decoration-none" aria-label="Card du service de seo">
+                            <div
+                                class="card-service__number text-center align-items-center k-pad-m border-right border-bottom">
+                                <h4 class="text-uppercase">04</h4>
                             </div>
-                            <div class="card-title" id="card-title">
-                                <p class="subtitle"><i class="fa-solid fa-magnifying-glass"></i> Seo</p>
+                            <div class="card-service__title" id="card-service-title">
+                                <p class="subtitle text-uppercase">
+                                    <i class="fa-solid fa-magnifying-glass"></i> Seo
+                                </p>
                             </div>
-                            <div class="card-text">
+                            <div class="card-service__text k-pad-l">
                                 <p class="text-justify">
                                     Un référencement naturel optimisé pour améliorer la visibilité et la performance de
                                     votre site. Structure, balises et contenus sont travaillés avec soin afin de
-                                    renforcer votre positionnement sur les moteurs de recherche. Chaque optimisation
+                                    renforcer votre positionnement sur les moteurs de recherche.<br> Chaque optimisation
                                     vise à attirer un trafic qualifié et durable vers vos pages.
                                 </p>
                             </div>
@@ -230,56 +241,143 @@
                 </div>
             </div>
         </section>
+        <section class="projets" aria-label="Présentation des projets">
+            <div class="container container-sec border-top p-0">
+                <div class="row">
+                    <div class="col-md-12 text-center k-pad-xl">
+                        <h3 class="text-uppercase mt-3">Portfolio</h3>
+                        <p class="subtitle text-uppercase">Les travaux en cours</p>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="list-project">
+                            <ul class="list-unstyled">
+                                <li class="list-project__li border-top border-bottom k-pad-m" aria-label="Lien du projet n°1">
+                                    <a href="" class="list-project__a text-decoration-none">
+                                        <div class="list-project__content mt-3">
+                                            <p class="subtitle text-uppercase">01 - ThreeDragons ( en cours )</p>
+                                            <p>
+                                                Framer - Restaurant - No code
+                                            </p>
+                                        </div>
+                                        <img src="assets/img/projets/projet-restaurant.jpg" class="list-project__image"
+                                            alt="Image du projet Thunderwolf" aria-label="Image du projet ThreeDragons">
+                                    </a>
+                                </li>
+                                <li class="list-project__li border-bottom k-pad-m" aria-label="Lien du projet n°2">
+                                    <a href="" class="list-project__a text-decoration-none">
+                                        <div class="list-project__content mt-3">
+                                            <p class="subtitle text-uppercase">02 - Portfolio ( en cours )</p>
+                                            <p>
+                                                Webflow - Portfolio
+                                            </p>
+                                        </div>
+                                        <img src="assets/img/projets/projet-portfolio.jpg" class="list-project__image"
+                                            alt="Image du projet Thunderwolf" aria-label="Image du projet Portfolio">
+                                    </a>
+                                </li>
+                                <li class="list-project__li border-bottom k-pad-m" aria-label="Lien du projet n°3">
+                                    <a href="" class="list-project__a text-decoration-none">
+                                        <div class="list-project__content mt-3">
+                                            <p class="subtitle text-uppercase">03 - Thunderwolf ( en cours )</p>
+                                            <p>
+                                                Symfony - Bootstrap - Sass - Développement - Design - Nature
+                                            </p>
+                                        </div>
+                                        <img src="assets/img/projets/projet-loup.jpg" class="list-project__image"
+                                            alt="Image du projet Thunderwolf" aria-label="Image du projet ThunderWolf">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact" aria-label="Contact">
+            <div class="container container-sec p-0 border-bottom">
+                <div class="row">
+                    <div class="col-md-12 text-center k-pad-xl mb-3">
+                        <h3 class="text-uppercase mt-3">Prendre contact</h3>
+                        <p class="subtitle text-uppercase">Ensemble, on crée</p>
+                    </div>
+                    <div class="col-md-3 border-right p-0 border-top">
+                        <a href="https://www.behance.net/kahinadev"
+                            class="text-decoration-none k-pad-m contact-button text-center w-full align-items-center text-uppercase"
+                            aria-label="Béhance">
+                            <i class="fa-brands fa-behance"></i> Béhance
+                        </a>
+                    </div>
+                    <div class="col-md-3 border-right p-0 border-top">
+                        <a href="https://github.com/kahinadev"
+                            class="text-decoration-none k-pad-m contact-button text-center w-full align-items-center text-uppercase"
+                            aria-label="Github">
+                            <i class="fa-brands fa-github"></i> Github
+                        </a>
+                    </div>
+                    <div class="col-md-3 border-right p-0 border-top">
+                        <a href="https://www.linkedin.com/in/kahinaouali/"
+                            class="text-decoration-none k-pad-m contact-button text-center w-full align-items-center text-uppercase"
+                            aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+                        </a>
+                    </div>
+                    <div class="col-md-3 p-0 border-top">
+                        <a href="https://mail.google.com/mail/u/0/#inbox"
+                            class="text-decoration-none k-pad-m contact-button text-center w-full align-items-center text-uppercase"
+                            aria-label="Mail">
+                            <i class="fa-solid fa-envelope-open"></i> Mail
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer class="footer"></footer>
+    <footer class="footer" aria-label="Footer">
+        <div class="container container-sec">
+            <div class="row">
+                <div class="col-md-12 text-center k-pad-l">
+                    <h5 class="text-uppercase">KAHINADEV</h5>
+                    <h5 class="subtitle text-uppercase">Développeuse full stack</h5>
+                    <h6 class="text-uppercase">
+                        © 2023-2025 Kahina Ouali — Tous droits réservés
+                    </h6>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-    <div class="language border-top border-right">
-        <a href="en/index.html"
-            class="text-decoration-none text-uppercase bg-transparent k-padding-s d-flex justify-content-center align-items-center">
-            <img src="assets/img/icon/flag/american-flag.webp" class="flag" alt="Drapeau américain"
-                aria-label="Drapeau américain">
-            <span>En</span>
-        </a>
-    </div>
-    <div class="tech-stack border-top border-left">
-        <a type="button"
-            class="text-decoration-none text-uppercase bg-transparent k-padding-s d-flex justify-content-center align-items-center"
-            data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-            <i class="fa-solid fa-code"></i>
-            <span>Stack</span>
-        </a>
-    </div>
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content k-padding-s">
+            <div class="modal-content k-pad-m bg-dark">
                 <div class="modal-header p-0 d-flex justify-content-between align-items-center">
                     <h5 class="text-uppercase"><i class="fa-solid fa-code"></i> Tech stack</h5>
-                    <button type="button" class="btn close p-0" data-bs-dismiss="modal" aria-label="Close">
+                    <button type="button" class="button-close border-0 p-0 bg-transparent" data-bs-dismiss="modal"
+                        aria-label="Close">
                         <i class="fa-solid fa-xmark"></i>
                     </button>
                 </div>
                 <div class="modal-body p-0 mt-3">
                     <div class="row row-cols-1 row-cols-md-3 g-2 mb-3" role="tablist">
-                        <div class="col nav-item text-center" role="presentation">
-                            <a class="nav-link active w-100 border-all text-uppercase" id="code-tab"
+                        <div class="col flex-fill nav-item text-center" role="presentation">
+                            <a class="nav-link active w-100 border-all k-pad-s text-uppercase" id="code-tab"
                                 data-bs-toggle="tab" data-bs-target="#code-pane" type="button" role="tab"
                                 aria-controls="code-pane" aria-selected="true">
                                 Code
                             </a>
                         </div>
-                        <div class="col nav-item text-center" role="presentation">
-                            <a class="nav-link w-100 border-all text-uppercase" id="lowcode-tab" data-bs-toggle="tab"
-                                data-bs-target="#lowcode-pane" type="button" role="tab" aria-controls="lowcode-pane"
-                                aria-selected="false">
+                        <div class="col flex-fill nav-item text-center" role="presentation">
+                            <a class="nav-link w-100 border-all k-pad-s text-uppercase" id="lowcode-tab"
+                                data-bs-toggle="tab" data-bs-target="#lowcode-pane" type="button" role="tab"
+                                aria-controls="lowcode-pane" aria-selected="false">
                                 Low / No code
                             </a>
                         </div>
-                        <div class="col nav-item text-center" role="presentation">
-                            <a class="nav-link w-100 border-all text-uppercase" id="design-tab" data-bs-toggle="tab"
-                                data-bs-target="#design-pane" type="button" role="tab" aria-controls="design-pane"
-                                aria-selected="false">
+                        <div class="col flex-fill nav-item text-center" role="presentation">
+                            <a class="nav-link w-100 border-all k-pad-s text-uppercase" id="design-tab"
+                                data-bs-toggle="tab" data-bs-target="#design-pane" type="button" role="tab"
+                                aria-controls="design-pane" aria-selected="false">
                                 Design
                             </a>
                         </div>
@@ -289,55 +387,54 @@
                             aria-labelledby="code-tab">
                             <div class="row row-cols-2 row-cols-md-4 g-3 text-center mt-3">
                                 <div class="col">
-                                    <p class="skill-item border-all text-uppercase">HTML</p>
+                                    <p class="skill-item border-all text-uppercase k-pad-s">HTML</p>
                                 </div>
                                 <div class="col">
-                                    <p class="skill-item border-all text-uppercase">CSS</p>
+                                    <p class="skill-item border-all text-uppercase k-pad-s">CSS</p>
                                 </div>
                                 <div class="col">
-                                    <p class="skill-item border-all text-uppercase">SASS</p>
+                                    <p class="skill-item border-all text-uppercase k-pad-s">SASS</p>
                                 </div>
                                 <div class="col">
-                                    <p class="skill-item border-all text-uppercase">Js</p>
+                                    <p class="skill-item border-all text-uppercase k-pad-s">Js</p>
                                 </div>
                                 <div class="col">
-                                    <p class="skill-item border-all text-uppercase">PHP</p>
+                                    <p class="skill-item border-all text-uppercase k-pad-s">PHP</p>
                                 </div>
                                 <div class="col">
-                                    <p class="skill-item border-all text-uppercase">MySQL</p>
+                                    <p class="skill-item border-all text-uppercase k-pad-s">MySQL</p>
                                 </div>
                                 <div class="col">
-                                    <p class="skill-item border-all text-uppercase">Symfony</p>
+                                    <p class="skill-item border-all text-uppercase k-pad-s">Symfony</p>
                                 </div>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="lowcode-pane" role="tabpanel" aria-labelledby="lowcode-tab">
                             <div class="row row-cols-2 row-cols-md-4 g-3 text-center mt-3">
                                 <div class="col">
-                                    <p class="skill-item border-all text-uppercase">WordPress</p>
+                                    <p class="skill-item border-all text-uppercase k-pad-s">WordPress</p>
                                 </div>
                                 <div class="col">
-                                    <p class="skill-item border-all text-uppercase">Shopify</p>
+                                    <p class="skill-item border-all text-uppercase k-pad-s">Shopify</p>
                                 </div>
                                 <div class="col">
-                                    <p class="skill-item border-all text-uppercase">Framer</p>
+                                    <p class="skill-item border-all text-uppercase k-pad-s">Framer</p>
                                 </div>
                                 <div class="col">
-                                    <p class="skill-item border-all text-uppercase">Airtable</p>
+                                    <p class="skill-item border-all text-uppercase k-pad-s">Airtable</p>
                                 </div>
                                 <div class="col">
-                                    <p class="skill-item border-all text-uppercase">Ksaar</p>
+                                    <p class="skill-item border-all text-uppercase k-pad-s">Ksaar</p>
                                 </div>
                                 <div class="col">
-                                    <p class="skill-item border-all text-uppercase">Grist</p>
+                                    <p class="skill-item border-all text-uppercase k-pad-s">Grist</p>
                                 </div>
                             </div>
                         </div>
-
                         <div class="tab-pane fade" id="design-pane" role="tabpanel" aria-labelledby="design-tab">
                             <div class="row row-cols-2 row-cols-md-4 g-3 text-center mt-3">
                                 <div class="col">
-                                    <p class="skill-item border-all text-uppercase">Figma</p>
+                                    <p class="skill-item border-all text-uppercase k-pad-s">Figma</p>
                                 </div>
                             </div>
                         </div>
@@ -346,6 +443,15 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="language border-top border-right border-bottom bg-dark position-fixed bottom-0">
+        <a href="en/index.html"
+            class="text-decoration-none text-uppercase bg-dark k-pad-m d-flex justify-content-center align-items-center">
+            <img src="assets/img/icon/flag/american-flag.webp" class="flag" alt="Drapeau américain"
+                aria-label="Drapeau américain">
+            <span>En</span>
+        </a>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

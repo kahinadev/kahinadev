@@ -1,58 +1,45 @@
 // =======================================
-// ABSTRACTS
+// STYLE
 // =======================================
+
+// =========== ABSTRACTS ===========
 
 @use "abstracts/variables" as *;
-@use "abstracts/mixins" as *;
 @use "abstracts/functions" as *;
+@use "abstracts/mixins" as *;
 
-// =======================================
-// VENDORS
-// ======================================= 
+// =========== BOOTSTRAP ===========
 
-@use "vendors/bootstrap"; 
+@use "vendors/bootstrap.scss";
 
-// =======================================
-// THEMES
-// ======================================= 
+// =========== THEMES ===========
 
-@use "themes/themes";
+@use "themes/themes.scss";
 
-// =======================================
-// BASE
-// =======================================
+// =========== BASE ===========
 
 @use "base/reset"; 
-@use "base/base";
-@use "base/typography";
-@use "base/utilities"; 
+@use "base/base"; 
+@use "base/typography"; 
+@use "base/utilities";
 
-// =======================================
-// LAYOUT
-// =======================================
+// =========== BASE ===========
 
 @use "layout/header";
 @use "layout/sidebar";
-@use "layout/footer"; 
-@use "layout/main";
+@use "layout/footer";
 
-// =======================================
-// COMPONENTS
-// =======================================
+// =========== COMPONENTS ===========
 
-@use "components/button"; 
-@use "components/card"; 
-@use "components/line";
 @use "components/navbar";
 @use "components/modal";
+@use "components/language";
+@use "components/line";
+@use "components/button";
 @use "components/moving";
-@use "components/language-stack";
+@use "components/card";
+@use "components/list";
 
-// =======================================
-// PAGES
-// =======================================
+// =========== PAGES ===========
 
 @use "pages/home";
-@use "pages/about";
-@use "pages/services";
-@use "pages/portfolio";

@@ -2,18 +2,12 @@
 // BASE
 // ===============================================
 
-// =================== IMPORT ====================
+// =========== VARIABLES & MIXINS ===========
 
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-// =================== BODY ======================
-
-body {
-    color: var(--text);
-    background-color: var(--background);
-    transition: background-color $transition-theme, color $transition-theme;
-}
+// =========== BODY ===========
 
 html,
 body {
@@ -23,19 +17,21 @@ body {
 
 section {
     .container {
-        position: relative;
-        width: calc(100% - 34%);
+        position: $relative;
+        overflow: $overflow-hidden;
+        max-width: calc(100% - 33.2%);
 
         @include respond-to(sm) {
-            width: calc(100% - 10%) !important;
+            max-width: $full !important;
         }
 
-        @include respond-to(xxl) {
-            width: calc(100% - 20%);
+        @include respond-to(xl) {
+            max-width: $full;
         }
     }
 }
-// =================== IMAGE ======================
+
+// =========== IMAGE ===========
 
 img {
     width: $full;

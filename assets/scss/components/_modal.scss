@@ -11,29 +11,24 @@
 
 .modal {
     .modal-dialog {
-        @media screen and (min-width: 576px) {
+        @include respond-to(sm, min) {
             max-width: 720px;
         }
 
         .modal-content {
             border-radius: $zero !important;
-            background-color: var(--background);
 
             .modal-header {
                 border-bottom: $none !important;
 
                 h5 {
-                    font-size: 2rem !important;
-                    color: var(--text);
+                    font-size: 1.8rem !important;
                 }
 
-                .close {
+                .button-close {
                     i {
-                        font-size: 35px;
-
-                        @include respond-to(sm) {
-                            font-size: 25px !important;
-                        }
+                        font-size: 25px;
+                        color: var(--text);
                     }
 
                     &:hover,
@@ -49,22 +44,22 @@
             }
 
             .modal-body {
-                .nav-link {
-                    padding: 1rem;
-                    font-size: 14px !important;
-                    font-weight: 600 !important;
-                    color: var(--background);
-                    background-color: var(--text);
-                }
+                .nav-item {
+                    .nav-link {
+                        font-size: 15px !important;
+                        font-weight: 600 !important;
+                        color: var(--background);
+                        background-color: var(--text);
+                    }
 
-                .nav-link.active {
-                    color: var(--background);
-                    background-color: var(--accent);
+                    .nav-link.active {
+                        color: var(--background);
+                        background-color: var(--accent);
+                    }
                 }
 
                 .skill-item {
-                    padding: 1rem;
-                    font-size: 15px;
+                    font-size: 14px !important;
                 }
             }
         }

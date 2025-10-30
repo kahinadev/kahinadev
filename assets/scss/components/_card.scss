@@ -2,7 +2,7 @@
 // CARDS
 // ===============================================
 
-// =========== IMPORT VARIABLES & MIXINS ===========
+// =========== VARIABLES & MIXINS ===========
 
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
@@ -11,86 +11,82 @@
 
 .card {
     border-radius: $zero !important;
+    background-color: transparent !important;
 }
 
-.card-service {
-    min-height: 500px;
-    overflow: $overflow-hidden;
-    background-color: var(--background);
-    transition: background-color 0.3s ease, padding 0.3s ease;
+// =========== SERVICES ===========
 
-    &:nth-child(1),
-    &:nth-child(3) {
-        border-right: 1px solid var(--border);
+.card-service {
+    min-height: 580px;
+    position: $relative;
+    overflow: $overflow-hidden;
+    transition: $transition-card;
+    background-color: var(--background);
+    transition: background-color 0.3s ease;
+
+    @include respond-to(sm, max) {
+        min-height: 480px !important;
     }
 
-    &:hover,
-    &:focus,
-    &:active {
-        .card-title {
-            transform: translateY(-230px);
+    @include respond-to(xl, max) {
+        min-height: 630px;
+    }
 
-            @include respond-to(lg) {
-                transform: translateY(-204px);
+    &:hover {
+        .card-service__title {
+            transform: translateY(-250px);
+
+            @include respond-to(xl, max) {
+                transform: translateY(-350px) !important;
+            }
+
+            @include respond-to(xxl, max) {
+                transform: translateY(-300px);
             }
         }
 
-        #card-title {
-            @include respond-to(sm) {
-                transform: translateY(-210px) !important;
+        #card-service-title {
+            @include respond-to(sm, max) {
+                margin-left: $k-padding-m !important;
+                transform: translateY(-220px) !important;
             }
         }
 
-        .card-text {
+        .card-service__text {
             bottom: 0;
         }
     }
 
-    .card-number {
-        width: 120px;
-        z-index: 3;
+    &__number {
+        width: 150px;
+        background-attachment: var(--background);
 
-        @include respond-to(sm) {
-            width: 140px !important;
+        @include respond-to(sm, max) {
+            width: 150px !important;
         }
 
-        @include respond-to(lg) {
+        @include respond-to(xl, max) {
             width: 220px;
         }
     }
 
-    .card-title,
-    .card-text {
+    &__title,
+    &__text {
         position: $absolute;
     }
 
-    .card-title {
-        left: 4rem;
+    &__title {
         bottom: 20px;
+        margin-left: $k-padding-l;
         transition: transform 0.4s ease;
-
-        .subtitle {
-            @include respond-to(lg) {
-                font-size: 1.4rem;
-            }
-        }
-
-        @include respond-to(sm) {
-            left: 2rem !important;
-        }
     }
 
-    .card-text {
-        left: 0;
-        padding: 4rem;
+    &__text {
+        left: $zero;
         bottom: -100%;
-        height: 100%;
+        height: $full;
         display: flex;
         align-items: flex-end;
         transition: bottom 0.4s ease;
-
-        @include respond-to(sm) {
-            padding: 2rem !important;
-        }
     }
 }

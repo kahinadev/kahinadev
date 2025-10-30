@@ -1,8 +1,8 @@
 // ===============================================
-// MOVING
+// RESET
 // ===============================================
 
-// =========== VARIABLES & MIXINS ===========
+// =========== VARIABLES ===========
 
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
@@ -10,38 +10,28 @@
 // =========== GENERAL ===========
 
 .moving {
-    width: $full;
-    overflow: $overflow-hidden;
-    box-sizing: border-box;
+    overflow: hidden;
 
     &__track {
-        gap: 2rem;
+        display: flex;
         white-space: nowrap;
-        will-change: transform;
-        animation: move linear $duration-moving infinite;
+        animation: move linear 15s infinite;
     }
 
     &__item {
-        font-size: 22px;
-        font-weight: 500;
-
-        &:hover,
-        &:focus,
-        &:active {
-            color: var(--accent);
-            transition: color $transition-theme;
-        }
+        font-size: 22px !important;
+        margin-right: $k-padding-s;
     }
 }
 
 // =========== KEYFRAMES ===========
 
 @keyframes move {
-    from {
+    0% {
         transform: translateX(0);
     }
 
-    to {
+    100% {
         transform: translateX(-100%);
     }
 }

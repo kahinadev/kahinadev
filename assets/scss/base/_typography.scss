@@ -2,18 +2,20 @@
 // TYPOGRAPHY
 // ===============================================
 
-// =================== IMPORT VARIABLE ===========
+// =========== VARIABLES & MIXINS ===========
 
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-// =================== IMPORT FONTS ==============
+// =========== FONT TITLE ===========
 
 @font-face {
     font-family: "Cyber cipher";
     src: url('../../assets/fonts/title/CyberCipher.woff2') format('woff2'),
         url('../../assets/fonts/title/CyberCipher.woff') format('woff');
 }
+
+// =========== FONT TEXT ===========
 
 @font-face {
     font-family: "Orbitron";
@@ -36,7 +38,7 @@
     font-weight: 600;
 }
 
-// =================== TITLES ==============
+// =========== TITLE ===========
 
 h1,
 h2,
@@ -47,12 +49,14 @@ h6 {
     @include title;
 }
 
+// =========== SIZE TITLE ===========
+
 h2 {
-    @include title(2.8rem, 5.8rem, 6.2rem);
+    @include title(4.2rem, 5.8rem, 6.2rem);
 }
 
 h3 {
-    @include title(2.6rem, 5.4rem, 6.1rem);
+    @include title(3.5rem, 5.4rem, 6.1rem); 
 }
 
 h4 {

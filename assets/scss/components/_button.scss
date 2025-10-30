@@ -2,31 +2,30 @@
 // BUTTON
 // ===============================================
 
-// =========== IMPORT VARIABLES & MIXINS ===========
+// =========== VARIABLES ===========
 
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 // =========== GENERAL ===========
 
 .btn {
-    font-size: 17px;
+    font-size: 22px !important;
     color: var(--text);
-    letter-spacing: 1.6px;
-    text-align: center !important;
-    padding: 1rem 2rem;
+    font-weight: 800;
     text-transform: uppercase;
+    letter-spacing: 3px;
     border-radius: $zero !important;
-    font-family: $font-title;
-    transition: all 0.3s ease-in-out !important;
+    font-family: $font-title !important;
+}
 
-    i {
-        display: $none;
-    }
+.btn-h {
+    transition: all 0.3s ease-in-out !important;
 
     &:hover,
     &:focus,
     &:active {
-        color: var(--text);
-        background-color: var(--secondary);
+        color: var(--background);
+        background-color: var(--text);
     }
 }

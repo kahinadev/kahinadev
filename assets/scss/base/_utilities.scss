@@ -2,63 +2,28 @@
 // UTILITIES
 // ======================================= 
 
+// =========== VARIABLES & MIXINS ===========
+
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-// =========== PADDING ===========
-
-.k-padding-s {
-    padding: $k-padding-s !important;
-}
-
-.k-padding-m {
-    padding: $k-padding-m;
-
-    @include respond-to(sm) {
-        padding: $k-padding-s !important;
-    }
-}
-
-.k-padding-section {
-    padding: $k-padding-section;
-
-    @include respond-to(sm) {
-        padding: $k-padding-section-s !important;
-    }
-}
-
-// =========== MARGIN ===========
-
-.mt-5 {
-    margin-top: 5rem;
-}
-
-.mb-5 {
-    margin-bottom: 5rem;
-}
-
-.mb-8 {
-    margin-bottom: 8rem;
-}
-
-.mb-5,
-.mb-8 {
-    @include respond-to(sm) {
-        margin-bottom: 3rem !important;
-    }
-}
-
-// =========== FULL ===========
+// =========== WIDTH ===========
 
 .w-full {
     width: $full !important;
 }
 
-// =========== POSITION ===========
+// =========== Z-INDEX ===========
 
-.s-relative-index {
-    z-index: 7;
-    position: relative !important;
+.k-index-sec {
+    z-index: 10 !important;
+    position: $relative !important;
+}
+
+// =========== ALIGN ===========
+
+.text-justify {
+    text-align: justify;
 }
 
 // =========== SUBTITLE ===========
@@ -69,14 +34,46 @@
     br {
         display: $none;
 
-        @include respond-to(sm) {
+        @include respond-to(xxl, max) {
             display: $block !important;
         }
     }
 }
 
-// =========== TEXT ===========
+// =========== SUBTITLE ===========
 
-.text-justify {
-    text-align: justify;
+.k-pad-s {
+    padding: $k-padding-s;
+}
+
+.k-pad-m {
+    padding: $k-padding-m;
+}
+
+.k-pad-l {
+    padding: $k-padding-l;
+
+    @include respond-to(sm, max) {
+        padding: $k-padding-m !important;
+    }
+}
+
+.k-pad-xl {
+    padding: $k-padding-xl $k-padding-m;
+
+    @include respond-to(sm, max) {
+        padding: $k-padding-l !important;
+    }
+}
+
+.k-pad-sec {
+    padding: $k-padding-section-desktop;
+
+    @include respond-to(sm, max) {
+        padding: $k-padding-section-mobile !important;
+    }
+
+    @include respond-to(xl, max) {
+        padding: $k-padding-section-tablet;
+    }
 }

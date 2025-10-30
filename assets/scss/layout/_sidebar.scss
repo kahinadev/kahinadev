@@ -1,0 +1,39 @@
+// ===============================================
+// SIDEBAR
+// ===============================================
+
+// =========== VARIABLES & MIXINS ===========
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// =========== GENERAL ===========
+
+.navbar-collapse {
+    @include respond-to(sm, max) {
+        width: 60% !important;
+    }
+
+    @include respond-to(lg, max) {
+        top: $zero;
+        left: $zero;
+        width: 42%;
+        z-index: 6;
+        height: $full;
+        position: $fixed;
+        border-right: 1px solid var(--border);
+        background-color: var(--background);
+
+           @include respond-to(sm, max) {
+            width: 66% !important;
+           }
+
+        .navbar-nav {
+            padding: 15rem $k-padding-s;
+
+            @include respond-to(sm, max) {
+                padding: 10rem $k-padding-s !important;
+            }
+        }
+    }
+}

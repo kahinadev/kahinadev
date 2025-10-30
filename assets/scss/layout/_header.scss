@@ -1,6 +1,6 @@
-// ===============================================
-// HEADER
-// ===============================================
+// =======================================
+// UTILITIES
+// ======================================= 
 
 // =========== VARIABLES & MIXINS ===========
 
@@ -10,58 +10,33 @@
 // =========== GENERAL ===========
 
 .header {
-    @include respond-to(sm) {
-        min-height: $height-header-mobile !important;
+    // =========== BRAND & THEME ===========
+
+    .brand,
+    .btn-toggle {
+        color: var(--text);
     }
 
-    @include respond-to(xxl) {
-        z-index: 9;
-        position: $relative;
-        min-height: $height-header-tablet;
-        background-color: var(--background) !important;
+    .brand {
+        font-size: 55px !important;
+        font-family: $font-title !important;
     }
 
-    .brand-n-theme {
-        @include respond-to(sm) {
-            width: 60% !important;
-        }
-
-        @include respond-to(lg) {
-            border-right: 1px solid var(--text);
-        }
-
-        .brand,
-        .btn-toggle {
-            width: 50%;
-        }
-
-        .logo {
-            transition: opacity $transition-theme;
-        }
-
-        .btn-toggle {
-            border: $none !important;
-            background-color: transparent !important;
+    #brand {
+        @include respond-to(sm, max) {
+            font-size: 36px !important;
         }
     }
 
-    .menu {
-        @include respond-to(sm) {
-            width: 40% !important;
-            padding: 0rem !important;
-            border-right: $none !important;
-        }
-
-        @include respond-to(lg) {
-            text-align: center;
-            padding: 4.4rem 2rem;
-            border-right: 1px solid var(--text);
+    .nav-brand {
+        @include respond-to(sm, max) {
+            padding: $k-padding-l $k-padding-m !important;
         }
     }
 
-    .contact {
-        @include respond-to(sm) {
-            display: $none !important;
+    .nav-menu {
+        @include respond-to(sm, max) {
+            width: 30%;
         }
     }
 }
