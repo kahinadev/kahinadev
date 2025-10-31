@@ -25,7 +25,7 @@
     &:hover,
     &:focus,
     &:active {
-        color: var(--background);
-        background-color: var(--text);
+        color: var(--background) !important;
+        background-color: var(--text) !important;
     }
 }

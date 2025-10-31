@@ -74,7 +74,7 @@
 
 // =========== TITLE ===========
 
-@mixin title($size-mobile: 4.5rem, $size-tablet: 5.8rem, $size-desktop: 7.5rem, $spacing: 1.2px) {
+@mixin title($size-mobile: 4.3rem, $size-tablet: 5.8rem, $size-desktop: 7.5rem, $spacing: 1.2px) {
     @include color-text;
     word-break: break-word;
     letter-spacing: $spacing;
@@ -122,7 +122,7 @@
 
 // =========== TEXT ===========
 
-@mixin text($size-mobile: 0.9rem, $size-tablet: 1.2rem, $size-desktop: 1.2rem, $weight: 300, $spacing: 1px, $line-height: 1.3) {
+@mixin text($size-mobile: 1rem, $size-tablet: 1.2rem, $size-desktop: 1.2rem, $weight: 300, $spacing: 1px, $line-height: 1.3) {
     @include color-text;
     font-weight: $weight;
     line-height: $line-height;

@@ -27,17 +27,10 @@
     <header class="header border-bottom bg-dark k-index-sec" aria-label="Header">
         <nav class="navbar navbar-expand-lg p-0">
             <div class="container-fluid p-0">
-                <div class="col-lg-1 col-md-3 col-sm-2 border-right k-pad-l text-center nav-brand">
+                <div class="col-lg-2 col-md-3 col-sm-2 border-right k-pad-l text-center nav-brand">
                     <a id="brand" class="brand text-decoration-none text-uppercase" href="index.html" aria-label="Logo">
                         KA
                     </a>
-                </div>
-                <div class="col-lg-1 col-md-2 border-right k-pad-xl">
-                    <button id="theme-toggle" class="btn-toggle bg-transparent border-0 w-full"
-                        aria-label="Switch theme">
-                        <i id="icon-sun" class="fa-regular fa-sun"></i>
-                        <i id="icon-moon" class="fa-regular fa-moon"></i>
-                    </button>
                 </div>
                 <div class="col-lg-10 col-md-7 text-end p-0 nav-menu">
                     <button class="navbar-toggler k-pad-xl border-left" type="button" data-bs-toggle="collapse"
@@ -57,8 +50,8 @@
                                     aria-label="Services">Services</a>
                             </li>
                             <li class="nav-item flex-fill text-center border-right k-pad-xl">
-                                <a class="nav-link text-uppercase" href="projets.html"
-                                    aria-label="Projects">Projects</a>
+                                <a class="nav-link text-uppercase" href="portfolio.html"
+                                    aria-label="Portfolio">Portfolio</a>
                             </li>
                             <li class="nav-item flex-fill text-center border-right k-pad-xl">
                                 <a class="nav-link text-uppercase" href="#contact" aria-label="Contact">Contact</a>
@@ -252,8 +245,8 @@
             <div class="container container-sec border-top p-0">
                 <div class="row">
                     <div class="col-md-12 text-center k-pad-xl">
-                        <h3 class="text-uppercase mt-3">Portfolio</h3>
-                        <p class="subtitle text-uppercase">Ongoing Projects</p>
+                        <h3 class="text-uppercase mt-3">Projects</h3>
+                        <p class="subtitle text-uppercase">My creations</p>
                     </div>
                     <div class="col-md-12">
                         <div class="list-project">
@@ -455,12 +448,26 @@
         </div>
     </div>
 
-    <div class="language border-top border-right border-bottom bg-dark position-fixed bottom-0">
+    <div class="button-language position-fixed bottom-0 p-0">
         <a href="../index.html"
-            class="text-decoration-none text-uppercase bg-dark k-pad-m d-flex justify-content-center align-items-center">
-            <img src="../assets/img/icon/flag/french-flag.webp" class="flag" alt="French flag" aria-label="French flag">
-            <span>Fr</span>
+            class="language btn text-decoration-none text-uppercase border-top bg-dark k-pad-m d-flex justify-content-center align-items-center w-full">
+            <img src="../assets/img/icon/flag/french-flag.webp" class="flag" alt="French flag"
+                aria-label="French flag">
+            <span class="flag-name">Fr</span>
         </a>
+    </div>
+    <div class="switch-theme position-fixed bottom-0 p-0">
+        <button id="theme-toggle" class="btn btn-toggle border-top bg-dark w-full k-pad-m"
+            aria-label="Switch theme">
+            <span id="icon-sun" class="d-flex justify-content-center align-items-center text-uppercase">
+                <i class="fa-regular fa-sun"></i>
+                <span class="theme-name">Light</span>
+            </span>
+            <span id="icon-moon" class="d-flex justify-content-center align-items-center text-uppercase">
+                <i class="fa-regular fa-moon"></i>
+                <span class="theme-name">Dark</span>
+            </span>
+        </button>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

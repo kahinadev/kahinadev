@@ -30,30 +30,41 @@ body {
 #theme-toggle {
     position: $relative;
 
-    i {
-        color: var(--text);
-        font-size: 38px;
-
-        @include respond-to(sm, max) {
-            font-size: 36px !important;
-        }
-    }
-
     #icon-sun {
-        display: $block;
+        display: $block !important;
     }
 
     #icon-moon {
-        display: $none;
+        display: $none !important;
     }
 
     &.is-light {
         #icon-sun {
             display: $none !important;
         }
-
         #icon-moon {
             display: $block !important;
         }
     }
 }
+// #theme-toggle {
+//     position: $relative;
+
+//     #icon-sun {
+//         display: $block;
+//     }
+
+//     #icon-moon {
+//         display: $none;
+//     }
+
+//     &.is-light {
+//         #icon-sun {
+//             display: $none !important;
+//         }
+
+//         #icon-moon {
+//             display: $block !important;
+//         }
+//     }
+// }

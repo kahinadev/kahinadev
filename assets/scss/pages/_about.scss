@@ -1,0 +1,32 @@
+// ===============================================
+// ABOUT
+// ===============================================
+
+// =========== VARIABLES & MIXINS ===========
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// =========== GENERAL ===========
+
+.about-me {
+    &__image {
+        @include respond-to(xl, max) {
+            border-right: $border;
+        }
+
+        img {
+            max-height: 620px;
+
+            @include respond-to(sm, max) {
+                height: 300px !important;
+            }
+        }
+    }
+
+    &__content {
+        @include respond-to(xl, max) {
+            border-left: $none !important;
+        }
+    }
+}

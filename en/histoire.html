@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>KAHINADEV - PROJETS</title>
+    <title>KAHINADEV - HISTORY</title>
 
     <meta name="description" content="">
     <meta name="keywords" content="">
@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body class="theme-dark">
@@ -27,17 +27,10 @@
     <header class="header border-bottom bg-dark k-index-sec" aria-label="Header">
         <nav class="navbar navbar-expand-lg p-0">
             <div class="container-fluid p-0">
-                <div class="col-lg-1 col-md-3 col-sm-2 border-right k-pad-l text-center nav-brand">
+                <div class="col-lg-2 col-md-3 col-sm-2 border-right k-pad-l text-center nav-brand">
                     <a id="brand" class="brand text-decoration-none text-uppercase" href="index.html" aria-label="Logo">
                         KA
                     </a>
-                </div>
-                <div class="col-lg-1 col-md-2 border-right k-pad-xl">
-                    <button id="theme-toggle" class="btn-toggle bg-transparent border-0 w-full"
-                        aria-label="Changer de thème">
-                        <i id="icon-sun" class="fa-regular fa-sun"></i>
-                        <i id="icon-moon" class="fa-regular fa-moon"></i>
-                    </button>
                 </div>
                 <div class="col-lg-10 col-md-7 text-end p-0 nav-menu">
                     <button class="navbar-toggler k-pad-xl border-left" type="button" data-bs-toggle="collapse"
@@ -50,15 +43,15 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ml-auto mb-lg-0 w-100 align-items-center">
                             <li class="nav-item flex-fill text-center border-right k-pad-xl">
-                                <a class="nav-link text-uppercase" href="histoire.html"
-                                    aria-label="Histoire">Histoire</a>
+                                <a class="nav-link text-uppercase" href="histoire.html" aria-label="History">History</a>
                             </li>
                             <li class="nav-item flex-fill text-center border-right k-pad-xl">
                                 <a class="nav-link text-uppercase" href="services.html"
                                     aria-label="Services">Services</a>
                             </li>
                             <li class="nav-item flex-fill text-center border-right k-pad-xl">
-                                <a class="nav-link text-uppercase" href="projets.html" aria-label="Projets">Projets</a>
+                                <a class="nav-link text-uppercase" href="portfolio.html"
+                                    aria-label="Portfolio">Portfolio</a>
                             </li>
                             <li class="nav-item flex-fill text-center border-right k-pad-xl">
                                 <a class="nav-link text-uppercase" href="index.html#contact"
@@ -81,56 +74,103 @@
 
     <main class="main">
         <section class="introduction" aria-label="Introduction">
-            <div class="container container-sec">
+            <div class="container container-sec border-bottom">
                 <div class="row">
                     <div class="col-md-12 text-center k-pad-sec">
-                        <h1 class="text-uppercase">Mes créations</h1>
-                        <p class="subtitle text-uppercase">Un aperçu de mon travail</p>
+                        <h1 class="text-uppercase">My story</h1>
+                        <p class="subtitle text-uppercase">Curiosity turned into a passion</p>
                     </div>
                 </div>
             </div>
         </section>
-         <section class="projects" aria-label="Présentation des projets">
-            <div class="container container-sec border-top p-0">
+        <section class="moving" aria-label="Moving text">
+            <div class="container container sec border-bottom">
+                <div class="moving__track d-flex align-items-center" id="movingTrack">
+                    <div class="moving__content k-pad-l" id="movingContent">
+                        <p class="moving__item text-uppercase mt-3">
+                            Creative <i class="fa-solid fa-circle"></i> Independent <i class="fa-solid fa-circle"></i>
+                            Organized <i class="fa-solid fa-circle"></i> Curious <i class="fa-solid fa-circle"></i>
+                            Creative <i class="fa-solid fa-circle"></i> Independent <i class="fa-solid fa-circle"></i>
+                            Organized <i class="fa-solid fa-circle"></i> Curious <i class="fa-solid fa-circle"></i>
+                            Creative <i class="fa-solid fa-circle"></i> Independent <i class="fa-solid fa-circle"></i>
+                            Organized <i class="fa-solid fa-circle"></i> Curious <i class="fa-solid fa-circle"></i>
+                            Creative <i class="fa-solid fa-circle"></i> Independent <i class="fa-solid fa-circle"></i>
+                            Organized <i class="fa-solid fa-circle"></i> Curious <i class="fa-solid fa-circle"></i>
+                            Creative <i class="fa-solid fa-circle"></i> Independent <i class="fa-solid fa-circle"></i>
+                            Organized <i class="fa-solid fa-circle"></i> Curious <i class="fa-solid fa-circle"></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about-me" aria-label="Who am I">
+            <div class="container container-sec border-bottom p-0">
                 <div class="row">
-                    <div class="col-md-12">
-                        <div class="list-project">
+                    <div class="col-lg-8 col-md-12 border-right k-pad-xl text-center bg-light about-me__title">
+                        <h2 class="text-uppercase">
+                            Profile
+                        </h2>
+                        <p class="subtitle text-uppercase">Code, create, elevate</p>
+                    </div>
+                    <div class="col-lg-6 col-md-8 p-0 border-top about-me__image">
+                        <img src="../assets/img/me/moi-deux.webp" alt="Photo of me" aria-label="Photo of me">
+                    </div>
+                    <div class="col-lg-6 col-md-12 border-top border-left p-0 about-me__content">
+                        <p class="text-justify k-pad-l">
+                            I am a passionate web developer, driven by curiosity and the desire to turn ideas into
+                            tangible projects. My academic background and professional experience have allowed me to
+                            master both technical skills and design, with a user-centered approach.
+                            <br>
+                            <br>
+                            For me, each project is a unique adventure where I can combine precision, creativity, and
+                            innovation. I place great importance on the quality of my work and aesthetics, while staying
+                            attentive to the latest web trends and technologies.
+                            <br>
+                            Independent in my work, I also enjoy collaborating with other professionals to bring modern,
+                            high-performance, and engaging digital experiences to life. My goal: to create custom
+                            solutions that truly make a difference.
+                        </p>
+                    </div>
+                    <div class="col-lg-12 border-top p-0 about-me__button">
+                        <a href="" class="btn btn-h w-full bg-dark border-top border-bottom k-pad-m">
+                            Upload my cv
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="values" aria-label="Valeurs">
+            <div class="container container-sec border-bottom">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 border-left k-pad-xl text-center bg-light align-items-center">
+                        <h3 class="text-uppercase">
+                            Values
+                        </h3>
+                        <p class="subtitle text-uppercase">What matters to me</p>
+                    </div>
+                    <div class="col-lg-6 col-md-6 p-0">
+                        <div class="list-values">
                             <ul class="list-unstyled">
-                                <li class="list-project__li border-top border-bottom k-pad-m" aria-label="Lien du projet n°1">
-                                    <a href="" class="list-project__a text-decoration-none">
-                                        <div class="list-project__content mt-3">
-                                            <p class="subtitle text-uppercase">01 - ThreeDragons ( en cours )</p>
-                                            <p>
-                                                Framer - Restaurant - No code
-                                            </p>
-                                        </div>
-                                        <img src="assets/img/projets/projet-restaurant.jpg" class="list-project__image"
-                                            alt="Image du projet ThreeDragons" aria-label="Image du projet ThreeDragons">
-                                    </a>
+                                <li class="list-values__li border-bottom k-pad-m" aria-label="Value n°1">
+                                    <p class="list-values__a text-decoration-none">
+                                    <div class="list-project__content mt-3">
+                                        <p class="subtitle text-uppercase">01 - Respect</p>
+                                    </div>
+                                    </p>
                                 </li>
-                                <li class="list-project__li border-bottom k-pad-m" aria-label="Lien du projet n°2">
-                                    <a href="" class="list-project__a text-decoration-none">
-                                        <div class="list-project__content mt-3">
-                                            <p class="subtitle text-uppercase">02 - Portfolio ( en cours )</p>
-                                            <p>
-                                                Webflow - Portfolio
-                                            </p>
-                                        </div>
-                                        <img src="assets/img/projets/projet-portfolio.jpg" class="list-project__image"
-                                            alt="Image du projet Portfolio" aria-label="Image du projet Portfolio">
-                                    </a>
+                                <li class="list-values__li border-bottom k-pad-m" aria-label="Value n°2">
+                                    <p class="list-values__a text-decoration-none">
+                                    <div class="list-project__content mt-3">
+                                        <p class="subtitle text-uppercase">02 - Listening</p>
+                                    </div>
+                                    </p>
                                 </li>
-                                <li class="list-project__li border-bottom k-pad-m" aria-label="Lien du projet n°3">
-                                    <a href="" class="list-project__a text-decoration-none">
-                                        <div class="list-project__content mt-3">
-                                            <p class="subtitle text-uppercase">03 - Thunderwolf ( en cours )</p>
-                                            <p>
-                                                Symfony - Bootstrap - Sass - Développement - Design - Nature
-                                            </p>
-                                        </div>
-                                        <img src="assets/img/projets/projet-loup.jpg" class="list-project__image"
-                                            alt="Image du projet Thunderwolf" aria-label="Image du projet ThunderWolf">
-                                    </a>
+                                <li class="list-values__li k-pad-m" aria-label="Value n°3">
+                                    <p class="list-values__a text-decoration-none">
+                                    <div class="list-project__content mt-3">
+                                        <p class="subtitle text-uppercase">03 - Kindness</p>
+                                    </div>
+                                    </p>
                                 </li>
                             </ul>
                         </div>
@@ -145,9 +185,9 @@
             <div class="row">
                 <div class="col-md-12 text-center k-pad-l">
                     <h5 class="text-uppercase">KAHINADEV</h5>
-                    <h5 class="subtitle text-uppercase">Développeuse full stack</h5>
+                    <h5 class="subtitle text-uppercase">Full-Stack Developer</h5>
                     <h6 class="text-uppercase">
-                        © 2023-2025 KAHINADEV — Tous droits réservés
+                        © 2023-2025 KAHINADEV — All rights reserved
                     </h6>
                 </div>
             </div>
@@ -252,13 +292,24 @@
         </div>
     </div>
 
-    <div class="language border-top border-right border-bottom bg-dark position-fixed bottom-0">
-        <a href="en/projets.html"
-            class="text-decoration-none text-uppercase bg-dark k-pad-m d-flex justify-content-center align-items-center">
-            <img src="assets/img/icon/flag/american-flag.webp" class="flag" alt="Drapeau américain"
-                aria-label="Drapeau américain">
-            <span>En</span>
+    <div class="button-language position-fixed bottom-0 p-0">
+        <a href="../histoire.html"
+            class="language btn text-decoration-none text-uppercase border-top bg-dark k-pad-m d-flex justify-content-center align-items-center w-full">
+            <img src="../assets/img/icon/flag/french-flag.webp" class="flag" alt="French flag" aria-label="French flag">
+            <span class="flag-name">Fr</span>
         </a>
+    </div>
+    <div class="switch-theme position-fixed bottom-0 p-0">
+        <button id="theme-toggle" class="btn btn-toggle border-top bg-dark w-full k-pad-m" aria-label="Switch theme">
+            <span id="icon-sun" class="d-flex justify-content-center align-items-center text-uppercase">
+                <i class="fa-regular fa-sun"></i>
+                <span class="theme-name">Light</span>
+            </span>
+            <span id="icon-moon" class="d-flex justify-content-center align-items-center text-uppercase">
+                <i class="fa-regular fa-moon"></i>
+                <span class="theme-name">Dark</span>
+            </span>
+        </button>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -268,7 +319,7 @@
         integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/37c4b211fb.js" crossorigin="anonymous"></script>
-    <script src="assets/js/website.js"></script>
+    <script src="../assets/js/website.js"></script>
 </body>
 
 </html>

@@ -33,7 +33,7 @@
 
 @use "components/navbar";
 @use "components/modal";
-@use "components/language";
+@use "components/language-n-switch";
 @use "components/line";
 @use "components/button";
 @use "components/moving";
@@ -43,3 +43,4 @@
 // =========== PAGES ===========
 
 @use "pages/home";
+@use "pages/about";
