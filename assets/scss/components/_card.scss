@@ -42,7 +42,7 @@
     background-color: var(--background);
 
     @include respond-to(sm, max) {
-        min-height: 480px !important;
+        min-height: 580px !important;
     }
 
     @include respond-to(xl, max) {
@@ -51,7 +51,7 @@
 
     &:hover {
         .card-service__title {
-            transform: translateY(-250px);
+            transform: translateY(-200px);
 
             @include respond-to(xl, max) {
                 transform: translateY(-350px) !important;
@@ -65,7 +65,7 @@
         #card-service-title {
             @include respond-to(sm, max) {
                 margin-left: $k-padding-m !important;
-                transform: translateY(-220px) !important;
+                transform: translateY(-270px) !important;
             }
         }
 
@@ -92,6 +92,14 @@
         display: flex;
         align-items: flex-end;
         transition: bottom 0.4s ease;
+    }
+}
+
+.col-card {
+    @include respond-to(sm, max) {
+        border-left: $none !important;
+        border-right: $none !important;
+        border-bottom: $none !important;
     }
 }
 

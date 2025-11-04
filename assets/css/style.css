@@ -727,7 +727,7 @@ a {
 }
 @media (max-width: 576px) {
   .card-service {
-    min-height: 480px !important;
+    min-height: 580px !important;
   }
 }
 @media (max-width: 1110px) {
@@ -736,7 +736,7 @@ a {
   }
 }
 .card-service:hover .card-service__title {
-  transform: translateY(-250px);
+  transform: translateY(-200px);
 }
 @media (max-width: 1110px) {
   .card-service:hover .card-service__title {
@@ -751,7 +751,7 @@ a {
 @media (max-width: 576px) {
   .card-service:hover #card-service-title {
     margin-left: 2rem !important;
-    transform: translateY(-220px) !important;
+    transform: translateY(-270px) !important;
   }
 }
 .card-service:hover .card-service__text {
@@ -772,6 +772,14 @@ a {
   display: flex;
   align-items: flex-end;
   transition: bottom 0.4s ease;
+}
+
+@media (max-width: 576px) {
+  .col-card {
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: none !important;
+  }
 }
 
 .list-project li {
