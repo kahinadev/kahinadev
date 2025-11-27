@@ -757,15 +757,11 @@ span {
 }
 
 .vertical-line-left {
-  left: 0;
-}
-
-.vertical-line-middle {
   left: 8%;
 }
 @media (max-width: 1110px) {
-  .vertical-line-middle {
-    display: none !important;
+  .vertical-line-left {
+    left: 0 !important;
   }
 }
 

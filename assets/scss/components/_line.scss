@@ -18,21 +18,17 @@
 }
 
 .vertical-line-left {
-    left: $zero;
-}
-
-.vertical-line-middle {
     left: $line-margin;
 
     @include respond-to(xl, max) {
-        display: $none !important;
+        left: $zero !important;
     }
 }
 
 .vertical-line-right {
     right: $line-margin;
 
-     @include respond-to(xl, max) {
+    @include respond-to(xl, max) {
         right: $zero !important;
     }
 }
