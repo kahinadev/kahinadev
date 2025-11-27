@@ -1,0 +1,38 @@
+// ===============================================
+// Line
+// ===============================================
+
+// =========== VARIABLES & MIXINS ===========
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// =========== GENERAL ===========
+
+.vertical-line {
+    width: 1px;
+    height: $full;
+    z-index: 2;
+    position: $fixed !important;
+    background-color: var(--border);
+}
+
+.vertical-line-left {
+    left: $zero;
+}
+
+.vertical-line-middle {
+    left: $line-margin;
+
+    @include respond-to(xl, max) {
+        display: $none !important;
+    }
+}
+
+.vertical-line-right {
+    right: $line-margin;
+
+     @include respond-to(xl, max) {
+        right: $zero !important;
+    }
+}

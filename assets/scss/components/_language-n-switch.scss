@@ -1,0 +1,88 @@
+// ===============================================
+// LANGUAGE & BUTTON SWITCH
+// ===============================================
+
+// =========== VARIABLES & MIXINS ===========
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// =========== GENERAL ===========
+
+.button-language,
+.switch-theme {
+    width: $width-btn-desktop;
+
+    @include respond-to(sm, max) {
+        width: $width-btn-mobile;
+    }
+
+    .btn-toggle {
+        @include respond-to(xl, max) {
+            border-top-left-radius: 1rem !important;
+        }
+    }
+
+    .language {
+        @include respond-to(xl, max) {
+            border-top-right-radius: 1rem !important;
+        }
+    }
+
+    .btn-toggle,
+    .language {
+        @include respond-to(xl, max) {
+            border-bottom: $border;
+        }
+    }
+
+    .theme-name,
+    .flag-name {
+        @include respond-to(xl, max) {
+            display: $none !important;
+        }
+    }
+
+    .btn {
+        padding: 20px 25px !important;
+    }
+}
+
+// =========== LANGUAGE ===========
+
+.language {
+    color: var(--text) !important;
+
+    @include respond-to(xl, max) {
+        border-right: $border;
+    }
+
+    .flag {
+        z-index: 3;
+        width: $flag-width-desktop;
+        height: $flag-height-desktop;
+        margin-right: $icon-marg;
+
+        @include respond-to(xl, max) {
+            width: $flag-width-tablet;
+            height: $flag-height-tablet;
+        }
+    }
+}
+
+// =========== SWITCH ===========
+
+.switch-theme {
+    right: $zero;
+
+    .btn-toggle {
+        @include respond-to(xl, max) {
+            border-left: $border;
+        }
+
+        i {
+            font-size: 25px;
+            color: var(--text);
+        }
+    }
+}

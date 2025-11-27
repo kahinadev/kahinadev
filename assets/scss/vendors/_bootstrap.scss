@@ -1,0 +1,64 @@
+// =======================================
+// BOOTSTRAP
+// ======================================= 
+
+.bg-dark {
+    background-color: var(--background) !important;
+}
+
+.bg-light {
+    background-color: var(--text) !important;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    a,
+    span {
+        color: var(--background) !important;
+    }
+}
+
+.bg-dark,
+.bg-primary,
+.bg-secondary {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    a,
+    span {
+        color: var(--text) !important;
+    }
+}
+
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.bg-secondary {
+    background-color: var(--secondary) !important;
+}
+
+.bg-accent {
+    background-color: var(--accent) !important;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    a,
+    span {
+        color: var(--background) !important;
+    }
+}

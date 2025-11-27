@@ -1,0 +1,28 @@
+// =======================================
+// FOOTER
+// ======================================= 
+
+// =========== VARIABLES & MIXINS ===========
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// =========== LOGO + SUBTITLE ===========
+
+.footer {
+    @include respond-to(lg, max) {
+        margin-top: $k-margin-xl !important;
+    }
+
+    h5 {
+        font-size: 45px !important;
+    }
+
+    .subtitle {
+        font-size: 18px !important;
+    }
+
+    h6 {
+        font-size: 15px !important;
+    }
+}

@@ -1,0 +1,21 @@
+// ===============================================
+// RESET
+// ===============================================
+
+// =========== VARIABLES ===========
+
+@use "../abstracts/variables" as *;
+
+// =========== UNIVERSAL ===========
+
+*,
+*::before,
+*::after {
+    margin: $zero;
+    padding: $zero;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}

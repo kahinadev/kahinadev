@@ -1,0 +1,52 @@
+// =======================================
+// UTILITIES
+// ======================================= 
+
+// =========== VARIABLES & MIXINS ===========
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.header {
+    // =========== GENERAL ===========
+    margin: $k-margin-header $k-margin-xl;
+
+    @include respond-to(sm, max) {
+        margin: $k-margin-header $k-margin-s !important;
+    }
+
+    @include respond-to(lg, max) {
+        margin: $k-margin-header $k-margin-m;
+    }
+
+    .navbar {
+        padding: $zero $k-padding-m;
+
+        @include respond-to(sm, max) {
+            padding: 0.5rem !important;
+        }
+
+        @include respond-to(lg, max) {
+            padding: $zero $k-padding-s;
+        }
+
+        .navbar-logo {
+            @include respond-to(sm, max) {
+                width: 50%;
+                text-align: left !important;
+            }
+        }
+
+        .logo {
+            width: 50%;
+
+            @include respond-to(sm, max) {
+                width: 40% !important;
+            }
+
+            @include respond-to(lg, max) {
+                width: 78%;
+            }
+        }
+    }
+}

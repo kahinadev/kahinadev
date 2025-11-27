@@ -1,0 +1,73 @@
+// ===============================================
+// NAVBAR
+// ===============================================
+
+// =========== VARIABLES & MIXINS ===========
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// =========== LINKS ===========
+
+.navbar-nav {
+    padding: 1rem 0;
+
+    .nav-item {
+        padding: 5px 25px;
+        @include transition;
+
+        &:not(:last-child) {
+            margin: $zero 5px;
+
+            @include respond-to(lg, max) {
+                margin: $zero $zero 20px $zero;
+            }
+        }
+    }
+
+    .nav-link {
+        color: var(--text);
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+
+.button-stack {
+    @include respond-to(sm, max) {
+        margin-top: 1.5rem !important;
+    }
+
+    @include respond-to(lg, max) {
+        margin-top: $k-margin-s;
+    }
+
+    .btn-stack {
+        padding: 10px 25px !important;
+        background-color: var(--text);
+
+        i,
+        span {
+            font-size: 14.5px !important;
+            font-weight: 800 !important;
+            color: var(--background) !important;
+        }
+
+        i {
+            margin-right: 5px;
+        }
+    }
+}
+
+// =========== BUTTON BURGER ===========
+
+.navbar-toggler {
+    border: $none !important;
+    border-radius: $zero !important;
+
+    .toggler-icon {
+        i {
+            color: var(--text);
+            font-size: 35px;
+        }
+    }
+}

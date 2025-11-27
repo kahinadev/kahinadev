@@ -1,0 +1,47 @@
+// =======================================
+// STYLE
+// =======================================
+
+// =========== ABSTRACTS ===========
+
+@use "abstracts/variables" as *;
+@use "abstracts/functions" as *;
+@use "abstracts/mixins" as *;
+
+// =========== BOOTSTRAP ===========
+
+@use "vendors/bootstrap.scss";
+
+// =========== THEMES ===========
+
+@use "themes/themes.scss";
+
+// =========== BASE ===========
+
+@use "base/reset"; 
+@use "base/base"; 
+@use "base/typography"; 
+@use "base/utilities";
+
+// =========== BASE ===========
+
+@use "layout/header";
+@use "layout/sidebar";
+@use "layout/footer";
+
+// =========== COMPONENTS ===========
+
+@use "components/navbar";
+@use "components/modal";
+@use "components/language-n-switch";
+@use "components/line";
+@use "components/button";
+@use "components/moving";
+@use "components/card";
+@use "components/list";
+
+// =========== PAGES ===========
+
+@use "pages/home";
+@use "pages/about";
+@use "pages/services";

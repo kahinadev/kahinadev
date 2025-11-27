@@ -1,0 +1,56 @@
+// ===============================================
+// RESET
+// ===============================================
+
+// =========== VARIABLES ===========
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// =========== GENERAL ===========
+
+.moving {
+    @include respond-to(lg, max) {
+        margin: $k-margin-m $zero !important;
+    }
+
+    .container {
+        @include respond-to(sm, max) {
+            max-width: calc(100% - 3%) !important;
+        }
+
+        .col-sec {
+            width: 95.6%;
+            margin: $zero 2.2rem;
+        }
+    }
+
+    &__track {
+        display: flex;
+        white-space: nowrap;
+        animation: move linear 15s infinite;
+    }
+
+    &__item {
+        font-size: 18px !important;
+        margin-right: $k-margin-s;
+    }
+}
+
+// =========== KEYFRAMES ===========
+
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .moving__track {
+        animation: none;
+    }
+}

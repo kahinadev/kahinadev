@@ -1,0 +1,52 @@
+// ===============================================
+// MODAL
+// ===============================================
+
+// =========== VARIABLES & MIXINS ===========
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// =========== GENERAL ===========
+
+.modal {
+    .modal-dialog {
+        @include respond-to(sm, min) {
+            max-width: 720px;
+        }
+
+        .modal-content {
+
+            .modal-header {
+                border-bottom: $none !important;
+
+                h5 {
+                    font-size: 1.6rem !important;
+                }
+
+                .button-close {
+                    i {
+                        font-size: 25px;
+                        color: var(--text);
+                    }
+
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        background-color: $none !important;
+
+                        i {
+                            color: var(--text);
+                        }
+                    }
+                }
+            }
+
+            .modal-body {
+                .skill-item {
+                    font-size: 14px !important;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,117 @@
+// =======================================
+// UTILITIES
+// ======================================= 
+
+// =========== VARIABLES & MIXINS ===========
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// =========== WIDTH ===========
+
+.w-full {
+    width: $full !important;
+}
+
+// =========== Z-INDEX ===========
+
+.k-index-sec {
+    z-index: 10 !important;
+    position: $relative !important;
+}
+
+// =========== ALIGN ===========
+
+.text-justify {
+    text-align: justify;
+}
+
+// =========== SUBTITLE ===========
+
+.subtitle {
+    @include subtitle;
+
+    br {
+        display: $none;
+
+        @include respond-to(xxl, max) {
+            display: $block !important;
+        }
+    }
+
+    .second {
+        display: $none !important;
+
+        @include respond-to(sm, max) {
+            display: $block !important;
+        }
+    }
+}
+
+// =========== PADDING ===========
+
+.k-pad-s {
+    padding: $k-padding-s;
+}
+
+.k-pad-m {
+    padding: $k-padding-m;
+}
+
+.k-pad-l {
+    padding: $k-padding-l;
+
+    @include respond-to(sm, max) {
+        padding: $k-padding-m !important;
+    }
+}
+
+.k-pad-xl {
+    padding: $k-padding-xl $k-padding-m;
+
+    @include respond-to(sm, max) {
+        padding: $k-padding-l !important;
+    }
+}
+
+.k-pad-sec {
+    padding: $k-padding-section-desktop;
+
+    @include respond-to(sm, max) {
+        padding: $k-padding-section-mobile !important;
+    }
+
+    @include respond-to(xl, max) {
+        padding: $k-padding-section-tablet;
+    }
+}
+
+// =========== COL ===========
+
+.col-sec {
+    overflow: $overflow-hidden;
+    position: $relative;
+
+    @include respond-to(lg, max) {
+        width: $full !important;
+        margin: $zero !important;
+    }
+}
+
+.col-service,
+.col-contact, 
+.col-about {
+    @include respond-to(xxl, max) {
+        width: $full !important;
+    }
+}
+
+// =========== SECTION ===========
+
+.sec-marg {
+    margin: $k-margin-l;
+
+    @include respond-to(lg, max) {
+        margin: $k-margin-m $zero !important;
+    }
+}

@@ -1,0 +1,32 @@
+// ===============================================
+// BUTTON
+// ===============================================
+
+// =========== VARIABLES ===========
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// =========== GENERAL ===========
+
+.btn {
+    color: var(--text);
+    font-weight: 700;
+    font-size: 15px !important;
+    padding: $k-padding-s $k-padding-m;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-family: $font-text;
+    
+}
+
+.btn-t {
+    transition: all 0.3s ease-in-out !important;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: var(--text) !important;
+        background-color: var(--secondary) !important;
+    }
+}

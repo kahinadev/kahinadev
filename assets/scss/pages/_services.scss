@@ -1,0 +1,18 @@
+// ===============================================
+// RESET
+// ===============================================
+
+// =========== VARIABLES ===========
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// =========== GENERAL ===========
+
+.category-services {
+    p {
+        i {
+            margin-right: 5px;
+        }
+    }
+}

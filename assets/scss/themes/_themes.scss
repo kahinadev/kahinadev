@@ -1,0 +1,70 @@
+// =======================================
+// THEMES
+// ======================================= 
+
+// =========== VARIABLES ===========
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// =========== LOOP ===========
+
+@each $mode, $palette in $colors {
+    .theme-#{$mode} {
+        @each $key, $value in $palette {
+            --#{$key}: #{$value};
+        }
+    }
+}
+
+// =========== BODY STYLES ===========
+
+body {
+    color: var(--text);
+    background-color: var(--background);
+    transition: $transition-theme;
+}
+
+// =========== BRAND & BUTTON ===========
+
+#theme-toggle {
+    position: $relative;
+
+    #icon-sun {
+        display: $block !important;
+    }
+
+    #icon-moon {
+        display: $none !important;
+    }
+
+    &.is-light {
+        #icon-sun {
+            display: $none !important;
+        }
+        #icon-moon {
+            display: $block !important;
+        }
+    }
+}
+// #theme-toggle {
+//     position: $relative;
+
+//     #icon-sun {
+//         display: $block;
+//     }
+
+//     #icon-moon {
+//         display: $none;
+//     }
+
+//     &.is-light {
+//         #icon-sun {
+//             display: $none !important;
+//         }
+
+//         #icon-moon {
+//             display: $block !important;
+//         }
+//     }
+// }

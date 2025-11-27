@@ -1,0 +1,56 @@
+// ===============================================
+// SIDEBAR
+// ===============================================
+
+// =========== VARIABLES & MIXINS ===========
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// =========== GENERAL ===========
+
+.navbar-toggler {
+    border: $none !important;
+}
+
+#navbarSupportedContent {
+    @include respond-to(sm, max) {
+        top: 18% !important;
+        width: 92% !important;
+        margin-left: -1rem;
+        min-height: 68% !important;
+    }
+}
+
+.navbar-collapse {
+    @include respond-to(md, max) {
+        top: 14% !important;
+        min-height: 50% !important;
+    }
+
+    @include respond-to(lg, max) {
+        top: 12%;
+        left: $k-margin-m;
+        width: 92%;
+        z-index: 6;
+        min-height: 40%;
+        border-radius: $border-radius;
+        position: $fixed;
+        border: 1px solid var(--border);
+        background-color: var(--background);
+        @include transition;
+
+        .navbar-nav {
+            padding: $k-padding-l $k-padding-m $zero $k-padding-m;
+        }
+
+        .button-stack {
+            margin-left: $k-margin-m;
+            padding-right: $k-padding-m;
+
+            button {
+                width: $full !important;
+            }
+        }
+    }
+}

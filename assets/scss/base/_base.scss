@@ -1,0 +1,40 @@
+// ===============================================
+// BASE
+// ===============================================
+
+// =========== VARIABLES & MIXINS ===========
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// =========== BODY ===========
+
+html,
+body {
+    min-height: 100vh;
+    overflow-x: $overflow-hidden;
+}
+
+section {
+    .container {
+        position: $relative;
+        overflow: $overflow-hidden;
+        max-width: calc(100% - 18%);
+
+        @include respond-to(sm) {
+            max-width: calc(100% - 2%) !important;
+        }
+
+        @include respond-to(xl) {
+           max-width: calc(100% - 8%);
+        }
+    }
+}
+
+// =========== IMAGE ===========
+
+img {
+    width: $full;
+    height: auto;
+    object-fit: cover;
+}

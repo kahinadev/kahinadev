@@ -1,0 +1,76 @@
+// ===============================================
+// TYPOGRAPHY
+// ===============================================
+
+// =========== VARIABLES & MIXINS ===========
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// =========== FONT TITLE ===========
+
+@font-face {
+    font-family: "Cyber cipher";
+    src: url('../../assets/fonts/title/CyberCipher.woff2') format('woff2'),
+        url('../../assets/fonts/title/CyberCipher.woff') format('woff');
+}
+
+// =========== FONT TEXT ===========
+
+@font-face {
+    font-family: "Orbitron";
+    src: url('../../assets/fonts/text/Orbitron-Regular.woff2') format('woff2'),
+        url('../../assets/fonts/text/Orbitron-Regular.woff') format('woff');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Orbitron";
+    src: url('../../assets/fonts/text/Orbitron-Medium.woff2') format('woff2'),
+        url('../../assets/fonts/text/Orbitron-Medium.woff') format('woff');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Orbitron";
+    src: url('../../assets/fonts/text/Orbitron-SemiBold.woff2') format('woff2'),
+        url('../../assets/fonts/text/Orbitron-SemiBold.woff') format('woff');
+    font-weight: 600;
+}
+
+// =========== TITLE ===========
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include title;
+}
+
+// =========== SIZE TITLE ===========
+
+h2 {
+    @include title(3.6rem, 5.8rem, 6.2rem);
+}
+
+h3 {
+    @include title(3.5rem, 5.4rem, 6.1rem); 
+}
+
+h4 {
+    @include title(2.5rem, 5.2rem, 2.2rem);
+}
+
+h5 {
+    @include title(1rem, 2rem, 2rem)
+}
+
+// =================== TEXT ==============
+
+p,
+a, 
+span {
+    @include text;
+}

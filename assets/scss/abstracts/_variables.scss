@@ -1,0 +1,105 @@
+// ===============================================
+// VARIABLES
+// ===============================================
+
+// =========== THEMES ===========
+
+$colors: (
+    light: (text: #11101e,
+        background: #eeecf3,
+        primary: #b1a8cd,
+        secondary: #766a95,
+        accent: #2b2037,
+        border: #11101e8b,
+    ),
+    dark: (text: #E3E2EF,
+        background: #0f0d14,
+        primary: #3d3359,
+        secondary: #766a95,
+        accent: #d4c9e0,
+        border: #e3e1ef8b,
+    ),
+);
+
+// =========== RESPONSIVE ===========
+
+$breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1110px,
+    xxl: 1280px,
+    xxxl: 1400px
+);
+
+// =========== BORDER ===========
+
+$border: 1px solid var(--border);
+$border-radius: 2rem;
+$border-positions: top, bottom, left, right, all;
+
+// =========== ANIMATION ===========
+
+$speed-moving: 400;
+$duration-moving: 3s; 
+$transition-card: background-color 0.3s ease, padding 0.3s ease;
+$transition-theme: background-color 0.3s ease, color 0.3s ease;
+
+// =========== NONE & FULL ===========
+
+$zero: 0;
+$block: block;
+$full: 100%;
+$none: none;
+
+// =========== POSITION ===========
+
+$fixed: fixed;
+$absolute: absolute;
+$relative: relative;
+
+// =========== OVERFLOW ===========
+
+$overflow-hidden: hidden;
+
+// =========== FONTS ===========
+
+$font-title: "Cyber cipher", sans-serif;
+$font-text: "Orbitron", sans-serif;
+
+// =========== LINE ===========
+
+$line-margin: 8%;
+
+// =========== MARGIN ===========
+
+$k-margin-s: 1rem; 
+$k-margin-m: 2rem; 
+$k-margin-l: 3rem;
+$k-margin-xl: 4rem;
+
+$k-margin-header: 1.5rem;
+
+// =========== PADDING ===========
+
+$k-padding-s: 1rem; 
+$k-padding-m: 2rem; 
+$k-padding-l: 3rem;
+$k-padding-xl: 4rem;
+$k-padding-section-mobile: 5rem $k-padding-s;
+$k-padding-section-tablet: 12rem $k-padding-m; 
+$k-padding-section-desktop: 12rem $k-padding-s; 
+
+// =========== LANGUAGE ===========
+
+$icon-marg: 6px;
+$flag-height-tablet: 30px; 
+$flag-width-tablet: 30px;
+$flag-height-desktop: 20px; 
+$flag-width-desktop: 20px;
+
+// =========== BUTTON ===========
+
+$width-btn-mobile: 15%; 
+$width-btn-desktop: 8%; 
