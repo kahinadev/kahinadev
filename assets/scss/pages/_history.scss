@@ -18,7 +18,7 @@
         position: fixed;
 
         @include respond-to(sm, max) {
-            height: 460px !important;
+            height: 500px !important;
         }
 
         @include respond-to(lg, max) {

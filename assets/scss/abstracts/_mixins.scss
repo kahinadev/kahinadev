@@ -53,7 +53,7 @@
 
 // =========== TITLE ===========
 
-@mixin title($size-mobile: 56px, $size-tablet: 80px, $size-desktop: 100px, $spacing: 1.2px) {
+@mixin title($size-mobile: 48px, $size-tablet: 80px, $size-desktop: 100px, $spacing: 1.2px) {
     @include font; 
     font-weight: 900 !important;
     word-break: break-word;

@@ -22,11 +22,15 @@
         @include respond-to(sm, max) {
             height: 300px !important;
         }
+
+        @include respond-to(xl, max) {
+            height: 480px;
+        }
     }
 
     &__title-number {
         .subtitle {
-            font-size: 15px !important;
+            font-size: 14px !important;
         }
     }
 }

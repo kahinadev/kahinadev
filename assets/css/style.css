@@ -64,7 +64,7 @@ h6 {
   h4,
   h5,
   h6 {
-    font-size: 56px !important;
+    font-size: 48px !important;
   }
 }
 @media (max-width: 992px) {
@@ -106,7 +106,7 @@ h2 {
 }
 @media (max-width: 576px) {
   h2 {
-    font-size: 50px !important;
+    font-size: 46px !important;
   }
 }
 @media (max-width: 992px) {
@@ -133,7 +133,7 @@ h3 {
 }
 @media (max-width: 576px) {
   h3 {
-    font-size: 48px !important;
+    font-size: 44px !important;
   }
 }
 @media (max-width: 992px) {
@@ -160,7 +160,7 @@ h4 {
 }
 @media (max-width: 576px) {
   h4 {
-    font-size: 46px !important;
+    font-size: 42px !important;
   }
 }
 @media (max-width: 992px) {
@@ -267,7 +267,7 @@ strong {
 }
 @media (max-width: 576px) {
   .section {
-    padding: 5rem 2rem !important;
+    padding: 5rem 1rem !important;
   }
 }
 
@@ -450,8 +450,13 @@ strong {
     height: 300px !important;
   }
 }
+@media (max-width: 1110px) {
+  .card-project img {
+    height: 480px;
+  }
+}
 .card-project__title-number .subtitle {
-  font-size: 15px !important;
+  font-size: 14px !important;
 }
 
 .modal .modal-header,
@@ -495,7 +500,7 @@ strong {
 }
 @media (max-width: 576px) {
   .history img {
-    height: 460px !important;
+    height: 500px !important;
   }
 }
 @media (max-width: 992px) {
@@ -561,6 +566,15 @@ strong {
 .history__content .qualities-item i,
 .history__content .values-item .hobbies-item i {
   margin-right: 10px;
+}
+
+.projects {
+  padding: 0 3rem 8rem 3rem;
+}
+@media (max-width: 576px) {
+  .projects {
+    padding: 0 1rem 5rem 1rem !important;
+  }
 }
 
 @media (max-width: 576px) {

@@ -1,0 +1,19 @@
+// ===============================================
+// HISTORY
+// ===============================================
+
+// =========== VARIABLES ===========
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// =========== GENERAL ===========
+
+.projects {
+    padding: 0 3rem 8rem 3rem;
+
+    @include respond-to(sm, max) {
+        padding: 0 1rem 5rem 1rem !important;
+
+    }
+}
