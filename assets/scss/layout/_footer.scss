@@ -1,21 +1,15 @@
-// =======================================
+// ===============================================
 // FOOTER
-// ======================================= 
+// ===============================================
 
-// =========== VARIABLES & MIXINS ===========
+// =========== VARIABLES ===========
 
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-// =========== LOGO + SUBTITLE ===========
-
 .footer {
-    @include respond-to(lg, max) {
-        margin-top: $k-margin-xl !important;
-    }
-
     h5 {
-        font-size: 45px !important;
+        font-size: 30px !important;
     }
 
     .subtitle {

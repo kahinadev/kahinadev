@@ -1,0 +1,90 @@
+// ===============================================
+// HISTORY
+// ===============================================
+
+// =========== VARIABLES ===========
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// =========== GENERAL ===========
+
+.history {
+    img {
+        top: 0;
+        z-index: -5;
+        width: 33.3%;
+        height: 100vh;
+        position: fixed;
+
+        @include respond-to(sm, max) {
+            height: 460px !important;
+        }
+
+        @include respond-to(lg, max) {
+            width: $full;
+            height: 700px;
+        }
+    }
+}
+
+.history__content {
+
+    .history__content-one,
+    .history__content-two,
+    .history__content-three,
+    .history__content-four,
+    .history__content-five {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .history__content-one {
+        top: 0;
+        opacity: 1 !important;
+        position: sticky;
+        z-index: 5;
+        min-height: 100vh;
+        transform: none !important;
+
+        @include respond-to(lg, max) {
+            min-height: 55vh;
+        }
+    }
+
+    .history__content-two,
+    .history__content-three,
+    .history__content-four,
+    .history__content-five {
+        min-height: 100vh;
+        opacity: 0;
+        z-index: 10;
+        position: relative;
+        transform: translateY(40px);
+        transition: opacity .7s ease, transform .7s ease;
+
+        @include respond-to(lg, max) {
+            min-height: 70vh;
+        }
+
+        .mt-3 {
+            @include respond-to(sm, max) {
+                margin-top: $zero !important;
+            }
+        }
+
+    }
+
+    .visible {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
+
+    .qualities-item,
+    .values-item .hobbies-item {
+        i {
+            margin-right: 10px;
+        }
+    }
+}

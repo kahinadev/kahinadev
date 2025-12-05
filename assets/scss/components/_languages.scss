@@ -1,0 +1,25 @@
+// ===============================================
+// LANGUAGES
+// ===============================================
+
+// =========== VARIABLES ===========
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// =========== GENERAL ===========
+
+.language {
+    left: $left-languages;
+    bottom: $bottom-languages;
+    padding: $padding-languages;
+    color: $text !important;
+    font-size: $size-languages !important;
+
+    .flag {
+        margin-right: 10px;
+        border-radius: $radius-flag-languages;
+        width: $width-flag-languages;
+        height: $height-flag-languages;
+    }
+}

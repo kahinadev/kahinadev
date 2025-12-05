@@ -7,37 +7,6 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-// =========== FONT TITLE ===========
-
-@font-face {
-    font-family: "Cyber cipher";
-    src: url('../../assets/fonts/title/CyberCipher.woff2') format('woff2'),
-        url('../../assets/fonts/title/CyberCipher.woff') format('woff');
-}
-
-// =========== FONT TEXT ===========
-
-@font-face {
-    font-family: "Orbitron";
-    src: url('../../assets/fonts/text/Orbitron-Regular.woff2') format('woff2'),
-        url('../../assets/fonts/text/Orbitron-Regular.woff') format('woff');
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: "Orbitron";
-    src: url('../../assets/fonts/text/Orbitron-Medium.woff2') format('woff2'),
-        url('../../assets/fonts/text/Orbitron-Medium.woff') format('woff');
-    font-weight: 500;
-}
-
-@font-face {
-    font-family: "Orbitron";
-    src: url('../../assets/fonts/text/Orbitron-SemiBold.woff2') format('woff2'),
-        url('../../assets/fonts/text/Orbitron-SemiBold.woff') format('woff');
-    font-weight: 600;
-}
-
 // =========== TITLE ===========
 
 h1,
@@ -52,25 +21,29 @@ h6 {
 // =========== SIZE TITLE ===========
 
 h2 {
-    @include title(3.6rem, 5.8rem, 6.2rem);
+    @include title(50px, 68px, 80px);
 }
 
 h3 {
-    @include title(3.5rem, 5.4rem, 6.1rem); 
+    @include title(48px, 60px, 79px);
 }
 
 h4 {
-    @include title(2.5rem, 5.2rem, 2.2rem);
+    @include title(46px, 50px, 78px);
 }
 
 h5 {
-    @include title(1rem, 2rem, 2rem)
+    @include title(22px, 30px, 50px)
 }
 
 // =================== TEXT ==============
 
 p,
-a, 
+a,
 span {
     @include text;
+}
+
+strong {
+    font-weight: 600 !important;
 }

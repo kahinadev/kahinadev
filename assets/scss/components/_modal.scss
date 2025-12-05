@@ -1,6 +1,6 @@
-// ===============================================
+// =======================================
 // MODAL
-// ===============================================
+// ======================================= 
 
 // =========== VARIABLES & MIXINS ===========
 
@@ -10,43 +10,28 @@
 // =========== GENERAL ===========
 
 .modal {
-    .modal-dialog {
-        @include respond-to(sm, min) {
-            max-width: 720px;
+
+    .modal-header,
+    .modal-body,
+    i {
+        color: $background !important;
+        border-bottom: $none !important;
+    }
+
+    .modal-header {
+        h5 {
+            font-size: $size-title-modal-header !important;
         }
 
-        .modal-content {
+        i {
+            font-size: $size-icon-modal-header !important;
+        }
+    }
 
-            .modal-header {
-                border-bottom: $none !important;
-
-                h5 {
-                    font-size: 1.6rem !important;
-                }
-
-                .button-close {
-                    i {
-                        font-size: 25px;
-                        color: var(--text);
-                    }
-
-                    &:hover,
-                    &:focus,
-                    &:active {
-                        background-color: $none !important;
-
-                        i {
-                            color: var(--text);
-                        }
-                    }
-                }
-            }
-
-            .modal-body {
-                .skill-item {
-                    font-size: 14px !important;
-                }
-            }
+    .modal-body {
+        .skill-item {
+            font-size: $size-skill-item-modal !important;
+            border-color: $background !important;
         }
     }
 }

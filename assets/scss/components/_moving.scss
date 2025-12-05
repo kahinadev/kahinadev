@@ -1,5 +1,5 @@
 // ===============================================
-// RESET
+// MOVING
 // ===============================================
 
 // =========== VARIABLES ===========
@@ -8,32 +8,16 @@
 @use "../abstracts/mixins" as *;
 
 // =========== GENERAL ===========
-
 .moving {
-    @include respond-to(lg, max) {
-        margin: $k-margin-m $zero !important;
-    }
-
-    .container {
-        @include respond-to(sm, max) {
-            max-width: calc(100% - 3%) !important;
-        }
-
-        .col-sec {
-            width: 95.6%;
-            margin: $zero 2.2rem;
-        }
-    }
-
     &__track {
-        display: flex;
         white-space: nowrap;
         animation: move linear 15s infinite;
     }
 
     &__item {
-        font-size: 18px !important;
-        margin-right: $k-margin-s;
+        font-size: 17px !important;
+        font-weight: 800 !important;
+        margin-right: 15px;
     }
 }
 

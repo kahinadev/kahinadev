@@ -1,45 +1,55 @@
-// ===============================================
-// WEBSITE
-// ===============================================
-
-// =========== THEME ===========
-
 document.addEventListener("DOMContentLoaded", () => {
-    const toggleButton = document.getElementById("theme-toggle");
-    const body = document.body;
-    const logoDark = document.getElementById("logo-dark");
-    const logoLight = document.getElementById("logo-light");
+    // --- HISTORY ---
+    
+    const blocks = document.querySelectorAll(
+        ".history__content-two, .history__content-three, .history__content-four, .history__content-five"
+    );
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        },
+        { threshold: 0.2 }
+    );
+
+    blocks.forEach((block) => observer.observe(block));
+
+    // --- LOADER ---
+
     const loader = document.getElementById("loader");
+    const greetingsEl = loader.querySelector(".subtitle-greetings");
+    const progressEl = loader.querySelector(".progress-number");
+    const mainContent = document.getElementById("main");
 
-    if (!toggleButton) return;
+    const greetings = ["Bienvenue", "Welcome", "Bienvenida", "환영합니다"];
+    let currentGreeting = 0;
+    let progress = 0;
 
-    const savedTheme = localStorage.getItem("theme");
+    const interval = setInterval(() => {
+        progress++;
 
-    if (savedTheme) {
-        body.classList.add(savedTheme);
-        toggleButton.classList.toggle("is-light", savedTheme === "theme-light");
-        logoDark.style.display = savedTheme === "theme-dark" ? "block" : "none";
-        logoLight.style.display = savedTheme === "theme-light" ? "block" : "none";
-    } else {
-        body.classList.add("theme-dark");
-        logoDark.style.display = "block";
-        logoLight.style.display = "none";
-    }
+        if (progress % 25 === 0 && currentGreeting < greetings.length - 1) {
+            currentGreeting++;
+            greetingsEl.style.opacity = 0;
+            setTimeout(() => {
+                greetingsEl.textContent = greetings[currentGreeting];
+                greetingsEl.style.opacity = 1;
+            }, 250);
+        }
 
-    const toggleTheme = () => {
-        const isDark = body.classList.contains("theme-dark");
-        const newTheme = isDark ? "theme-light" : "theme-dark";
+        progressEl.textContent = `${progress}%`;
 
-        body.classList.remove("theme-dark", "theme-light");
-        body.classList.add(newTheme);
-
-        toggleButton.classList.toggle("is-light", newTheme === "theme-light");
-
-        logoDark.style.display = newTheme === "theme-dark" ? "block" : "none";
-        logoLight.style.display = newTheme === "theme-light" ? "block" : "none";
-
-        localStorage.setItem("theme", newTheme);
-    };
-
-    toggleButton.addEventListener("click", toggleTheme);
+        if (progress >= 100) {
+            clearInterval(interval);
+            loader.classList.add("hidden");
+            setTimeout(() => {
+                loader.style.display = "none";
+                mainContent.style.display = "block";
+            }, 800);
+        }
+    }, 50);
 });

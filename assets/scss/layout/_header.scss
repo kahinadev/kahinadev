@@ -1,5 +1,5 @@
 // =======================================
-// UTILITIES
+// HEADER
 // ======================================= 
 
 // =========== VARIABLES & MIXINS ===========
@@ -7,45 +7,27 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
+// =========== GENERAL ===========
+
 .header {
-    // =========== GENERAL ===========
-    margin: $k-margin-header $k-margin-xl;
+    z-index: 15;
+    padding: $padding-header-desktop;
 
     @include respond-to(sm, max) {
-        margin: $k-margin-header $k-margin-s !important;
-    }
-
-    @include respond-to(lg, max) {
-        margin: $k-margin-header $k-margin-m;
+        padding: $padding-header-mobile;
     }
 
     .navbar {
-        padding: $zero $k-padding-m;
-
-        @include respond-to(sm, max) {
-            padding: 0.5rem !important;
+        .navbar-brand {
+            font-size: $size-brand;
+            font-weight: $weight-brand;
+            letter-spacing: $spacing-brand;
         }
 
-        @include respond-to(lg, max) {
-            padding: $zero $k-padding-s;
-        }
-
-        .navbar-logo {
-            @include respond-to(sm, max) {
-                width: 50%;
-                text-align: left !important;
-            }
-        }
-
-        .logo {
-            width: 50%;
-
-            @include respond-to(sm, max) {
-                width: 40% !important;
-            }
-
-            @include respond-to(lg, max) {
-                width: 78%;
+        .navbar-toggler {
+            .toggler-icon {
+                margin-left: $margin-left-icon; 
+                font-size: $size-icon !important;
             }
         }
     }

@@ -10,24 +10,6 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
 
-    <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="assets/js/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="assets/img/favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
@@ -38,231 +20,171 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="theme-dark">
-    <div class="vertical-line vertical-line-left top-0"></div>
-    <div class="vertical-line vertical-line-right top-0"></div>
-    <header class="header">
-        <nav class="navbar navbar-expand-lg border-all rounded-5 bg-dark k-index-sec">
+<body>
+    <header class="header" id="header" aria-label="Header">
+        <nav class="navbar navbar-expand-lg bg-transparent">
             <div class="container-fluid">
-                <div class="col-lg-1 col-md-2 text-center navbar-logo">
-                    <a href="index.html" class="brand">
-                        <img id="logo-light" src="assets/img/logo/light-theme-logo.webp" class="logo" alt="Logo"
-                            aria-label="Logo">
-                        <img id="logo-dark" src="assets/img/logo/dark-theme-logo.webp" class="logo" alt="Logo"
-                            aria-label="Logo">
-                    </a>
-                </div>
-                <div class="col-lg-11 navbar-menu">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="toggler-icon"><i class="fa-solid fa-bars"></i></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                            <li class="nav-item border-all rounded-4">
-                                <a class="nav-link text-uppercase" href="histoire.html"
-                                    aria-label="Histoire">Histoire</a>
-                            </li>
-                            <li class="nav-item border-all rounded-4">
-                                <a class="nav-link text-uppercase" href="services.html"
-                                    aria-label="Services">Services</a>
-                            </li>
-                            <li class="nav-item border-all rounded-4">
-                                <a class="nav-link text-uppercase" href="portfolio.html"
-                                    aria-label="Portfolio">Portfolio</a>
-                            </li>
-                            <li class="nav-item border-all rounded-4">
-                                <a class="nav-link text-uppercase" href="index.html#contact"
-                                    aria-label="Contact">Contact</a>
-                            </li>
-                        </ul>
-                        <div class="button-stack">
-                            <button
-                                class="d-flex btn btn-stack justify-content-center align-items-center text-uppercase border-all rounded-4"
-                                type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
-                                aria-label="Tech stack">
-                                <i class="fa-solid fa-code"></i>
-                                <span>Stack</span>
-                            </button>
-                        </div>
+                <a class="navbar-brand" href="index.html" aria-label="Nom du site">KAHINADEV</a>
+                <button class="navbar-toggler border-all rounded-4" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="toggler-icon"><i class="fa-solid fa-bars-staggered"></i></span>
+                </button>
+                <div class="collapse navbar-collapse rounded-4" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link border-all rounded-5 text-uppercase" href="index.html"
+                                aria-label="Accueil">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link border-all rounded-5 text-uppercase" href="histoire.html"
+                                aria-label="Histoire">Histoire</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link border-all rounded-5 text-uppercase" href="services.html"
+                                aria-label="Services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link border-all rounded-5 text-uppercase" href="portfolio.html"
+                                aria-label="Portfolio">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link border-all rounded-5 text-uppercase" href="contact.html"
+                                aria-label="Contact">Contact</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex">
+                        <button class="btn btn-stack text-uppercase" type="button" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal" aria-label="Tech stack">
+                            <i class="fa-solid fa-terminal"></i> Stack
+                        </button>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
 
-    <main class="main">
-        <section class="introduction" aria-label="Introduction">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 k-pad-sec col-sec text-center border-all mt-5 mb-5 rounded-5">
-                        <h1 class="text-uppercase mt-3">
-                            Mon histoire
-                        </h1>
-                        <p class="subtitle text-uppercase">Une curiosité devenue une passion</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="moving mb-5" aria-label="Texte qui bouge">
-            <div class="container">
-                <div class="col-md-12 col-sec border-all rounded-5 bg-accent">
-                    <div id="movingTrack" class="moving__track d-flex align-items-center">
-                        <div id="movingContent" class="moving__content k-pad-s">
-                            <p class="moving__item text-uppercase mt-3">
-                                Créative <i class="fa-regular fa-star"></i> Autonome <i class="fa-regular fa-star"></i>
-                                Organisée <i class="fa-regular fa-star"></i> Curieuse <i class="fa-regular fa-star"></i>
-                                Créative <i class="fa-regular fa-star"></i> Autonome <i class="fa-regular fa-star"></i>
-                                Organisée <i class="fa-regular fa-star"></i> Curieuse <i class="fa-regular fa-star"></i>
-                                Créative <i class="fa-regular fa-star"></i> Autonome <i class="fa-regular fa-star"></i>
-                                Organisée <i class="fa-regular fa-star"></i> Curieuse <i class="fa-regular fa-star"></i>
-                                Créative <i class="fa-regular fa-star"></i> Autonome <i class="fa-regular fa-star"></i>
-                                Organisée <i class="fa-regular fa-star"></i> Curieuse <i class="fa-regular fa-star"></i>
-                                Créative <i class="fa-regular fa-star"></i> Autonome <i class="fa-regular fa-star"></i>
-                                Organisée <i class="fa-regular fa-star"></i> Curieuse <i class="fa-regular fa-star"></i>
-                                Créative <i class="fa-regular fa-star"></i> Autonome <i class="fa-regular fa-star"></i>
-                                Organisée <i class="fa-regular fa-star"></i> Curieuse <i class="fa-regular fa-star"></i>
-                                Créative <i class="fa-regular fa-star"></i> Autonome <i class="fa-regular fa-star"></i>
-                                Organisée <i class="fa-regular fa-star"></i> Curieuse <i class="fa-regular fa-star"></i>
-                                Créative <i class="fa-regular fa-star"></i> Autonome <i class="fa-regular fa-star"></i>
-                                Organisée <i class="fa-regular fa-star"></i> Curieuse <i class="fa-regular fa-star"></i>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="profile sec-marg" aria-label="Profil">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 profile-title text-center border-all rounded-5 k-pad-l mt-3">
-                        <h2 class="text-uppercase">Profil</h2>
-                        <p class="subtitle text-uppercase">Coder, créer, sublimer</p>
-                    </div>
-                    <div class="col-lg-6 col-md-12">
-                        <img src="assets/img/me/moi-deux.webp" class="rounded-5 border-all mt-5" alt="Photo de moi"
+    <main class="main" id="main" aria-label="Main">
+        <section class="history border-top" aria-label="Histoire">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 col-md-8 col-sm-12 p-0 position-relative">
+                        <img src="assets/img/me/pic-of-me-two.png" class="border-right" alt="Photo de moi"
                             aria-label="Photo de moi">
                     </div>
-                    <div class="col-lg-6 col-md-12">
-                        <button type="button"
-                            class="k-pad-m bg-light text-uppercase text-center border-all w-full mt-5 rounded-5"
-                            data-bs-toggle="modal" data-bs-target="#profile">
-                            <span><i class="fa-regular fa-comment"></i> <strong>Quelques mots sur moi</strong></span>
-                        </button>
-                        <button type="button"
-                            class="k-pad-m bg-light text-uppercase text-center border-all w-full mt-3 rounded-5"
-                            data-bs-toggle="modal" data-bs-target="#values">
-                            <span><i class="fa-regular fa-heart"></i> <strong>Mes valeurs</strong></span>
-                        </button>
-                        <button type="button"
-                            class="k-pad-m bg-light text-uppercase text-center border-all w-full mt-3 rounded-5"
-                            data-bs-toggle="modal" data-bs-target="#hobbies">
-                            <span><i class="fa-regular fa-lightbulb"></i> <strong>Mes passions</strong></span>
-                        </button>
-                        <a href="assets/pdf/Curriculum vitae - Kahina Ouali.pdf" type="button"
-                            class="k-pad-m bg-light text-uppercase text-center border-all w-full mt-3 rounded-5">
-                            <span><i class="fa-regular fa-lightbulb"></i> <strong>Télécharger mon cv</strong></span>
-                        </a>
-
-                        <div class="modal fade" id="profile" tabindex="-1" aria-labelledby="exampleModalLabel"
-                            aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                                <div class="modal-content k-pad-m bg-dark rounded-4">
-                                    <div class="modal-header">
-                                        <div
-                                            class="modal-header p-0 d-flex w-full justify-content-between align-items-center">
-                                            <h5 class="text-uppercase"><i class="fa-regular fa-comment"></i> Quelques
-                                                mots sur moi</h5>
-                                            <button type="button" class="button-close border-0 p-0 bg-transparent"
-                                                data-bs-dismiss="modal" aria-label="Close">
-                                                <i class="fa-solid fa-xmark"></i>
-                                            </button>
-                                        </div>
+                    <div class="col-lg-8 col-md-12 col-sm-12 p-0">
+                        <div class="history__content">
+                            <div class="history__content-one text-center border-bottom">
+                                <h1 class="text-uppercase">Mon histoire</h1>
+                                <p class="subtitle text-uppercase">
+                                    <strong>Une curiosité devenue<br class="br"> une passion</strong>
+                                </p>
+                            </div>
+                            <div class="history__content-two text-center p-5 bg-dark">
+                                <h2 class="text-uppercase">À propos</h2>
+                                <p class="subtitle text-uppercase mb-5">
+                                    <strong>Quelques mots sur moi</strong>
+                                </p>
+                                <p class="text-justify">
+                                    Je suis développeuse web passionnée, animée par la curiosité et le désir de
+                                    transformer des idées en projets concrets. Mon parcours académique et mes
+                                    expériences professionnelles m’ont permis de maîtriser à la fois la technique et
+                                    le
+                                    design, avec une approche centrée sur l’utilisateur.
+                                    <br>
+                                    <br>
+                                    Chaque projet est pour moi une aventure unique où je peux allier rigueur,
+                                    créativité
+                                    et innovation. J’accorde une grande importance à la qualité du travail et à
+                                    l’esthétique, tout en restant attentive aux nouvelles tendances et technologies
+                                    du web.
+                                    <br>
+                                    <br>
+                                    Autonome dans ma manière de travailler, j’aime collaborer avec d’autres
+                                    professionnels pour donner vie à des expériences numériques modernes,
+                                    performantes et engageantes. Mon objectif : créer des solutions sur mesure qui font la
+                                    différence.
+                                </p>
+                            </div>
+                            <div class="history__content-three text-center bg-light p-5">
+                                <h2 class="text-uppercase">Mes qualités</h2>
+                                <p class="subtitle text-uppercase mb-5">
+                                    <strong>Ce qui me définit</strong>
+                                </p>
+                                <div class="row row-cols-1 row-cols-md-2 g-2 text-center mt-3">
+                                    <div class="col">
+                                        <p class="qualities-item border-all rounded-4 text-uppercase p-3">
+                                            <i class="fa-solid fa-paintbrush"></i> Créative
+                                        </p>
                                     </div>
-                                    <div class="modal-body">
-                                        <p class="text-justify">
-                                            Je suis développeuse web passionnée, animée par la curiosité et le désir de
-                                            transformer des
-                                            idées en projets concrets. Mon parcours académique et mes expériences
-                                            professionnelles m’ont
-                                            permis de maîtriser à la fois la technique et le design, avec une approche
-                                            centrée sur
-                                            l’utilisateur.
-                                            <br>
-                                            <br>
-                                            Chaque projet est pour moi une aventure unique où je peux allier rigueur,
-                                            créativité et
-                                            innovation. J’accorde une grande importance à la qualité du travail et à
-                                            l’esthétique, tout
-                                            en restant attentive aux nouvelles tendances et technologies du web.
-                                            <br>
-                                            Autonome dans ma manière de travailler, j’aime collaborer avec d’autres
-                                            professionnels pour
-                                            donner vie à des expériences numériques modernes, performantes et
-                                            engageantes. Mon objectif
-                                            : créer des solutions sur mesure qui font la différence.
+                                    <div class="col">
+                                        <p class="qualities-item border-all rounded-4 text-uppercase p-3">
+                                            <i class="fa-solid fa-rocket"></i> Autonome
+                                        </p>
+                                    </div>
+                                    <div class="col">
+                                        <p class="qualities-item border-all rounded-4 text-uppercase p-3">
+                                            <i class="fa-solid fa-list-check"></i> Organisée
+                                        </p>
+                                    </div>
+                                    <div class="col">
+                                        <p class="qualities-item border-all rounded-4 text-uppercase p-3">
+                                            <i class="fa-solid fa-magnifying-glass"></i> Curieuse
                                         </p>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="modal fade" id="values" tabindex="-1" aria-labelledby="exampleModalLabel"
-                            aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                                <div class="modal-content k-pad-m bg-dark rounded-4">
-                                    <div class="modal-header">
-                                        <div
-                                            class="modal-header p-0 d-flex w-full justify-content-between align-items-center">
-                                            <h5 class="text-uppercase"><i class="fa-regular fa-heart"></i> Mes valeurs
-                                            </h5>
-                                            <button type="button" class="button-close border-0 p-0 bg-transparent"
-                                                data-bs-dismiss="modal" aria-label="Close">
-                                                <i class="fa-solid fa-xmark"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p class="text-justify k-pad-m border-all bg-secondary text-center rounded-5">
+                            <div class="history__content-four text-center bg-dark p-5">
+                                <h2 class="text-uppercase">Mes valeurs</h2>
+                                <p class="subtitle text-uppercase mb-5">
+                                    <strong>Les fondations de ma démarche</strong>
+                                </p>
+                                <div class="row row-cols-1 row-cols-md-2 g-2 text-center mt-3">
+                                    <div class="col">
+                                        <p class="values-item border-all rounded-4 text-uppercase p-3">
                                             <i class="fa-regular fa-handshake"></i> Respect
                                         </p>
-                                        <p class="text-justify k-pad-m border-all bg-secondary text-center rounded-5">
+                                    </div>
+                                    <div class="col">
+                                        <p class="values-item border-all rounded-4 text-uppercase p-3">
                                             <i class="fa-solid fa-seedling"></i> Bienveillance
                                         </p>
-                                        <p class="text-justify k-pad-m border-all bg-secondary text-center rounded-5">
+                                    </div>
+                                    <div class="col">
+                                        <p class="values-item border-all rounded-4 text-uppercase p-3">
                                             <i class="fa-solid fa-ear-listen"></i> Écoute
                                         </p>
                                     </div>
+                                    <div class="col">
+                                        <p class="values-item border-all rounded-4 text-uppercase p-3">
+                                            <i class="fa-solid fa-scale-balanced"></i> Intégrité
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="modal fade" id="hobbies" tabindex="-1" aria-labelledby="exampleModalLabel"
-                            aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                                <div class="modal-content k-pad-m bg-dark rounded-4">
-                                    <div class="modal-header">
-                                        <div
-                                            class="modal-header p-0 d-flex w-full justify-content-between align-items-center">
-                                            <h5 class="text-uppercase"><i class="fa-regular fa-lightbulb"></i> Mes
-                                                passions
-                                            </h5>
-                                            <button type="button" class="button-close border-0 p-0 bg-transparent"
-                                                data-bs-dismiss="modal" aria-label="Close">
-                                                <i class="fa-solid fa-xmark"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p class="text-center k-pad-m border-all bg-primary text-center rounded-5">
+                            <div class="history__content-five text-center bg-light p-5">
+                                <h2 class="text-uppercase">Mes passions</h2>
+                                <p class="subtitle text-uppercase mb-5">
+                                    <strong>Mon univers, mes inspirations</strong>
+                                </p>
+                                <div class="row row-cols-1 row-cols-md-2 g-2 text-center mt-3">
+                                    <div class="col">
+                                        <p class="hobbies-item border-all rounded-4 text-uppercase p-3">
                                             <i class="fa-solid fa-book-open"></i> La lecture
                                         </p>
-                                        <p class="text-center k-pad-m border-all bg-primary text-center rounded-5">
+                                    </div>
+                                    <div class="col">
+                                        <p class="hobbies-item border-all rounded-4 text-uppercase p-3">
                                             <i class="fa-solid fa-gamepad"></i> Jeux vidéo
                                         </p>
-                                        <p class="text-center k-pad-m border-all bg-primary text-center rounded-5">
+                                    </div>
+                                    <div class="col">
+                                        <p class="hobbies-item border-all rounded-4 text-uppercase p-3">
                                             <i class="fa-solid fa-person-running"></i> Le sport
                                         </p>
-                                        <p class="text-center k-pad-m border-all bg-primary text-center rounded-5">
+                                    </div>
+                                    <div class="col">
+                                        <p class="hobbies-item border-all rounded-4 text-uppercase p-3">
                                             <i class="fa-solid fa-plane"></i> Les voyages
                                         </p>
                                     </div>
@@ -275,10 +197,10 @@
         </section>
     </main>
 
-    <footer class="footer border-top" aria-label="Footer">
+    <footer class="footer border-top p-5 bg-light" aria-label="Footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 text-center k-pad-l">
+                <div class="col-md-12 text-center">
                     <h5 class="text-uppercase">KAHINADEV</h5>
                     <h5 class="subtitle text-uppercase">Développeuse full stack orientée design</h5>
                     <h6 class="text-uppercase">
@@ -289,79 +211,65 @@
         </div>
     </footer>
 
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <a href="en/histoire.html"
+        class="language d-flex align-items-center justify-content-center bg-light position-fixed border-all rounded-4 text-decoration-none text-uppercase">
+        <img src="assets/img/icon/flag/american-flag.webp" class="flag" alt="Drapeau américain"
+            aria-label="Drapeau américain">
+        Anglais
+    </a>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content k-pad-m bg-dark rounded-5 border-none">
-                <div class="modal-header p-0 w-full d-flex justify-content-between align-items-center">
-                    <h5 class="text-uppercase"><i class="fa-solid fa-code"></i> Tech stack</h5>
+            <div class="modal-content rounded-4 bg-dark p-5">
+                <div class="modal-header border-none d-flex justify-content-between p-0">
+                    <h5 class="text-uppercase"><i class="fa-solid fa-terminal"></i> Tech stack</h5>
                     <button type="button" class="button-close border-0 p-0 bg-transparent" data-bs-dismiss="modal"
                         aria-label="Close">
                         <i class="fa-solid fa-xmark"></i>
                     </button>
                 </div>
                 <div class="modal-body p-0 mt-3">
-                    <div class="row row-cols-2 row-cols-md-4 g-2 text-center mt-3">
+                    <div class="row row-cols-2 row-cols-md-2 g-2 text-center mt-3">
                         <div class="col">
-                            <p class="skill-item border-all text-uppercase k-pad-s rounded-3">HTML</p>
+                            <p class="skill-item border-all rounded-4 text-uppercase p-3">Html</p>
                         </div>
                         <div class="col">
-                            <p class="skill-item border-all text-uppercase k-pad-s rounded-3">CSS</p>
+                            <p class="skill-item border-all rounded-4 text-uppercase p-3">Css</p>
                         </div>
                         <div class="col">
-                            <p class="skill-item border-all text-uppercase k-pad-s rounded-3">SASS</p>
+                            <p class="skill-item border-all rounded-4 text-uppercase p-3">Sass</p>
                         </div>
                         <div class="col">
-                            <p class="skill-item border-all text-uppercase k-pad-s rounded-3">Js</p>
+                            <p class="skill-item border-all rounded-4 text-uppercase p-3">Js</p>
                         </div>
                         <div class="col">
-                            <p class="skill-item border-all text-uppercase k-pad-s rounded-3">PHP</p>
+                            <p class="skill-item border-all rounded-4 text-uppercase p-3">Php</p>
                         </div>
                         <div class="col">
-                            <p class="skill-item border-all text-uppercase k-pad-s rounded-3">MySQL</p>
+                            <p class="skill-item border-all rounded-4 text-uppercase p-3">MySQL</p>
                         </div>
                         <div class="col">
-                            <p class="skill-item border-all text-uppercase k-pad-s rounded-3">Symfony</p>
+                            <p class="skill-item border-all rounded-4 text-uppercase p-3">Symfony</p>
                         </div>
                         <div class="col">
-                            <p class="skill-item border-all text-uppercase k-pad-s rounded-3">WordPress</p>
+                            <p class="skill-item border-all rounded-4 text-uppercase p-3">WordPress</p>
                         </div>
                         <div class="col">
-                            <p class="skill-item border-all text-uppercase k-pad-s rounded-3">Shopify</p>
+                            <p class="skill-item border-all rounded-4 text-uppercase p-3">Shopify</p>
                         </div>
                         <div class="col">
-                            <p class="skill-item border-all text-uppercase k-pad-s rounded-3">Airtable</p>
+                            <p class="skill-item border-all rounded-4 text-uppercase p-3">Airtable</p>
                         </div>
                         <div class="col">
-                            <p class="skill-item border-all text-uppercase k-pad-s rounded-3">Ksaar</p>
+                            <p class="skill-item border-all rounded-4 text-uppercase p-3">Ksaar</p>
                         </div>
                         <div class="col">
-                            <p class="skill-item border-all text-uppercase k-pad-s rounded-3">Grist</p>
+                            <p class="skill-item border-all rounded-4 text-uppercase p-3">Grist</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="button-language position-fixed bottom-0 p-0">
-        <a href="en/histoire.html"
-            class="language btn text-decoration-none text-uppercase rounded-0 border-top bg-dark k-pad-m d-flex justify-content-center align-items-center w-full">
-            <img src="assets/img/icon/flag/american-flag.webp" class="flag" alt="Drapeau américain"
-                aria-label="Drapeau américain">
-            <span class="flag-name">En</span>
-        </a>
-    </div>
-    <div class="switch-theme position-fixed bottom-0 p-0">
-        <button id="theme-toggle" class="btn btn-toggle rounded-0 border-top bg-dark w-full k-pad-m"
-            aria-label="Changer de thème">
-            <span id="icon-sun" class="text-uppercase">
-                <i class="fa-regular fa-sun"></i>
-            </span>
-            <span id="icon-moon" class="text-uppercase">
-                <i class="fa-regular fa-moon"></i>
-            </span>
-        </button>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

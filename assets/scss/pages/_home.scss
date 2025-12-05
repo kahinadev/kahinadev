@@ -2,115 +2,28 @@
 // HOME
 // ===============================================
 
-// =========== VARIABLES & MIXINS ===========
+// =========== VARIABLES ===========
 
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-// =========== GENERAL ===========
-
 .introduction {
-    .container {
-        width: 94%;
-
-        @include respond-to(sm, max) {
-            width: 94% !important;
-        }
-    }
-
-    .k-pad-sec {
-        width: 94%;
-        margin: $zero $k-margin-l;
-
-        @include respond-to(sm, max) {
-            width: 99% !important;
-        }
-    }
-
-    .available {
-        width: 30%;
-        font-size: 12px !important;
-
-        @include respond-to(sm, max) {
-            width: 94% !important;
-        }
-
-        @include respond-to(xxl, max) {
-            width: 60%;
-        }
-
-        i {
-            color: var(--secondary);
-        }
-    }
-
-    h1 {
-        br {
-            @include respond-to(sm, max) {
-                display: $none !important;
-            }
-        }
-    }
-
-    .btn {
-        width: 50%;
-
-        @include respond-to(sm, max) {
-            width: 94% !important;
-        }
-
-        @include respond-to(xxl, max) {
-            width: 82%;
-        }
-    }
-}
-
-.about-me {
     img {
-        height: 705px;
-
-        @include respond-to (sm, max) {
-            height: 380px !important;
-        }
-
-        @include respond-to(xxl, max) {
-            margin-bottom: $k-margin-s;
-        }
-    }
-
-    &__content {
-        margin-top: $k-margin-l;
-    }
-}
-
-.service-title,
-.portfolio-title {
-
-    @include respond-to(sm, max) {
-        width: 93% !important;
+        border-top-left-radius: 2rem;
+        border-top-right-radius: 2rem;
     }
 }
 
 .services {
-    .service-title {
-        width: 98%;
-        margin: $zero $k-margin-s;
-
+    .col-service {
         @include respond-to(sm, max) {
-            margin: $zero $k-margin-s;
-
-        }
-
-        @include respond-to(lg, max) {
-            width: 97%;
+            padding: $zero !important;
         }
     }
 }
 
-.portfolio {
-    .portfolio-title {
-        @include respond-to(sm, max) {
-            width: $full !important;
-        }
+.contact {
+    .contact-button {
+        color: $background;
     }
 }

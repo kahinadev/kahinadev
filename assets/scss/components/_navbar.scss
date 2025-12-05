@@ -7,67 +7,50 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-// =========== LINKS ===========
+// =========== GENERAL ===========
 
-.navbar-nav {
-    padding: 1rem 0;
+.navbar {
+    // =========== LINKS ===========
 
     .nav-item {
-        padding: 5px 25px;
-        @include transition;
-
         &:not(:last-child) {
-            margin: $zero 5px;
+            margin-right: $margin-right-item;
+
+            @include respond-to(xl, max) {
+                margin-right: $zero !important;
+                margin-bottom: $margin-bottom-item;
+            }
+        }
+
+        .nav-link {
+            font-size: $size-link !important;
+            font-weight: $weight-link;
+            padding: $padding-link;
+            letter-spacing: $spacing-link;
+            @include transition;
 
             @include respond-to(lg, max) {
-                margin: $zero $zero 20px $zero;
+                border-color: $background !important;
+            }
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: $background;
+                background-color: $text;
+
+                @include respond-to(lg, max) {
+                    color: $text !important;
+                    background-color: $background !important;
+                }
             }
         }
     }
 
-    .nav-link {
-        color: var(--text);
-        font-size: 14px;
-        font-weight: 500;
-    }
-}
-
-.button-stack {
-    @include respond-to(sm, max) {
-        margin-top: 1.5rem !important;
-    }
-
-    @include respond-to(lg, max) {
-        margin-top: $k-margin-s;
-    }
-
+    .nav-link,
     .btn-stack {
-        padding: 10px 25px !important;
-        background-color: var(--text);
-
-        i,
-        span {
-            font-size: 14.5px !important;
-            font-weight: 800 !important;
-            color: var(--background) !important;
-        }
-
-        i {
-            margin-right: 5px;
-        }
-    }
-}
-
-// =========== BUTTON BURGER ===========
-
-.navbar-toggler {
-    border: $none !important;
-    border-radius: $zero !important;
-
-    .toggler-icon {
-        i {
-            color: var(--text);
-            font-size: 35px;
+        @include respond-to(lg, max) {
+            color: $background !important
         }
     }
 }

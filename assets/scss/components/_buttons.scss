@@ -1,0 +1,32 @@
+// ===============================================
+// BUTTONS
+// ===============================================
+
+// =========== VARIABLES & MIXINS ===========
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// =========== GENERAL ===========
+
+.btn {
+    font-size: $size-button !important;
+    font-weight: $weight-button !important;
+    letter-spacing: $spacing-button;
+}
+
+.btn-all {
+    color: $background;
+    min-width: $min-width-button;
+    letter-spacing: $spacing-button;
+    border-radius: $border-radius-button;
+    background-color: $text;
+    @include transition;
+
+    &:hover,
+    &:focus,
+    &:active {
+        border: $border !important;
+        background-color: transparent !important;
+    }
+}

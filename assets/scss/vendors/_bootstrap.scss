@@ -1,64 +1,41 @@
-// =======================================
+// ===============================================
 // BOOTSTRAP
-// ======================================= 
+// ===============================================
 
-.bg-dark {
-    background-color: var(--background) !important;
+// =========== VARIABLES ===========
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// =========== PADDING ===========
+
+.p-5 {
+    @include respond-to(sm, max) {
+        padding: 3rem 2rem !important;
+    }
+
+    @include respond-to(lg, max) {
+        padding: 3rem 2rem;
+    }
 }
+
+// =========== BACKGROUND ===========
 
 .bg-light {
-    background-color: var(--text) !important;
+    background-color: $background !important;
+}
+
+.bg-dark {
+    background-color: $text !important;
 
     h1,
     h2,
     h3,
     h4,
     h5,
-    h6,
-    p,
     a,
-    span {
-        color: var(--background) !important;
-    }
-}
-
-.bg-dark,
-.bg-primary,
-.bg-secondary {
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    a,
-    span {
-        color: var(--text) !important;
-    }
-}
-
-.bg-primary {
-    background-color: var(--primary) !important;
-}
-
-.bg-secondary {
-    background-color: var(--secondary) !important;
-}
-
-.bg-accent {
-    background-color: var(--accent) !important;
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    a,
-    span {
-        color: var(--background) !important;
+    p {
+        color: $background !important;
+        border-color: $background !important;
     }
 }

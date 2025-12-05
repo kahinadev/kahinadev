@@ -5,16 +5,7 @@
 // =========== ABSTRACTS ===========
 
 @use "abstracts/variables" as *;
-@use "abstracts/functions" as *;
 @use "abstracts/mixins" as *;
-
-// =========== BOOTSTRAP ===========
-
-@use "vendors/bootstrap.scss";
-
-// =========== THEMES ===========
-
-@use "themes/themes.scss";
 
 // =========== BASE ===========
 
@@ -31,17 +22,19 @@
 
 // =========== COMPONENTS ===========
 
+@use "components/loader";
 @use "components/navbar";
-@use "components/modal";
-@use "components/language-n-switch";
-@use "components/line";
-@use "components/button";
+@use "components/buttons";
+@use "components/languages";
 @use "components/moving";
 @use "components/card";
-@use "components/list";
+@use "components/modal";
 
 // =========== PAGES ===========
 
 @use "pages/home";
-@use "pages/about";
-@use "pages/services";
+@use "pages/history";
+
+// =========== VENDORS ===========
+
+@use "vendors/bootstrap";

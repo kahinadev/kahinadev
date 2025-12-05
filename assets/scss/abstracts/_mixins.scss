@@ -5,7 +5,6 @@
 // =========== VARIABLES ===========
 
 @use "variables" as *;
-
 @use "sass:map";
 
 // =========== RESPONSIVE ===========
@@ -24,7 +23,7 @@
 
 // =========== BORDER ===========
 
-@mixin border-position($position, $color: var(--border), $width: 1px, $style: solid) {
+@mixin border-position($position, $color: $text, $width: 1px, $style: solid) {
     @if $position ==all {
         border: #{$width} #{$style} #{$color} !important;
     }
@@ -40,43 +39,25 @@
     }
 }
 
-// =========== HOVER ===========
-
-@mixin hover-effect($color: var(--accent)) {
-    @include transition();
-
-    &:hover,
-    &:focus,
-    &:active {
-        color: $color;
-    }
-}
-
 // =========== TRANSITION ===========
 
 @mixin transition($property: all, $duration: 0.3s, $timing: ease-in-out) {
     transition: $property $duration $timing;
 }
 
-// =========== COLOR TEXT ===========
+// =========== FONTS ===========
 
-@mixin color-text($color: var(--text)) {
-    color: $color;
-}
-
-// =========== FONTS TEXT ===========
-
-@mixin font-text($font: $font-text) {
-    font-family: $font;
+@mixin font($font-all: $font) {
+    font-family: $font-all;
 }
 
 // =========== TITLE ===========
 
-@mixin title($size-mobile: 3.8rem, $size-tablet: 5.8rem, $size-desktop: 7.5rem, $spacing: 1.2px) {
-    @include color-text;
+@mixin title($size-mobile: 56px, $size-tablet: 80px, $size-desktop: 100px, $spacing: 1.2px) {
+    @include font; 
+    font-weight: 900 !important;
     word-break: break-word;
     letter-spacing: $spacing;
-    font-family: $font-title;
 
     @include respond-to(sm, max) {
         font-size: $size-mobile !important;
@@ -86,7 +67,7 @@
         font-size: $size-tablet;
     }
 
-     @include respond-to(xl, max) {
+    @include respond-to(xl, max) {
         line-height: 1 !important;
     }
 
@@ -97,24 +78,22 @@
 
 // =========== SUBTITLE ===========
 
-@mixin subtitle($size-desktop: 1.3rem, $weight: 700, $spacing: 1.6px) {
-    @include color-text;
+@mixin subtitle($size-desktop: 26px, $weight: 600, $spacing: 1.6px) {
+    @include font; 
     overflow-wrap: break-word;
     word-break: break-word;
     font-size: $size-desktop;
     font-weight: $weight !important;
     letter-spacing: $spacing;
-    @include font-text;
 }
 
 // =========== TEXT ===========
 
-@mixin text($size-mobile: 1rem, $size-tablet: 1.2rem, $size-desktop: 1.2rem, $weight: 300, $spacing: 1px, $line-height: 1.3) {
-    @include color-text;
+@mixin text($size-mobile: 18px, $size-tablet: 19.5px, $size-desktop: 20px, $weight: 300, $spacing: 1px, $line-height: 1.3) {
+    @include font; 
     font-weight: $weight;
     line-height: $line-height;
     letter-spacing: $spacing;
-    @include font-text;
 
     @include respond-to(sm, max) {
         font-size: $size-mobile !important;

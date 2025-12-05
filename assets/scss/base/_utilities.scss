@@ -13,13 +13,6 @@
     width: $full !important;
 }
 
-// =========== Z-INDEX ===========
-
-.k-index-sec {
-    z-index: 10 !important;
-    position: $relative !important;
-}
-
 // =========== ALIGN ===========
 
 .text-justify {
@@ -30,88 +23,20 @@
 
 .subtitle {
     @include subtitle;
-
-    br {
-        display: $none;
-
-        @include respond-to(xxl, max) {
-            display: $block !important;
+    
+    .br {
+        @include respond-to(xxl, min) {
+            display: $none !important;
         }
-    }
-
-    .second {
-        display: $none !important;
-
-        @include respond-to(sm, max) {
-            display: $block !important;
-        }
-    }
-}
-
-// =========== PADDING ===========
-
-.k-pad-s {
-    padding: $k-padding-s;
-}
-
-.k-pad-m {
-    padding: $k-padding-m;
-}
-
-.k-pad-l {
-    padding: $k-padding-l;
-
-    @include respond-to(sm, max) {
-        padding: $k-padding-m !important;
-    }
-}
-
-.k-pad-xl {
-    padding: $k-padding-xl $k-padding-m;
-
-    @include respond-to(sm, max) {
-        padding: $k-padding-l !important;
-    }
-}
-
-.k-pad-sec {
-    padding: $k-padding-section-desktop;
-
-    @include respond-to(sm, max) {
-        padding: $k-padding-section-mobile !important;
-    }
-
-    @include respond-to(xl, max) {
-        padding: $k-padding-section-tablet;
-    }
-}
-
-// =========== COL ===========
-
-.col-sec {
-    overflow: $overflow-hidden;
-    position: $relative;
-
-    @include respond-to(lg, max) {
-        width: $full !important;
-        margin: $zero !important;
-    }
-}
-
-.col-service,
-.col-contact, 
-.col-about {
-    @include respond-to(xxl, max) {
-        width: $full !important;
     }
 }
 
 // =========== SECTION ===========
 
-.sec-marg {
-    margin: $k-margin-l;
+.section {
+    padding: $padding-section-desktop;
 
-    @include respond-to(lg, max) {
-        margin: $k-margin-m $zero !important;
+    @include respond-to(sm, max) {
+        padding: $padding-section-mobile !important;
     }
 }

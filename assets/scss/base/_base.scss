@@ -15,20 +15,8 @@ body {
     overflow-x: $overflow-hidden;
 }
 
-section {
-    .container {
-        position: $relative;
-        overflow: $overflow-hidden;
-        max-width: calc(100% - 18%);
-
-        @include respond-to(sm) {
-            max-width: calc(100% - 2%) !important;
-        }
-
-        @include respond-to(xl) {
-           max-width: calc(100% - 8%);
-        }
-    }
+body {
+    background-color: $background;
 }
 
 // =========== IMAGE ===========

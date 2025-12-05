@@ -1,114 +1,32 @@
 // ===============================================
-// CARDS
+// HOME
 // ===============================================
 
-// =========== VARIABLES & MIXINS ===========
+// =========== VARIABLES ===========
 
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-// =========== GENERAL ===========
+// =========== PROJECTS ===========
 
-.card {
-    background-color: transparent !important;
+.card-project {
+    transition: transform .3s ease;
 
-    .subtitle {
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    img {
+        height: 800px;
+
         @include respond-to(sm, max) {
-            font-size: 1.1rem !important;
+            height: 300px !important;
+        }
+    }
+
+    &__title-number {
+        .subtitle {
+            font-size: 15px !important;
         }
     }
 }
-
-.card-service {
-    &__icon-title {
-        span {
-            i {
-                font-size: 25px;
-            }
-        }
-    }
-}
-
-// .card-service,
-// .card-value {
-//     transition: background-color 0.3s ease;
-
-//     &__number {
-//         width: 150px;
-//         background-attachment: var(--background);
-
-//         @include respond-to(sm, max) {
-//             width: 150px !important;
-//         }
-
-//         @include respond-to(xl, max) {
-//             width: 220px;
-//         }
-//     }
-// }
-
-// // =========== SERVICES ===========
-
-// .card-service {
-//     min-height: 580px;
-//     position: $relative;
-//     overflow: $overflow-hidden;
-//     transition: $transition-card;
-//     background-color: var(--background);
-
-//     @include respond-to(sm, max) {
-//         min-height: 580px !important;
-//     }
-
-//     @include respond-to(xl, max) {
-//         min-height: 630px;
-//     }
-
-//     &:hover {
-//         .card-service__title {
-//             transform: translateY(-200px);
-
-//             @include respond-to(xl, max) {
-//                 transform: translateY(-350px) !important;
-//             }
-
-//             @include respond-to(xxl, max) {
-//                 transform: translateY(-300px);
-//             }
-//         }
-
-//         #card-service-title {
-//             @include respond-to(sm, max) {
-//                 margin-left: $k-padding-m !important;
-//                 transform: translateY(-270px) !important;
-//             }
-//         }
-
-//         .card-service__text {
-//             bottom: 0;
-//         }
-//     }
-
-//     &__title,
-//     &__text {
-//         position: $absolute;
-//     }
-
-//     &__title {
-//         bottom: 20px;
-//         margin-left: $k-padding-l;
-//         transition: transform 0.4s ease;
-//     }
-
-//     &__text {
-//         left: $zero;
-//         bottom: -100%;
-//         height: $full;
-//         display: flex;
-//         align-items: flex-end;
-//         transition: bottom 0.4s ease;
-//     }
-// }
-
-
-// // =========== VALUES ===========
