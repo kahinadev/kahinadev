@@ -29,8 +29,12 @@
     }
 
     &__title-number {
-        .subtitle {
-            font-size: 14px !important;
+        p {
+            font-size: 19px;
+
+            @include respond-to(sm, max) {
+                font-size: 16px !important;
+            }
         }
     }
 }

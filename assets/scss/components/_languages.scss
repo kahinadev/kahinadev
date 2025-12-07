@@ -10,11 +10,15 @@
 // =========== GENERAL ===========
 
 .language {
-    left: $left-languages;
+    left: $left-languages-desktop;
     bottom: $bottom-languages;
     padding: $padding-languages;
     color: $text !important;
     font-size: $size-languages !important;
+
+    @include respond-to(sm, max) {
+        left: $left-languages-mobile !important;
+    }
 
     .flag {
         margin-right: 10px;

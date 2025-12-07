@@ -6,6 +6,7 @@
 
 $text: #06070E; 
 $background: #eaeef2; 
+$primary: #c7b8ea;
 
 // =========== RESPONSIVE ===========
 
@@ -28,9 +29,11 @@ $border-positions: top, bottom, left, right, all;
 // =========== NONE & FULL ===========
 
 $zero: 0;
+$flex: flex;
 $block: block;
 $full: 100%;
 $none: none;
+$column: column;
 
 // =========== POSITION ===========
 
@@ -48,7 +51,7 @@ $font: "Orbitron", sans-serif;
 
 // =========== HEADER ===========
 
-$padding-header-mobile: 20px;
+$padding-header-mobile: 20px 10px;
 $padding-header-desktop: 20px 40px; 
 
 // =========== BRAND ===========
@@ -83,7 +86,8 @@ $min-width-button: 200px;
 // =========== LANGUAGES ===========
 
 $size-languages: 12px;
-$left-languages: 2rem; 
+$left-languages-mobile: 1rem;
+$left-languages-desktop: 2rem; 
 $bottom-languages: 1rem;
 $padding-languages: 1rem 1.5rem; 
 $radius-flag-languages: 20px;
@@ -94,9 +98,34 @@ $height-flag-languages: 20px;
 
 $padding-section-mobile: 5rem 1rem;
 $padding-section-desktop: 8rem 3rem; 
+$padding-section-projects-mobile: 0 1rem 5rem 1rem;
+$padding-section-projects-desktop: 0 3rem 8rem 3rem;
 
 // =========== MODAL ===========
 
 $size-skill-item-modal: 14px;
 $size-icon-modal-header: 27px;
 $size-title-modal-header: 20px; 
+
+// =========== BOOTSTRAP ===========
+
+$padding-boot-five: 3rem 2rem;
+$padding-boot-two-l-r: 2rem;
+
+// =========== HISTORY ===========
+
+$img-height-mobile: 500px;
+$img-height-tablet: 700px; 
+$img-height-desktop: 100vh; 
+$min-height-content-desktop: 100vh;
+
+// =========== PORTFOLIO / PROJECTS ===========
+
+$top-category: 1rem;
+$size-category: 12px;
+$size-marg-category: 10px;
+$project-content-top: 1rem;
+$project-intro-bottom: 0rem; 
+$project-image-opacity: 0.7; 
+$project-image-opacity-hover: 1;
+$project-image-opacity-transition: opacity 0.5s ease-in-out;

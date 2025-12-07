@@ -11,7 +11,7 @@
 
 .p-5 {
     @include respond-to(sm, max) {
-        padding: 3rem 2rem !important;
+        padding: 3rem 1.5rem !important;
     }
 
     @include respond-to(lg, max) {
@@ -20,6 +20,21 @@
 }
 
 // =========== BACKGROUND ===========
+
+.bg-light,
+.bg-primary {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    a,
+    p {
+        color: $text !important;
+        border-color: $text !important;
+    }
+}
 
 .bg-light {
     background-color: $background !important;
@@ -38,4 +53,8 @@
         color: $background !important;
         border-color: $background !important;
     }
+}
+
+.bg-primary {
+    background-color: $primary !important;
 }
