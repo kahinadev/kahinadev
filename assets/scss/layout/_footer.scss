@@ -8,15 +8,50 @@
 @use "../abstracts/mixins" as *;
 
 .footer {
-    h5 {
-        font-size: 30px !important;
+    padding: $footer-padding-desktop;
+
+    @include respond-to(sm, max) {
+        text-align: $center;
+        padding: $footer-padding-mobile !important;
     }
 
-    .subtitle {
-        font-size: 18px !important;
+    .footer-contact {
+        @include respond-to(sm, max) {
+            justify-content: $center !important;
+        }
+
+        // =========== ICON CONTACT ===========
+
+        .a-contact {
+            margin-right: $footer-margin;
+
+            i {
+                font-size: $footer-icon;
+            }
+
+        }
     }
 
-    h6 {
-        font-size: 15px !important;
+    // =========== VERSION & COPYRIGHT ===========
+
+    .version,
+    .copyright {
+        @include respond-to(sm, max) {
+            text-align: $center !important;
+        }
+    }
+
+    .version {
+        font-weight: $footer-weight-version !important;
+        font-size: $footer-size-version !important;
+        font-family: $font-text;
+
+        @include respond-to(sm, max) {
+            margin-top: $footer-margin;
+        }
+    }
+
+    .copyright {
+        font-size: $footer-size-copyright !important;
     }
 }

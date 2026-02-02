@@ -7,6 +7,14 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
+// =========== FONT TITLE ===========
+
+@font-face {
+    font-family: "Giaza";
+    src: url('../../assets/fonts/Giaza/Giaza.woff2') format('woff2'),
+        url('../../assets/fonts/Giaza/Giaza.woff') format('woff');
+}
+
 // =========== TITLE ===========
 
 h1,
@@ -21,19 +29,19 @@ h6 {
 // =========== SIZE TITLE ===========
 
 h2 {
-    @include title(42px, 68px, 80px);
+    @include title(50px, 68px, 80px);
 }
 
 h3 {
-    @include title(40px, 60px, 79px);
+    @include title(48px, 60px, 68px);
 }
 
 h4 {
-    @include title(38px, 50px, 78px);
+    @include title(22px, 22px, 22px);
 }
 
 h5 {
-    @include title(22px, 30px, 50px)
+    @include title(20px, 20px, 20px);
 }
 
 // =================== TEXT ==============
@@ -43,6 +51,14 @@ a,
 span {
     @include text;
 }
+
+// =================== LINKS ==============
+
+a {
+    text-decoration: $none !important;
+}
+
+// =================== STRONG ==============
 
 strong {
     font-weight: 600 !important;

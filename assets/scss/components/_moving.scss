@@ -8,16 +8,28 @@
 @use "../abstracts/mixins" as *;
 
 // =========== GENERAL ===========
+
 .moving {
+    overflow: $overflow-hidden;
+    position: $relative;
+    margin-top: 4rem;
+
+    @include respond-to(xl, max) {
+        margin-top: 2rem !important;
+    }
+
+    // =========== MOVING TRACK ===========
+    
     &__track {
-        white-space: nowrap;
-        animation: move linear 15s infinite;
+        display: $flex !important;
+        white-space: $no-wrap-moving;
+        width: $max-content-moving;
+        margin: $margin-moving;
+        animation: move linear 165s infinite;
     }
 
     &__item {
-        font-size: 17px !important;
-        font-weight: 800 !important;
-        margin-right: 15px;
+        font-size: $size-item-moving !important;
     }
 }
 
@@ -35,6 +47,6 @@
 
 @media (prefers-reduced-motion: reduce) {
     .moving__track {
-        animation: none;
+        animation: $none;
     }
 }

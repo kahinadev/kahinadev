@@ -11,23 +11,16 @@
 
 .header {
     z-index: 15;
-    padding: $padding-header-desktop;
+    padding: 1rem $zero;
 
     @include respond-to(sm, max) {
-        padding: $padding-header-mobile;
+        padding: 0.5rem 1rem !important;
     }
 
     .navbar {
         .navbar-brand {
-            font-size: $size-brand;
-            font-weight: $weight-brand;
-            letter-spacing: $spacing-brand;
-        }
-
-        .navbar-toggler {
-            .toggler-icon {
-                margin-left: $margin-left-icon; 
-                font-size: $size-icon !important;
+            img {
+                width: 70px;
             }
         }
     }

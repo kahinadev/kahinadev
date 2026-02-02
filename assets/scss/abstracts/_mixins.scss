@@ -23,7 +23,7 @@
 
 // =========== BORDER ===========
 
-@mixin border-position($position, $color: $text, $width: 1px, $style: solid) {
+@mixin border-position($position, $color: $secondary, $width: 1px, $style: solid) {
     @if $position ==all {
         border: #{$width} #{$style} #{$color} !important;
     }
@@ -45,19 +45,25 @@
     transition: $property $duration $timing;
 }
 
-// =========== FONTS ===========
+// =========== COLOR & FONT ===========
 
-@mixin font($font-all: $font) {
-    font-family: $font-all;
+@mixin color {
+    color: $text;
+}
+
+@mixin font-text {
+    font-family: $font-text;
 }
 
 // =========== TITLE ===========
 
-@mixin title($size-mobile: 46px, $size-tablet: 80px, $size-desktop: 100px, $spacing: 1.2px) {
-    @include font; 
+@mixin title($size-mobile: 52px, $size-tablet: 80px, $size-desktop: 90px, $spacing: 1.2px) {
+    @include color;
     font-weight: 900 !important;
     word-break: break-word;
+    text-transform: $uppercase;
     letter-spacing: $spacing;
+    font-family: $font-title;
 
     @include respond-to(sm, max) {
         font-size: $size-mobile !important;
@@ -68,7 +74,7 @@
     }
 
     @include respond-to(xl, max) {
-        line-height: 1 !important;
+        line-height: 1.2 !important;
     }
 
     @include respond-to(xl, min) {
@@ -78,20 +84,23 @@
 
 // =========== SUBTITLE ===========
 
-@mixin subtitle($size-desktop: 26px, $weight: 600, $spacing: 1.6px) {
-    @include font; 
+@mixin subtitle($size-desktop: 26px, $weight: 600, $spacing: 1.6px) { 
+    @include color;
+    @include font-text;
     overflow-wrap: break-word;
     word-break: break-word;
     font-size: $size-desktop;
+    text-transform: $uppercase;
     font-weight: $weight !important;
     letter-spacing: $spacing;
 }
 
 // =========== TEXT ===========
 
-@mixin text($size-mobile: 18px, $size-tablet: 19.5px, $size-desktop: 20px, $weight: 300, $spacing: 1px, $line-height: 1.3) {
-    @include font; 
-    font-weight: $weight;
+@mixin text($size-mobile: 16px, $size-tablet: 19.5px, $size-desktop: 20px, $weight: 300, $spacing: 1px, $line-height: 1.3) {
+    @include color;
+    @include font-text;
+    font-weight: $weight !important;
     line-height: $line-height;
     letter-spacing: $spacing;
 

@@ -1,5 +1,5 @@
 // ===============================================
-// HOME
+// CARD
 // ===============================================
 
 // =========== VARIABLES ===========
@@ -7,34 +7,33 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-// =========== PROJECTS ===========
+// =========== INITIAL ===========
 
-.card-project {
-    transition: transform .3s ease;
+.card {
+    transition: $card-transition;
+    background-color: transparent !important;
 
     &:hover {
         transform: scale(1.05);
+        box-shadow: $card-shadow-hover;
+        transition: transform $card-transition, box-shadow $card-transition;
+    }
+}
+
+// =========== SERVICES ===========
+
+.card-service {
+    border: $card-border;
+
+    .card-service-number {
+        padding: $card-padding;
+        margin-top: -7rem;
+        margin-left: 6rem;
+        position: $absolute;
+        border: $card-border;
     }
 
-    img {
-        height: 800px;
-
-        @include respond-to(sm, max) {
-            height: 300px !important;
-        }
-
-        @include respond-to(xl, max) {
-            height: 480px;
-        }
-    }
-
-    &__title-number {
-        p {
-            font-size: 19px;
-
-            @include respond-to(sm, max) {
-                font-size: 16px !important;
-            }
-        }
+    .card-service-content {
+        margin-top: $card-content;
     }
 }

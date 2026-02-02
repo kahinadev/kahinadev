@@ -7,23 +7,80 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-.introduction {
-    img {
-        border-top-left-radius: 2rem;
-        border-top-right-radius: 2rem;
-    }
-}
+// =========== INTRODUCTION ===========
 
-.services {
-    .col-service {
+.introduction {
+    .subtitle {
         @include respond-to(sm, max) {
-            padding: $zero !important;
+            margin-top: 1rem;
         }
     }
 }
 
-.contact {
-    .contact-button {
-        color: $background;
+// =========== ABOUT ===========
+
+.about {
+    .about-image {
+        width: 90%;
+        margin-left: 12%;
+
+        @include respond-to(sm, max) {
+            width: $full !important;
+            margin: 2rem 6% 3rem 0 !important;
+        }
+
+        img {
+            width: 80%;
+            z-index: 8;
+            height: 600px;
+            position: $relative;
+            margin-top: 50px;
+            margin-bottom: -45px;
+
+            @include respond-to(sm, max) {
+                height: 376px !important;
+                margin-top: 24px !important;
+            }
+
+            @include respond-to(lg, max) {
+                width: 86% !important;
+                margin-left: 0% !important;
+            }
+
+            @include respond-to(xl, max) {
+                width: $full;
+                height: 480px;
+                margin-left: 10%;
+            }
+        }
+    }
+
+    .qualities,
+    .values {
+        border: $about-border;
+    }
+
+    .qualities,
+    .values {
+        .w-m {
+            @include respond-to(sm, max) {
+                width: 66% !important;
+            }
+
+            @include respond-to(xl, max) {
+                width: 45%;
+            }
+        }
+    }
+
+}
+
+// =========== ABOUT ===========
+
+.presentation-services {
+    h3 {
+        @include respond-to(sm, max) {
+            margin-bottom: 1rem !important;
+        }
     }
 }

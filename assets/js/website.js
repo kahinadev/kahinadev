@@ -1,25 +1,6 @@
+// =========== LOADER ===========
+
 document.addEventListener("DOMContentLoaded", () => {
-    // --- HISTORY ---
-    
-    const blocks = document.querySelectorAll(
-        ".history__content-two, .history__content-three, .history__content-four, .history__content-five"
-    );
-
-    const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("visible");
-                }
-            });
-        },
-        { threshold: 0.2 }
-    );
-
-    blocks.forEach((block) => observer.observe(block));
-
-    // --- LOADER ---
-
     const loader = document.getElementById("loader");
     const greetingsEl = loader.querySelector(".subtitle-greetings");
     const progressEl = loader.querySelector(".progress-number");
@@ -52,4 +33,22 @@ document.addEventListener("DOMContentLoaded", () => {
             }, 800);
         }
     }, 50);
+});
+
+// =========== SIDEBAR ===========
+
+const openMenu = document.getElementById("openMenu");
+const closeMenu = document.getElementById("closeSidebar");
+const sidebar = document.getElementById("sidebar");
+
+openMenu.addEventListener("click", () => {
+    sidebar.classList.add("active");
+    openMenu.setAttribute("aria-expanded", "true");
+    document.body.style.overflow = "hidden";
+});
+
+closeMenu.addEventListener("click", () => {
+    sidebar.classList.remove("active");
+    openMenu.setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "";
 });

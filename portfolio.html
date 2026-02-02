@@ -10,12 +10,31 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
 
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+    <script src="assets/js/manifest.json"></script>
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -23,191 +42,190 @@
 <body>
     <header class="header" id="header" aria-label="Header">
         <nav class="navbar navbar-expand-lg bg-transparent">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html" aria-label="Nom du site">KAHINADEV</a>
-                <button class="navbar-toggler border-all rounded-4" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="toggler-icon"><i class="fa-solid fa-bars-staggered"></i></span>
+            <div class="container align-items-center">
+                <a class="navbar-brand" href="index.html" aria-label="Logo du site">
+                    <img src="assets/img/logo/logo-k-kahinadev.webp" alt="Logo du site" aria-label="Logo du site">
+                </a>
+                <button id="openMenu" class="btn toggler-menu d-flex" aria-label="Button menu">
+                    <span class="toggler-bars rounded-2"></span>
+                    <span class="toggler-bars rounded-2"></span>
+                    <span class="toggler-bars rounded-2"></span>
                 </button>
-                <div class="collapse navbar-collapse rounded-4" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link border-all rounded-5 text-uppercase" href="index.html"
-                                aria-label="Accueil">Accueil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link border-all rounded-5 text-uppercase" href="histoire.html"
-                                aria-label="Histoire">Histoire</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link border-all rounded-5 text-uppercase" href="services.html"
-                                aria-label="Services">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link border-all rounded-5 text-uppercase" href="portfolio.html"
-                                aria-label="Portfolio">Portfolio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link border-all rounded-5 text-uppercase" href="contact.html"
-                                aria-label="Contact">Contact</a>
-                        </li>
-                    </ul>
-                    <div class="d-flex">
-                        <button class="btn btn-stack text-uppercase" type="button" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal" aria-label="Tech stack">
-                            <i class="fa-solid fa-terminal"></i> Stack
-                        </button>
-                    </div>
-                </div>
             </div>
         </nav>
     </header>
 
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-menu">
+            <div class="sidebar-header">
+                <button id="closeSidebar" class="btn p-0 button-close" aria-label="Close">
+                    <span class="close-icon"><i class="fa-solid fa-xmark"></i></span>
+                </button>
+            </div>
+            <div class="sidebar-body">
+                <ul class="list-unstyled">
+                    <li class="nav-item border-top border-left border-right border-bottom">
+                        <a href="index.html" class="nav-link d-flex align-items-center justify-content-between"
+                            aria-label="Accueil">
+                            Accueil
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item border-left border-right border-bottom">
+                        <a href="histoire.html" class="nav-link d-flex align-items-center justify-content-between"
+                            aria-label="Histoire">
+                            Histoire
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item border-left border-right border-bottom">
+                        <a href="services.html" class="nav-link d-flex align-items-center justify-content-between"
+                            aria-label="Services">
+                            Services
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item border-left border-right border-bottom">
+                        <a href="portfolio.html" class="nav-link d-flex align-items-center justify-content-between"
+                            aria-label="Portfolio">
+                            Portfolio
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item border-left border-right border-bottom">
+                        <a href="contact.html" class="nav-link d-flex align-items-center justify-content-between"
+                            aria-label="Contact">
+                            Contact
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <main class="main" id="main" aria-label="Main">
-        <section class="projects border-top" aria-label="Portfolio">
-            <div class="container-fluid">
-                <div class="row align-items-center">
-                    <div class="col-lg-12 col-md-12 col-sm-12 p-5 text-center mt-5">
-                        <h1 class="text-uppercase mt-5">
-                            Les projets
-                        </h1>
-                        <p class="subtitle text-uppercase">
-                            <strong>Un aperçu de mon travail</strong>
+        <section class="portfolio section border-top" aria-label="Portfolio">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 mb-5">
+                        <p
+                            class="d-flex align-items-center w-sm justify-content-center bg-accent border-all infos-section border-all p-3">
+                            <i class="fa-solid fa-certificate"></i>
+                            Projets
                         </p>
+                        <h1>Mes créations</h1>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 mt-5 col-project">
-                        <a href="projet-portfolio.html"
-                            class="card card-project bg-transparent border-0 text-decoration-none">
-                            <img src="assets/img/projects/portfolio-project-mockup.webp" class="border-all rounded-4"
-                                alt="Photo du projet portfolio" aria-label="Photo du projet portfolio">
-                            <div class="card-project__title-number d-flex justify-content-between mt-3">
-                                <p class="text-uppercase">Projet portfolio</p>
-                                <p class="text-uppercase">01</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 mt-5 col-project">
-                        <a href="#" class="card card-project bg-transparent border-0 text-decoration-none">
-                            <img src="assets/img/projects/projet-portfolio.jpg" class="border-all rounded-4"
-                                alt="Photo du projet Entreprise" aria-label="Photo du projet Entreprise">
-                            <div class="card-project__title-number d-flex justify-content-between mt-3">
-                                <p class="text-uppercase">
-                                    Projet entreprise
-                                    <br>
-                                    <strong>En cours</strong>
-                                </p>
-                                <p class="text-uppercase">02</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 mt-5 col-project">
-                        <a href="#" class="card card-project bg-transparent border-0 text-decoration-none">
-                            <img src="assets/img/projects/projet-restaurant.jpg" class="border-all rounded-4"
-                                alt="Photo du projet ThreeDragons" aria-label="Photo du projet ThreeDragons">
-                            <div class="card-project__title-number d-flex justify-content-between mt-3">
-                                <p class="text-uppercase">
-                                    Projet ThreeDragons
-                                    <br>
-                                    <strong>En cours</strong>
-                                </p>
-                                <p class="text-uppercase">03</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 mt-5 col-project">
-                        <a href="#" class="card card-project bg-transparent border-0 text-decoration-none">
-                            <img src="assets/img/projects/projet-loup.jpg" class="border-all rounded-4"
-                                alt="Photo du projet thunderwolf" aria-label="Photo du projet thunderwolf">
-                            <div class="card-project__title-number d-flex justify-content-between mt-3">
-                                <p class="text-uppercase">
-                                    Projet thunderwolf
-                                    <br>
-                                    <strong>En cours</strong>
-                                </p>
-                                <p class="text-uppercase">04</p>
-                            </div>
-                        </a>
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <ul class="list-unstyled list-projects">
+                            <li class="nav-item">
+                                <a href="projets/portfolio.html"
+                                    class="nav-link a-project d-flex justify-content-between">
+                                    <span class="project-number text-center rounded-3 subtitle">01</span>
+                                    <span
+                                        class="project-name-category d-flex justify-content-between rounded-3 subtitle">
+                                        Portfolio
+                                        <span class="category available color-hover rounded-3">
+                                            <strong>Refonte</strong>
+                                        </span>
+                                    </span>
+                                    <span class="project-arrow text-center rounded-3">
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </span>
+                                    <img src="assets/img/projects/portfolio/mockup-ipad-portfolio.webp"
+                                        class="project-image rounded-3" alt="Image du projet Portfolio"
+                                        aria-label="Image du projet Portfolio">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link a-project d-flex justify-content-between">
+                                    <span class="project-number text-center rounded-3 subtitle">02</span>
+                                    <span
+                                        class="project-name-category d-flex justify-content-between rounded-3 subtitle">
+                                        ThreeDragons
+                                        <span class="category soon color-accent rounded-3">
+                                            <strong>Bientôt</strong>
+                                        </span>
+                                    </span>
+                                    <span class="project-arrow text-center rounded-3">
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </span>
+                                    <img src="assets/img/projects/threedragons/moodboard-threedragons.webp"
+                                        class="project-image rounded-3" alt="Image du projet Threedragons"
+                                        aria-label="Image du projet Threedragons">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link a-project d-flex justify-content-between">
+                                    <span class="project-number text-center rounded-3 subtitle">03</span>
+                                    <span
+                                        class="project-name-category d-flex justify-content-between rounded-3 subtitle">
+                                        Thunderwolf
+                                        <span class="category soon color-accent rounded-3">
+                                            <strong>Bientôt</strong>
+                                        </span>
+                                    </span>
+                                    <span class="project-arrow text-center rounded-3">
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link a-project d-flex justify-content-between">
+                                    <span class="project-number text-center rounded-3 subtitle">04</span>
+                                    <span
+                                        class="project-name-category d-flex justify-content-between rounded-3 subtitle">
+                                        Manga
+                                        <span class="category soon color-accent rounded-3">
+                                            <strong>Bientôt</strong>
+                                        </span>
+                                    </span>
+                                    <span class="project-arrow text-center rounded-3">
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer border-top p-5 bg-light" aria-label="Footer">
+    <footer class="footer border-top" aria-label="Footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 text-center">
-                    <h5 class="text-uppercase">KAHINADEV</h5>
-                    <h5 class="subtitle text-uppercase">Développeuse full stack orientée design</h5>
-                    <h6 class="text-uppercase">
-                        © 2023-2025 KAHINADEV — Tous droits réservés
-                    </h6>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <h4>KahinaDev</h4>
+                    <div class="d-flex justify-content-left footer-contact">
+                        <a href="https://www.linkedin.com/in/kahinaouali/" class="a-contact mt-3" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.behance.net/kahinadev" class="a-contact mt-3" aria-label="Behance">
+                            <i class="fa-brands fa-behance"></i>
+                        </a>
+                        <a href="https://github.com/kahinadev" class="a-contact mt-3" aria-label="Github">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://mail.google.com/mail/u/0/#inbox" class="a-contact mt-3" aria-label="Mail">
+                            <i class="fa-solid fa-envelope-open"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <h5 class="version text-end">V3.8.26</h5>
+                    <h6 class="copyright subtitle text-end">© 2023-2025 KAHINADEV — Tous droits réservés</h6>
                 </div>
             </div>
         </div>
     </footer>
 
     <a href="en/portfolio.html"
-        class="language d-flex align-items-center justify-content-center bg-light position-fixed border-all rounded-4 text-decoration-none text-uppercase">
+        class="languages d-flex align-items-center justify-content-center border-all rounded-3 bg-primary">
         <img src="assets/img/icon/flag/american-flag.webp" class="flag" alt="Drapeau américain"
             aria-label="Drapeau américain">
-        Anglais
+        En
     </a>
-
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content rounded-4 bg-dark p-5">
-                <div class="modal-header border-none d-flex justify-content-between p-0">
-                    <h5 class="text-uppercase"><i class="fa-solid fa-terminal"></i> Tech stack</h5>
-                    <button type="button" class="button-close border-0 p-0 bg-transparent" data-bs-dismiss="modal"
-                        aria-label="Close">
-                        <i class="fa-solid fa-xmark"></i>
-                    </button>
-                </div>
-                <div class="modal-body p-0 mt-3">
-                    <div class="row row-cols-2 row-cols-md-2 g-2 text-center mt-3">
-                        <div class="col">
-                            <p class="skill-item border-all rounded-4 text-uppercase p-3">Html</p>
-                        </div>
-                        <div class="col">
-                            <p class="skill-item border-all rounded-4 text-uppercase p-3">Css</p>
-                        </div>
-                        <div class="col">
-                            <p class="skill-item border-all rounded-4 text-uppercase p-3">Sass</p>
-                        </div>
-                        <div class="col">
-                            <p class="skill-item border-all rounded-4 text-uppercase p-3">Js</p>
-                        </div>
-                        <div class="col">
-                            <p class="skill-item border-all rounded-4 text-uppercase p-3">Php</p>
-                        </div>
-                        <div class="col">
-                            <p class="skill-item border-all rounded-4 text-uppercase p-3">MySQL</p>
-                        </div>
-                        <div class="col">
-                            <p class="skill-item border-all rounded-4 text-uppercase p-3">Symfony</p>
-                        </div>
-                        <div class="col">
-                            <p class="skill-item border-all rounded-4 text-uppercase p-3">WordPress</p>
-                        </div>
-                        <div class="col">
-                            <p class="skill-item border-all rounded-4 text-uppercase p-3">Shopify</p>
-                        </div>
-                        <div class="col">
-                            <p class="skill-item border-all rounded-4 text-uppercase p-3">Airtable</p>
-                        </div>
-                        <div class="col">
-                            <p class="skill-item border-all rounded-4 text-uppercase p-3">Ksaar</p>
-                        </div>
-                        <div class="col">
-                            <p class="skill-item border-all rounded-4 text-uppercase p-3">Grist</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

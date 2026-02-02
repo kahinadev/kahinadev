@@ -4,9 +4,12 @@
 
 // =========== COLORS ===========
 
-$text: #06070E; 
-$background: #eaeef2; 
-$primary: #c7b8ea;
+$text: #F7ECE1;
+$background: #211D33;
+$primary: #242038;
+$secondary: #565285;
+$accent: #8783D1;
+$hover: #B7B8D9;
 
 // =========== RESPONSIVE ===========
 
@@ -26,14 +29,34 @@ $border: 1px solid $text;
 $border-radius: 2rem;
 $border-positions: top, bottom, left, right, all;
 
+// =========== AUTO ===========
+
+$auto: auto;
+
 // =========== NONE & FULL ===========
 
 $zero: 0;
+$full: 100%;
+
+// =========== DISPLAY ===========
+
 $flex: flex;
 $block: block;
-$full: 100%;
 $none: none;
+
+// =========== OPACITY ===========
+
+$opacity: 0;
+$opacity-hover: 1;
+
+// =========== DIRECTION ===========
+
 $column: column;
+
+// =========== ALIGN ===========
+
+$center: center;
+$flex-end: flex-end;
 
 // =========== POSITION ===========
 
@@ -41,83 +64,108 @@ $fixed: fixed;
 $absolute: absolute;
 $relative: relative;
 
+// =========== ICON ===========
+
+$icon-margin: 5px;
+
 // =========== OVERFLOW ===========
 
+$overflow-visible: visible;
 $overflow-hidden: hidden;
+
+// =========== TRANSFORM ===========
+
+$uppercase: uppercase;
 
 // =========== FONTS ===========
 
-$font: "Orbitron", sans-serif;
+$font-title: "Giaza", sans-serif;
+$font-text: "Tajawal", sans-serif;
 
-// =========== HEADER ===========
+// =========== TOGGLER MENU ===========
 
-$padding-header-mobile: 20px 10px;
-$padding-header-desktop: 20px 40px; 
-
-// =========== BRAND ===========
-
-$size-brand: 19px; 
-$weight-brand: 800; 
-$spacing-brand: 4.5px;
-
-// =========== NAVBAR ICON ===========
-
-$size-icon: 19px;
-$margin-left-icon: 4px; 
-
-// =========== NAVBAR ===========
-
-$margin-right-item: 10px; 
-$margin-bottom-item: 15px; 
-
-$size-link: 12px;
-$weight-link: 500;
-$spacing-link: 2px;
-$padding-link: 10px 20px;
-
-// =========== BUTTONS ===========
-
-$size-button: 14.5px; 
-$weight-button: 600; 
-$spacing-button: 3px;
-$border-radius-button: 1rem;
-$min-width-button: 200px; 
-
-// =========== LANGUAGES ===========
-
-$size-languages: 12px;
-$left-languages-mobile: 1rem;
-$left-languages-desktop: 2rem; 
-$bottom-languages: 1rem;
-$padding-languages: 1rem 1.5rem; 
-$radius-flag-languages: 20px;
-$width-flag-languages: 20px;
-$height-flag-languages: 20px;
+$toggler-height: 2px;
+$toggler-width-p: 50px;
+$toggler-width-s: 40px;
+$toggler-transition: 0.3s ease;
 
 // =========== SECTION ===========
 
 $padding-section-mobile: 5rem 1rem;
-$padding-section-desktop: 8rem 3rem; 
-$padding-section-projects-mobile: 0 1rem 5rem 1rem;
-$padding-section-projects-desktop: 0 3rem 8rem 3rem;
+$padding-section-desktop: 8rem 0rem;
 
-// =========== MODAL ===========
+// =========== SIDEBAR ===========
 
-$size-skill-item-modal: 14px;
-$size-icon-modal-header: 27px;
-$size-title-modal-header: 20px; 
+$sidebar-inset: 0;
+$sidebar-padding: 2rem;
+$sidebar-padding-item: 3rem;
+$sidebar-padding-item-hover: 5rem;
+$sidebar-size-icon: 30px;
+$sidebar-margin-body: 3rem;
+$sidebar-margin-mobile: 1rem $auto;
+$sidebar-margin-desktop: 3rem $auto;
+
+// =========== FOOTER ===========
+
+$footer-icon: 20px;
+$footer-margin: 10px;
+$footer-weight-version: 300;
+$footer-size-version: 15px;
+$footer-size-copyright: 14.8px;
+$footer-padding-mobile: 3rem 1rem;
+$footer-padding-desktop: 3rem 0;
+
+// =========== CARD ===========
+
+$card-padding: 2rem;
+$card-content: 2rem;
+$card-border: 4px solid $secondary;
+$card-transition: transform .3s ease;
+$card-shadow-hover: 5px 5px 0px $hover;
+
+// =========== BUTTONS ===========
+
+$size-button: 14px;
+$weight-button: 600;
+$spacing-button: 3px;
+$padding-button: 10px 30px;
+$button-shadow: 0 0 0 $text;
+$button-shadow-hover: 5px 5px 0px $text;
+$button-transition: 0.25s ease;
+
+// =========== LANGUAGES ===========
+
+$left-languages: 1rem;
+$bottom-languages: 1rem;
+$padding-languages: 1rem 1.5rem;
+$width-flag-languages: 20px;
+$height-flag-languages: 20px;
+
+// =========== MOVING ===========
+
+$size-item-moving: 22px;
+$margin-moving: 1rem 0;
+$no-wrap-moving: nowrap;
+$max-content-moving: max-content; 
+
+// =========== LIST ===========
+
+$padding-list: 2rem;
+$list-border: 4px solid $secondary;
+
+// =========== ABOUT ===========
+
+$about-border: 4px solid $secondary;
+
+// =========== PORTFOLIO ===========
+
+$height-image-mobile: 300px;
+$height-image-desktop: 400px;
 
 // =========== BOOTSTRAP ===========
 
 $padding-boot-five: 3rem 2rem;
 $padding-boot-two-l-r: 2rem;
-
-// =========== HISTORY ===========
-
-$img-height-mobile: 500px;
-$img-height-tablet: 700px; 
-$img-height-desktop: 100vh; 
-$min-height-content-desktop: 100vh;
 
 // =========== PORTFOLIO / PROJECTS ===========
 
@@ -125,7 +173,7 @@ $top-category: 1rem;
 $size-category: 12px;
 $size-marg-category: 10px;
 $project-content-top: 1rem;
-$project-intro-bottom: 0rem; 
-$project-image-opacity: 0.7; 
+$project-intro-bottom: 0rem;
+$project-image-opacity: 0.7;
 $project-image-opacity-hover: 1;
 $project-image-opacity-transition: opacity 0.5s ease-in-out;

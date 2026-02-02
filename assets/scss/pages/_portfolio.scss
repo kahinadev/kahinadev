@@ -7,59 +7,59 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-// =========== GENERAL ===========
+// // =========== GENERAL ===========
 
-.portfolio,
-.projects {
-    .col-project {
-        @include respond-to(sm, max) {
-            padding: $zero !important;
-            margin-top: 2rem !important;
-        }
-    }
-}
+// .portfolio,
+// .projects {
+//     .col-project {
+//         @include respond-to(sm, max) {
+//             padding: $zero !important;
+//             margin-top: 2rem !important;
+//         }
+//     }
+// }
 
-.projects {
-    padding: $padding-section-projects-desktop;
+// .projects {
+//     padding: $padding-section-projects-desktop;
 
-    @include respond-to(sm, max) {
-        padding: $padding-section-projects-mobile !important;
+//     @include respond-to(sm, max) {
+//         padding: $padding-section-projects-mobile !important;
 
-    }
+//     }
 
-    .text-center {
-        @include respond-to(sm, max) {
-            margin-top: 0rem !important;
-        }
-    }
-}
+//     .text-center {
+//         @include respond-to(sm, max) {
+//             margin-top: 0rem !important;
+//         }
+//     }
+// }
 
-// =========== PROJECTS ===========
+// // =========== PROJECTS ===========
 
 
-.project-intro {
-    #project-intro-title {
-        @include respond-to(sm, max) {
-            padding-bottom: $project-intro-bottom !important;
-        }
-    }
+// .project-intro {
+//     #project-intro-title {
+//         @include respond-to(sm, max) {
+//             padding-bottom: $project-intro-bottom !important;
+//         }
+//     }
 
-    #project-intro-content {
-        @include respond-to(sm, max) {
-            padding-top: $project-content-top !important;
-        }
-    }
-}
+//     #project-intro-content {
+//         @include respond-to(sm, max) {
+//             padding-top: $project-content-top !important;
+//         }
+//     }
+// }
 
-.project-images {
-    img {
-        opacity: $project-image-opacity;
-        transition: $project-image-opacity-transition;
+// .project-images {
+//     img {
+//         opacity: $project-image-opacity;
+//         transition: $project-image-opacity-transition;
 
-        &:hover,
-        &:focus,
-        &:active {
-            opacity: $project-image-opacity-hover;
-        }
-    }
-}
+//         &:hover,
+//         &:focus,
+//         &:active {
+//             opacity: $project-image-opacity-hover;
+//         }
+//     }
+// }

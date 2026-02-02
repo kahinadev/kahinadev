@@ -7,11 +7,60 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
+// =========== BACKGROUND ===========
+
+.bg-accent {
+    background-color: $accent !important;
+}
+
+// =========== COLOR ===========
+
+.color-accent {
+    color: $accent;
+}
+
+.color-hover {
+    color: $hover !important;
+}
+
 // =========== WIDTH ===========
 
 .w-full {
     width: $full !important;
 }
+
+.w-sm {
+    width: 20%;
+
+    @include respond-to(sm, max) {
+        width: 70% !important;
+    }
+
+    @include respond-to(xl, max) {
+        width: 30%;
+    }
+}
+
+.w-s {
+    width: 30%;
+
+    @include respond-to(sm, max) {
+        width: 68% !important;
+    }
+
+    @include respond-to(xl, max) {
+        width: 45%;
+    }
+}
+
+.w-m {
+    width: 42%;
+
+    @include respond-to(xl, max) {
+        width: 70%;
+    }
+}
+
 
 // =========== ALIGN ===========
 
@@ -23,11 +72,40 @@
 
 .subtitle {
     @include subtitle;
-    
+
+    @include respond-to(sm, max) {
+        font-size: 20px !important;
+    }
+
     .br {
         @include respond-to(xxl, min) {
             display: $none !important;
         }
+    }
+}
+
+// =========== HERO ===========
+
+.hero-sec {
+    padding: 12rem 5rem;
+
+    @include respond-to(sm, max) {
+        padding: 8rem 1rem !important;
+    }
+}
+
+// =========== INFOS SECTION ===========
+
+.infos-section {
+    border-radius: 50px;
+    font-size: 16px;
+    font-family: $font-title;
+    text-transform: $uppercase;
+    border-color: $text !important;
+
+    i {
+        font-size: 11px;
+        margin: 4px 5px 0 0;
     }
 }
 

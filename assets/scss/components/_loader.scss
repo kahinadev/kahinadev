@@ -15,23 +15,28 @@
     height: $full;
     position: $fixed;
     z-index: 999;
-    opacity: 1;
-    background-color: $text !important;
+    opacity: $opacity-hover;
+    background-color: $background !important;
     transition: opacity 0.8s ease !important;
 
     .loader-content {
         p {
-            color: $background !important;
+            color: $hover !important;
         }
 
         .subtitle {
             font-size: 45px !important;
             transition: opacity 0.5s ease;
         }
+
+        .progress-number {
+            font-size: 22px !important;
+            margin-top: -1rem;
+        }
     }
 
     &.hidden {
         opacity: $zero;
-        pointer-events: none;
+        pointer-events: $none;
     }
 }

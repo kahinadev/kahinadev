@@ -9,20 +9,18 @@
 
 // =========== GENERAL ===========
 
-.language {
-    left: $left-languages-desktop;
+.languages {
+    left: $left-languages;
     bottom: $bottom-languages;
+    position: $fixed;
+    font-size: 14px !important;
+    font-weight: 800 !important;
+    font-family: $font-text;
+    text-transform: $uppercase;
     padding: $padding-languages;
-    color: $text !important;
-    font-size: $size-languages !important;
-
-    @include respond-to(sm, max) {
-        left: $left-languages-mobile !important;
-    }
 
     .flag {
         margin-right: 10px;
-        border-radius: $radius-flag-languages;
         width: $width-flag-languages;
         height: $height-flag-languages;
     }

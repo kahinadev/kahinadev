@@ -10,23 +10,31 @@
 // =========== GENERAL ===========
 
 .btn {
+    color: $accent;
+    padding: $padding-button;
+    text-transform: $uppercase;
     font-size: $size-button !important;
     font-weight: $weight-button !important;
     letter-spacing: $spacing-button;
+
+    span {
+        font-size: $size-button !important;
+    }
+
+    i {
+        margin-right: $icon-margin;
+    }
 }
 
-.btn-all {
-    color: $background;
-    min-width: $min-width-button;
-    letter-spacing: $spacing-button;
-    border-radius: $border-radius-button;
-    background-color: $text;
-    @include transition;
+.btn-k-shad {
+    box-shadow: $button-shadow;
+    transform: translate(0, 0);
+    transition: transform $button-transition, box-shadow $button-transition;
 
-    &:hover,
-    &:focus,
-    &:active {
-        border: $border !important;
-        background-color: transparent !important;
+    &:hover {
+        color: $background !important;
+        box-shadow: $button-shadow-hover;
+        background-color: $hover;
+        transform: translate(-4.5px, -4.5px);
     }
 }

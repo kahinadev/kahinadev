@@ -21,40 +21,18 @@
 
 // =========== BACKGROUND ===========
 
-.bg-light,
-.bg-primary {
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    a,
-    p {
-        color: $text !important;
-        border-color: $text !important;
-    }
-}
-
 .bg-light {
-    background-color: $background !important;
+    background-color: $text !important;
 }
 
 .bg-dark {
-    background-color: $text !important;
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    a,
-    p {
-        color: $background !important;
-        border-color: $background !important;
-    }
+    background-color: $background !important;
 }
 
 .bg-primary {
     background-color: $primary !important;
+}
+
+.bg-secondary {
+    background-color: $secondary !important;
 }

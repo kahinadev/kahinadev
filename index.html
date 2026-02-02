@@ -10,12 +10,31 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
 
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+    <script src="assets/js/manifest.json"></script>
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -24,346 +43,381 @@
     <div id="loader" class="d-flex justify-content-center align-items-center">
         <div class="loader-content text-center">
             <p class="subtitle subtitle-greetings text-uppercase"><strong>Bienvenue</strong></p>
-            <p class="progress-number">0%</p>
+            <p class="subtitle progress-number">0%</p>
         </div>
     </div>
-
     <header class="header" id="header" aria-label="Header">
         <nav class="navbar navbar-expand-lg bg-transparent">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html" aria-label="Nom du site">KAHINADEV</a>
-                <button class="navbar-toggler border-all rounded-4" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="toggler-icon"><i class="fa-solid fa-bars-staggered"></i></span>
+            <div class="container align-items-center">
+                <a class="navbar-brand" href="index.html" aria-label="Logo du site">
+                    <img src="assets/img/logo/logo-k-kahinadev.webp" alt="Logo du site" aria-label="Logo du site">
+                </a>
+                <button id="openMenu" class="btn toggler-menu d-flex" aria-label="Button menu">
+                    <span class="toggler-bars rounded-2"></span>
+                    <span class="toggler-bars rounded-2"></span>
+                    <span class="toggler-bars rounded-2"></span>
                 </button>
-                <div class="collapse navbar-collapse rounded-4" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link border-all rounded-5 text-uppercase" href="index.html"
-                                aria-label="Accueil">Accueil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link border-all rounded-5 text-uppercase" href="histoire.html"
-                                aria-label="Histoire">Histoire</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link border-all rounded-5 text-uppercase" href="services.html"
-                                aria-label="Services">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link border-all rounded-5 text-uppercase" href="portfolio.html"
-                                aria-label="Portfolio">Portfolio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link border-all rounded-5 text-uppercase" href="contact.html"
-                                aria-label="Contact">Contact</a>
-                        </li>
-                    </ul>
-                    <div class="d-flex">
-                        <button class="btn btn-stack text-uppercase" type="button" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal" aria-label="Tech stack">
-                            <i class="fa-solid fa-terminal"></i> Stack
-                        </button>
-                    </div>
-                </div>
             </div>
         </nav>
     </header>
 
-    <main class="main" id="main" aria-label="Main">
-        <section class="introduction" aria-label="Introduction">
-            <div class="container-fluid">
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-menu">
+            <div class="sidebar-header">
+                <button id="closeSidebar" class="btn p-0 button-close" aria-label="Close">
+                    <span class="close-icon"><i class="fa-solid fa-xmark"></i></span>
+                </button>
+            </div>
+            <div class="sidebar-body">
+                <ul class="list-unstyled">
+                    <li class="nav-item border-top border-left border-right border-bottom">
+                        <a href="#introduction" class="nav-link d-flex align-items-center justify-content-between"
+                            aria-label="Accueil">
+                            Accueil
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item border-left border-right border-bottom">
+                        <a href="#histoire" class="nav-link d-flex align-items-center justify-content-between"
+                            aria-label="Histoire">
+                            Histoire
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item border-left border-right border-bottom">
+                        <a href="#services" class="nav-link d-flex align-items-center justify-content-between"
+                            aria-label="Services">
+                            Services
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item border-left border-right border-bottom">
+                        <a href="#portfolio" class="nav-link d-flex align-items-center justify-content-between"
+                            aria-label="Portfolio">
+                            Portfolio
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item border-left border-right border-bottom">
+                        <a href="#contact" class="nav-link d-flex align-items-center justify-content-between"
+                            aria-label="Contact">
+                            Contact
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <main id="main" class="main" aria-label="Main">
+        <section id="introduction" class="introduction hero-sec border-bottom" aria-label="Introduction">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 d-flex justify-content-center text-center">
+                        <p
+                            class="d-flex align-items-center w-sm justify-content-center bg-accent border-all infos-section border-all p-3">
+                            <i class="fa-solid fa-certificate"></i>
+                            Portfolio
+                        </p>
+                    </div>
+                    <div class="col-md-12 text-center">
+                        <h1>Bienvenue</h1>
+                        <p class="subtitle">Développeuse full-stack orientée design</p>
+                        <a href="#a-propos" class="btn btn-k-shad border-all w-m">
+                            Commencer
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="a-propos" class="about section" aria-label="À propos">
+            <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-6 col-md-8 col-sm-12 p-5">
-                        <h1 class="text-uppercase">
-                            Salut, je suis kahina
-                        </h1>
-                        <p class="subtitle text-uppercase">
-                            <strong>Développeuse full stack orientée design</strong>
-                        </p>
-                        <a href="#propos" class="btn btn-all p-3 text-uppercase">Commencer</a>
-                    </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12 p-0">
-                        <img src="assets/img/me/pic-of-me-one.png" class="border-top border-left border-right"
-                            alt="Photo de moi" aria-label="Photo de moi">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="moving" aria-label="Texte qui bouge">
-            <div class="container-fluid p-0">
-                <div class="col-md-12 col-sec border-bottom border-top">
-                    <div id="movingTrack" class="moving__track d-flex align-items-center">
-                        <div id="movingContent" class="moving__content">
-                            <p class="moving__item text-uppercase mt-3">
-                                Bienvenue <i class="fa-regular fa-face-smile-wink"></i> Welcome
-                                <i class="fa-regular fa-face-smile-wink"></i> Bienvenido <i
-                                    class="fa-regular fa-face-smile-wink"></i>
-                                환영합니다 <i class="fa-regular fa-face-smile-wink"></i> Bienvenue <i
-                                    class="fa-regular fa-face-smile-wink"></i> Welcome
-                                <i class="fa-regular fa-face-smile-wink"></i> Bienvenido <i
-                                    class="fa-regular fa-face-smile-wink"></i>
-                                환영합니다 <i class="fa-regular fa-face-smile-wink"></i> Bienvenue <i
-                                    class="fa-regular fa-face-smile-wink"></i> Welcome
-                                <i class="fa-regular fa-face-smile-wink"></i> Bienvenido <i
-                                    class="fa-regular fa-face-smile-wink"></i>
-                                환영합니다 <i class="fa-regular fa-face-smile-wink"></i> Bienvenue <i
-                                    class="fa-regular fa-face-smile-wink"></i> Welcome
-                                <i class="fa-regular fa-face-smile-wink"></i> Bienvenido <i
-                                    class="fa-regular fa-face-smile-wink"></i>
-                                환영합니다 <i class="fa-regular fa-face-smile-wink"></i> Bienvenue <i
-                                    class="fa-regular fa-face-smile-wink"></i> Welcome
-                                <i class="fa-regular fa-face-smile-wink"></i> Bienvenido <i
-                                    class="fa-regular fa-face-smile-wink"></i>
-                                환영합니다 <i class="fa-regular fa-face-smile-wink"></i> Bienvenue <i
-                                    class="fa-regular fa-face-smile-wink"></i> Welcome
-                                <i class="fa-regular fa-face-smile-wink"></i> Bienvenido <i
-                                    class="fa-regular fa-face-smile-wink"></i>
-                                환영합니다 <i class="fa-regular fa-face-smile-wink"></i> Bienvenue <i
-                                    class="fa-regular fa-face-smile-wink"></i> Welcome
-                                <i class="fa-regular fa-face-smile-wink"></i> Bienvenido <i
-                                    class="fa-regular fa-face-smile-wink"></i>
-                                환영합니다 <i class="fa-regular fa-face-smile-wink"></i>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="propos" class="about section" aria-label="À propos">
-            <div class="container-fluid">
-                <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-12">
-                        <h2 class="text-uppercase">
-                            À propos
-                        </h2>
-                        <p class="subtitle text-uppercase">
-                            <strong>Qui suis-je ?</strong>
+                        <p
+                            class="d-flex align-items-center w-m justify-content-center bg-accent border-all infos-section border-all p-3">
+                            <i class="fa-solid fa-certificate"></i>
+                            Quelques mots
                         </p>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <p class="text-justify">
-                            Je m'appelle Kahina, développeuse web de 26 ans. Je suis passionnée par la création
-                            d’expériences numériques à la fois intuitives, esthétiques et cohérentes.
+                        <h2>À propos</h2>
+                        <p class="text-justify mt-5">
+                            Je m'appelle Kahina, développeuse web de 26 ans. Je suis développeuse web passionnée, animée
+                            par la curiosité et le désir de transformer
+                            des idées en projets concrets. Mon parcours académique et mes expériences
+                            professionnelles m’ont permis de maîtriser à la fois la technique et le design, avec une
+                            approche centrée sur l’utilisateur.
                             <br>
                             <br>
-                            J’aime concevoir des interfaces où la technique rencontre la créativité, en accordant une
-                            attention particulière aux détails qui rendent chaque projet unique.
+                            Chaque projet est pour moi une aventure unique où je peux allier rigueur, créativité et
+                            innovation. J’accorde une grande importance à la qualité du travail et à l’esthétique,
+                            tout en restant attentive aux nouvelles tendances et technologies du web.
+                            <br>
+                            Autonome dans ma manière de travailler, j’aime collaborer avec d’autres professionnels
+                            pour donner vie à des expériences numériques modernes, performantes et engageantes.
+                            <br>
+                            <br>
+                            <strong>Mon objectif : créer des solutions sur mesure qui font la différence.</strong>
                         </p>
-                        <a href="histoire.html" class="btn btn-all p-3 mt-3 text-uppercase">En savoir plus</a>
                     </div>
-                </div>
-            </div>
-        </section>
-        <section class="moving" aria-label="Texte qui bouge">
-            <div class="container-fluid p-0">
-                <div class="col-md-12 col-sec border-bottom border-top">
-                    <div id="movingTrack" class="moving__track d-flex align-items-center">
-                        <div id="movingContent" class="moving__content">
-                            <p class="moving__item text-uppercase mt-3">
-                                Bienvenue <i class="fa-regular fa-face-smile-wink"></i> Welcome
-                                <i class="fa-regular fa-face-smile-wink"></i> Bienvenido <i
-                                    class="fa-regular fa-face-smile-wink"></i>
-                                환영합니다 <i class="fa-regular fa-face-smile-wink"></i> Bienvenue <i
-                                    class="fa-regular fa-face-smile-wink"></i> Welcome
-                                <i class="fa-regular fa-face-smile-wink"></i> Bienvenido <i
-                                    class="fa-regular fa-face-smile-wink"></i>
-                                환영합니다 <i class="fa-regular fa-face-smile-wink"></i> Bienvenue <i
-                                    class="fa-regular fa-face-smile-wink"></i> Welcome
-                                <i class="fa-regular fa-face-smile-wink"></i> Bienvenido <i
-                                    class="fa-regular fa-face-smile-wink"></i>
-                                환영합니다 <i class="fa-regular fa-face-smile-wink"></i> Bienvenue <i
-                                    class="fa-regular fa-face-smile-wink"></i> Welcome
-                                <i class="fa-regular fa-face-smile-wink"></i> Bienvenido <i
-                                    class="fa-regular fa-face-smile-wink"></i>
-                                환영합니다 <i class="fa-regular fa-face-smile-wink"></i> Bienvenue <i
-                                    class="fa-regular fa-face-smile-wink"></i> Welcome
-                                <i class="fa-regular fa-face-smile-wink"></i> Bienvenido <i
-                                    class="fa-regular fa-face-smile-wink"></i>
-                                환영합니다 <i class="fa-regular fa-face-smile-wink"></i> Bienvenue <i
-                                    class="fa-regular fa-face-smile-wink"></i> Welcome
-                                <i class="fa-regular fa-face-smile-wink"></i> Bienvenido <i
-                                    class="fa-regular fa-face-smile-wink"></i>
-                                환영합니다 <i class="fa-regular fa-face-smile-wink"></i> Bienvenue <i
-                                    class="fa-regular fa-face-smile-wink"></i> Welcome
-                                <i class="fa-regular fa-face-smile-wink"></i> Bienvenido <i
-                                    class="fa-regular fa-face-smile-wink"></i>
-                                환영합니다 <i class="fa-regular fa-face-smile-wink"></i>
-                            </p>
+                    <div class="col-lg-6 col-md-6 col-sm-12 text-end">
+                        <div class="about-image border-all rounded-3 text-center">
+                            <img src="assets/img/me/photo-de-moi-une.webp" class="border-all rounded-3"
+                                alt="Photo de moi" aria-label="Photo de moi">
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
-        <section class="services section" aria-label="Services">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h3 class="text-uppercase">Services</h3>
-                        <p class="subtitle text-uppercase">
-                            <strong>Ce que je propose</strong>
-                        </p>
+                    <div class="col-md-12 bg-secondary p-3 rounded-3 moving">
+                        <div id="movingTrack" class="moving__track">
+                            <div id="moving-content" class="moving__content">
+                                <h2 class="moving__item subtitle">
+                                    Html - Css - Sass - Javascript - Php - MySQL - WordPress - Shopify - Airtable -
+                                    Ksaar - Grist - Html - Css - Sass - Javascript - Php - MySQL - WordPress -
+                                    Shopify - Airtable - Ksaar - Grist - Html - Css - Sass - Javascript - Php -
+                                    MySQL - WordPress - Shopify - Airtable - Ksaar - Grist - Html - Css - Sass -
+                                    Javascript - Php - MySQL - WordPress - Shopify - Airtable - Ksaar - Grist - Html
+                                    - Css - Sass - Javascript - Php - MySQL - WordPress - Shopify - Airtable - Ksaar
+                                    - Grist - Html - Css - Sass - Javascript - Php - MySQL - WordPress - Shopify -
+                                    Airtable - Ksaar - Grist - Html - Css - Sass - Javascript - Php - MySQL -
+                                    WordPress - Shopify - Airtable - Ksaar - Grist - Html - Css - Sass - Javascript -
+                                    Php - MySQL - WordPress - Shopify - Airtable -
+                                    Ksaar - Grist - Html - Css - Sass - Javascript - Php - MySQL - WordPress - Shopify -
+                                    Airtable -
+                                    Ksaar - Grist - Html - Css - Sass - Javascript - Php - MySQL - WordPress - Shopify -
+                                    Airtable -
+                                    Ksaar - Grist - Html - Css - Sass - Javascript - Php - MySQL - WordPress - Shopify -
+                                    Airtable -
+                                    Ksaar - Grist - Html - Css - Sass - Javascript - Php - MySQL - WordPress - Shopify -
+                                    Airtable -
+                                    Ksaar - Grist - Html - Css - Sass - Javascript - Php - MySQL - WordPress - Shopify -
+                                    Airtable -
+                                    Ksaar - Grist -
+                                </h2>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-lg-4 col-md-12 mt-5 col-service">
-                        <div class="card card-service border-all p-5 bg-transparent rounded-4">
-                            <div class="card-service__title">
-                                <p class="subtitle text-uppercase mt-3">
-                                    <i class="fa-solid fa-code"></i> Développement
+                    <div class="col-lg-6 col-md-6 col-md-12">
+                        <div class="card qualities p-5 rounded-3 mt-5">
+                            <p
+                                class="d-flex align-items-center w-m justify-content-center bg-accent border-all infos-section border-all p-3">
+                                <i class="fa-solid fa-certificate"></i>
+                                Forces
+                            </p>
+                            <h3>Qualités</h3>
+                            <div class="list-qualities mt-5">
+                                <p class="p-list subtitle d-flex justify-content-between">
+                                    <span class="icon-list text-center rounded-3">
+                                        <i class="fa-solid fa-paintbrush"></i>
+                                    </span>
+                                    <span class="qualities-name rounded-3"><strong>Créative</strong></span>
+                                </p>
+                                <p class="p-list subtitle d-flex justify-content-between">
+                                    <span class="icon-list text-center rounded-3">
+                                        <i class="fa-solid fa-rocket"></i>
+                                    </span>
+                                    <span class="qualities-name rounded-3"><strong>Autonome</strong></span>
+                                </p>
+                                <p class="p-list subtitle d-flex justify-content-between">
+                                    <span class="icon-list text-center rounded-3">
+                                        <i class="fa-solid fa-list-check"></i>
+                                    </span>
+                                    <span class="qualities-name rounded-3"><strong>Organisée</strong></span>
+                                </p>
+                                <p class="p-list subtitle d-flex justify-content-between">
+                                    <span class="icon-list text-center rounded-3">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </span>
+                                    <span class="qualities-name rounded-3"><strong>Curieuse</strong></span>
                                 </p>
                             </div>
-                            <div class="card-service__content mt-3">
-                                <p class="text-justify">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-md-12">
+                        <div class="card values p-5 rounded-3 mt-5">
+                            <p
+                                class="d-flex align-items-center w-m justify-content-center bg-accent border-all infos-section border-all p-3">
+                                <i class="fa-solid fa-certificate"></i>
+                                Piliers
+                            </p>
+                            <h3>Valeurs</h3>
+                            <div class="list-values mt-5">
+                                <p class="p-list subtitle d-flex justify-content-between">
+                                    <span class="icon-list text-center rounded-3">
+                                        <i class="fa-regular fa-handshake"></i>
+                                    </span>
+                                    <span class="qualities-name rounded-3"><strong>Respect</strong></span>
+                                </p>
+                                <p class="p-list subtitle d-flex justify-content-between">
+                                    <span class="icon-list text-center rounded-3">
+                                        <i class="fa-solid fa-seedling"></i>
+                                    </span>
+                                    <span class="qualities-name rounded-3"><strong>Bienveillance</strong></span>
+                                </p>
+                                <p class="p-list subtitle d-flex justify-content-between">
+                                    <span class="icon-list text-center rounded-3">
+                                        <i class="fa-solid fa-ear-listen"></i>
+                                    </span>
+                                    <span class="qualities-name rounded-3"><strong>Écoute</strong></span>
+                                </p>
+                                <p class="p-list subtitle d-flex justify-content-between">
+                                    <span class="icon-list text-center rounded-3">
+                                        <i class="fa-solid fa-scale-balanced"></i>
+                                    </span>
+                                    <span class="qualities-name rounded-3"><strong>Intégrité</strong></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="services" class="presentation-services section border-top" aria-label="Services">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 d-flex justify-content-center text-center">
+                        <p
+                            class="d-flex align-items-center w-sm justify-content-center bg-accent border-all infos-section border-all p-3">
+                            <i class="fa-solid fa-certificate"></i>
+                            Services
+                        </p>
+                    </div>
+                    <div class="col-md-12 text-center mb-3">
+                        <h3 class="mb-5">Ce que je propose</h3>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card card-service card-border p-5 bg-transparent rounded-3 bg-primary mt-3">
+                            <div class="card-service-content">
+                                <p class="subtitle text-center">Développement web</p>
+                                <p class="text-justify mt-3">
                                     Des sites modernes, performants et pensés pour évoluer avec votre activité. Chaque
                                     projet allie design soigné, rapidité et sécurité pour garantir une expérience fluide
                                     et durable.
                                 </p>
-                                <a href="services.html" class="btn btn-all p-3 w-full text-uppercase">
-                                    Voir le service
-                                </a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-12 mt-5 col-service">
-                        <div class="card card-service border-all p-5 bg-transparent rounded-4">
-                            <div class="card-service__title">
-                                <p class="subtitle text-uppercase mt-3">
-                                    <i class="fa-solid fa-swatchbook"></i> Design
-                                </p>
-                            </div>
-                            <div class="card-service__content mt-3">
-                                <p class="text-justify">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card card-service card-border p-5 bg-transparent rounded-3 bg-primary mt-3">
+                            <div class="card-service-content">
+                                <p class="subtitle text-center">Web design</p>
+                                <p class="text-justify mt-3">
                                     Des interfaces élégantes et intuitives qui valorisent votre identité et vos
                                     services. Chaque maquette combine esthétique, cohérence et simplicité d’usage, pour
                                     une navigation fluide sur tous les supports.
                                 </p>
-                                <a href="services.html" class="btn btn-all p-3 w-full text-uppercase">
-                                    Voir le service
-                                </a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-12 mt-5 col-service">
-                        <div class="card card-service border-all p-5 bg-transparent rounded-4">
-                            <div class="card-service__title">
-                                <p class="subtitle text-uppercase mt-3">
-                                    <i class="fa-solid fa-repeat"></i> Refonte
-                                </p>
-                            </div>
-                            <div class="card-service__content mt-3">
-                                <p class="text-justify">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card card-service card-border p-5 bg-transparent rounded-3 bg-primary mt-3">
+                            <div class="card-service-content">
+                                <p class="subtitle text-center">Refonte</p>
+                                <p class="text-justify mt-3">
                                     Une refonte permet de redonner vie à votre site et de l’adapter aux standards
-                                    actuels du web. Après une analyse complète de l’existant, le design, la structure et
-                                    les contenus sont repensés pour plus de performance et de cohérence.
+                                    actuels du web. Après une analyse de l’existant, le design, la structure et les
+                                    contenus sont repensés pour plus de performance et de cohérence.
                                 </p>
-                                <a href="services.html" class="btn btn-all p-3 w-full text-uppercase">
-                                    Voir le service
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projets" class="presentation-projects section border-top" aria-label="Présentation des projets">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 mb-5">
+                        <p
+                            class="d-flex align-items-center w-sm justify-content-center bg-accent border-all infos-section border-all p-3">
+                            <i class="fa-solid fa-certificate"></i>
+                            Projets
+                        </p>
+                        <h3>Mes créations</h3>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <ul class="list-unstyled list-projects">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link a-project d-flex justify-content-between">
+                                    <span class="project-number text-center rounded-3 subtitle">01</span>
+                                    <span
+                                        class="project-name-category d-flex justify-content-between rounded-3 subtitle">
+                                        ThreeDragons
+                                        <span class="category soon color-accent rounded-3">
+                                            <strong>Bientôt</strong>
+                                        </span>
+                                    </span>
+                                    <span class="project-arrow text-center rounded-3">
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </span>
+                                    <img src="assets/img/projects/threedragons/moodboard-threedragons.webp"
+                                        class="project-image rounded-3" alt="Image du projet Threedragons"
+                                        aria-label="Image du projet Threedragons">
                                 </a>
-                            </div>
-                        </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link a-project d-flex justify-content-between">
+                                    <span class="project-number text-center rounded-3 subtitle">02</span>
+                                    <span
+                                        class="project-name-category d-flex justify-content-between rounded-3 subtitle">
+                                        Thunderwolf
+                                        <span class="category soon color-accent rounded-3">
+                                            <strong>Bientôt</strong>
+                                        </span>
+                                    </span>
+                                    <span class="project-arrow text-center rounded-3">
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link a-project d-flex justify-content-between">
+                                    <span class="project-number text-center rounded-3 subtitle">03</span>
+                                    <span
+                                        class="project-name-category d-flex justify-content-between rounded-3 subtitle">
+                                        Manga
+                                        <span class="category soon color-accent rounded-3">
+                                            <strong>Bientôt</strong>
+                                        </span>
+                                    </span>
+                                    <span class="project-arrow text-center rounded-3">
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="portfolio section border-top" aria-label="Portfolio">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h3 class="text-uppercase">Projets</h3>
-                        <p class="subtitle text-uppercase">
-                            <strong>Mes créations</strong>
+        <section id="contact" class="contact section border-top" aria-label="Contact">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-6 col-md-12 mb-5">
+                        <p
+                            class="d-flex align-items-center w-s justify-content-center bg-accent border-all infos-section border-all p-3">
+                            <i class="fa-solid fa-certificate"></i>
+                            Contact
                         </p>
+                        <h3>Ensemble, on crée</h3>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 mt-5 col-project">
-                        <a href="projet-portfolio.html"
-                            class="card card-project bg-transparent border-0 text-decoration-none">
-                            <img src="assets/img/projects/portfolio-project-mockup.webp" class="border-all rounded-4"
-                                alt="Photo du projet portfolio" aria-label="Photo du projet portfolio">
-                            <div class="card-project__title-number d-flex justify-content-between mt-3">
-                                <p class="text-uppercase">Projet portfolio</p>
-                                <p class="text-uppercase">01</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 mt-5 col-project">
-                        <a href="#" class="card card-project bg-transparent border-0 text-decoration-none">
-                            <img src="assets/img/projects/projet-portfolio.jpg" class="border-all rounded-4"
-                                alt="Photo du projet Entreprise" aria-label="Photo du projet Entreprise">
-                            <div class="card-project__title-number d-flex justify-content-between mt-3">
-                                <p class="text-uppercase">
-                                    Projet entreprise
-                                    <br>
-                                    <strong>En cours</strong>
-                                </p>
-                                <p class="text-uppercase">02</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 mt-5 col-project">
-                        <a href="#" class="card card-project bg-transparent border-0 text-decoration-none">
-                            <img src="assets/img/projects/projet-restaurant.jpg" class="border-all rounded-4"
-                                alt="Photo du projet ThreeDragons" aria-label="Photo du projet ThreeDragons">
-                            <div class="card-project__title-number d-flex justify-content-between mt-3">
-                                <p class="text-uppercase">
-                                    Projet ThreeDragons
-                                    <br>
-                                    <strong>En cours</strong>
-                                </p>
-                                <p class="text-uppercase">03</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 mt-5 col-project">
-                        <a href="#" class="card card-project bg-transparent border-0 text-decoration-none">
-                            <img src="assets/img/projects/projet-loup.jpg" class="border-all rounded-4"
-                                alt="Photo du projet thunderwolf" aria-label="Photo du projet thunderwolf">
-                            <div class="card-project__title-number d-flex justify-content-between mt-3">
-                                <p class="text-uppercase">
-                                    Projet thunderwolf
-                                    <br>
-                                    <strong>En cours</strong>
-                                </p>
-                                <p class="text-uppercase">04</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="contact section border-top" aria-label="Contact">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-8 col-md-8 col-md-12 mb-3">
-                        <h3 class="text-uppercase">Prendre contact</h3>
-                        <p class="subtitle text-uppercase">
-                            <strong>Ensemble, on crée</strong>
-                        </p>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-md-12">
-                        <div class="social border-all rounded-5 bg-dark p-3 text-center">
-                            <a href="https://www.behance.net/kahinadev"
-                                class="text-decoration-none contact-button w-full align-items-center text-uppercase"
-                                aria-label="Béhance">
-                                <i class="fa-brands fa-behance"></i> Béhance
-                            </a>
-                        </div>
-                        <div class="social border-all rounded-5 bg-dark p-3 text-center mt-3">
-                            <a href="https://github.com/kahinadev"
-                                class="text-decoration-none contact-button w-full align-items-center text-uppercase"
-                                aria-label="Github">
-                                <i class="fa-brands fa-github"></i> Github
-                            </a>
-                        </div>
-                        <div class="social border-all rounded-5 bg-dark p-3 text-center mt-3">
+                    <div class="col-lg-6 col-md-6 col-md-12">
+                        <div class="border-all p-5 list-contact rounded-3">
                             <a href="https://www.linkedin.com/in/kahinaouali/"
-                                class="text-decoration-none contact-button w-full align-items-center text-uppercase"
+                                class="a-contact w-full d-flex justify-content-center align-items-center subtitle border-all rounded-3 p-3"
                                 aria-label="LinkedIn">
                                 <i class="fa-brands fa-linkedin-in"></i> LinkedIn
                             </a>
-                        </div>
-                        <div class="social border-all rounded-5 bg-dark p-3 text-center mt-3">
+                            <a href="https://www.behance.net/kahinadev"
+                                class="a-contact w-full d-flex justify-content-center align-items-center subtitle border-all rounded-3 p-3 mt-3"
+                                aria-label="Behance">
+                                <i class="fa-brands fa-behance"></i> Behance
+                            </a>
+                            <a href="https://github.com/kahinadev"
+                                class="a-contact w-full d-flex justify-content-center align-items-center subtitle border-all rounded-3 p-3 mt-3"
+                                aria-label="Github">
+                                <i class="fa-brands fa-github"></i> Github
+                            </a>
                             <a href="https://mail.google.com/mail/u/0/#inbox"
-                                class="text-decoration-none contact-button w-full align-items-center text-uppercase"
+                                class="a-contact w-full d-flex justify-content-center align-items-center subtitle border-all rounded-3 p-3 mt-3"
                                 aria-label="Mail">
                                 <i class="fa-solid fa-envelope-open"></i> Mail
                             </a>
@@ -374,80 +428,40 @@
         </section>
     </main>
 
-    <footer class="footer border-top p-5 bg-light" aria-label="Footer">
+    <footer class="footer border-top" aria-label="Footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 text-center">
-                    <h5 class="text-uppercase">KAHINADEV</h5>
-                    <h5 class="subtitle text-uppercase">Développeuse full stack orientée design</h5>
-                    <h6 class="text-uppercase">
-                        © 2023-2025 KAHINADEV — Tous droits réservés
-                    </h6>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <h4>KahinaDev</h4>
+                    <div class="d-flex justify-content-left footer-contact">
+                        <a href="https://www.linkedin.com/in/kahinaouali/" class="a-contact mt-3" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.behance.net/kahinadev" class="a-contact mt-3" aria-label="Behance">
+                            <i class="fa-brands fa-behance"></i>
+                        </a>
+                        <a href="https://github.com/kahinadev" class="a-contact mt-3" aria-label="Github">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://mail.google.com/mail/u/0/#inbox" class="a-contact mt-3" aria-label="Mail">
+                            <i class="fa-solid fa-envelope-open"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <h5 class="version text-end">V3.8.26</h5>
+                    <h6 class="copyright subtitle text-end">© 2023-2025 KAHINADEV — Tous droits réservés</h6>
                 </div>
             </div>
         </div>
     </footer>
 
     <a href="en/index.html"
-        class="language d-flex align-items-center justify-content-center bg-light position-fixed border-all rounded-4 text-decoration-none text-uppercase">
+        class="languages d-flex align-items-center justify-content-center border-all rounded-3 bg-primary">
         <img src="assets/img/icon/flag/american-flag.webp" class="flag" alt="Drapeau américain"
             aria-label="Drapeau américain">
-        Anglais
+        En
     </a>
-
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content rounded-4 bg-dark p-5">
-                <div class="modal-header border-none d-flex justify-content-between p-0">
-                    <h5 class="text-uppercase"><i class="fa-solid fa-terminal"></i> Tech stack</h5>
-                    <button type="button" class="button-close border-0 p-0 bg-transparent" data-bs-dismiss="modal"
-                        aria-label="Close">
-                        <i class="fa-solid fa-xmark"></i>
-                    </button>
-                </div>
-                <div class="modal-body p-0 mt-3">
-                    <div class="row row-cols-2 row-cols-md-2 g-2 text-center mt-3">
-                        <div class="col">
-                            <p class="skill-item border-all rounded-4 text-uppercase p-3">Html</p>
-                        </div>
-                        <div class="col">
-                            <p class="skill-item border-all rounded-4 text-uppercase p-3">Css</p>
-                        </div>
-                        <div class="col">
-                            <p class="skill-item border-all rounded-4 text-uppercase p-3">Sass</p>
-                        </div>
-                        <div class="col">
-                            <p class="skill-item border-all rounded-4 text-uppercase p-3">Js</p>
-                        </div>
-                        <div class="col">
-                            <p class="skill-item border-all rounded-4 text-uppercase p-3">Php</p>
-                        </div>
-                        <div class="col">
-                            <p class="skill-item border-all rounded-4 text-uppercase p-3">MySQL</p>
-                        </div>
-                        <div class="col">
-                            <p class="skill-item border-all rounded-4 text-uppercase p-3">Symfony</p>
-                        </div>
-                        <div class="col">
-                            <p class="skill-item border-all rounded-4 text-uppercase p-3">WordPress</p>
-                        </div>
-                        <div class="col">
-                            <p class="skill-item border-all rounded-4 text-uppercase p-3">Shopify</p>
-                        </div>
-                        <div class="col">
-                            <p class="skill-item border-all rounded-4 text-uppercase p-3">Airtable</p>
-                        </div>
-                        <div class="col">
-                            <p class="skill-item border-all rounded-4 text-uppercase p-3">Ksaar</p>
-                        </div>
-                        <div class="col">
-                            <p class="skill-item border-all rounded-4 text-uppercase p-3">Grist</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

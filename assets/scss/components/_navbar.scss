@@ -7,50 +7,95 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-// =========== GENERAL ===========
+// =========== NAVBAR HEADER ===========
 
 .navbar {
-    // =========== LINKS ===========
 
-    .nav-item {
-        &:not(:last-child) {
-            margin-right: $margin-right-item;
+    // =========== TOGGLER MENU ===========
 
-            @include respond-to(xl, max) {
-                margin-right: $zero !important;
-                margin-bottom: $margin-bottom-item;
+    .toggler-menu {
+        padding: $zero !important;
+        flex-direction: $column;
+
+        .toggler-bars {
+            height: $toggler-height;
+            width: $toggler-width-p;
+            background-color: $secondary;
+            transition: background-color $toggler-transition, width $toggler-transition;
+
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+
+            &:nth-child(2) {
+                width: $toggler-width-s;
+                background-color: $accent;
+                align-self: $flex-end !important;
             }
         }
 
-        .nav-link {
-            font-size: $size-link !important;
-            font-weight: $weight-link;
-            padding: $padding-link;
-            letter-spacing: $spacing-link;
-            @include transition;
+        &:hover {
+            .toggler-bars {
+                background-color: $accent;
 
-            @include respond-to(lg, max) {
-                border-color: $background !important;
-            }
-
-            &:hover,
-            &:focus,
-            &:active {
-                color: $background;
-                background-color: $text;
-
-                @include respond-to(lg, max) {
-                    color: $text !important;
-                    background-color: $background !important;
+                &:nth-child(2) {
+                    width: $toggler-width-p;
                 }
             }
         }
     }
+}
 
-    .nav-link,
-    .btn-stack {
-        @include respond-to(lg, max) {
-            color: $background !important
-        }
+// =========== NAVBAR SERVICES ===========
+
+.navbar-services {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+
+  ul {
+    position: relative; // OBLIGATOIRE
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 999px;
+    background: #fff;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  ul::before {
+    content: "";
+    position: absolute;
+    top: 0.5rem;
+    left: 0;
+    height: calc(100% - 1rem);
+    width: var(--w, 0);
+    transform: translateX(var(--x, 0));
+    background: #000;
+    border-radius: 999px;
+    transition:
+      transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+      width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 0;
+  }
+
+  .nav-item {
+    position: relative;
+    z-index: 1;
+
+    .nav-link {
+      position: relative;
+      z-index: 2;
+      padding: 0.6rem 1rem;
+      border-radius: 999px;
+      color: #000;
+      transition: color 0.3s ease;
     }
+
+    &.is-active .nav-link {
+      color: #fff;
+    }
+  }
 }

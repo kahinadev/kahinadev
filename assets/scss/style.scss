@@ -7,7 +7,7 @@
 @use "abstracts/variables" as *;
 @use "abstracts/mixins" as *;
 
-// =========== BASE ===========
+// // =========== BASE ===========
 
 @use "base/reset"; 
 @use "base/base"; 
@@ -25,17 +25,17 @@
 @use "components/loader";
 @use "components/navbar";
 @use "components/buttons";
+@use "components/list";
 @use "components/languages";
 @use "components/moving";
 @use "components/card";
-@use "components/modal";
-@use "components/category";
+// @use "components/modal";
+// @use "components/category";
 
 // =========== PAGES ===========
 
 @use "pages/home";
-@use "pages/history";
-@use "pages/portfolio";
+// @use "pages/portfolio";
 
 // =========== VENDORS ===========
 

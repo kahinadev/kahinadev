@@ -9,19 +9,71 @@
 
 // =========== GENERAL ===========
 
-.navbar-collapse {
-    @include respond-to(sm, max) {
-        top: 11% !important;
-        left: 1rem !important;
+.sidebar {
+    inset: $sidebar-inset;
+    position: $fixed;
+    z-index: 9999;
+    width: $full;
+    height: $full;
+    padding: $sidebar-padding;
+    opacity: $opacity;
+    pointer-events: $none;
+    background-color: $background;
+    transform: translateY(-100%);
+    transition: transform 0.6s ease, opacity 0.4s ease;
+
+    .sidebar-menu {
+        width: calc(100vw - 25vw);
+        margin: $sidebar-margin-desktop;
+
+        @include respond-to(md, max) {
+            margin: $sidebar-margin-mobile !important;
+        }
+
+        .sidebar-header {
+            .btn {
+                i {
+                    font-size: $sidebar-size-icon;
+                    color: $secondary !important;
+                }
+            }
+        }
+
+        .sidebar-body {
+            margin-top: $sidebar-margin-body;
+
+            .nav-item {
+                padding: $sidebar-padding-item;
+
+                &:hover, 
+                &:focus,
+                &:active {
+                    padding-left: $sidebar-padding-item-hover;
+                    background-color: $text;
+                    transition: all 0.5s ease-in-out;
+                }
+
+                @include respond-to(sm, max) {
+                    padding: $sidebar-padding !important;
+                }
+
+                .nav-link {
+                    color: $secondary;
+                    font-size: 35px;
+                    font-family: $font-title;
+                    text-transform: $uppercase;
+
+                    @include respond-to(sm, max) {
+                        font-size: 22px !important;
+                    }
+                }
+            }
+        }
     }
-    @include respond-to(lg, max) {
-        padding: 2rem;
-        width: 92%;
-        left: 2rem;
-        top: 9%;
-        z-index: 12;
-        position: fixed;
-        background-color: $text;
-        @include transition;
-    }
+}
+
+.sidebar.active {
+    transform: translateY(0);
+    opacity: $opacity-hover;
+    pointer-events: $auto;
 }
