@@ -10,17 +10,16 @@
 // =========== GENERAL ===========
 
 .header {
-    z-index: 15;
-    padding: 1rem $zero;
+    .ka-navigation {
+        @include respond-to(sm, max) {
+            padding: 1rem $zero !important;
+        }
 
-    @include respond-to(sm, max) {
-        padding: 0.5rem 1rem !important;
-    }
+        .logo {
+            width: 10%;
 
-    .navbar {
-        .navbar-brand {
-            img {
-                width: 70px;
+            @include respond-to(lg, max) {
+                width: 25%;
             }
         }
     }

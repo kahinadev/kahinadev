@@ -1,0 +1,23 @@
+// ===============================================
+// BADGE
+// ===============================================
+
+// =========== VARIABLES & MIXINS ===========
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// =========== BASE ===========
+
+.ka-badge {
+    gap: $badge-gap;
+
+    p {
+        font-size: $badge-size !important;
+        padding: $badge-padding;
+    }
+
+    .bg-dark {
+        color: $color-background;
+    }
+}

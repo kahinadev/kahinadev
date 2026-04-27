@@ -1,52 +1,51 @@
-// ===============================================
+// =======================================
 // MOVING
-// ===============================================
+// ======================================= 
 
-// =========== VARIABLES ===========
+// =========== VARIABLES & MIXINS ===========
 
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-// =========== GENERAL ===========
+// =========== BASE ===========
 
-.moving {
-    overflow: $overflow-hidden;
-    position: $relative;
-    margin-top: 4rem;
+.ka-moving {
+    overflow: $hidden;
 
-    @include respond-to(xl, max) {
-        margin-top: 2rem !important;
+    &__track {
+        width: $width-full;
+        overflow: $hidden;
+        padding: 1.2rem 0;
     }
 
-    // =========== MOVING TRACK ===========
-    
-    &__track {
-        display: $flex !important;
-        white-space: $no-wrap-moving;
-        width: $max-content-moving;
-        margin: $margin-moving;
-        animation: move linear 165s infinite;
+    &__content {
+        display: $flex;
+        width: max-content;
+        animation: ka-moving-scroll 18s linear infinite;
     }
 
     &__item {
-        font-size: $size-item-moving !important;
+        font-family: $font-text;
+        font-size: clamp(1rem, 2vw, 1.4rem);
+        font-weight: 700 !important;
+        letter-spacing: 0.08em;
+        color: $color-text;
+        padding: 0 0.5rem;
+
+        &::after {
+            content: ' •';
+            color: $color-accent;
+            margin-left: 0.5rem;
+        }
     }
 }
 
-// =========== KEYFRAMES ===========
-
-@keyframes move {
-    0% {
+@keyframes ka-moving-scroll {
+    from {
         transform: translateX(0);
     }
 
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .moving__track {
-        animation: $none;
+    to {
+        transform: translateX(-50%);
     }
 }

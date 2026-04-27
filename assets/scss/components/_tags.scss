@@ -1,0 +1,35 @@
+// ===============================================
+// CATEGORY
+// ===============================================
+
+// =========== VARIABLES ===========
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// =========== GENERAL ===========
+
+.ka-tags {
+    gap: $tags-gap;
+    opacity: $zero;
+    max-height: $zero;
+    transition: $tags-transition;
+
+    @include respond-to(sm, max) {
+        display: $none !important;
+    }
+
+    .ka-services__item:hover & {
+        opacity: 1;
+        margin-top: $tags-margin-t-desk;
+    }
+
+    .tag {
+        padding: $tags-padding;
+        font-weight: 500 !important;
+        border-color: $color-text !important;
+        border-radius: $border-radius-sm;
+        font-size: $tags-size !important;
+        letter-spacing: 2px !important;
+    }
+}

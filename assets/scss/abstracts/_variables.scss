@@ -2,14 +2,17 @@
 // VARIABLES
 // ===============================================
 
+// =========== GENERAL ===========
+
+$tags-badge-padding: 10px 20px;
+
 // =========== COLORS ===========
 
-$text: #F7ECE1;
-$background: #211D33;
-$primary: #242038;
-$secondary: #565285;
-$accent: #8783D1;
-$hover: #B7B8D9;
+$color-text: #2C2725; 
+$color-background: #FFF5F0; 
+$color-primary: #FFBFA3; 
+$color-secondary: #FF8955; 
+$color-accent: #FF5C35;
 
 // =========== RESPONSIVE ===========
 
@@ -23,157 +26,124 @@ $breakpoints: (
     xxxl: 1400px
 );
 
+// =========== BORDER RADIUS ===========
+
+$border-radius-sm: 0.5rem; // tags, badges
+$border-radius-md: 1rem; // boutons
+$border-radius-lg: 2rem; // nav, images, cards
+$border-radius-full: 5rem;
+
 // =========== BORDER ===========
 
-$border: 1px solid $text;
-$border-radius: 2rem;
+$border-width: 2px; 
+$border-type: solid; 
+$border-radius: $border-radius-lg; 
 $border-positions: top, bottom, left, right, all;
-
-// =========== AUTO ===========
-
-$auto: auto;
-
-// =========== NONE & FULL ===========
-
-$zero: 0;
-$full: 100%;
 
 // =========== DISPLAY ===========
 
 $flex: flex;
-$block: block;
 $none: none;
+$block: block;
 
-// =========== OPACITY ===========
+// =========== WRAP ===========
 
-$opacity: 0;
-$opacity-hover: 1;
+$flex-wrap-sm: wrap;
+
+// =========== ALIGN ===========
+
+$left: left; 
+$right: right;
+$center: center;
+$justify: justify;
+
+// =========== POSITION ===========
+
+$relative: relative;
+$absolute: absolute;
+
+// =========== OVERFLOW ===========
+
+$hidden: hidden;
+$visible: visible; 
+
+// =========== ZERO ===========
+
+$zero: 0;
+
+// =========== WIDTH ===========
+
+$width-full: 100%; 
+$height-full: 100%;
+$width-badge-tags: calc(50% - 7.5px);
+
+// =========== FONTS ===========
+
+$font-title: "Basteleur";
+$font-text: "Satoshi", sans-serif;
+
+// =========== FONT WEIGHT ===========
+
+$strong-weight: 600;
 
 // =========== DIRECTION ===========
 
 $column: column;
 
-// =========== ALIGN ===========
+// =========== HERO ===========
 
-$center: center;
-$flex-end: flex-end;
+$hero-padding-mobile: 0 1rem;
 
-// =========== POSITION ===========
+// =========== TAGS ===========
 
-$fixed: fixed;
-$absolute: absolute;
-$relative: relative;
+$tags-gap: 10px;
+$tags-size: 12px; 
+$tags-top: 40px; 
+$tags-padding-b-hover: 3rem;
+$tags-margin-t-desk: 40px;
+$tags-title-size-tab: 48px;
+$tags-title-size-desk: 64px;
+$tags-padding: $tags-badge-padding; 
+$tags-padding-b-hover-tab: 4rem;
+$tags-padding-b-hover-mobile: 2rem;
+$tags-padding-ease: padding 0.4s ease; 
+$tags-transition: opacity 0.4s ease, margin-top 0.4s ease;
 
-// =========== ICON ===========
+// =========== BADGE ===========
 
-$icon-margin: 5px;
-
-// =========== OVERFLOW ===========
-
-$overflow-visible: visible;
-$overflow-hidden: hidden;
-
-// =========== TRANSFORM ===========
-
-$uppercase: uppercase;
-
-// =========== FONTS ===========
-
-$font-title: "Giaza", sans-serif;
-$font-text: "Tajawal", sans-serif;
-
-// =========== TOGGLER MENU ===========
-
-$toggler-height: 2px;
-$toggler-width-p: 50px;
-$toggler-width-s: 40px;
-$toggler-transition: 0.3s ease;
-
-// =========== SECTION ===========
-
-$padding-section-mobile: 5rem 1rem;
-$padding-section-desktop: 8rem 0rem;
-
-// =========== SIDEBAR ===========
-
-$sidebar-inset: 0;
-$sidebar-padding: 2rem;
-$sidebar-padding-item: 3rem;
-$sidebar-padding-item-hover: 5rem;
-$sidebar-size-icon: 30px;
-$sidebar-margin-body: 3rem;
-$sidebar-margin-mobile: 1rem $auto;
-$sidebar-margin-desktop: 3rem $auto;
-
-// =========== FOOTER ===========
-
-$footer-icon: 20px;
-$footer-margin: 10px;
-$footer-weight-version: 300;
-$footer-size-version: 15px;
-$footer-size-copyright: 14.8px;
-$footer-padding-mobile: 3rem 1rem;
-$footer-padding-desktop: 3rem 0;
-
-// =========== CARD ===========
-
-$card-padding: 2rem;
-$card-content: 2rem;
-$card-border: 4px solid $secondary;
-$card-transition: transform .3s ease;
-$card-shadow-hover: 5px 5px 0px $hover;
+$badge-gap: 10px;
+$badge-size: 13px;
+$badge-padding: 15px 20px;
 
 // =========== BUTTONS ===========
 
-$size-button: 14px;
-$weight-button: 600;
-$spacing-button: 3px;
-$padding-button: 10px 30px;
-$button-shadow: 0 0 0 $text;
-$button-shadow-hover: 5px 5px 0px $text;
-$button-transition: 0.25s ease;
+$btn-h: 1.7rem; 
+$btn-v: 1.1rem;
+$btn-gap: 0.8rem;
+$btn-weight: 600;
+$btn-size: 13px;
+$btn-dot-size: 10px;
+$btn-radius: $border-radius-md;
+$btn-padding: 0.8rem 1.2rem;
 
-// =========== LANGUAGES ===========
+// =========== LANGUAGE ===========
 
-$left-languages: 1rem;
-$bottom-languages: 1rem;
-$padding-languages: 1rem 1.5rem;
-$width-flag-languages: 20px;
-$height-flag-languages: 20px;
+$width-flag: 20px;
+$height-flag: 20px;
 
-// =========== MOVING ===========
+// =========== SERVICES ===========
 
-$size-item-moving: 22px;
-$margin-moving: 1rem 0;
-$no-wrap-moving: nowrap;
-$max-content-moving: max-content; 
+$services-b-mobile: 1rem;
+$services-b-tablet: 3rem; 
+$services-content-b-padding: 2rem;
 
-// =========== LIST ===========
+// =========== LANGUAGE ===========
 
-$padding-list: 2rem;
-$list-border: 4px solid $secondary;
+$language-left: 1rem;
+$language-bottom: 1rem;
 
-// =========== ABOUT ===========
+// =========== MARQUEE ===========
 
-$about-border: 4px solid $secondary;
-
-// =========== PORTFOLIO ===========
-
-$height-image-mobile: 300px;
-$height-image-desktop: 400px;
-
-// =========== BOOTSTRAP ===========
-
-$padding-boot-five: 3rem 2rem;
-$padding-boot-two-l-r: 2rem;
-
-// =========== PORTFOLIO / PROJECTS ===========
-
-$top-category: 1rem;
-$size-category: 12px;
-$size-marg-category: 10px;
-$project-content-top: 1rem;
-$project-intro-bottom: 0rem;
-$project-image-opacity: 0.7;
-$project-image-opacity-hover: 1;
-$project-image-opacity-transition: opacity 0.5s ease-in-out;
+$marquee-dot-width: 50px;
+$marquee-dot-height: 50px;
+$marquee-dot-radius: 50%;

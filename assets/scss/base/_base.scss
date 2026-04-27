@@ -12,17 +12,20 @@
 html,
 body {
     min-height: 100vh;
-    overflow-x: $overflow-hidden;
+    overflow-x: $hidden;
+    font-family: $font-text;
 }
 
 body {
-    background-color: $background;
+    color: $color-text;
+    background-color: $color-background;
 }
 
 // =========== IMAGE ===========
 
 img {
-    width: $full;
-    height: auto;
+    width: $width-full;
+    max-width: $width-full;
+    height: auto !important;
     object-fit: cover;
 }

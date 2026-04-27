@@ -7,114 +7,82 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-// =========== BACKGROUND ===========
-
-.bg-accent {
-    background-color: $accent !important;
-}
-
-// =========== COLOR ===========
-
-.color-accent {
-    color: $accent;
-}
-
-.color-hover {
-    color: $hover !important;
-}
-
-// =========== WIDTH ===========
-
-.w-full {
-    width: $full !important;
-}
-
-.w-sm {
-    width: 20%;
-
-    @include respond-to(sm, max) {
-        width: 70% !important;
-    }
-
-    @include respond-to(xl, max) {
-        width: 30%;
-    }
-}
-
-.w-s {
-    width: 30%;
-
-    @include respond-to(sm, max) {
-        width: 68% !important;
-    }
-
-    @include respond-to(xl, max) {
-        width: 45%;
-    }
-}
-
-.w-m {
-    width: 42%;
-
-    @include respond-to(xl, max) {
-        width: 70%;
-    }
-}
-
-
-// =========== ALIGN ===========
-
-.text-justify {
-    text-align: justify;
-}
-
-// =========== SUBTITLE ===========
-
-.subtitle {
-    @include subtitle;
-
-    @include respond-to(sm, max) {
-        font-size: 20px !important;
-    }
-
-    .br {
-        @include respond-to(xxl, min) {
-            display: $none !important;
-        }
-    }
-}
-
 // =========== HERO ===========
 
-.hero-sec {
-    padding: 12rem 5rem;
+.ka-h-100 {
+    height: 100vh;
 
     @include respond-to(sm, max) {
-        padding: 8rem 1rem !important;
+        height: 100vh !important;
     }
-}
 
-// =========== INFOS SECTION ===========
-
-.infos-section {
-    border-radius: 50px;
-    font-size: 16px;
-    font-family: $font-title;
-    text-transform: $uppercase;
-    border-color: $text !important;
-
-    i {
-        font-size: 11px;
-        margin: 4px 5px 0 0;
+    @include respond-to(lg, max) {
+        height: 53vh;
     }
 }
 
 // =========== SECTION ===========
 
-.section {
-    padding: $padding-section-desktop;
+.ka-h-section {
+    min-height: 90dvh;
+}
+
+.ka-padding-section {
+    padding: 120px 0;
 
     @include respond-to(sm, max) {
-        padding: $padding-section-mobile !important;
+        padding: 80px 1rem !important;
     }
+}
+
+// =========== ALIGN ===========
+
+.text-justify {
+    text-align: $justify !important;
+}
+
+.col-center-sm {
+    @include respond-to(sm, max) {
+        text-align: $center !important;
+    }
+}
+
+// =========== BORDER RADIUS ===========
+
+.ka-radius-sm {
+    border-radius: $border-radius-sm;
+}
+
+.ka-radius-md {
+    border-radius: $border-radius-md;
+}
+
+.ka-radius-lg {
+    border-radius: $border-radius-lg;
+}
+
+.ka-radius-full {
+    border-radius: $border-radius-full;
+}
+
+// =========== WRAP ===========
+
+.flex-wrap-sm {
+    @include respond-to(sm, max) {
+        flex-wrap: $flex-wrap-sm;
+    }
+}
+
+// =========== WIDTH ===========
+
+.w-badge-tags {
+    @include respond-to(lg, max) {
+        width: $width-badge-tags;
+    }
+}
+
+// =========== BACKGROUND ===========
+
+.bg-accent {
+    background-color: $color-accent !important;
 }

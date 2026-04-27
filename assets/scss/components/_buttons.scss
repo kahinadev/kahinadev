@@ -7,34 +7,84 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-// =========== GENERAL ===========
+// =========== BASE ===========
 
-.btn {
-    color: $accent;
-    padding: $padding-button;
-    text-transform: $uppercase;
-    font-size: $size-button !important;
-    font-weight: $weight-button !important;
-    letter-spacing: $spacing-button;
+.ka-btn {
+    @include button;
+    background-color: $color-background;
+    transition: color 0.45s ease, border-color 0.45s ease;
 
-    span {
-        font-size: $size-button !important;
+    &::before {
+        inset: -2px;
+        content: '';
+        z-index: $zero;
+        position: $absolute;
+        background: $color-accent;
+        border-radius: inherit;
+        clip-path: inset(0 100% 0 0 round $border-radius-md);
+        transition: clip-path 0.55s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    i {
-        margin-right: $icon-margin;
+    &:hover {
+        &::before {
+            clip-path: inset(0 0% 0 0 round $border-radius-md);
+        }
+
+        .ka-btn__dot {
+            background-color: $color-background;
+            left: calc(100% - $btn-h - $btn-v + 14px);
+        }
+
+        .ka-btn__label {
+            color: $color-background !important;
+            padding-left: $zero;
+            padding-right: calc($btn-dot-size + $btn-gap);
+        }
+    }
+
+    &__label {
+        z-index: 1;
+        color: $color-accent;
+        @include label;
+        padding-left: calc($btn-dot-size + $btn-gap);
+        transition: padding 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    &__dot {
+        left: $btn-h;
+        top: 50%;
+        z-index: 2;
+        flex-shrink: $zero;
+        border-radius: 50%;
+        width: $btn-dot-size;
+        height: $btn-dot-size;
+        pointer-events: $none;
+        transform: translateY(-58%);
+        background-color: $color-accent;
+        transition:
+            left 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+            background 0.4s ease;
     }
 }
 
-.btn-k-shad {
-    box-shadow: $button-shadow;
-    transform: translate(0, 0);
-    transition: transform $button-transition, box-shadow $button-transition;
+.ka-btn-language {
+    left: $language-left;
+    bottom: $language-bottom;
+    @include button;
+    border-color: $color-accent !important;
+    background-color: $color-accent;
 
-    &:hover {
-        color: $background !important;
-        box-shadow: $button-shadow-hover;
-        background-color: $hover;
-        transform: translate(-4.5px, -4.5px);
+    &__flag {
+        img {
+            width: $width-flag;
+            height: $height-flag;
+            border-radius: $border-radius-md;
+        }
+    }
+
+    &__label {
+        color: $color-background;
+        padding-left: $zero !important;
+        @include label;
     }
 }

@@ -7,80 +7,173 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-// =========== INTRODUCTION ===========
+// =========== HERO INTRODUCTION ===========
 
-.introduction {
-    .subtitle {
+.ka-hero-home {
+    @include respond-to(sm, max) {
+        padding-top: 15rem !important;
+    }
+
+    &__content {
+        @include respond-to(sm, max) {
+            text-align: $center !important;
+            justify-content: $center !important;
+            padding: $hero-padding-mobile !important;
+        }
+
+        .subtitle {
+            br {
+                display: $none;
+
+                @include respond-to(lg, max) {
+                    display: $block !important;
+                }
+            }
+        }
+    }
+
+    &__btn {
+        @include respond-to(sm, max) {
+            display: $flex !important;
+            justify-content: $center !important;
+        }
+    }
+
+    &__img {
+        right: 0;
+        width: 65%;
+        overflow-x: $hidden;
+
         @include respond-to(sm, max) {
             margin-top: 1rem;
+            right: $zero !important;
+            height: 520px !important;
+            width: $width-full !important;
+            position: $relative !important;
+        }
+
+        @include respond-to(lg, max) {
+            right: -10rem;
+            width: 94%;
         }
     }
 }
 
 // =========== ABOUT ===========
 
-.about {
-    .about-image {
-        width: 90%;
-        margin-left: 12%;
-
-        @include respond-to(sm, max) {
-            width: $full !important;
-            margin: 2rem 6% 3rem 0 !important;
-        }
-
-        img {
-            width: 80%;
-            z-index: 8;
-            height: 600px;
-            position: $relative;
-            margin-top: 50px;
-            margin-bottom: -45px;
-
-            @include respond-to(sm, max) {
-                height: 376px !important;
-                margin-top: 24px !important;
-            }
-
-            @include respond-to(lg, max) {
-                width: 86% !important;
-                margin-left: 0% !important;
-            }
-
-            @include respond-to(xl, max) {
-                width: $full;
-                height: 480px;
-                margin-left: 10%;
-            }
-        }
-    }
-
-    .qualities,
-    .values {
-        border: $about-border;
-    }
-
-    .qualities,
-    .values {
-        .w-m {
-            @include respond-to(sm, max) {
-                width: 66% !important;
-            }
-
-            @include respond-to(xl, max) {
-                width: 45%;
-            }
-        }
-    }
-
-}
-
-// =========== ABOUT ===========
-
-.presentation-services {
-    h3 {
+.ka-about {
+    &__title {
         @include respond-to(sm, max) {
             margin-bottom: 1rem !important;
         }
+    }
+}
+
+// =========== SERVICES ===========
+
+.ka-services {
+    z-index: 2;
+
+    @include respond-to(sm, max) {
+        padding-bottom: $services-b-mobile !important;
+    }
+
+    @include respond-to(lg, max) {
+        padding-bottom: $services-b-tablet;
+    }
+
+    &__list {
+        &.has-hover {
+            .ka-services__item:not(:hover) {
+                opacity: 0.25;
+            }
+        }
+    }
+
+    &__item {
+        transition: opacity 0.4s ease;
+        border-color: $color-secondary;
+
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+
+        &:hover {
+            .tags {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__content {
+        width: $width-full;
+        padding-bottom: $services-content-b-padding;
+
+        .ka-services__item:hover & {
+            padding-bottom: $tags-padding-b-hover;
+
+            @include respond-to(sm, max) {
+                padding-bottom: $tags-padding-b-hover-mobile !important;
+            }
+
+            @include respond-to(lg, max) {
+                padding-bottom: $tags-padding-b-hover-tab;
+            }
+        }
+
+        .title {
+
+            .num,
+            .fa-arrow-right-long {
+                font-size: 22px;
+                color: $color-secondary;
+            }
+
+            .name {
+                font-size: $tags-title-size-desk;
+                font-weight: 500 !important;
+
+                @include respond-to(lg, max) {
+                    font-size: $tags-title-size-tab;
+                }
+            }
+
+            &:hover {
+                .name {
+                    color: $color-secondary;
+                }
+            }
+        }
+    }
+}
+
+// =========== PROJECTS ===========
+
+.ka-projects {
+    z-index: 3;
+    padding-top: 0px;
+
+    &__col--offset-1 {
+        margin-top: 6rem;
+    }
+
+    &__col--offset-2 {
+        margin-top: 2rem;
+    }
+
+    &__col--offset-3 {
+        margin-top: 4rem;
+    }
+
+    &__col--offset-1,
+    &__col--offset-2,
+    &__col--offset-3 {
+        @include respond-to(md, max) {
+            margin-top: 2rem;
+        }
+    }
+
+    .ka-padding-section {
+        padding-top: 40px;
     }
 }

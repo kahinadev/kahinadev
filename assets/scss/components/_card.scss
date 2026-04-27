@@ -7,33 +7,52 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-// =========== INITIAL ===========
+// =========== BASE ===========
 
-.card {
-    transition: $card-transition;
-    background-color: transparent !important;
+.ka-card {
+    border: $none;
 
-    &:hover {
-        transform: scale(1.05);
-        box-shadow: $card-shadow-hover;
-        transition: transform $card-transition, box-shadow $card-transition;
+    &:hover .overlay {
+        opacity: 1;
     }
-}
 
-// =========== SERVICES ===========
+    &__img {
+        width: $width-full;
+        aspect-ratio: 4 / 3;
+        overflow: $hidden;
+        cursor: pointer;
+        box-shadow: $zero $zero $zero $zero $color-text;
+        transition: box-shadow 0.55s cubic-bezier(0.16, 1, 0.3, 1);
 
-.card-service {
-    border: $card-border;
+        img {
+            width: $width-full;
+            height: $height-full;
+            object-fit: cover;
+            display: $block;
+            transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+        }
 
-    .card-service-number {
-        padding: $card-padding;
-        margin-top: -7rem;
-        margin-left: 6rem;
+    }
+
+    .overlay {
+        inset: $zero;
+        background: rgba($color-text, 0.75);
+        opacity: $zero;
         position: $absolute;
-        border: $card-border;
+        border-radius: $border-radius-lg;
+        transition: opacity 0.4s ease;
+
+        &__title {
+            color: $color-text !important;
+            font-size: 32px !important;
+        }
     }
 
-    .card-service-content {
-        margin-top: $card-content;
+    &__project-content {
+
+        .title,
+        .project-year {
+            font-weight: 800 !important;
+        }
     }
 }

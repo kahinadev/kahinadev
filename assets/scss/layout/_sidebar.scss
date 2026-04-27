@@ -7,73 +7,107 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-// =========== GENERAL ===========
+// =========== BASE ===========
 
-.sidebar {
-    inset: $sidebar-inset;
-    position: $fixed;
-    z-index: 9999;
-    width: $full;
-    height: $full;
-    padding: $sidebar-padding;
-    opacity: $opacity;
+.ka-sidebar {
+    top: $zero;
+    left: $zero;
+    z-index: 50;
+    opacity: $zero;
+    max-width: 350px;
+    width: $width-full;
+    height: $height-full;
     pointer-events: $none;
-    background-color: $background;
-    transform: translateY(-100%);
+    transform: translateY(-100px);
+    background-color: $color-background;
     transition: transform 0.6s ease, opacity 0.4s ease;
 
-    .sidebar-menu {
-        width: calc(100vw - 25vw);
-        margin: $sidebar-margin-desktop;
+    @include respond-to(sm, max) {
+        right: $zero !important;
+        overflow-y: auto;
+        overflow-x: $hidden;
+        width: $width-full !important;
+        max-width: $width-full !important;
+        transform: translateX(-100px);
+    }
 
-        @include respond-to(md, max) {
-            margin: $sidebar-margin-mobile !important;
-        }
+    &__inner {
+        width: $width-full;
+    }
 
-        .sidebar-header {
-            .btn {
+    &__header {
+        .btn {
+            padding: $zero !important;
+            border: $none !important;
+
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: transparent !important;
+            }
+
+            .close-icon {
+                color: $color-accent;
+
                 i {
-                    font-size: $sidebar-size-icon;
-                    color: $secondary !important;
+                    font-size: 22px;
                 }
             }
         }
+    }
 
-        .sidebar-body {
-            margin-top: $sidebar-margin-body;
+    &__body {
+        flex: 1;
+        width: 95%;
+        height: 88%;
+        margin-left: 17px;
 
-            .nav-item {
-                padding: $sidebar-padding-item;
+        @include respond-to(sm, max) {
+            height: 83% !important;
+        }
+
+        li {
+            &:not(:last-child) {
+                margin-bottom: 5px;
+            }
+
+            a {
+                font-size: 38px !important;
+                font-family: $font-title;
 
                 &:hover, 
-                &:focus,
-                &:active {
-                    padding-left: $sidebar-padding-item-hover;
-                    background-color: $text;
-                    transition: all 0.5s ease-in-out;
+                &:active, 
+                &:focus {
+                    color: $color-secondary !important;
+                    transition: all 0.3s ease-in-out;
                 }
+            }
+        }
+    }
 
-                @include respond-to(sm, max) {
-                    padding: $sidebar-padding !important;
-                }
+    &__footer {
+        .socials {
+            gap: 48px;
+            margin-top: 4px;
 
-                .nav-link {
-                    color: $secondary;
-                    font-size: 35px;
-                    font-family: $font-title;
-                    text-transform: $uppercase;
+            @include respond-to(lg, max) {
+                gap: 57px !important;
+            }
 
-                    @include respond-to(sm, max) {
-                        font-size: 22px !important;
-                    }
-                }
+            @include respond-to(lg, max) {
+                gap: 72px;
+            }
+
+            a {
+                font-size: 14px;
+                color: $color-secondary;
             }
         }
     }
 }
 
-.sidebar.active {
-    transform: translateY(0);
-    opacity: $opacity-hover;
-    pointer-events: $auto;
+.ka-sidebar.active {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
 }

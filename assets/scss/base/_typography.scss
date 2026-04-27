@@ -7,12 +7,56 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-// =========== FONT TITLE ===========
+// =========== IMPORT FONT TITLE ===========
 
 @font-face {
-    font-family: "Giaza";
-    src: url('../../assets/fonts/Giaza/Giaza.woff2') format('woff2'),
-        url('../../assets/fonts/Giaza/Giaza.woff') format('woff');
+    font-family: "Basteleur";
+    src: url('../../assets/fonts/Basteleur/Basteleur-Moonlight.woff2') format('woff2'),
+        url('../../assets/fonts/Basteleur/Basteleur-Moonlight.woff') format('woff');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Basteleur";
+    src: url('../../assets/fonts/Basteleur/Basteleur-Bold.woff2') format('woff2'),
+        url('../../assets/fonts/Basteleur/Basteleur-Bold.woff') format('woff');
+    font-weight: 700;
+    font-display: swap;
+}
+
+// =========== IMPORT FONT TEXT ===========
+
+@font-face {
+    font-family: "Satoshi";
+    src: url('../../assets/fonts/Satoshi/Satoshi-Light.woff2') format('woff2'),
+        url('../../assets/fonts/Satoshi/Satoshi-Light.woff') format('woff');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Satoshi";
+    src: url('../../assets/fonts/Satoshi/Satoshi-Regular.woff2') format('woff2'),
+        url('../../assets/fonts/Satoshi/Satoshi-Regular.woff') format('woff');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Satoshi";
+    src: url('../../assets/fonts/Satoshi/Satoshi-Medium.woff2') format('woff2'),
+        url('../../assets/fonts/Satoshi/Satoshi-Medium.woff') format('woff');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Satoshi";
+    src: url('../../assets/fonts/Satoshi/Satoshi-Bold.woff2') format('woff2'),
+        url('../../assets/fonts/Satoshi/Satoshi-Bold.woff') format('woff');
+    font-weight: 700;
+    font-display: swap;
 }
 
 // =========== TITLE ===========
@@ -29,11 +73,11 @@ h6 {
 // =========== SIZE TITLE ===========
 
 h2 {
-    @include title(50px, 68px, 80px);
+    @include title(40px, 58px, 73px);
 }
 
 h3 {
-    @include title(48px, 60px, 68px);
+    @include title(38px, 56px, 70px);
 }
 
 h4 {
@@ -41,7 +85,13 @@ h4 {
 }
 
 h5 {
-    @include title(20px, 20px, 20px);
+    @include title(17px, 17px, 17px);
+}
+
+// =================== SUBTITLE ==============
+
+.subtitle {
+    @include subtitle; 
 }
 
 // =================== TEXT ==============
@@ -50,16 +100,14 @@ p,
 a,
 span {
     @include text;
+
+    strong {
+        font-weight: $strong-weight !important;
+    }
 }
 
 // =================== LINKS ==============
 
 a {
     text-decoration: $none !important;
-}
-
-// =================== STRONG ==============
-
-strong {
-    font-weight: 600 !important;
 }

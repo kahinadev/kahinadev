@@ -7,95 +7,89 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-// =========== NAVBAR HEADER ===========
+// =========== BASE ===========
 
-.navbar {
+.ka-navigation {
+    z-index: 8;
+    width: calc(100% - 108px);
 
-    // =========== TOGGLER MENU ===========
+    @include respond-to(sm, max) {
+        width: $width-full !important;
+    }
 
-    .toggler-menu {
-        padding: $zero !important;
-        flex-direction: $column;
+    @include respond-to(lg, max) {
+        width: calc(100% - 20px);
+    }
 
-        .toggler-bars {
-            height: $toggler-height;
-            width: $toggler-width-p;
-            background-color: $secondary;
-            transition: background-color $toggler-transition, width $toggler-transition;
-
-            &:not(:last-child) {
-                margin-bottom: 10px;
-            }
-
-            &:nth-child(2) {
-                width: $toggler-width-s;
-                background-color: $accent;
-                align-self: $flex-end !important;
-            }
+    .container-fluid {
+        @include respond-to(sm, max) {
+            flex-direction: row-reverse;
         }
+    }
 
-        &:hover {
-            .toggler-bars {
-                background-color: $accent;
+    &__toggler,
+    &__home,
+    &__contact {
+        width: 33.33%;
+    }
+
+     &__toggler,
+    &__home {
+        @include respond-to(sm, max) {
+            width: 50%;
+        }
+    }
+
+    &__home {
+        @include respond-to(sm, max) {
+            text-align: $left !important;
+        }
+    }
+
+    &__toggler {
+        @include respond-to(sm, max) {
+            justify-content: $right;
+        }
+    }
+
+    &__contact {
+        @include respond-to(sm, max) {
+            display: $none !important;
+        }
+    }
+
+    &__burger {
+        gap: 5px;
+        .icon {
+            flex-direction: $column;
+
+            .line {
+                height: 2px;
+                border-radius: $border-radius-md;
+                background-color: $color-accent;
+                transition:
+                    background 0.35s ease,
+                    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                    opacity 0.3s ease,
+                    width 0.3s ease;
+
+                &:nth-child(1),
+                &:nth-child(3) {
+                    width: 26px;
+                }
 
                 &:nth-child(2) {
-                    width: $toggler-width-p;
+                    width: 22px;
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: 5px;
                 }
             }
         }
+
+        .burger-name {
+            font-size: 17.5px;
+        }
     }
-}
-
-// =========== NAVBAR SERVICES ===========
-
-.navbar-services {
-  position: fixed;
-  bottom: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1000;
-
-  ul {
-    position: relative; // OBLIGATOIRE
-    display: flex;
-    gap: 0.5rem;
-    padding: 0.5rem;
-    border-radius: 999px;
-    background: #fff;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
-  }
-
-  ul::before {
-    content: "";
-    position: absolute;
-    top: 0.5rem;
-    left: 0;
-    height: calc(100% - 1rem);
-    width: var(--w, 0);
-    transform: translateX(var(--x, 0));
-    background: #000;
-    border-radius: 999px;
-    transition:
-      transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
-      width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 0;
-  }
-
-  .nav-item {
-    position: relative;
-    z-index: 1;
-
-    .nav-link {
-      position: relative;
-      z-index: 2;
-      padding: 0.6rem 1rem;
-      border-radius: 999px;
-      color: #000;
-      transition: color 0.3s ease;
-    }
-
-    &.is-active .nav-link {
-      color: #fff;
-    }
-  }
 }

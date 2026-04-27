@@ -1,57 +1,53 @@
-// ===============================================
-// FOOTER
-// ===============================================
+// =======================================
+// HEADER
+// ======================================= 
 
-// =========== VARIABLES ===========
+// =========== VARIABLES & MIXINS ===========
 
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-.footer {
-    padding: $footer-padding-desktop;
+// =========== BASE ===========
+
+.ka-footer {
+    padding: 40px $zero;
+    background-color: #ffdfd1;
 
     @include respond-to(sm, max) {
-        text-align: $center;
-        padding: $footer-padding-mobile !important;
+        padding: 40px 1rem !important;
     }
 
-    .footer-contact {
+    &__social {
+        gap: 5px;
+
         @include respond-to(sm, max) {
+            margin: 1.5rem 0;
             justify-content: $center !important;
         }
 
-        // =========== ICON CONTACT ===========
+        a {
 
-        .a-contact {
-            margin-right: $footer-margin;
-
-            i {
-                font-size: $footer-icon;
+            &:hover,
+            &:focus,
+            &:active {
+                color: $color-text !important;
             }
 
+            i {
+                font-size: 22px;
+            }
         }
     }
 
-    // =========== VERSION & COPYRIGHT ===========
-
-    .version,
-    .copyright {
-        @include respond-to(sm, max) {
-            text-align: $center !important;
-        }
+    &__version {
+        font-weight: 300 !important;
+        margin: 10px 0;
+        font-family: $font-text !important;
     }
 
-    .version {
-        font-weight: $footer-weight-version !important;
-        font-size: $footer-size-version !important;
-        font-family: $font-text;
-
-        @include respond-to(sm, max) {
-            margin-top: $footer-margin;
-        }
+    &__copyright {
+        font-size: 14px !important;
+        color: $color-accent !important;
     }
 
-    .copyright {
-        font-size: $footer-size-copyright !important;
-    }
 }

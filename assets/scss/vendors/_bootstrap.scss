@@ -7,32 +7,20 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-// =========== PADDING ===========
-
-.p-5 {
-    @include respond-to(sm, max) {
-        padding: 3rem 1.5rem !important;
-    }
-
-    @include respond-to(lg, max) {
-        padding: 3rem 2rem;
-    }
-}
-
 // =========== BACKGROUND ===========
 
 .bg-light {
-    background-color: $text !important;
+    background-color: $color-background !important;
 }
 
 .bg-dark {
-    background-color: $background !important;
+    background-color: $color-text !important;
 }
 
 .bg-primary {
-    background-color: $primary !important;
+    background-color: $color-primary !important;
 }
 
 .bg-secondary {
-    background-color: $secondary !important;
+    background-color: $color-secondary !important;
 }
