@@ -68,11 +68,12 @@
 }
 
 .ka-btn-language {
+    z-index: 5 !important;
     left: $language-left;
     bottom: $language-bottom;
     @include button;
     border-color: $color-accent !important;
-    background-color: $color-accent;
+    background-color: $color-dark-accent;
 
     &__flag {
         img {

@@ -100,11 +100,6 @@ window.addEventListener('scroll', () => {
     if (!raf) raf = requestAnimationFrame(tick);
 }, { passive: true });
 
-const about = document.querySelector('.ka-about');
-about.style.position = 'sticky';
-about.style.top = '0';
-about.style.zIndex = '99';
-
 // =========== ANIMATIONS ===========
 
 const revealObserver = new IntersectionObserver((entries) => {

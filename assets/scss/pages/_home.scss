@@ -72,7 +72,6 @@
 // =========== SERVICES ===========
 
 .ka-services {
-    z-index: 2;
 
     @include respond-to(sm, max) {
         padding-bottom: $services-b-mobile !important;
@@ -150,7 +149,6 @@
 // =========== PROJECTS ===========
 
 .ka-projects {
-    z-index: 3;
     padding-top: 0px;
 
     &__col--offset-1 {

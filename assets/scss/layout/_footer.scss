@@ -17,6 +17,12 @@
         padding: 40px 1rem !important;
     }
 
+    h4,
+    &__version, 
+    &__copyright {
+        color: $color-dark-accent !important;
+    }
+
     &__social {
         gap: 5px;
 
@@ -40,14 +46,13 @@
     }
 
     &__version {
-        font-weight: 300 !important;
+        font-weight: 400 !important;
         margin: 10px 0;
         font-family: $font-text !important;
     }
 
     &__copyright {
         font-size: 14px !important;
-        color: $color-accent !important;
     }
 
 }
