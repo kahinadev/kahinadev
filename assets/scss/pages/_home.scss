@@ -125,7 +125,7 @@
             .num,
             .fa-arrow-right-long {
                 font-size: 22px;
-                color: $color-secondary;
+                color: $color-accent;
             }
 
             .name {
@@ -139,7 +139,7 @@
 
             &:hover {
                 .name {
-                    color: $color-secondary;
+                    color: $color-accent;
                 }
             }
         }

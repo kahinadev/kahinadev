@@ -1014,7 +1014,7 @@ a {
 .ka-services__content .title .num,
 .ka-services__content .title .fa-arrow-right-long {
   font-size: 22px;
-  color: #FF8955;
+  color: #FF5C35;
 }
 .ka-services__content .title .name {
   font-size: 64px;
@@ -1026,7 +1026,7 @@ a {
   }
 }
 .ka-services__content .title:hover .name {
-  color: #FF8955;
+  color: #FF5C35;
 }
 
 .ka-projects {
