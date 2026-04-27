@@ -54,18 +54,18 @@
         <nav class="ka-navigation p-3 position-relative">
             <div class="container-fluid d-flex justify-content-between align-items-center">
                 <div class="ka-navigation__toggler d-flex">
-                    <div id="burger" class="ka-navigation__burger d-flex align-items-center" onclick="openSidebar()"
-                        aria-label="Menu">
-                        <div class="icon d-flex" aria-label="Icon menu">
+                    <button id="burger" class="ka-navigation__burger d-flex align-items-center" onclick="openSidebar()"
+                        aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="sidebar">
+                        <div class="icon d-flex">
                             <span class="line"></span>
                             <span class="line"></span>
                             <span class="line"></span>
                         </div>
                         <span class="burger-name text-uppercase"><strong>Menu</strong></span>
-                    </div>
+                    </button>
                 </div>
-                <a class="ka-navigation__home text-center" href="index.html" aria-label="Logo">
-                    <img src="assets/img/logo/Logo portfolio - KahinaDev.svg" class="logo" alt="Logo" aria-label="Logo">
+                <a class="ka-navigation__home text-center" href="index.html">
+                    <img src="assets/img/logo/Logo portfolio - KahinaDev.svg" class="logo" alt="Logo">
                 </a>
                 <div class="ka-navigation__contact d-flex align-items-center justify-content-end">
                     <a class="ka-btn border-all d-flex align-items-center position-relative" href="contact.html"
@@ -79,14 +79,14 @@
     </header>
 
     <!-- Sidebar -->
-    <div id="sidebar" class="ka-sidebar d-flex position-fixed border-right" aria-label="Sidebar">
+    <div id="sidebar" class="ka-sidebar d-flex position-fixed border-right" role="dialog" aria-modal="true" aria-label="Menu de navigation">
         <div class="ka-sidebar__inner">
             <div class="ka-sidebar__header d-flex justify-content-between align-items-center border-bottom p-3">
                 <div class="ka-sidebar__name d-flex align-items-center">
                     <span class="text-uppercase"><strong>Menu</strong></span>
                 </div>
                 <button id="closeSidebar" class="ka-sidebar__close btn p-0" aria-label="Close">
-                    <span class="close-icon"><i class="fa-solid fa-xmark"></i></span>
+                    <span class="close-icon"><i class="fa-solid fa-xmark" aria-hidden="true"></i></span>
                 </button>
             </div>
             <div class="ka-sidebar__body px-3 d-flex justify-content-left align-items-center">
@@ -139,7 +139,8 @@
                             <h1 class="text-uppercase text-left ka-reveal-left ka-delay-1">
                                 Salut, je suis Kahina
                             </h1>
-                            <p class="subtitle text-uppercase mb-3 ka-reveal-left ka-delay-2">Développeuse front-end &<br> UI/UX designer</p>
+                            <p class="subtitle text-uppercase mb-3 ka-reveal-left ka-delay-2">Développeuse front-end
+                                &<br> UI/UX designer</p>
                             <div class="ka-hero-home__btn ka-reveal-left ka-delay-2">
                                 <a class="ka-btn border-all d-flex align-items-center position-relative"
                                     href="#a-propos">
@@ -151,15 +152,19 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12 p-0">
-                        <img src="assets/img/home/kahinadev-cyberpunk-background.webp"
-                            class="ka-hero-home__img position-fixed top-0" alt="Background de moi en cyberpunk"
-                            aria-label="Background de moi en cyberpunk">
+                        <img src="assets/img/home/kahinadev-portrait-one-desktop.webp"
+                            class="ka-hero-home__img img-hero-desktop position-fixed top-0"
+                            alt="Portrait de Kahina en tenue cyberpunk avec masque et capuche">
+                        <img src="assets/img/home/kahinadev-portrait-one-mobile-cyberpunk.webp"
+                            class="ka-hero-home__img img-hero-mobile position-fixed top-0"
+                            alt="Portrait de Kahina en tenue cyberpunk avec masque et capuche">
                     </div>
                 </div>
             </div>
         </section>
         <section id="a-propos" class="ka-about bg-light position-relative" aria-label="A propos">
-            <div class="ka-moving bg-primary border-top border-bottom position-relative" aria-label="Texte défilant">
+            <div class="ka-moving bg-primary border-top border-bottom position-relative" aria-label="Texte défilant"
+                aria-hidden="true">
                 <div class="ka-moving__track">
                     <div class="ka-moving__content">
                         <span class="ka-moving__item text-uppercase text-nowrap">Créativité</span>
@@ -225,7 +230,7 @@
                                         aria-label="Développement web">
                                         <span class="num"><strong>01</strong></span>
                                         <span class="name text-uppercase">Développement web</span>
-                                        <span class="arrow"><i class="fa-solid fa-arrow-right-long"></i></span>
+                                        <span class="arrow"><i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i></span>
                                     </a>
                                     <div class="ka-tags justify-content-center d-flex align-items-center flex-wrap-sm">
                                         <span class="tag border-all text-center text-uppercase w-badge-tags">HTML /
@@ -247,7 +252,7 @@
                                         aria-label="Web design">
                                         <span class="num"><strong>02</strong></span>
                                         <span class="name text-uppercase">Web design</span>
-                                        <span class="arrow"><i class="fa-solid fa-arrow-right-long"></i></span>
+                                        <span class="arrow"><i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i></span>
                                     </a>
                                     <div class="ka-tags justify-content-center d-flex align-items-center flex-wrap-sm">
                                         <span
@@ -269,7 +274,7 @@
                                         aria-label="Branding">
                                         <span class="num"><strong>03</strong></span>
                                         <span class="name text-uppercase">Branding</span>
-                                        <span class="arrow"><i class="fa-solid fa-arrow-right-long"></i></span>
+                                        <span class="arrow"><i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i></span>
                                     </a>
                                     <div class="ka-tags justify-content-center d-flex align-items-center flex-wrap-sm">
                                         <span class="tag border-all text-center text-uppercase w-badge-tags">Logo</span>
@@ -290,7 +295,7 @@
                                         aria-label="Refonte">
                                         <span class="num"><strong>04</strong></span>
                                         <span class="name text-uppercase">Refonte</span>
-                                        <span class="arrow"><i class="fa-solid fa-arrow-right-long"></i></span>
+                                        <span class="arrow"><i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i></span>
                                     </a>
                                     <div class="ka-tags justify-content-center d-flex align-items-center flex-wrap-sm">
                                         <span
@@ -310,7 +315,7 @@
             </div>
         </section>
         <section class="ka-projects bg-light position-relative" aria-label="Projets">
-            <div class="ka-marquee d-flex flex-column justify-content-center">
+            <div class="ka-marquee d-flex flex-column justify-content-center" aria-hidden="true">
                 <div class="ka-marquee__wrapper d-flex flex-column">
                     <div class="ka-marquee__track">
                         <div class="ka-marquee__row row-1 text-nowrap" id="row1"></div>
@@ -325,8 +330,12 @@
                     <div class="col-lg-7 col-md-6">
                         <a href="#" class="ka-card position-relative bg-transparent ka-reveal-scale ka-delay-3">
                             <div class="card__project-img position-relative">
-                                <img src="assets/img/projects/redesign-portfolio-project.webp" class="ka-radius-lg"
-                                    alt="Image du projet Portfolio" aria-label="Image du projet Portfolio">
+                                <img src="assets/img/projects/kahinadev-project-portfolio-desktop.webp"
+                                    class="project-img-desktop ka-radius-lg"
+                                    alt="Mockup de deux iPhones présentant le portfolio KahinaDev">
+                                <img src="assets/img/projects/kahinadev-project-portfolio-mobile.webp"
+                                    class="project-img-mobile ka-radius-lg"
+                                    alt="Mockup de deux iPhones présentant le portfolio KahinaDev">
                                 <div class="overlay bg-secondary d-flex justify-content-center align-items-center">
                                     <h4 class="text-uppercase overlay__title">Portfolio</h4>
                                 </div>
@@ -352,7 +361,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-sm-12 col-center-sm">
-                    <h4 class="text-uppercase mt-3">KahinaDev</h4>
+                    <p class="ka-footer__name text-uppercase mt-3">KahinaDev</p>
                     <a class="ka-btn border-all text-uppercase d-inline-flex align-items-center position-relative mx-auto"
                         href="contact.html">
                         <span class="ka-btn__dot position-absolute"></span>
@@ -362,21 +371,22 @@
                 <div class="col-md-6 col-sm-12 text-end col-center-sm">
                     <div class="d-flex justify-content-end ka-footer__social">
                         <a href="https://www.linkedin.com/in/kahinaouali/" aria-label="LinkedIn">
-                            <i class="fa-brands fa-linkedin-in"></i>
+                            <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
                         </a>
                         <a href="https://www.behance.net/kahinadev" aria-label="Behance">
-                            <i class="fa-brands fa-behance"></i>
+                            <i class="fa-brands fa-behance" aria-hidden="true"></i>
                         </a>
                         <a href="https://github.com/kahinadev" aria-label="Github">
-                            <i class="fa-brands fa-github"></i>
+                            <i class="fa-brands fa-github" aria-hidden="true"></i>
                         </a>
                         <a href="https://mail.google.com/mail/u/0/#inbox" aria-label="Mail">
-                            <i class="fa-solid fa-envelope-open"></i>
+                            <i class="fa-solid fa-envelope-open" aria-hidden="true"></i>
                         </a>
                     </div>
-                    <h5 class="ka-footer__version">V3.8.27</h5>
-                    <h6 class="ka-footer__copyright subtitle text-uppercase">© 2023-2026 KAHINADEV — Tous droits
-                        réservés</h6>
+                    <span class="ka-footer__version">V3.8.27</span>
+                    <br>
+                    <span class="ka-footer__copyright subtitle text-uppercase">© 2023-2026 KAHINADEV — Tous droits
+                        réservés</span>
                 </div>
             </div>
         </div>

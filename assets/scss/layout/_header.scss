@@ -15,6 +15,11 @@
             padding: 1rem $zero !important;
         }
 
+        &__burger {
+            border: $none !important;
+            background-color: transparent !important;
+        }
+
         .logo {
             width: 10%;
 

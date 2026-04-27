@@ -31,7 +31,20 @@
             display: $block;
             transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
         }
+    }
 
+    .project-img-desktop {
+        @include respond-to(sm, max) {
+            display: $none !important;
+        }
+    }
+
+    .project-img-mobile {
+        display: $none;
+
+        @include respond-to(sm, max) {
+            display: $block !important;
+        }
     }
 
     .overlay {

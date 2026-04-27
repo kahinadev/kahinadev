@@ -1,0 +1,26 @@
+// ===============================================
+// IMAGES
+// ===============================================
+
+// =========== VARIABLES ===========
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// =========== BASE ===========
+
+.img-hero-desktop,
+.project-img-desktop {
+    @include respond-to(sm, max) {
+        display: $none !important;
+    }
+}
+
+.img-hero-mobile,
+.project-img-mobile {
+    display: $none;
+
+    @include respond-to(sm, max) {
+        display: $block !important;
+    }
+}

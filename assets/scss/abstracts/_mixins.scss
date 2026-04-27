@@ -42,7 +42,7 @@
 // =========== TITLE ===========
 
 @mixin title($size-mobile: 50px, $size-tablet: 65px, $size-desktop: 92px, $spacing: 1.2px) {
-    color: $color-accent;
+    color: $color-dark-accent;
     font-weight: 900 !important;
     word-break: break-word;
     letter-spacing: $spacing;
