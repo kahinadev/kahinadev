@@ -2,7 +2,7 @@
 // CARD
 // ===============================================
 
-// =========== VARIABLES ===========
+// =========== VARIABLES & MIXINS ===========
 
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
@@ -10,62 +10,137 @@
 // =========== BASE ===========
 
 .ka-card {
-    border: $none;
+   margin-top: 3rem;
+   min-height: 380px;
+   overflow: $hidden;
+   transition: filter $card-transition, transform $card-transition;
 
-    &:hover .overlay {
-        opacity: 1;
-    }
+   @include respond-to(sm, max) {
+      gap: $card-gap;
+      display: flex;
+      margin-top: $zero !important;
+      margin-bottom: 1.5rem;
+      justify-content: flex-end;
+      filter: $none !important;
+      transform: $none !important;
 
-    &__img {
-        width: $width-full;
-        aspect-ratio: 4 / 3;
-        overflow: $hidden;
-        cursor: pointer;
-        box-shadow: $zero $zero $zero $zero $color-text;
-        transition: box-shadow 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+      &.is-hovered &__front {
+         opacity: 1 !important;
+         transform: $none !important;
+         pointer-events: $auto !important;
+      }
+   }
 
-        img {
-            width: $width-full;
-            height: $height-full;
-            object-fit: cover;
-            display: $block;
-            transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-    }
+   @include respond-to(lg, max) {
+      margin-top: 1rem;
+   }
 
-    .project-img-desktop {
-        @include respond-to(sm, max) {
-            display: $none !important;
-        }
-    }
+   &__front {
+      flex: 1;
+      justify-content: flex-end;
+      transition: opacity $card-transition, transform $card-transition;
+   }
 
-    .project-img-mobile {
-        display: $none;
+   &__name {
+      font-size: 22px;
+      line-height: 1.15;
+   }
 
-        @include respond-to(sm, max) {
-            display: $block !important;
-        }
-    }
+   &__back {
+      inset: $zero;
+      opacity: $zero;
+      pointer-events: $none;
+      transform: translateY(-14px);
+      transition: opacity $card-transition, transform $card-transition;
+   }
 
-    .overlay {
-        inset: $zero;
-        background: rgba($color-text, 0.75);
-        opacity: $zero;
-        position: $absolute;
-        border-radius: $border-radius-lg;
-        transition: opacity 0.4s ease;
+   &.is-hovered &__front {
+      opacity: $zero;
+      pointer-events: $none;
+      transform: translateY(16px);
+   }
 
-        &__title {
-            color: $color-text !important;
-            font-size: 32px !important;
-        }
-    }
+   &.is-hovered &__back {
+      opacity: 1;
+      transform: translateY($zero);
+      pointer-events: $auto;
 
-    &__project-content {
+      @include respond-to(sm, max) {
+         opacity: 0 !important;
+      }
+   }
 
-        .title,
-        .project-year {
-            font-weight: 800 !important;
-        }
-    }
+   &__desc {
+      margin-top: 10px;
+      font-size: 20px !important;
+   }
+
+   &__back {
+      padding: 3rem;
+   }
+
+   &__back-label {
+      font-size: 18px;
+   }
+
+   &__tags {
+      gap: $card-gap;
+      display: inline-block;
+      transition: background $card-transition, color $card-transition;
+
+      .tag {
+         padding: 0.8rem;
+         font-weight: 800 !important;
+         font-size: 14px !important;
+         background-color: $color-background;
+      }
+   }
+}
+
+// =========== PROJECTS ===========
+
+.ka-card-project {
+   border: $none;
+
+   &:hover .overlay {
+      opacity: 1;
+   }
+
+   &__img {
+      overflow: $hidden;
+      cursor: pointer;
+      width: $width-full;
+      aspect-ratio: 4 / 3;
+      box-shadow: $zero $zero $zero $zero $color-text;
+      transition: box-shadow 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+
+      img {
+         width: $width-full;
+         height: $height-full;
+         object-fit: cover;
+         display: $block;
+         transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+   }
+
+   .overlay {
+      inset: $zero;
+      background: rgba($color-text, 0.75);
+      opacity: $zero;
+      position: $absolute;
+      transition: opacity 0.4s ease;
+
+      &__title {
+         color: $color-text !important;
+         font-size: 32px !important;
+      }
+   }
+
+   &__content {
+      .title,
+      .project-year {
+         color: $color-text;
+         font-weight: 800 !important;
+      }
+   }
 }

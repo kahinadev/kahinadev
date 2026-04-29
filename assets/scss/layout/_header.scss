@@ -9,23 +9,42 @@
 
 // =========== GENERAL ===========
 
-.header {
-    .ka-navigation {
+.ka-header {
+    transition: background 0.4s ease, box-shadow 0.4s ease;
+
+    .container-fluid {
+        @include respond-to(lg, max) {
+            flex-direction: row-reverse !important;
+        }
+    }
+
+    &__logo {
         @include respond-to(sm, max) {
-            padding: 1rem $zero !important;
+            width: 30% !important;
         }
 
-        &__burger {
-            border: $none !important;
-            background-color: transparent !important;
+        @include respond-to(md, min) {
+            width: 20%;
         }
+    }
 
-        .logo {
-            width: 10%;
+    &.is-sticky {
+        top: $zero;
+        left: $zero;
+        right: $zero;
+        z-index: 100;
+        position: $fixed;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+        animation: slideDown 0.4s ease forwards;
+    }
+}
 
-            @include respond-to(lg, max) {
-                width: 25%;
-            }
-        }
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
     }
 }

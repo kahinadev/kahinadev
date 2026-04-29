@@ -1,0 +1,66 @@
+// ===============================================
+// SIDEBAR
+// ===============================================
+
+// =========== VARIABLES & MIXINS ===========
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// =========== BASE ===========
+
+.ka-hero {
+    @include respond-to(320px, max) {
+        padding-top: $zero !important;
+    }
+
+    @include respond-to(sm, max) {
+        padding-top: 12rem;
+    }
+
+    &__content {
+        @include respond-to(sm, max) {
+            text-align: $center;
+        }
+    }
+
+    &__btn {
+        @include respond-to(sm, max) {
+            display: $flex !important;
+            justify-content: $center !important;
+        }
+    }
+
+    &__img {
+        right: $zero;
+        overflow-x: $hidden;
+    }
+
+    .ka-img-desktop {
+        top: $zero;
+        right: -1.5rem;
+        width: 86%;
+
+        @include respond-to(lg, max) {
+            top: 4px;
+            right: -6rem;
+            height: 950px;
+            width: $width-full;
+        }
+    }
+
+    .ka-img-mobile {
+        @include respond-to(sm, max) {
+            margin-top: 1rem;
+            bottom: 0;
+            height: 520px !important;
+            position: $relative !important;
+        }
+    }
+
+    #ka-hero-img-mobile {
+        @include respond-to(320px, max) {
+            display: $none !important;
+        }
+    }
+}

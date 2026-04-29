@@ -2,18 +2,13 @@
 // VARIABLES
 // ===============================================
 
-// =========== GENERAL ===========
-
-$tags-badge-padding: 10px 20px;
-
 // =========== COLORS ===========
 
-$color-text: #2C2725; 
-$color-background: #FFF5F0; 
-$color-primary: #FFBFA3; 
-$color-secondary: #FF8955; 
+$color-text: #2C2725;
+$color-background: #FDF6F0;
+$color-primary: #8C2808;
+$color-secondary: #C4380A;
 $color-accent: #FF5C35;
-$color-dark-accent: #C93D1A;
 
 // =========== RESPONSIVE ===========
 
@@ -27,19 +22,24 @@ $breakpoints: (
     xxxl: 1400px
 );
 
-// =========== BORDER RADIUS ===========
+// =========== RADIUS ===========
 
-$border-radius-sm: 0.5rem; // tags, badges
-$border-radius-md: 1rem; // boutons
-$border-radius-lg: 2rem; // nav, images, cards
-$border-radius-full: 5rem;
+$border-r-sm: 0.5rem; // tags, badges
+$border-r-md: 1rem; // buttons
+$border-r-lg: 2rem; // nav, images, cards
 
 // =========== BORDER ===========
 
-$border-width: 2px; 
+$border-width: 1px; 
 $border-type: solid; 
-$border-radius: $border-radius-lg; 
-$border-positions: top, bottom, left, right, all;
+$border-radius: $border-r-lg;
+$border-color: rgba($color-accent, 0.6);
+$border: $border-width $border-type $border-radius;
+$border-positions: top, bottom, left, right, all; 
+
+// =========== AUTO ===========
+
+$auto: auto;
 
 // =========== DISPLAY ===========
 
@@ -47,21 +47,26 @@ $flex: flex;
 $none: none;
 $block: block;
 
-// =========== WRAP ===========
-
-$flex-wrap-sm: wrap;
-
 // =========== ALIGN ===========
 
 $left: left; 
 $right: right;
 $center: center;
-$justify: justify;
 
 // =========== POSITION ===========
 
-$relative: relative;
+$fixed: fixed; 
+$relative: relative; 
 $absolute: absolute;
+
+// =========== BUTTON BURGER ===========
+
+$burger-gap: 10px; 
+$height-icon: 2px;
+$bottom-line-icon: 5px;
+$width-line-icon-one: 16px; 
+$width-line-icon-two: 22px;
+$width-line-icon-three: 32px;
 
 // =========== OVERFLOW ===========
 
@@ -76,14 +81,18 @@ $zero: 0;
 
 $width-full: 100%; 
 $height-full: 100%;
-$width-badge-tags: calc(50% - 7.5px);
+$width-badge-n-tags: calc(50% - 7.5px);
 
 // =========== FONTS ===========
 
 $font-title: "Basteleur";
 $font-text: "Satoshi", sans-serif;
 
-// =========== FONT WEIGHT ===========
+// =========== BREAK ===========
+
+$break-word: break-word;
+
+// =========== WEIGHT ===========
 
 $strong-weight: 600;
 
@@ -91,60 +100,46 @@ $strong-weight: 600;
 
 $column: column;
 
-// =========== HERO ===========
+// =========== BUTTONS ===========
 
-$hero-padding-mobile: 0 1rem;
-
-// =========== TAGS ===========
-
-$tags-gap: 10px;
-$tags-size: 12px; 
-$tags-top: 40px; 
-$tags-padding-b-hover: 3rem;
-$tags-margin-t-desk: 40px;
-$tags-title-size-tab: 48px;
-$tags-title-size-desk: 64px;
-$tags-padding: $tags-badge-padding; 
-$tags-padding-b-hover-tab: 4rem;
-$tags-padding-b-hover-mobile: 2rem;
-$tags-padding-ease: padding 0.4s ease; 
-$tags-transition: opacity 0.4s ease, margin-top 0.4s ease;
+$btn-h: 1.5rem;
+$btn-v: 1.1rem;
+$btn-size: 13px; 
+$btn-gap: 0.8rem;
+$btn-weight: 600;
+$btn-radius: $border-r-md; 
+$btn-dot-size: 10px;
+$btn-padding: 0.8rem 1.2rem;
 
 // =========== BADGE ===========
 
-$badge-gap: 10px;
-$badge-size: 13px;
+$badge-size: 15px;
 $badge-padding: 15px 20px;
 
-// =========== BUTTONS ===========
+// =========== MARQUEE ===========
 
-$btn-h: 1.5rem; 
-$btn-v: 1.1rem;
-$btn-gap: 0.8rem;
-$btn-weight: 600;
-$btn-size: 13px;
-$btn-dot-size: 10px;
-$btn-radius: $border-radius-md;
-$btn-padding: 0.8rem 1.2rem;
-
-// =========== LANGUAGE ===========
-
-$width-flag: 20px;
-$height-flag: 20px;
-
-// =========== SERVICES ===========
-
-$services-b-mobile: 1rem;
-$services-b-tablet: 3rem; 
-$services-content-b-padding: 2rem;
+$marquee-gap: 1.2rem;
+$marquee-dot-width: 50px;
+$marquee-dot-height: 50px;
+$marquee-dot-radius: 50%;
+$marquee-padding: $zero 0.28em;
 
 // =========== LANGUAGE ===========
 
 $language-left: 1rem;
 $language-bottom: 1rem;
 
-// =========== MARQUEE ===========
+// =========== SECTION ===========
 
-$marquee-dot-width: 50px;
-$marquee-dot-height: 50px;
-$marquee-dot-radius: 50%;
+$padding-mobile: 80px 2rem; 
+
+// =========== CARD ===========
+
+$card-gap: 8px;
+$card-transition: 0.30s ease;
+
+// =========== ARROW ===========
+
+$arrow-gap: 10px;
+$arrow-slide-width: 42px;
+$arrow-slide-height: 42px;

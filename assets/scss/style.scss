@@ -20,26 +20,21 @@
 @use "layout/sidebar";
 @use "layout/footer";
 
-// // =========== COMPONENTS ===========
+// =========== COMPONENTS ===========
 
-@use "components/moving";
-@use "components/tags";
-@use "components/images";
-// @use "components/loader";
 @use "components/navbar";
-@use "components/badge";
 @use "components/buttons";
-@use "components/greetings";
-// @use "components/list";
-@use "components/marquee";
+@use "components/hero";
+@use "components/images";
+@use "components/languages";
+@use "components/moving";
 @use "components/card";
-// // @use "components/modal";
-// // @use "components/category";
+@use "components/arrow";
+@use "components/marquee";
 
 // =========== PAGES ===========
 
 @use "pages/home";
-// // @use "pages/portfolio";
 
 // =========== VENDORS ===========
 

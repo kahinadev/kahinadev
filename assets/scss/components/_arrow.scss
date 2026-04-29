@@ -1,0 +1,33 @@
+// ===============================================
+// ARROW
+// ===============================================
+
+// =========== VARIABLES & MIXINS ===========
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// =========== SLIDE ===========
+
+.ka-services__nav-arrow {
+    gap: $arrow-gap;
+    display: $none;
+
+    @include respond-to(sm, max) {
+        display: $flex !important;
+    }
+}
+
+.ka-services__arrow {
+    cursor: pointer;
+    width: $arrow-slide-width;
+    height: $arrow-slide-height;
+    border: $none !important;
+    background-color: transparent !important;
+    transition: border-color $card-transition, background $card-transition, color $card-transition;
+
+    i {
+        font-size: 23px;
+        color: $color-text;
+    }
+}

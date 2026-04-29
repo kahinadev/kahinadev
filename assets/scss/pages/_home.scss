@@ -1,147 +1,61 @@
-// ===============================================
+// =======================================
 // HOME
-// ===============================================
+// ======================================= 
 
-// =========== VARIABLES ===========
+// =========== VARIABLES & MIXINS ===========
 
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-// =========== HERO INTRODUCTION ===========
-
-.ka-hero-home {
-    @include respond-to(sm, max) {
-        padding-top: 15rem !important;
-    }
-
-    &__content {
-        @include respond-to(sm, max) {
-            text-align: $center !important;
-            justify-content: $center !important;
-            padding: $hero-padding-mobile !important;
-        }
-
-        .subtitle {
-            br {
-                display: $none;
-
-                @include respond-to(lg, max) {
-                    display: $block !important;
-                }
-            }
-        }
-    }
-
-    &__btn {
-        @include respond-to(sm, max) {
-            display: $flex !important;
-            justify-content: $center !important;
-        }
-    }
-
-    &__img {
-        right: 0;
-        width: 74%;
-        overflow-x: $hidden;
-
-        @include respond-to(sm, max) {
-            margin-top: 1rem;
-            right: $zero !important;
-            height: 520px !important;
-            width: $width-full !important;
-            position: $relative !important;
-        }
-
-        @include respond-to(lg, max) {
-            right: -10rem;
-            width: 94%;
-        }
-    }
-}
-
-// =========== ABOUT ===========
-
-.ka-about {
-    &__title {
-        @include respond-to(sm, max) {
-            margin-bottom: 1rem !important;
-        }
-    }
-}
-
 // =========== SERVICES ===========
 
 .ka-services {
-
     @include respond-to(sm, max) {
-        padding-bottom: $services-b-mobile !important;
+        padding: 80px $zero $zero $zero !important;
     }
 
-    @include respond-to(lg, max) {
-        padding-bottom: $services-b-tablet;
-    }
-
-    &__list {
-        &.has-hover {
-            .ka-services__item:not(:hover) {
-                opacity: 0.25;
-            }
+    h3 {
+        @include respond-to(sm, max) {
+            padding: 0 2rem !important;
         }
     }
 
-    &__item {
-        transition: opacity 0.4s ease;
-        border-color: $color-secondary;
-
-        &:not(:last-child) {
-            margin-bottom: 2rem;
+    .ka-services__outer {
+        @include respond-to(sm, max) {
+            overflow: $hidden;
         }
 
-        &:hover {
-            .tags {
-                opacity: 1;
-            }
-        }
-    }
-
-    &__content {
-        width: $width-full;
-        padding-bottom: $services-content-b-padding;
-
-        .ka-services__item:hover & {
-            padding-bottom: $tags-padding-b-hover;
-
-            @include respond-to(sm, max) {
-                padding-bottom: $tags-padding-b-hover-mobile !important;
-            }
-
-            @include respond-to(lg, max) {
-                padding-bottom: $tags-padding-b-hover-tab;
-            }
-        }
-
-        .title {
-
-            .num,
-            .fa-arrow-right-long {
-                font-size: 22px;
-                color: $color-accent;
-            }
-
-            .name {
-                font-size: $tags-title-size-desk;
-                font-weight: 500 !important;
-
-                @include respond-to(lg, max) {
-                    font-size: $tags-title-size-tab;
+        #servicesCard {
+            .col-12 {
+                @include respond-to(sm, max) {
+                    width: 88vw;
+                    flex-shrink: $zero;
                 }
             }
+        }
 
-            &:hover {
-                .name {
-                    color: $color-accent;
-                }
+        #servicesCard.has-hover {
+            .ka-card:not(.is-hovered) {
+                transform: scale(0.97);
+                filter: brightness(0.45) blur(1px);
             }
+        }
+
+        .bg-primary,
+        .bg-secondary {
+
+            .ka-card__name,
+            .ka-card__desc,
+            .ka-card__label, 
+            .ka-card__back-label {
+                color: $color-background !important;
+            }
+        }
+    }
+
+    .col-button {
+        @include respond-to(sm, max) {
+            margin-top: 1rem !important;
         }
     }
 }
@@ -149,29 +63,11 @@
 // =========== PROJECTS ===========
 
 .ka-projects {
-    padding-top: 0px;
-
-    &__col--offset-1 {
-        margin-top: 6rem;
-    }
-
-    &__col--offset-2 {
-        margin-top: 2rem;
-    }
-
-    &__col--offset-3 {
-        margin-top: 4rem;
-    }
-
-    &__col--offset-1,
-    &__col--offset-2,
-    &__col--offset-3 {
-        @include respond-to(md, max) {
-            margin-top: 2rem;
-        }
-    }
-
     .ka-padding-section {
         padding-top: 40px;
+
+        @include respond-to(sm, max) {
+            padding-top: 20px !important;
+        }
     }
 }

@@ -73,41 +73,34 @@ h6 {
 // =========== SIZE TITLE ===========
 
 h2 {
-    @include title(40px, 58px, 73px);
+    @include title(34px, 72px, 76px);
 }
 
 h3 {
-    @include title(38px, 56px, 70px);
+    @include title(30px, 68px, 72px);
 }
 
 h4 {
-    @include title(22px, 22px, 22px);
+    @include title(26px, 26px, 26px);
 }
 
-h5 {
-    @include title(17px, 17px, 17px);
-}
 
-// =================== SUBTITLE ==============
+// =========== SUBTITLE ===========
 
 .subtitle {
-    @include subtitle; 
+    @include subtitle;
 }
 
-// =================== TEXT ==============
+// =========== TEXT ===========
 
 p,
 a,
 span {
     @include text;
-
-    strong {
-        font-weight: $strong-weight !important;
-    }
 }
 
-// =================== LINKS ==============
+// =========== STRONG ===========
 
-a {
-    text-decoration: $none !important;
+strong {
+    font-weight: $strong-weight !important;
 }

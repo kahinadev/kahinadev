@@ -17,68 +17,32 @@
     }
 
     @include respond-to(lg, max) {
-        height: 53vh;
+        height: 70vh;
     }
 }
 
-// =========== SECTION ===========
-
-.ka-h-section {
-    min-height: 90dvh;
-}
+// =========== PADDING ===========
 
 .ka-padding-section {
     padding: 120px 0;
 
     @include respond-to(sm, max) {
-        padding: 80px 1rem !important;
-    }
-}
-
-// =========== ALIGN ===========
-
-.text-justify {
-    text-align: $justify !important;
-}
-
-.col-center-sm {
-    @include respond-to(sm, max) {
-        text-align: $center !important;
+        padding: $padding-mobile !important;
     }
 }
 
 // =========== BORDER RADIUS ===========
 
 .ka-radius-sm {
-    border-radius: $border-radius-sm;
+    border-radius: $border-r-sm;
 }
 
 .ka-radius-md {
-    border-radius: $border-radius-md;
+    border-radius: $border-r-md;
 }
 
 .ka-radius-lg {
-    border-radius: $border-radius-lg;
-}
-
-.ka-radius-full {
-    border-radius: $border-radius-full;
-}
-
-// =========== WRAP ===========
-
-.flex-wrap-sm {
-    @include respond-to(sm, max) {
-        flex-wrap: $flex-wrap-sm;
-    }
-}
-
-// =========== WIDTH ===========
-
-.w-badge-tags {
-    @include respond-to(lg, max) {
-        width: $width-badge-tags;
-    }
+    border-radius: $border-r-lg;
 }
 
 // =========== BACKGROUND ===========

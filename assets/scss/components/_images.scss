@@ -1,23 +1,21 @@
-// ===============================================
+// =======================================
 // IMAGES
-// ===============================================
+// ======================================= 
 
-// =========== VARIABLES ===========
+// =========== VARIABLES & MIXINS ===========
 
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
 // =========== BASE ===========
 
-.img-hero-desktop,
-.project-img-desktop {
+.ka-img-desktop {
     @include respond-to(sm, max) {
-        display: $none !important;
+        display: $none;
     }
 }
 
-.img-hero-mobile,
-.project-img-mobile {
+.ka-img-mobile {
     display: $none;
 
     @include respond-to(sm, max) {

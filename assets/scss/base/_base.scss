@@ -9,7 +9,7 @@
 
 // =========== BODY ===========
 
-html,
+html, 
 body {
     min-height: 100vh;
     overflow-x: $hidden;
@@ -18,7 +18,7 @@ body {
 
 body {
     color: $color-text;
-    background-color: $color-background;
+    background: $color-background;
 }
 
 // =========== IMAGE ===========
@@ -26,6 +26,6 @@ body {
 img {
     width: $width-full;
     max-width: $width-full;
-    height: auto !important;
+    height: $auto;
     object-fit: cover;
 }

@@ -11,6 +11,7 @@
 
 .ka-btn {
     @include button;
+    border-color: $color-primary !important;
     background-color: $color-background;
     transition: color 0.45s ease, border-color 0.45s ease;
 
@@ -19,15 +20,15 @@
         content: '';
         z-index: $zero;
         position: $absolute;
-        background: $color-accent;
+        background: $color-primary;
         border-radius: inherit;
-        clip-path: inset(0 100% 0 0 round $border-radius-md);
+        clip-path: inset(0 100% 0 0 round $border-r-md);
         transition: clip-path 0.55s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     &:hover {
         &::before {
-            clip-path: inset(0 0% 0 0 round $border-radius-md);
+            clip-path: inset(0 0% 0 0 round $border-r-md);
         }
 
         .ka-btn__dot {
@@ -44,7 +45,7 @@
 
     &__label {
         z-index: 1;
-        color: $color-accent;
+        color: $color-primary;
         @include label;
         padding-left: calc($btn-dot-size + $btn-gap);
         transition: padding 0.6s cubic-bezier(0.16, 1, 0.3, 1);
@@ -52,7 +53,7 @@
 
     &__dot {
         left: $btn-h;
-        top: 50%;
+        top: 52%;
         z-index: 2;
         flex-shrink: $zero;
         border-radius: 50%;
@@ -60,32 +61,9 @@
         height: $btn-dot-size;
         pointer-events: $none;
         transform: translateY(-58%);
-        background-color: $color-accent;
+        background-color: $color-primary;
         transition:
             left 0.6s cubic-bezier(0.16, 1, 0.3, 1),
             background 0.4s ease;
-    }
-}
-
-.ka-btn-language {
-    z-index: 5 !important;
-    left: $language-left;
-    bottom: $language-bottom;
-    @include button;
-    border-color: $color-accent !important;
-    background-color: $color-dark-accent;
-
-    &__flag {
-        img {
-            width: $width-flag;
-            height: $height-flag;
-            border-radius: $border-radius-md;
-        }
-    }
-
-    &__label {
-        color: $color-background;
-        padding-left: $zero !important;
-        @include label;
     }
 }

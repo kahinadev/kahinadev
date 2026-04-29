@@ -1,0 +1,27 @@
+// ===============================================
+// ABOUT
+// ===============================================
+
+// =========== VARIABLES ===========
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// =========== HERO ===========
+
+.ka-about {
+    padding-top: 5rem;
+
+    &__img {
+        margin-top: 12rem;
+        width: 70%;
+        height: 590px;
+        overflow-x: $hidden;
+
+        @include respond-to(sm, max) {
+            margin-top: 15rem !important;
+            width: $width-full !important;
+            height: 580px !important;
+        }
+    }
+}

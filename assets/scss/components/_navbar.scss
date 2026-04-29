@@ -11,85 +11,74 @@
 
 .ka-navigation {
     z-index: 8;
-    width: calc(100% - 108px);
 
-    @include respond-to(sm, max) {
-        width: $width-full !important;
-    }
-
-    @include respond-to(lg, max) {
-        width: calc(100% - 20px);
-    }
-
-    .container-fluid {
-        @include respond-to(sm, max) {
-            flex-direction: row-reverse;
-        }
-    }
-
-    &__toggler,
     &__home,
-    &__contact {
-        width: 33.33%;
-    }
-
-     &__toggler,
-    &__home {
-        @include respond-to(sm, max) {
-            width: 50%;
+    &__burger {
+        @include respond-to(lg, max) {
+            width: 50% !important;
         }
     }
 
     &__home {
-        @include respond-to(sm, max) {
+        @include respond-to(lg, max) {
             text-align: $left !important;
         }
     }
 
-    &__toggler {
-        @include respond-to(sm, max) {
-            justify-content: $right;
-        }
-    }
-
-    &__contact {
-        @include respond-to(sm, max) {
-            display: $none !important;
-        }
-    }
-
     &__burger {
-        gap: 5px;
-        .icon {
-            flex-direction: $column;
+        gap: $burger-gap;
 
+        &:hover,
+        &:focus,
+        &:active {
             .line {
-                height: 2px;
-                border-radius: $border-radius-md;
-                background-color: $color-accent;
-                transition:
-                    background 0.35s ease,
-                    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-                    opacity 0.3s ease,
-                    width 0.3s ease;
 
                 &:nth-child(1),
+                &:nth-child(2),
                 &:nth-child(3) {
-                    width: 26px;
+                    transition: all 0.5s ease-in-out;
+                    width: $width-line-icon-three !important;
                 }
+            }
 
-                &:nth-child(2) {
-                    width: 22px;
-                }
+            .burger-name {
+                color: $color-accent !important;
+            }
+        }
 
-                &:not(:last-child) {
-                    margin-bottom: 5px;
-                }
+        .line {
+            height: $height-icon;
+            background-color: $color-accent;
+            transition:
+                background 0.35 ease,
+                transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.3s ease,
+                width 0.3s ease;
+
+            &:nth-child(1) {
+                width: $width-line-icon-one;
+            }
+
+            &:nth-child(2) {
+                width: $width-line-icon-two;
+            }
+
+            &:nth-child(3) {
+                width: $width-line-icon-three;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: $bottom-line-icon;
             }
         }
 
         .burger-name {
-            font-size: 17.5px;
+            font-size: 18px;
+            color: $color-accent;
+
+            strong {
+                font-weight: 900 !important;
+            }
         }
     }
 }

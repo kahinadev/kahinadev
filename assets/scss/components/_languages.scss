@@ -1,0 +1,34 @@
+// ===============================================
+// LANGUAGES
+// ===============================================
+
+// =========== VARIABLES & MIXINS ===========
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// =========== BASE ===========
+
+.ka-btn-language {
+    left: 1rem;
+    bottom: 1rem;
+    z-index: 5;
+
+    &::before {
+        display: $none;
+    }
+
+    &:hover {
+        .ka-btn__label {
+            padding-left: $zero !important;
+            padding-right: $zero !important;
+        }
+    }
+
+    &__label {
+        font-size: 16px;
+        font-weight: 900 !important;
+        color: $color-background !important;
+        padding-left: $zero !important;
+    }
+}
