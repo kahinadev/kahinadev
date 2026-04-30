@@ -1,5 +1,5 @@
 // =======================================
-// IMAGES
+// COMING
 // ======================================= 
 
 // =========== VARIABLES & MIXINS ===========
@@ -9,16 +9,14 @@
 
 // =========== BASE ===========
 
-.ka-img-desktop {
-    @include respond-to(sm, max) {
-        display: $none !important;
-    }
-}
+.ka-coming-soon {
+    z-index: 200;
+    width: $width-full;
+    height: 100vh;
 
-.ka-img-mobile {
-    display: $none;
-
-    @include respond-to(sm, max) {
-        display: $block !important;
+    &__content {
+        h1 {
+            color: $color-background !important;
+        }
     }
 }

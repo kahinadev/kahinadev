@@ -22,6 +22,7 @@
 
 // =========== COMPONENTS ===========
 
+@use "components/coming";
 @use "components/navbar";
 @use "components/buttons";
 @use "components/hero";
@@ -35,6 +36,7 @@
 // =========== PAGES ===========
 
 @use "pages/home";
+@use "pages/project";
 
 // =========== VENDORS ===========
 

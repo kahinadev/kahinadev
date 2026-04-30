@@ -12,7 +12,8 @@
 .ka-btn-language {
     left: 1rem;
     bottom: 1rem;
-    z-index: 5;
+    z-index: 205;
+    border: $none !important;
 
     &::before {
         display: $none;

@@ -1,0 +1,26 @@
+// =======================================
+// PROJECT
+// ======================================= 
+
+// =========== VARIABLES & MIXINS ===========
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// =========== INTRODUCTION ===========
+
+.ka-project-intro {
+    .br {
+        @include respond-to(sm, max) {
+            display: $none;
+        }
+    }
+}
+
+// =========== IDENTITY ===========
+
+.ka-project-identity {
+    .ka-padding-section {
+        padding-bottom: $zero !important;
+    }
+}

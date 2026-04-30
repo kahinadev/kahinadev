@@ -52,11 +52,20 @@
 </head>
 
 <body>
-    <!-- HEADER -->
-    <header id="header" class="ka-header bg-light p-3 border-bottom" aria-label="Header">
+    <!-- COMING SOON -->
+    <div class="ka-coming-soon position-fixed top-0 bg-accent d-flex align-items-center justify-content-center">
+        <div class="ka-coming-soon__content d-flex justify-content-center">
+            <h1 class="text-uppercase text-center">
+                Portfolio en maintenance
+            </h1>
+        </div>
+    </div>
+
+    <!--<header id="header" class="ka-header bg-light p-3 border-bottom d-flex justify-content-between align-items-center"
+        aria-label="Header">
         <nav class="ka-navigation position-relative">
             <div class="container-fluid d-flex justify-content-between align-items-center">
-                <!-- BURGER -->
+             
                 <button id="burger"
                     class="ka-navigation__burger border-0 bg-transparent d-flex justify-content-end align-items-center"
                     aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="ka-sidebar">
@@ -68,12 +77,11 @@
                     <span class="burger-name text-uppercase"><strong>Menu</strong></span>
                 </button>
 
-                <!-- LOGO -->
+          
                 <a href="index.html" class="ka-navigation__home text-center" aria-label="Retour à l'accueil">
                     <img src="assets/img/logo/Logo portfolio - KahinaDev.svg" class="ka-header__logo" alt="KahinaDev">
                 </a>
 
-                <!-- BUTTON CONTACT -->
                 <div class="ka-header__contact">
                     <a class="ka-btn border-all d-none d-lg-flex align-items-center position-relative text-decoration-none"
                         href="https://mail.google.com/mail/u/0/#inbox" aria-label="Prendre contact">
@@ -85,7 +93,6 @@
         </nav>
     </header>
 
-    <!-- SIDEBAR -->
     <div id="ka-sidebar" class="ka-sidebar bg-light position-fixed border-right" role="dialog" aria-hidden="true"
         aria-label="Menu de navigation" aria-modal="true">
         <div class="ka-sidebar__inner d-flex flex-column">
@@ -129,7 +136,6 @@
         </div>
     </div>
 
-    <!-- MAIN -->
     <main id="main" class="main" aria-label="Main">
         <section id="introduction" class="ka-hero ka-h-100 d-flex align-items-center position-relative"
             aria-label="Introduction">
@@ -186,8 +192,8 @@
             </div>
             <div class="container ka-padding-section">
                 <div class="row">
-                    <div class="col-md-12 mb-5 ka-about__title">
-                        <h2 class="text-uppercase ka-reveal-up ka-delay-2">
+                    <div class="col-md-12">
+                        <h2 class="text-uppercase ka-reveal-up ka-delay-2 mb-3">
                             Le code, c'est mon outil. Le design, c'est mon langage.
                         </h2>
                     </div>
@@ -197,7 +203,7 @@
                         </p>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12">
-                        <p class="text-justify mb-3 ka-reveal-up ka-delay-3">
+                        <p class="mb-3 ka-reveal-up ka-delay-3">
                             Je conçois des expériences web où la technique et l'esthétique se répondent naturellement,
                             parce qu'un site réussi ne sacrifie jamais l'un pour l'autre. Chaque détail compte, chaque
                             choix visuel a une raison d'être, et chaque ligne de code sert une intention.
@@ -226,7 +232,7 @@
         </section>
         <section id="services" class="ka-services bg-light position-relative ka-padding-section border-top"
             aria-label="Services">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <h3 class="text-uppercase ka-reveal-up ka-delay-3">Mes services</h3>
@@ -354,7 +360,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-12 d-flex justify-content-center align-items-center mt-5 col-button ka-reveal-up ka-delay-3">
+                <div class="col-md-12 d-flex justify-content-center align-items-center mt-5 col-button">
                     <a class="ka-btn border-all text-uppercase d-flex align-items-center position-relative ka-reveal-up ka-delay-3"
                         href="#projects">
                         <span class="ka-btn__dot position-absolute"></span>
@@ -376,16 +382,16 @@
             </div>
             <div class="container ka-padding-section">
                 <div class="row">
-                    <div class="col-lg-7 col-md-12 p-0">
-                        <a href="#"
+                    <div class="col-lg-7 col-md-12">
+                        <a href="project-portfolio.html"
                             class="ka-card-project text-decoration-none position-relative bg-transparent ka-reveal-scale ka-delay-3">
                             <div class="ka-card-project__img position-relative">
-                                <img src="assets/img/projects/portfolio/kahinadev-projet-portfolio-desktop.webp"
+                                <img src="assets/img/projects/portfolio/kahinadev-portfolio-refonte-digitale-desktop.webp"
                                     class="ka-img-desktop ka-radius-lg"
-                                    alt="Mockup de deux iPhones présentant le portfolio KahinaDev">
-                                <img src="assets/img/projects/portfolio/kahinadev-projet-portfolio-mobile.webp"
+                                    alt="Mockup iPhone présentant le portfolio KahinaDev">
+                                <img src="assets/img/projects/portfolio/kahinadev-portfolio-refonte-digitale-mobile.webp"
                                     class="ka-img-mobile ka-radius-lg"
-                                    alt="Mockup de deux iPhones présentant le portfolio KahinaDev">
+                                    alt="Mockup iPhone présentant le portfolio KahinaDev">
                                 <div
                                     class="overlay bg-accent ka-radius-lg d-flex justify-content-center align-items-center">
                                     <h4 class="text-uppercase overlay__title">Portfolio</h4>
@@ -406,7 +412,6 @@
         </section>
     </main>
 
-    <!-- FOOTER -->
     <footer class="ka-footer border-top position-relative d-flex flex-column justify-content-between"
         aria-label="Footer">
         <div class="container">
@@ -441,11 +446,10 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer>-->
 
-    <!-- SWITCH LANGUAGE -->
     <a href="en/index.html"
-        class="ka-btn ka-btn-language border-all d-flex align-items-center position-fixed text-decoration-none p-3 bg-primary border-all"
+        class="ka-btn ka-btn-language d-flex align-items-center position-fixed text-decoration-none p-3 bg-primary"
         aria-label="English">
         <div class="ka-btn__label ka-btn-language__label position-relative text-nowrap text-uppercase">English</div>
     </a>

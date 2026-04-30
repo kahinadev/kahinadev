@@ -7,6 +7,22 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
+// =========== HERO ===========
+
+.ka-hero {
+    &__content {
+        @include respond-to(sm, max) {
+            padding: $zero 2rem !important;
+        }
+    }
+}
+
+#introduction {
+    @include respond-to(320px, max) {
+        height: 77vh !important;
+    }
+}
+
 // =========== SERVICES ===========
 
 .ka-services {

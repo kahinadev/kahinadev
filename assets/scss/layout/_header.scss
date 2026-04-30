@@ -10,6 +10,7 @@
 // =========== GENERAL ===========
 
 .ka-header {
+    height: 100px;
     transition: background 0.4s ease, box-shadow 0.4s ease;
 
     .container-fluid {
@@ -28,15 +29,15 @@
         }
     }
 
-    &.is-sticky {
-        top: $zero;
-        left: $zero;
-        right: $zero;
-        z-index: 100;
-        position: $fixed;
-        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
-        animation: slideDown 0.4s ease forwards;
-    }
+    // &.is-sticky {
+    //     top: $zero;
+    //     left: $zero;
+    //     right: $zero;
+    //     z-index: 100;
+    //     position: $fixed;
+    //     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+    //     animation: slideDown 0.4s ease forwards;
+    // }
 }
 
 @keyframes slideDown {

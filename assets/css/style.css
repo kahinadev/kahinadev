@@ -282,7 +282,7 @@ strong {
 }
 @media (max-width: 576px) {
   .ka-padding-section {
-    padding: 80px 2rem !important;
+    padding: 80px 1rem !important;
   }
 }
 
@@ -303,6 +303,7 @@ strong {
 }
 
 .ka-header {
+  height: 100px;
   transition: background 0.4s ease, box-shadow 0.4s ease;
 }
 @media (max-width: 992px) {
@@ -319,15 +320,6 @@ strong {
   .ka-header__logo {
     width: 20%;
   }
-}
-.ka-header.is-sticky {
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  position: fixed;
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
-  animation: slideDown 0.4s ease forwards;
 }
 
 @keyframes slideDown {
@@ -475,8 +467,18 @@ strong {
   }
 }
 
+.ka-coming-soon {
+  z-index: 200;
+  width: 100%;
+  height: 100vh;
+}
+.ka-coming-soon__content h1 {
+  color: #FDF6F0 !important;
+}
+
 .ka-navigation {
   z-index: 8;
+  width: 100% !important;
 }
 @media (max-width: 992px) {
   .ka-navigation__home, .ka-navigation__burger {
@@ -578,14 +580,10 @@ strong {
   transition: left 0.6s cubic-bezier(0.16, 1, 0.3, 1), background 0.4s ease;
 }
 
-@media (max-width: 320px) {
-  .ka-hero {
-    padding-top: 0 !important;
-  }
-}
 @media (max-width: 576px) {
   .ka-hero {
-    padding-top: 12rem;
+    padding-top: 60px;
+    display: inherit !important;
   }
 }
 @media (max-width: 576px) {
@@ -618,7 +616,7 @@ strong {
 }
 @media (max-width: 576px) {
   .ka-hero .ka-img-mobile {
-    margin-top: 1rem;
+    margin-top: 2rem;
     bottom: 0;
     height: 520px !important;
     position: relative !important;
@@ -632,7 +630,7 @@ strong {
 
 @media (max-width: 576px) {
   .ka-img-desktop {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -648,7 +646,8 @@ strong {
 .ka-btn-language {
   left: 1rem;
   bottom: 1rem;
-  z-index: 5;
+  z-index: 205;
+  border: none !important;
 }
 .ka-btn-language::before {
   display: none;
@@ -734,6 +733,7 @@ strong {
 .ka-card__name {
   font-size: 22px;
   line-height: 1.15;
+  letter-spacing: 2px;
 }
 .ka-card__back {
   inset: 0;
@@ -900,6 +900,18 @@ strong {
 }
 
 @media (max-width: 576px) {
+  .ka-hero__content {
+    padding: 0 2rem !important;
+  }
+}
+
+@media (max-width: 320px) {
+  #introduction {
+    height: 77vh !important;
+  }
+}
+
+@media (max-width: 576px) {
   .ka-services {
     padding: 80px 0 0 0 !important;
   }
@@ -947,6 +959,16 @@ strong {
   .ka-projects .ka-padding-section {
     padding-top: 20px !important;
   }
+}
+
+@media (max-width: 576px) {
+  .ka-project-intro .br {
+    display: none;
+  }
+}
+
+.ka-project-identity .ka-padding-section {
+  padding-bottom: 0 !important;
 }
 
 .bg-light {
