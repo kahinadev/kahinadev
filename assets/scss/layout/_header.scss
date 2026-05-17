@@ -10,42 +10,39 @@
 // =========== GENERAL ===========
 
 .ka-header {
-    height: 100px;
-    transition: background 0.4s ease, box-shadow 0.4s ease;
+    top: 10px;
+    z-index: 150;
+    position: $fixed;
+    width: $width-full;
 
-    .container-fluid {
+    @include respond-to(lg, max) {
+        padding: 1rem !important;
+    }
+
+    .container {
         @include respond-to(lg, max) {
             flex-direction: row-reverse !important;
         }
     }
 
-    &__logo {
-        @include respond-to(sm, max) {
-            width: 30% !important;
+    .ka-nav__logo {
+        @include respond-to(lg, max) {
+            text-align: $left !important;
         }
 
-        @include respond-to(md, min) {
-            width: 20%;
+        img {
+            width: 5%;
+            margin-left: 4rem;
+
+            @include respond-to(sm, max) {
+                width: 15% !important;
+                margin-left: $zero !important;
+
+            }
+
+            @include respond-to(lg, max) {
+                width: 8%;
+            }
         }
-    }
-
-    // &.is-sticky {
-    //     top: $zero;
-    //     left: $zero;
-    //     right: $zero;
-    //     z-index: 100;
-    //     position: $fixed;
-    //     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
-    //     animation: slideDown 0.4s ease forwards;
-    // }
-}
-
-@keyframes slideDown {
-    from {
-        transform: translateY(-100%);
-    }
-
-    to {
-        transform: translateY(0);
     }
 }

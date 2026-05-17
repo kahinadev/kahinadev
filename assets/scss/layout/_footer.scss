@@ -10,60 +10,19 @@
 // =========== BASE ===========
 
 .ka-footer {
-    padding: 40px $zero;
-    background-color: #fae8e0;
-
     @include respond-to(sm, max) {
-        padding: 40px 1rem !important;
+        padding-block: 0.5rem;
     }
 
-    &__name {
-        font-weight: 800 !important;
-        font-family: $font-title !important;
-    }
-
-    &__name,
-    &__version, 
-    &__copyright {
-        color: $color-text !important;
-    }
-
-    &__social {
-        gap: 5px;
+    &__logo {
+        width: 8%;
 
         @include respond-to(sm, max) {
-            margin: 1.5rem 0;
-            justify-content: $center !important;
+            width: 15% !important;
         }
-
-        a {
-
-            &:hover,
-            &:focus,
-            &:active {
-                color: $color-text !important;
-            }
-
-            i {
-                font-size: 22px;
-                color: $color-text;
-            }
-        }
-    }
-    &__version {
-        font-weight: 500 !important;
-        margin: 10px 0;
-        font-family: $font-text !important;
     }
 
     &__copyright {
-        font-size: 14px !important;
+        font-size: 12px !important;
     }
-
-    .col-center-sm {
-        @include respond-to(sm, max) {
-            text-align: $center !important;
-        }
-    }
-
 }

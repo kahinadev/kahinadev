@@ -7,71 +7,31 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-// =========== HERO ===========
+// =========== ABOUT ===========
 
-.ka-hero {
-    &__content {
-        @include respond-to(sm, max) {
-            padding: $zero 2rem !important;
+.ka-about {
+    h2 {
+        br {
+            @include respond-to(lg, max) {
+                display: $none !important;
+            }
         }
     }
-}
 
-#introduction {
-    @include respond-to(320px, max) {
-        height: 77vh !important;
+    p {
+        @include respond-to(sm, max) {
+            margin-bottom: 3rem !important;
+        }
     }
 }
 
 // =========== SERVICES ===========
 
 .ka-services {
-    @include respond-to(sm, max) {
-        padding: 80px $zero $zero $zero !important;
-    }
-
     h3 {
         @include respond-to(sm, max) {
-            padding: 0 2rem !important;
-        }
-    }
-
-    .ka-services__outer {
-        @include respond-to(sm, max) {
-            overflow: $hidden;
-        }
-
-        #servicesCard {
-            .col-12 {
-                @include respond-to(sm, max) {
-                    width: 88vw;
-                    flex-shrink: $zero;
-                }
-            }
-        }
-
-        #servicesCard.has-hover {
-            .ka-card:not(.is-hovered) {
-                transform: scale(0.97);
-                filter: brightness(0.45) blur(1px);
-            }
-        }
-
-        .bg-primary,
-        .bg-secondary {
-
-            .ka-card__name,
-            .ka-card__desc,
-            .ka-card__label, 
-            .ka-card__back-label {
-                color: $color-background !important;
-            }
-        }
-    }
-
-    .col-button {
-        @include respond-to(sm, max) {
-            margin-top: 1rem !important;
+            margin-bottom: 1rem !important;
+            padding-block: 0.5rem !important;
         }
     }
 }
@@ -79,11 +39,15 @@
 // =========== PROJECTS ===========
 
 .ka-projects {
-    .ka-padding-section {
-        padding-top: 40px;
+    transform: translateZ(0);
 
+    @include respond-to(sm, max) {
+        padding: 30px 0 80px 0 !important;
+    }
+
+    .container {
         @include respond-to(sm, max) {
-            padding-top: 20px !important;
+            padding-block: 0.5rem !important;
         }
     }
 }

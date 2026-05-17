@@ -11,14 +11,6 @@
 
 .ka-h-100 {
     height: 100vh;
-
-    @include respond-to(sm, max) {
-        height: 100vh !important;
-    }
-
-    @include respond-to(lg, max) {
-        height: 70vh;
-    }
 }
 
 // =========== PADDING ===========
@@ -29,6 +21,12 @@
     @include respond-to(sm, max) {
         padding: $padding-mobile !important;
     }
+}
+
+// =========== TEXT ALIGN ===========
+
+.text-justify {
+    text-align: justify;
 }
 
 // =========== BORDER RADIUS ===========
@@ -43,6 +41,12 @@
 
 .ka-radius-lg {
     border-radius: $border-r-lg;
+}
+
+// =========== COLOR ===========
+
+.text-primary {
+    color: $color-primary !important;
 }
 
 // =========== BACKGROUND ===========

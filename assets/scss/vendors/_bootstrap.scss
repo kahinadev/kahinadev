@@ -7,16 +7,24 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
+// =========== COLOR ===========
+
+.text-light {
+    color: $color-text !important;
+}
+
+.text-dark {
+    color: $color-background !important;
+}
+
 // =========== BACKGROUND ===========
 
 .bg-light {
-    background-color: $color-background !important;
+    background-color: $color-text !important;
 }
 
 .bg-dark {
-    background-color: $color-text !important;
-
-    
+    background-color: $color-background !important;
 }
 
 .bg-primary {
@@ -25,4 +33,8 @@
 
 .bg-secondary {
     background-color: $color-secondary !important;
+}
+
+.bg-transparent {
+    background-color: transparent !important;
 }

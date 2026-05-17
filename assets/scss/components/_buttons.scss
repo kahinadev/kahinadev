@@ -9,10 +9,22 @@
 
 // =========== BASE ===========
 
-.ka-btn {
+.ka-btn,
+.ka-btn-contact,
+.ka-btn-language {
     @include button;
-    border-color: $color-primary !important;
+    border-color: $color-text !important;
     background-color: $color-background;
+
+    &__label,
+    .name {
+        @include label;
+    }
+}
+
+// =========== BUTTON ===========
+
+.ka-btn {
     transition: color 0.45s ease, border-color 0.45s ease;
 
     &::before {
@@ -45,7 +57,7 @@
 
     &__label {
         z-index: 1;
-        color: $color-primary;
+        color: $color-text;
         @include label;
         padding-left: calc($btn-dot-size + $btn-gap);
         transition: padding 0.6s cubic-bezier(0.16, 1, 0.3, 1);
@@ -61,9 +73,33 @@
         height: $btn-dot-size;
         pointer-events: $none;
         transform: translateY(-58%);
-        background-color: $color-primary;
+        background-color: $color-text;
         transition:
             left 0.6s cubic-bezier(0.16, 1, 0.3, 1),
             background 0.4s ease;
+    }
+}
+
+// =========== CONTACT BUTTON ===========
+
+.ka-btn-contact {
+    width: $width-full !important;
+    transition: all 0.3s ease-in-out;
+    border-color: $color-secondary !important;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: $color-secondary !important;
+
+        i, 
+        span {
+            color: $color-background !important;
+        }
+    }
+
+    i, 
+    span {
+        color: $color-secondary;
     }
 }

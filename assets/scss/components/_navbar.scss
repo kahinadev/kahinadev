@@ -9,50 +9,32 @@
 
 // =========== BASE ===========
 
-.ka-navigation {
-    z-index: 8;
-    width: $width-full !important;
-
-    &__home,
-    &__burger {
-        @include respond-to(lg, max) {
-            width: 50% !important;
-        }
-    }
-
-    &__home {
-        @include respond-to(lg, max) {
-            text-align: $left !important;
-        }
-    }
-
+.ka-nav {
     &__burger {
         gap: $burger-gap;
 
         &:hover,
         &:focus,
         &:active {
-            .line {
+            .icon__line {
 
                 &:nth-child(1),
-                &:nth-child(2),
-                &:nth-child(3) {
-                    transition: all 0.5s ease-in-out;
-                    width: $width-line-icon-three !important;
+                &:nth-child(2) {
+                    transition: all 0.3s ease-in-out;
+                    width: $width-line-icon-two !important;
+                    background-color: $color-secondary !important;
                 }
             }
-
-            .burger-name {
-                color: $color-accent !important;
-            }
         }
+    }
 
-        .line {
+    .icon {
+        &__line {
             height: $height-icon;
-            background-color: $color-accent;
+            background-color: $color-text !important;
             transition:
                 background 0.35 ease,
-                transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.3s cubic-bezier(0.3, 0, 0.2, 1),
                 opacity 0.3s ease,
                 width 0.3s ease;
 
@@ -64,21 +46,8 @@
                 width: $width-line-icon-two;
             }
 
-            &:nth-child(3) {
-                width: $width-line-icon-three;
-            }
-
             &:not(:last-child) {
                 margin-bottom: $bottom-line-icon;
-            }
-        }
-
-        .burger-name {
-            font-size: 18px;
-            color: $color-accent;
-
-            strong {
-                font-weight: 900 !important;
             }
         }
     }

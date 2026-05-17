@@ -13,16 +13,15 @@
     top: $zero;
     left: $zero;
     z-index: 150;
-    opacity: $zero;
-    width: 350px;
+    width: 480px;
     height: $height-full;
     max-width: $width-full;
     pointer-events: $none;
+    opacity: $zero;
     overflow-y: $auto;
     overflow-x: $hidden;
     visibility: $hidden;
     transform: translateX(-100%);
-    border-color: $border-color !important;
     transition: transform 0.6s ease, opacity 0.4s ease;
 
     @include respond-to(sm, max) {
@@ -30,8 +29,33 @@
     }
 
     @include respond-to(lg, max) {
-        width: 480px;
         right: $zero !important;
+    }
+
+    &__header,
+    &__footer {
+        border-width: 0.8px !important;
+    }
+
+    &__header {
+        border-bottom-color: $color-background !important;
+
+        span {
+            font-size: 18px;
+        }
+
+        span,
+        i {
+            color: $color-background;
+        }
+
+        .ka-sidebar__close {
+            background-color: transparent !important;
+
+            i {
+                font-size: 22px;
+            }
+        }
     }
 
     &__inner {
@@ -39,63 +63,35 @@
         height: $height-full !important;
     }
 
-    &__header {
-        border-width: 0.8px !important;
-        border-color: $border-color !important;
-
-        span,
-        i {
-            color: $color-accent;
-            font-size: 22px;
-        }
-
-        i {
-            margin-right: -5px;
-
-            @include respond-to(lg, max) {
-                font-size: 32px;
-            }
-        }
-    }
-
-    &__menu {
-        height: 98%;
-        padding-left: 2rem;
-    }
-
     &__body {
         flex: 1;
         width: $width-full;
 
-        .ka-item {
-            &:not(:last-child) {
-                margin-bottom: 5px;
+        .ka-sidebar__menu {
+            width: $width-full;
+            padding-left: 2rem !important;
+
+            @include respond-to(sm, max) {
+                
+                height: 92% !important;
             }
 
-            .ka-link {
-                @include link;
-
-                &:hover,
-                &:active,
-                &:focus {
-                    color: $color-secondary !important;
-                    transition: all 0.3s ease-in-out;
-                }
+            @include respond-to(md, min) {
+                height: 96%;
             }
+        }
+
+        .ka-link {
+            @include link;
         }
     }
 
-    &__close {
-        border: $none !important;
-        background-color: transparent !important;
-    }
-
     &__footer {
-        border-color: $border-color !important;
+        border-top-color: $color-background !important;
 
         a {
             font-size: 15px;
-            color: $color-accent;
+            color: $color-background;
         }
     }
 

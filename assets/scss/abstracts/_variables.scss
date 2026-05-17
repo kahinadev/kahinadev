@@ -4,11 +4,12 @@
 
 // =========== COLORS ===========
 
-$color-text: #2C2725;
-$color-background: #FDF6F0;
-$color-primary: #8C2808;
-$color-secondary: #C4380A;
+$color-text: #F0EEFF;
+$color-background: #080808;
+$color-primary: #9333EA;
+$color-secondary: #C084FC;
 $color-accent: #FF5C35;
+$color-border: #ee8970a2;
 
 // =========== RESPONSIVE ===========
 
@@ -24,16 +25,16 @@ $breakpoints: (
 
 // =========== RADIUS ===========
 
-$border-r-sm: 0.5rem; // tags, badges
-$border-r-md: 1rem; // buttons
-$border-r-lg: 2rem; // nav, images, cards
+$border-r-sm: 0.5rem;
+$border-r-md: 1rem; 
+$border-r-lg: 2rem; 
 
 // =========== BORDER ===========
 
 $border-width: 1px; 
 $border-type: solid; 
 $border-radius: $border-r-lg;
-$border-color: rgba($color-accent, 0.6);
+$border-color: $color-accent;
 $border: $border-width $border-type $border-radius;
 $border-positions: top, bottom, left, right, all; 
 
@@ -66,7 +67,6 @@ $height-icon: 2px;
 $bottom-line-icon: 5px;
 $width-line-icon-one: 16px; 
 $width-line-icon-two: 22px;
-$width-line-icon-three: 32px;
 
 // =========== OVERFLOW ===========
 
@@ -85,8 +85,8 @@ $width-badge-n-tags: calc(50% - 7.5px);
 
 // =========== FONTS ===========
 
-$font-title: "Basteleur";
-$font-text: "Satoshi", sans-serif;
+$font-title: "Boxing";
+$font-text: "Supreme", sans-serif;
 
 // =========== BREAK ===========
 
@@ -121,6 +121,8 @@ $badge-padding: 15px 20px;
 $marquee-gap: 1.2rem;
 $marquee-dot-width: 50px;
 $marquee-dot-height: 50px;
+$marquee-dot-width-mobile: 30px; 
+$marquee-dot-height-mobile: 30px;
 $marquee-dot-radius: 50%;
 $marquee-padding: $zero 0.28em;
 
@@ -131,15 +133,11 @@ $language-bottom: 1rem;
 
 // =========== SECTION ===========
 
-$padding-mobile: 80px 1rem; 
+$padding-mobile: 80px 0.5rem; 
 
 // =========== CARD ===========
 
 $card-gap: 8px;
 $card-transition: 0.30s ease;
-
-// =========== ARROW ===========
-
-$arrow-gap: 10px;
-$arrow-slide-width: 42px;
-$arrow-slide-height: 42px;
+$transition-base: 300ms ease;
+$transition-slow: 500ms cubic-bezier(0.16, 1, 0.3, 1);

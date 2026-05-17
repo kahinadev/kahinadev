@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet n°1 - Portfolio</title>
+    <meta name="description"
+        content="Développeuse front-end et UI/UX basée en Île-de-France, je transforme vos idées en interfaces soignées, performantes et mémorables.">
+    <meta name="keywords" content="développeuse front-end freelance, intégratrice web, création site web WordPress, 
+    développeuse HTML CSS JavaScript, designer UI/UX, freelance développement web">
+
+    <!-- OPEN GRAPH-->
+    <meta property="og:title" content="KahinaDev | Développeuse Front-End & Designer UI/UX" />
+    <meta property="og:description"
+        content="Développeuse front-end et UI/UX basée en Île-de-France, je transforme vos idées en interfaces soignées, performantes et mémorables." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kahinadev.github.io/kahinadev/" />
+
+    <!-- HREFLANG -->
+    <link rel="alternate" hreflang="fr" href="https://kahinadev.github.io/kahinadev/project-portfolio" />
+    <link rel="alternate" hreflang="en" href="https://kahinadev.github.io/kahinadev/en/project-portfolio" />
+
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- BOOTSTRAP -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+            crossorigin="anonymous">
+    </noscript>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header id="header" class="ka-header py-3" aria-label="Header">
+        <nav class="ka-nav">
+            <div class="container d-flex justify-content-between align-items-center">
+                <button id="burger"
+                    class="ka-nav__burger bg-transparent border-0 d-flex justify-content-end align-items-center">
+                    <div class="icon d-flex flex-column">
+                        <span class="icon__line border-r-md bg-light" aria-hidden="true"></span>
+                        <span class="icon__line border-r-md bg-light" aria-hidden="true"></span>
+                    </div>
+                </button>
+                <a class="ka-nav__logo text-center" href="index.html" aria-label="Retour à l'accueil">
+                    <img src="assets/img/logo/kahinadev-logo.webp" alt="KahinaDev">
+                </a>
+                <div class="ka-nav__contact">
+                    <a class="ka-btn border-all d-none d-lg-flex align-items-center position-relative text-decoration-none"
+                        href="https://mail.google.com/mail/u/0/#inbox" aria-label="Prendre contact">
+                        <span class="ka-btn__dot position-absolute"></span>
+                        <span class="ka-btn__label position-relative text-uppercase text-nowrap">Contact</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- SIDEBAR -->
+    <div id="ka-sidebar" class="ka-sidebar bg-secondary position-fixed" role="dialog" aria-hidden="true"
+        aria-label="Menu de navigation" aria-modal="true">
+        <div class="ka-sidebar__inner d-flex flex-column">
+            <div class="ka-sidebar__header d-flex p-3 justify-content-between align-items-center p-3 border-bottom">
+                <span class="text-uppercase"><strong>Menu</strong></span>
+                <button id="closeSidebar" class="ka-sidebar__close p-0 border-0" aria-label="Fermer le menu"
+                    aria-controls="ka-sidebar" tabindex="-1">
+                    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="ka-sidebar__body d-flex flex-column justify-content-between">
+                <div class="ka-sidebar__menu d-flex align-items-center">
+                    <ul class="list-unstyled">
+                        <li class="ka-item"><a class="ka-link text-uppercase text-decoration-none"
+                                href="index.html#introduction" tabindex="-1">Intro</a></li>
+                        <li class="ka-item"><a class="ka-link text-uppercase text-decoration-none"
+                                href="index.html#about" tabindex="-1">À propos</a></li>
+                        <li class="ka-item"><a class="ka-link text-uppercase text-decoration-none"
+                                href="index.html#services" tabindex="-1">Services</a></li>
+                        <li class="ka-item"><a class="ka-link text-uppercase text-decoration-none"
+                                href="index.html#projects" tabindex="-1">Projets</a></li>
+                        <li class="ka-item"><a class="ka-link text-uppercase text-decoration-none"
+                                href="index.html#contact" tabindex="-1">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="ka-sidebar__footer p-3 border-top d-flex justify-content-between align-items-center">
+                    <a href="https://www.behance.net/kahinadev" class="text-uppercase text-decoration-none"
+                        target="_blank" rel="noopener noreferrer" aria-label="See my Behance" tabindex="-1">
+                        <strong>Béhance</strong>
+                    </a>
+                    <a href="https://www.linkedin.com/in/kahinaouali/" class="text-uppercase text-decoration-none"
+                        target="_blank" rel="noopener noreferrer" aria-label="See my LinkedIn" tabindex="-1">
+                        <strong>LinkedIn</strong>
+                    </a>
+                    <a href="https://github.com/kahinadev" class="text-uppercase text-decoration-none" target="_blank"
+                        rel="noopener noreferrer" aria-label="See my GitHub" tabindex="-1">
+                        <strong>Github</strong>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN -->
+    <main id="main" class="main" aria-label="Main">
+        <section class="project-introduction ka-padding-section" aria-label="Introduction du projet">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 mt-5">
+                        <span class="project-introduction__service border-all ka-radius-sm text-uppercase ka-reveal-right ka-delay-3">
+                            <strong>Refonte digitale * 2026</strong>
+                        </span>
+                        <h1 class="title text-uppercase mt-5 ka-reveal-right ka-delay-3">
+                            { Portfolio }
+                        </h1>
+                        <p class="ka-reveal-right ka-delay-3">
+                            Mon ancien portfolio ne me représentait plus. Il était certes fonctionnel, mais il manquait 
+                            ce quelque chose qui fait qu'on s'en souvient. Cette refonte n'est pas juste une mise à jour 
+                            technique, c'est une prise de position. J'ai voulu créer un espace plus créatif, avec une 
+                            identité visuelle et des couleurs qui s'assument, et une atmosphère qui s'impose dès la 
+                            première seconde. 
+                        </p>
+                        <img src="assets/img/projects/portfolio/kahinadev-redesign-project.webp"
+                            class="ka-radius-lg mt-3 ka-reveal-up ka-delay-3" alt="Mockup de deux iPhones présentant le portfolio KahinaDev">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="project-colors" aria-label="Couleurs du projet">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2 class="subtitle text-uppercase mb-3 ka-reveal-right ka-delay-3">Couleurs du projet</h2>
+                        <div class="d-flex justify-content-between project-colors__bg">
+                            <span class="bg-accent ka-radius-md ka-reveal-up ka-delay-3"></span>
+                            <span class="bg-secondary ka-radius-md ka-reveal-up ka-delay-3"></span>
+                            <span class="bg-primary ka-radius-md ka-reveal-up ka-delay-3"></span>
+                            <span class="bg-light ka-radius-md ka-reveal-up ka-delay-3"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="project-universe" aria-label="Univers du projet">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="subtitle text-uppercase mb-3 ka-reveal-right ka-delay-3">
+                            Univers du projet
+                        </h3>
+                        <p class="ka-reveal-right ka-delay-3">
+                            L'univers de ce portfolio est directement inspiré de l'esthétique des 
+                            jeux vidéo. Des couleurs vives, des contrastes forts et une typographie 
+                            qui s'impose. Chaque choix visuel est pensé pour créer une atmosphère 
+                            immersive et cohérente. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid mt-3">
+                <div class="row">
+                    <div class="col-md-6 p-0">
+                        <img src="assets/img/projects/portfolio/kahinadev-before-after.webp" class="ka-reveal-up ka-delay-3" alt="Mockup de deux iPhones présentant le avant / après du portfolio">
+                    </div>
+                     <div class="col-md-6 p-0">
+                        <img src="assets/img/projects/portfolio/kahinadev-project-universe.webp" class="ka-reveal-up ka-delay-3" alt="Ville cyberpunk">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="ka-footer border-top bg-dark position-relative py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-12">
+                    <img src="assets/img/logo/kahinadev-logo.webp" class="ka-footer__logo" alt="Logo">
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <span class="ka-footer__version">V4</span>
+                    <br>
+                    <span class="ka-footer__copyright subtitle text-uppercase">© 2023-2026 KAHINADEV — Tous droits
+                        réservés</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SWITCH -->
+    <a href="en/project-portfolio.html"
+        class="ka-btn-language border-all d-flex align-items-center position-fixed text-decoration-none bg-light border-all"
+        aria-label="English">
+        <div class="ka-btn-language__label position-relative text-nowrap text-uppercase">English</div>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/website.js"></script>
+    <script src="https://kit.fontawesome.com/6744aeacbc.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

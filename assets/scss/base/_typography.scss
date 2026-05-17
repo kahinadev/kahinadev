@@ -10,52 +10,45 @@
 // =========== IMPORT FONT TITLE ===========
 
 @font-face {
-    font-family: "Basteleur";
-    src: url('../../assets/fonts/Basteleur/Basteleur-Moonlight.woff2') format('woff2'),
-        url('../../assets/fonts/Basteleur/Basteleur-Moonlight.woff') format('woff');
-    font-weight: 300;
+    font-family: "Boxing";
+    src: url('../../assets/fonts/Boxing/Boxing-Regular.woff2') format('woff2'),
+        url('../../assets/fonts/Boxing/Boxing-Regular.woff') format('woff');
+    font-weight: 400;
     font-display: swap;
 }
 
-@font-face {
-    font-family: "Basteleur";
-    src: url('../../assets/fonts/Basteleur/Basteleur-Bold.woff2') format('woff2'),
-        url('../../assets/fonts/Basteleur/Basteleur-Bold.woff') format('woff');
-    font-weight: 700;
-    font-display: swap;
-}
 
 // =========== IMPORT FONT TEXT ===========
 
 @font-face {
-    font-family: "Satoshi";
-    src: url('../../assets/fonts/Satoshi/Satoshi-Light.woff2') format('woff2'),
-        url('../../assets/fonts/Satoshi/Satoshi-Light.woff') format('woff');
+    font-family: "Supreme";
+    src: url('../../assets/fonts/Supreme/Supreme-Light.woff2') format('woff2'),
+        url('../../assets/fonts/Supreme/Supreme-Light.woff') format('woff');
     font-weight: 300;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "Satoshi";
-    src: url('../../assets/fonts/Satoshi/Satoshi-Regular.woff2') format('woff2'),
-        url('../../assets/fonts/Satoshi/Satoshi-Regular.woff') format('woff');
+    font-family: "Supreme";
+    src: url('../../assets/fonts/Supreme/Supreme-Regular.woff2') format('woff2'),
+        url('../../assets/fonts/Supreme/Supreme-Regular.woff') format('woff');
     font-weight: 400;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "Satoshi";
-    src: url('../../assets/fonts/Satoshi/Satoshi-Medium.woff2') format('woff2'),
-        url('../../assets/fonts/Satoshi/Satoshi-Medium.woff') format('woff');
-    font-weight: 500;
+    font-family: "Supreme";
+    src: url('../../assets/fonts/Supreme/Supreme-Bold.woff2') format('woff2'),
+        url('../../assets/fonts/Supreme/Supreme-Bold.woff') format('woff');
+    font-weight: 700;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "Satoshi";
-    src: url('../../assets/fonts/Satoshi/Satoshi-Bold.woff2') format('woff2'),
-        url('../../assets/fonts/Satoshi/Satoshi-Bold.woff') format('woff');
-    font-weight: 700;
+    font-family: "Supreme";
+    src: url('../../assets/fonts/Supreme/Supreme-Extrabold.woff2') format('woff2'),
+        url('../../assets/fonts/Supreme/Supreme-Extrabold.woff') format('woff');
+    font-weight: 800;
     font-display: swap;
 }
 
@@ -72,16 +65,18 @@ h6 {
 
 // =========== SIZE TITLE ===========
 
-h2 {
-    @include title(34px, 72px, 76px);
+h2, 
+.details-large {
+    @include title(40px, 72px, 100px);
 }
 
-h3 {
-    @include title(30px, 68px, 72px);
+h3, 
+.details-medium {
+    @include title(36px, 68px, 72px);
 }
 
 h4 {
-    @include title(26px, 26px, 26px);
+    @include title(25px, 30px, 30px);
 }
 
 

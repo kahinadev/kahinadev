@@ -8,19 +8,42 @@
 @use "../abstracts/mixins" as *;
 
 // =========== INTRODUCTION ===========
+.project-introduction {
+    &__service {
+        padding: $btn-padding;
+        color: $color-accent !important;
+        font-size: 14px !important;
+    }
 
-.ka-project-intro {
-    .br {
+    h1 {
         @include respond-to(sm, max) {
-            display: $none;
+            font-size: 39px !important;
+            margin-top: 2.5rem !important;
         }
     }
 }
 
-// =========== IDENTITY ===========
+.project-colors {
+    &__bg {
+        gap: 15px;
+        margin-top: 1rem;
 
-.ka-project-identity {
-    .ka-padding-section {
-        padding-bottom: $zero !important;
+        @include respond-to(sm, max) {
+            flex-wrap: wrap;
+
+            span {
+                width: calc(50% - 8px) !important;
+            }
+        }
+
+        span {
+            width: 25%;
+            height: 50px;
+            padding: 5rem;
+        }
     }
+}
+
+.project-universe {
+    padding-top: 80px;
 }

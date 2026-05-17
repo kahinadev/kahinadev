@@ -10,37 +10,14 @@
 // =========== GENERAL ===========
 
 .ka-marquee {
-    gap: $marquee-gap;
-    height: 65vh;
-    min-height: 240px;
+    width: $width-full;
     overflow: $hidden;
-
-    @include respond-to(sm, max) {
-        height: 45vh !important;
-    }
-
-    @include respond-to(lg, max) {
-        height: 40vh;
-        margin-bottom: -4rem !important;
-    }
-
-    .row-1 .ka-marquee__item {
-        color: $color-primary;
-    }
-
-    .row-2 .ka-marquee__item {
-        color: transparent;
-        -webkit-text-stroke: 4px $color-accent;
-    }
-
-    &__wrapper {
-        gap: $marquee-gap;
-        width: 120%;
-        margin-left: -10%;
-        transform: rotate(-6deg);
-    }
+    display: $flex;
+    gap: 1rem;
+    padding-block: 16px;
 
     &__track {
+        width: $width-full;
         overflow: $hidden;
     }
 
@@ -49,15 +26,13 @@
     }
 
     &__item {
-        line-height: 1;
-        flex-shrink: $zero;
         align-items: $center;
+        line-height: 1;
+        flex-shrink: 0;
         display: inline-flex;
-        text-transform: uppercase;
-        font-weight: 700 !important;
-        padding: $marquee-padding;
         font-family: $font-title;
-        font-size: clamp(4rem, 9vw, 8.5rem) !important;
+        text-transform: uppercase;
+        font-size: clamp(3rem, 8vw, 8rem);
     }
 
     &__dot {
@@ -70,5 +45,21 @@
         position: $relative;
         background: $color-accent;
         vertical-align: middle;
+
+        @include respond-to(sm, max) {
+            margin: $zero 1.6em !important;
+            width: $marquee-dot-width-mobile !important;
+            height: $marquee-dot-height-mobile !important;
+        }
+    }
+}
+
+.ka-marquee__row {
+    &--1 .ka-marquee__item {
+        color: $color-text;
+    }
+
+    &--2 .ka-marquee__item {
+        color: $color-primary;
     }
 }

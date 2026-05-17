@@ -10,58 +10,58 @@
 // =========== BASE ===========
 
 .ka-hero {
-    // @include respond-to(320px, max) {
-    //     padding-top: $zero !important;
-    // }
+    padding-top: 10rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-image: url("../../../../htdocs/kahinadev/assets/img/banner/kahinadev-background-banner.webp");
 
     @include respond-to(sm, max) {
-        padding-top: 60px;
-        display: inherit !important;
+        padding: 7rem 0.5rem 0rem 0.5rem !important;
     }
 
-    &__content {
+    .title {
         @include respond-to(sm, max) {
-            text-align: $center;
+            line-height: 1 !important;
         }
-    }
 
-    &__btn {
-        @include respond-to(sm, max) {
-            display: $flex !important;
-            justify-content: $center !important;
+        br {
+            display: $none;
+
+            @include respond-to(sm, max) {
+                display: $block !important;
+            }
         }
     }
 
     &__img {
-        right: $zero;
-        overflow-x: $hidden;
-    }
+        top: 8rem;
+        width: 45%;
+        margin-left: 10rem;
+        height: $height-full;
+        position: $fixed !important;
 
-    .ka-img-desktop {
-        top: $zero;
-        right: -1.5rem;
-        width: 86%;
+        @include respond-to(sm, max) {
+            right: 2rem !important;
+            top: 4rem !important;
+            width: 85% !important;
+            height: $height-full !important;
+        }
 
         @include respond-to(lg, max) {
-            top: 4px;
-            right: -6rem;
-            height: 950px;
+            top: 0rem;
             width: $width-full;
+            margin-left: -5rem !important;
         }
     }
 
-    .ka-img-mobile {
-        @include respond-to(sm, max) {
-            margin-top: 2rem;
-            bottom: 0;
-            height: 520px !important;
-            position: $relative !important;
-        }
-    }
+    .scroll-indicator {
+        bottom: 50px;
+        position: $absolute;
 
-    #ka-hero-img-mobile {
-        @include respond-to(320px, max) {
-            display: $none !important;
+        span {
+            font-weight: 800;
+            color: $color-accent;
         }
     }
 }

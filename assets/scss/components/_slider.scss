@@ -1,0 +1,61 @@
+// ===============================================
+// SLIDER
+// ===============================================
+
+// =========== VARIABLES ===========
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// =========== BASE ===========
+
+.ka-slider {
+    padding-block: 2rem;
+    overflow: $hidden;
+
+    &__card {
+        opacity: 0.4;
+        flex: 0 0 clamp(260px, 70vw, 420px);
+        transform: scale(0.92);
+        transition: opacity $transition-slow, transform $transition-slow;
+
+        &.is-active {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+}
+
+.ka-slider__track {
+    gap: 1.5rem;
+    cursor: grab;
+    padding-inline: 2rem;
+    user-select: $none;
+    will-change: transform;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+
+    &.is-dragging {
+        cursor: grabbing;
+        transition: $none;
+    }
+}
+
+.ka-slider__dots {
+    gap: 15px;
+    margin-top: 2rem;
+}
+
+.ka-slider__dot {
+    width: 50px;
+    height: 10px;
+    border-radius: 18px;
+    border: $none;
+    cursor: pointer;
+    background: rgba($color-accent, 0.2);
+    transition: background $transition-base, width $transition-base;
+
+    &.is-active {
+        width: 34px;
+        background-color: $color-accent;
+    }
+}
