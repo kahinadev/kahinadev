@@ -11,7 +11,7 @@
 
 .ka-footer {
     @include respond-to(sm, max) {
-        padding-block: 0.5rem;
+        padding: 1rem;
     }
 
     &__logo {

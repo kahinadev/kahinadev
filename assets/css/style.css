@@ -438,7 +438,7 @@ strong {
 
 @media (max-width: 576px) {
   .ka-footer {
-    padding-block: 0.5rem;
+    padding: 1rem;
   }
 }
 .ka-footer__logo {
@@ -599,9 +599,8 @@ strong {
 }
 @media (max-width: 576px) {
   .ka-hero__img {
-    right: 2rem !important;
+    right: 0rem !important;
     top: 4rem !important;
-    width: 85% !important;
   }
 }
 @media (max-width: 992px) {

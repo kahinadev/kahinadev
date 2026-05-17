@@ -42,9 +42,8 @@
         position: $fixed !important;
 
         @include respond-to(sm, max) {
-            right: 2rem !important;
+            right: 0rem !important;
             top: 4rem !important;
-            width: 85% !important;
         }
 
         @include respond-to(lg, max) {
