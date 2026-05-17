@@ -14,7 +14,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
-    background-image: url("../../../../htdocs/kahinadev/assets/img/banner/kahinadev-background-banner.webp");
+    background-image: url("../../assets/img/banner/kahinadev-background-banner.webp");
 
     @include respond-to(sm, max) {
         padding: 7rem 0.5rem 0rem 0.5rem !important;
@@ -38,14 +38,13 @@
         top: 8rem;
         width: 45%;
         margin-left: 10rem;
-        height: $height-full;
+        height: 100vh;
         position: $fixed !important;
 
         @include respond-to(sm, max) {
             right: 2rem !important;
             top: 4rem !important;
             width: 85% !important;
-            height: $height-full !important;
         }
 
         @include respond-to(lg, max) {

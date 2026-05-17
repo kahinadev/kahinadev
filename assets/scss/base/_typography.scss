@@ -67,12 +67,12 @@ h6 {
 
 h2, 
 .details-large {
-    @include title(40px, 72px, 100px);
+    @include title(37px, 72px, 100px);
 }
 
 h3, 
 .details-medium {
-    @include title(36px, 68px, 72px);
+    @include title(31px, 68px, 72px);
 }
 
 h4 {
