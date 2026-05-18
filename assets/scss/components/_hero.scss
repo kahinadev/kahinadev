@@ -14,7 +14,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
-    background-image: url("../../assets/img/banner/kahinadev-background-banner.webp");
+    background-image: url("../../assets/img/banner/kahinadev-background-cyberpunk-banner.webp");
 
     @include respond-to(sm, max) {
         padding: 7rem 0.5rem 0rem 0.5rem !important;
@@ -44,6 +44,7 @@
         @include respond-to(sm, max) {
             right: 0rem !important;
             top: 4rem !important;
+            height: 120vh !important;
         }
 
         @include respond-to(lg, max) {

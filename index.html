@@ -57,10 +57,11 @@
         <nav class="ka-nav">
             <div class="container d-flex justify-content-between align-items-center">
                 <button id="burger"
-                    class="ka-nav__burger bg-transparent border-0 d-flex justify-content-end align-items-center">
+                    class="ka-nav__burger bg-transparent border-0 d-flex justify-content-end align-items-center"
+                    aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="ka-sidebar">
                     <div class="icon d-flex flex-column">
-                        <span class="icon__line border-r-md bg-light" aria-hidden="true"></span>
-                        <span class="icon__line border-r-md bg-light" aria-hidden="true"></span>
+                        <span class="icon__line border-r-md bg-light ka-radius-md" aria-hidden="true"></span>
+                        <span class="icon__line border-r-md bg-light ka-radius-md" aria-hidden="true"></span>
                     </div>
                 </button>
                 <a class="ka-nav__logo text-center" href="index.html" aria-label="Retour à l'accueil">
@@ -130,7 +131,7 @@
                         <h1 class="title text-uppercase text-center">
                             { Kahina<br>Dev }
                         </h1>
-                        <img src="assets/img/portrait/kahinadev-cyberpunk-portrait.webp" class="ka-hero__img" alt="">
+                        <img src="assets/img/portrait/kahinadev-cyberpunk-portrait-woman.webp" class="ka-hero__img" alt="Portrait cyberpunk de KahinaDev">
                     </div>
                     <div class="col-lg-12">
                         <a href="#about" class="scroll-indicator text-decoration-none">
@@ -268,8 +269,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-12 ka-reveal-up ka-delay-3">
-                        <a href="project-portfolio.html" class="ka-card__project text-decoration-none position-relative bg-transparent">
-                            <img src="assets/img/projects/portfolio/kahinadev-redesign-project.webp"
+                        <a href="project-portfolio.html"
+                            class="ka-card__project text-decoration-none position-relative bg-transparent">
+                            <img src="assets/img/projects/portfolio/kahinadev-redesign-project-portfolio.webp"
                                 class="ka-radius-lg" alt="Mockup de deux iPhones présentant le portfolio KahinaDev">
                             <div class="ka-card-project__content mt-3 d-flex justify-content-between">
                                 <span class="infos text-uppercase text-light">
@@ -359,6 +361,8 @@
         integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
         crossorigin="anonymous"></script>
     <script src="assets/js/website.js"></script>
+    <script src="assets/js/slide.js"></script>
+    <script src="assets/js/titles.js"></script>
     <script src="https://kit.fontawesome.com/6744aeacbc.js" crossorigin="anonymous"></script>
 </body>
 

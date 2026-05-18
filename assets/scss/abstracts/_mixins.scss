@@ -41,7 +41,7 @@
 
 // =========== TITLE ===========
 
-@mixin title($size-mobile: 54px, $size-tablet: 68px, $size-desktop: 110px, $title-weight: 900, $line-height: 1.2) {
+@mixin title($size-mobile: 54px, $size-tablet: 68px, $size-desktop: 98px, $title-weight: 900, $line-height: 1.2) {
     font-size: $size-desktop;
     color: $color-text;
     word-break: $break-word;

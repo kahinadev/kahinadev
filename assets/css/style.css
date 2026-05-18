@@ -141,7 +141,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-size: 110px;
+  font-size: 98px;
   color: #F0EEFF;
   word-break: break-word;
   font-weight: 900;
@@ -323,7 +323,7 @@ strong {
 }
 .ka-header .ka-nav__logo img {
   width: 5%;
-  margin-left: 4rem;
+  margin-left: 2rem;
 }
 @media (max-width: 576px) {
   .ka-header .ka-nav__logo img {
@@ -458,7 +458,7 @@ strong {
 }
 .ka-nav__burger:hover .icon__line:nth-child(1), .ka-nav__burger:hover .icon__line:nth-child(2), .ka-nav__burger:focus .icon__line:nth-child(1), .ka-nav__burger:focus .icon__line:nth-child(2), .ka-nav__burger:active .icon__line:nth-child(1), .ka-nav__burger:active .icon__line:nth-child(2) {
   transition: all 0.3s ease-in-out;
-  width: 22px !important;
+  width: 50px !important;
   background-color: #C084FC !important;
 }
 .ka-nav .icon__line {
@@ -467,10 +467,10 @@ strong {
   transition: background 0.35 ease, transform 0.3s cubic-bezier(0.3, 0, 0.2, 1), opacity 0.3s ease, width 0.3s ease;
 }
 .ka-nav .icon__line:nth-child(1) {
-  width: 16px;
+  width: 50px;
 }
 .ka-nav .icon__line:nth-child(2) {
-  width: 22px;
+  width: 40px;
 }
 .ka-nav .icon__line:not(:last-child) {
   margin-bottom: 5px;
@@ -570,7 +570,7 @@ strong {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
-  background-image: url("../../assets/img/banner/kahinadev-background-banner.webp");
+  background-image: url("../../assets/img/banner/kahinadev-background-cyberpunk-banner.webp");
 }
 @media (max-width: 576px) {
   .ka-hero {
@@ -601,6 +601,7 @@ strong {
   .ka-hero__img {
     right: 0rem !important;
     top: 4rem !important;
+    height: 120vh !important;
   }
 }
 @media (max-width: 992px) {
@@ -741,7 +742,7 @@ strong {
 }
 
 .ka-btn-language {
-  left: 1rem;
+  right: 1rem;
   bottom: 20px;
   z-index: 5;
 }
