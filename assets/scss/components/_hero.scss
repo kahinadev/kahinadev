@@ -49,7 +49,7 @@
 
         @include respond-to(lg, max) {
             top: 0rem;
-            width: $width-full;
+            width: $width-full !important;
             margin-left: -5rem !important;
         }
     }

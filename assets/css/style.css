@@ -266,6 +266,11 @@ strong {
 .ka-h-100 {
   height: 100vh;
 }
+@media (max-width: 576px) {
+  .ka-h-100 {
+    height: 90vh !important;
+  }
+}
 
 .ka-padding-section {
   padding: 120px 0;
@@ -607,7 +612,7 @@ strong {
 @media (max-width: 992px) {
   .ka-hero__img {
     top: 0rem;
-    width: 100%;
+    width: 100% !important;
     margin-left: -5rem !important;
   }
 }

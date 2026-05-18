@@ -11,6 +11,10 @@
 
 .ka-h-100 {
     height: 100vh;
+
+    @include respond-to(sm, max) {
+        height: 90vh !important;
+    }
 }
 
 // =========== PADDING ===========
