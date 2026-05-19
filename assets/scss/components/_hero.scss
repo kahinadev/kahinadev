@@ -39,6 +39,7 @@
         width: 45%;
         margin-left: 10rem;
         height: 100vh;
+        aspect-ratio: 4/5;
         position: $fixed !important;
 
         @include respond-to(sm, max) {

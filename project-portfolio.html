@@ -4,22 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet n°1 - Portfolio</title>
+
+    <!-- GOOGLE ANALYTICS -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MBNQHYEXHX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-MBNQHYEXHX');
+    </script>
+
+    <!-- TITLE & META SEO -->
+    <title>Portfolio KahinaDev | Refonte digitale 2026</title>
     <meta name="description"
-        content="Développeuse front-end et UI/UX basée en Île-de-France, je transforme vos idées en interfaces soignées, performantes et mémorables.">
+        content="Découvrez la refonte du portfolio de KahinaDev, développeuse front-end et designer UI/UX. Une identité visuelle inspirée de l'esthétique des jeux vidéo.">
     <meta name="keywords" content="développeuse front-end freelance, intégratrice web, création site web WordPress, 
     développeuse HTML CSS JavaScript, designer UI/UX, freelance développement web">
+    <link rel="canonical" href="https://www.kahinadev.com/project-portfolio.html">
 
-    <!-- OPEN GRAPH-->
-    <meta property="og:title" content="KahinaDev | Développeuse Front-End & Designer UI/UX" />
+    <!-- HREFLANG-->
+    <link rel="alternate" hreflang="fr" href="https://www.kahinadev.com/project-portfolio.html" />
+    <link rel="alternate" hreflang="en" href="https://www.kahinadev.com/en/project-portfolio.html" />
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="Portfolio KahinaDev | Refonte digitale 2026" />
     <meta property="og:description"
-        content="Développeuse front-end et UI/UX basée en Île-de-France, je transforme vos idées en interfaces soignées, performantes et mémorables." />
+        content="Découvrez la refonte du portfolio de KahinaDev, développeuse front-end et designer UI/UX. Une identité visuelle inspirée de l'esthétique des jeux vidéo." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://kahinadev.github.io/kahinadev/" />
-
-    <!-- HREFLANG -->
-    <link rel="alternate" hreflang="fr" href="https://kahinadev.github.io/kahinadev/project-portfolio" />
-    <link rel="alternate" hreflang="en" href="https://kahinadev.github.io/kahinadev/en/project-portfolio" />
+    <meta property="og:url" content="https://www.kahinadev.com/project-portfolio.html" />
+    <meta property="og:image"
+        content="https://www.kahinadev.com/assets/img/open-graph/kahinadev-open-graph-image.jpg" />
 
     <!-- FAVICON -->
     <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
@@ -39,15 +54,13 @@
     <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
-    <!-- BOOTSTRAP -->
+    <!-- BOOTSTRAP & CSS -->
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" as="style"
         onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
     <noscript>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
             crossorigin="anonymous">
     </noscript>
-
-    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -56,7 +69,7 @@
     <header id="header" class="ka-header py-3" aria-label="Header">
         <nav class="ka-nav">
             <div class="container d-flex justify-content-between align-items-center">
-                  <button id="burger"
+                <button id="burger"
                     class="ka-nav__burger bg-transparent border-0 d-flex justify-content-end align-items-center"
                     aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="ka-sidebar">
                     <div class="icon d-flex flex-column">
@@ -128,21 +141,23 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 mt-5">
-                        <span class="project-introduction__service border-all ka-radius-sm text-uppercase ka-reveal-right ka-delay-3">
+                        <span
+                            class="project-introduction__service border-all ka-radius-sm text-uppercase ka-reveal-right ka-delay-3">
                             <strong>Refonte digitale * 2026</strong>
                         </span>
                         <h1 class="title text-uppercase mt-5 ka-reveal-right ka-delay-3">
                             { Portfolio }
                         </h1>
                         <p class="ka-reveal-right ka-delay-3">
-                            Mon ancien portfolio ne me représentait plus. Il était certes fonctionnel, mais il manquait 
-                            ce quelque chose qui fait qu'on s'en souvient. Cette refonte n'est pas juste une mise à jour 
-                            technique, c'est une prise de position. J'ai voulu créer un espace plus créatif, avec une 
-                            identité visuelle et des couleurs qui s'assument, et une atmosphère qui s'impose dès la 
-                            première seconde. 
+                            Mon ancien portfolio ne me représentait plus. Il était certes fonctionnel, mais il manquait
+                            ce quelque chose qui fait qu'on s'en souvient. Cette refonte n'est pas juste une mise à jour
+                            technique, c'est une prise de position. J'ai voulu créer un espace plus créatif, avec une
+                            identité visuelle et des couleurs qui s'assument, et une atmosphère qui s'impose dès la
+                            première seconde.
                         </p>
                         <img src="assets/img/projects/portfolio/kahinadev-redesign-project-portfolio.webp"
-                            class="ka-radius-lg mt-3 ka-reveal-up ka-delay-3" alt="Mockup de deux iPhones présentant le portfolio KahinaDev">
+                            class="ka-radius-lg mt-3 ka-reveal-up ka-delay-3"
+                            alt="Mockup de deux iPhones présentant le portfolio KahinaDev">
                     </div>
                 </div>
             </div>
@@ -170,10 +185,10 @@
                             Univers du projet
                         </h3>
                         <p class="ka-reveal-right ka-delay-3">
-                            L'univers de ce portfolio est directement inspiré de l'esthétique des 
-                            jeux vidéo. Des couleurs vives, des contrastes forts et une typographie 
-                            qui s'impose. Chaque choix visuel est pensé pour créer une atmosphère 
-                            immersive et cohérente. 
+                            L'univers de ce portfolio est directement inspiré de l'esthétique des
+                            jeux vidéo. Des couleurs vives, des contrastes forts et une typographie
+                            qui s'impose. Chaque choix visuel est pensé pour créer une atmosphère
+                            immersive et cohérente.
                         </p>
                     </div>
                 </div>
@@ -181,7 +196,9 @@
             <div class="container-fluid mt-3">
                 <div class="row">
                     <div class="col-md-6 p-0">
-                        <img src="assets/img/projects/portfolio/kahinadev-project-portfolio-before-after.webp" class="ka-reveal-up ka-delay-3" alt="Mockup de deux iPhones présentant le avant / après du portfolio">
+                        <img src="assets/img/projects/portfolio/kahinadev-project-portfolio-before-after.webp"
+                            class="ka-reveal-up ka-delay-3"
+                            alt="Mockup de deux iPhones présentant le avant / après du portfolio">
                     </div>
                     <div class="col-md-6 p-0">
                         <img src="assets/img/projects/portfolio/kahinadev-project-portfolio-moodboard.webp"
@@ -228,14 +245,33 @@
         <div class="ka-btn-language__label position-relative text-nowrap text-uppercase">English</div>
     </a>
 
+    <!-- BOOTSTRAP JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
         integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
         crossorigin="anonymous"></script>
+
+    <!-- PERSONAL JS -->
     <script src="assets/js/website.js"></script>
     <script src="https://kit.fontawesome.com/6744aeacbc.js" crossorigin="anonymous"></script>
+
+    <!-- SCHEMA.ORG -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org", 
+            "@type": "CreativeWork", 
+            "name": "Portfolio KahinaDev | Refonte digitale 2026", 
+            "url": "https://www.kahinadev.com/project-portfolio.html",
+            "author": {
+                "@type": "Person", 
+                "name": "Kahina", 
+                "url": "https://www.kahinadev.com"
+            },
+            "description": "Refonte complète du portfolio de KahinaDev, inspirée de l'esthétique des jeux vidéo."
+        }
+    </script>
 </body>
 
 </html>

@@ -19,7 +19,7 @@
     }
 
     p {
-        @include respond-to(sm, max) {
+        @include respond-to(lg, max) {
             margin-bottom: 3rem !important;
         }
     }
