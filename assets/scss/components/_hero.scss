@@ -59,6 +59,10 @@
         bottom: 50px;
         position: $absolute;
 
+        @include respond-to(sm, max) {
+            bottom: 60px !important;
+        }
+
         span {
             font-weight: 800;
             color: $color-accent;

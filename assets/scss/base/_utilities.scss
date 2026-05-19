@@ -10,7 +10,11 @@
 // =========== HERO ===========
 
 .ka-h-100 {
-    height: 100vh;
+    height: 100svh;
+
+    @include respond-to(sm, max) {
+        height: 96svh !important;
+    }
 }
 
 // =========== PADDING ===========
