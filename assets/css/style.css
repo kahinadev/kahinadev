@@ -298,7 +298,7 @@ strong {
 }
 
 .text-primary {
-  color: #9333EA !important;
+  color: #9B66CC !important;
 }
 
 .bg-accent {
@@ -327,18 +327,22 @@ strong {
   }
 }
 .ka-header .ka-nav__logo img {
-  width: 5%;
-  margin-left: 2rem;
+  width: 80%;
 }
 @media (max-width: 576px) {
   .ka-header .ka-nav__logo img {
-    width: 15% !important;
-    margin-left: 0 !important;
+    width: 80% !important;
+    margin-left: -1rem !important;
   }
 }
 @media (max-width: 992px) {
   .ka-header .ka-nav__logo img {
-    width: 8%;
+    width: 100% !important;
+  }
+}
+@media (max-width: 992px) {
+  .ka-header .ka-nav__contact {
+    display: none !important;
   }
 }
 
@@ -370,15 +374,12 @@ strong {
 .ka-sidebar__header, .ka-sidebar__footer {
   border-width: 0.8px !important;
 }
-.ka-sidebar__header {
-  border-bottom-color: #080808 !important;
-}
 .ka-sidebar__header span {
   font-size: 18px;
 }
 .ka-sidebar__header span,
 .ka-sidebar__header i {
-  color: #080808;
+  color: #FF5C35;
 }
 .ka-sidebar__header .ka-sidebar__close {
   background-color: transparent !important;
@@ -410,12 +411,12 @@ strong {
 }
 .ka-sidebar__body .ka-link {
   font-size: 55px;
-  color: #080808;
+  color: #F0EEFF;
   font-family: "Boxing";
 }
 .ka-sidebar__body .ka-link:hover {
   color: #FF5C35;
-  transition: all 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 @media (max-width: 320px) {
   .ka-sidebar__body .ka-link {
@@ -427,12 +428,9 @@ strong {
     font-size: 42px;
   }
 }
-.ka-sidebar__footer {
-  border-top-color: #080808 !important;
-}
 .ka-sidebar__footer a {
   font-size: 15px;
-  color: #080808;
+  color: #FF5C35;
 }
 .ka-sidebar.active {
   transform: translateX(0);
@@ -446,12 +444,23 @@ strong {
     padding: 1rem;
   }
 }
+.ka-footer__name {
+  font-size: 18px !important;
+  color: #FF5C35;
+  font-family: "Boxing";
+}
 .ka-footer__logo {
-  width: 8%;
+  width: 10%;
 }
 @media (max-width: 576px) {
   .ka-footer__logo {
-    width: 15% !important;
+    width: 25% !important;
+    margin-left: -1rem;
+  }
+}
+@media (max-width: 992px) {
+  .ka-footer__logo {
+    width: 15%;
   }
 }
 .ka-footer__copyright {
@@ -511,7 +520,7 @@ strong {
   content: "";
   z-index: 0;
   position: absolute;
-  background: #9333EA;
+  background: #9B66CC;
   border-radius: inherit;
   clip-path: inset(0 100% 0 0 round 1rem);
   transition: clip-path 0.55s cubic-bezier(0.16, 1, 0.3, 1);
@@ -553,7 +562,7 @@ strong {
 
 .ka-btn-contact {
   width: 100% !important;
-  transition: all 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   border-color: #C084FC !important;
 }
 .ka-btn-contact:hover, .ka-btn-contact:focus, .ka-btn-contact:active {
@@ -677,7 +686,7 @@ strong {
   color: #F0EEFF;
 }
 .ka-marquee__row--2 .ka-marquee__item {
-  color: #9333EA;
+  color: #9B66CC;
 }
 
 .ka-slider {
@@ -730,7 +739,7 @@ strong {
 .ka-card {
   min-height: 380px;
   overflow: hidden;
-  transition: filter 0.3s ease, transform 0.3s ease;
+  transition: filter 300ms ease, transform 300ms ease;
 }
 @media (max-width: 576px) {
   .ka-card {
@@ -768,6 +777,44 @@ strong {
   padding-left: 0 !important;
 }
 
+.img-desktop {
+  display: block;
+}
+@media (max-width: 576px) {
+  .img-desktop {
+    display: none !important;
+  }
+}
+
+.img-mobile {
+  display: none;
+}
+@media (max-width: 576px) {
+  .img-mobile {
+    display: block !important;
+  }
+}
+
+.skip-link {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+.skip-link:focus {
+  top: 10px;
+  left: 10px;
+  width: auto;
+  height: auto;
+  clip: auto;
+  color: #F0EEFF;
+  font-weight: 900;
+  overflow: visible;
+  white-space: normal;
+}
+
 @media (max-width: 992px) {
   .ka-about h2 br {
     display: none !important;
@@ -802,7 +849,7 @@ strong {
 
 .project-introduction__service {
   padding: 0.8rem 1.2rem;
-  color: #FF5C35 !important;
+  color: #FF7857 !important;
   font-size: 14px !important;
 }
 @media (max-width: 576px) {
@@ -851,7 +898,7 @@ strong {
 }
 
 .bg-primary {
-  background-color: #9333EA !important;
+  background-color: #9B66CC !important;
 }
 
 .bg-secondary {

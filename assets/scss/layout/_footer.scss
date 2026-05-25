@@ -14,11 +14,22 @@
         padding: 1rem;
     }
 
+    &__name {
+        font-size: 18px !important;
+        color: $color-accent;
+        font-family: $font-title;
+    }
+
     &__logo {
-        width: 8%;
+        width: 10%;
 
         @include respond-to(sm, max) {
-            width: 15% !important;
+            width: 25% !important;
+            margin-left: -1rem;
+        }
+
+        @include respond-to(lg, max) {
+            width: 15%;
         }
     }
 

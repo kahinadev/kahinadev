@@ -6,9 +6,11 @@
 
 $color-text: #F0EEFF;
 $color-background: #080808;
-$color-primary: #9333EA;
+$color-primary: #9B66CC;
+// $color-primary: #9333EA;
 $color-secondary: #C084FC;
 $color-accent: #FF5C35;
+$color-details: #FF7857;
 $color-border: #ee8970a2;
 
 // =========== RESPONSIVE ===========
@@ -37,6 +39,11 @@ $border-radius: $border-r-lg;
 $border-color: $color-accent;
 $border: $border-width $border-type $border-radius;
 $border-positions: top, bottom, left, right, all; 
+
+// =========== SKIP LINK ===========
+
+$width-skip: 1px; 
+$height-skip: 1px;
 
 // =========== AUTO ===========
 
@@ -138,6 +145,5 @@ $padding-mobile: 80px 0.5rem;
 // =========== CARD ===========
 
 $card-gap: 8px;
-$card-transition: 0.30s ease;
 $transition-base: 300ms ease;
 $transition-slow: 500ms cubic-bezier(0.16, 1, 0.3, 1);

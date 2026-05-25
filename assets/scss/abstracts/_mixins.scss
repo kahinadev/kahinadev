@@ -90,12 +90,12 @@
 
 @mixin link {
     font-size: 55px;
-    color: $color-background;
+    color: $color-text;
     font-family: $font-title;
 
     &:hover {
         color: $color-accent;
-        transition: all 0.3s ease-in-out;
+        transition: color 0.3s ease-in-out;
     }
 
     @include respond-to(320px, max) {
@@ -136,7 +136,7 @@ $reveals: (
 @each $name, $props in $reveals {
     .ka-reveal-#{$name} {
         opacity: $zero;
-        transform: map-get($props, transform);
+        transform: map.get($props, transform);
         transition:
             opacity 2s cubic-bezier(0.16, 1, 0.3, 1),
             transform 2s cubic-bezier(0.16, 1, 0.3, 1);

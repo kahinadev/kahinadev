@@ -12,7 +12,7 @@
 .ka-card {
    min-height: 380px;
    overflow: $hidden;
-   transition: filter $card-transition, transform $card-transition;
+   transition: filter $transition-base, transform $transition-base;
 
    @include respond-to(sm, max) {
       padding: 2rem !important;

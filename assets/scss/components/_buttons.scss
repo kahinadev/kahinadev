@@ -84,7 +84,7 @@
 
 .ka-btn-contact {
     width: $width-full !important;
-    transition: all 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
     border-color: $color-secondary !important;
 
     &:hover,
@@ -92,13 +92,13 @@
     &:active {
         background-color: $color-secondary !important;
 
-        i, 
+        i,
         span {
             color: $color-background !important;
         }
     }
 
-    i, 
+    i,
     span {
         color: $color-secondary;
     }

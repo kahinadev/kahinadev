@@ -67,6 +67,7 @@
 <body>
     <!-- HEADER -->
     <header id="header" class="ka-header py-3" aria-label="Header">
+        <a href="#about" class="skip-link text-decoration-none text-uppercase">Aller au contenu principal</a>
         <nav class="ka-nav">
             <div class="container d-flex justify-content-between align-items-center">
                 <button id="burger"
@@ -78,7 +79,7 @@
                     </div>
                 </button>
                 <a class="ka-nav__logo text-center" href="index.html" aria-label="Retour à l'accueil">
-                    <img src="assets/img/logo/kahinadev-logo.webp" alt="KahinaDev">
+                    <img src="assets/img/logo/kahinadev-logo.webp" alt="Logo KahinaDev">
                 </a>
                 <div class="ka-nav__contact">
                     <a class="ka-btn border-all d-none d-lg-flex align-items-center position-relative text-decoration-none"
@@ -93,7 +94,7 @@
     </header>
 
     <!-- SIDEBAR -->
-    <div id="ka-sidebar" class="ka-sidebar bg-secondary position-fixed" role="dialog" aria-hidden="true"
+    <div id="ka-sidebar" class="ka-sidebar bg-dark position-fixed" role="dialog" aria-hidden="true"
         aria-label="Menu de navigation" aria-modal="true">
         <div class="ka-sidebar__inner d-flex flex-column">
             <div class="ka-sidebar__header d-flex p-3 justify-content-between align-items-center p-3 border-bottom">
@@ -157,7 +158,10 @@
                             première seconde.
                         </p>
                         <img src="assets/img/projects/portfolio/kahinadev-redesign-project-portfolio.webp"
-                            class="ka-radius-lg mt-3 ka-reveal-up ka-delay-3"
+                            class="ka-radius-lg img-desktop mt-3 ka-reveal-up ka-delay-3"
+                            alt="Mockup de deux iPhones présentant le portfolio KahinaDev">
+                        <img src="assets/img/projects/portfolio/kahinadev-redesign-project-portfolio-mobile.webp"
+                            class="ka-radius-lg img-mobile mt-3 ka-reveal-up ka-delay-3"
                             alt="Mockup de deux iPhones présentant le portfolio KahinaDev">
                     </div>
                 </div>
@@ -210,7 +214,7 @@
                             class="ka-reveal-up ka-delay-3" alt="Univers">
                     </div>
                     <div class="col-md-6 p-0">
-                        <img src="assets/img/projects/portfolio/kahinadev-redesign-project-portfolio-mobile.webp"
+                        <img src="assets/img/projects/portfolio/kahinadev-redesign-project-portfolio-mockup-iphone.webp"
                             class="ka-reveal-up ka-delay-3" alt="Mockup mobile KahinaDev">
                     </div>
                     <div class="col-md-6 p-0">
@@ -226,25 +230,26 @@
     <footer class="ka-footer border-top bg-dark position-relative py-5">
         <div class="container">
             <div class="row">
-                <div class="col-md-8 col-sm-12">
-                    <img src="assets/img/logo/kahinadev-logo.webp" class="ka-footer__logo" alt="Logo">
+               <div class="col-lg-8 col-md-6 col-sm-12">
+                    <span class="ka-footer__name text-uppercase">KahinaDev</span>
                 </div>
-                <div class="col-md-4 col-sm-12">
+                <div class="col-lg-4 col-md-6 col-sm-12">
                     <span class="ka-footer__version">V4</span>
                     <br>
                     <span class="ka-footer__copyright subtitle text-uppercase">© 2023-2026 KAHINADEV — Tous droits
                         réservés</span>
                 </div>
+                <div class="col-lg-12">
+                    <!-- SWITCH LANGUAGE -->
+                    <a href="en/project-portfolio.html"
+                        class="ka-btn-language border-all d-flex align-items-center position-fixed text-decoration-none bg-light border-all"
+                        aria-label="English">
+                        <div class="ka-btn-language__label position-relative text-nowrap text-uppercase">English</div>
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
-
-    <!-- SWITCH -->
-    <a href="en/project-portfolio.html"
-        class="ka-btn-language border-all d-flex align-items-center position-fixed text-decoration-none bg-light border-all"
-        aria-label="English">
-        <div class="ka-btn-language__label position-relative text-nowrap text-uppercase">English</div>
-    </a>
 
     <!-- BOOTSTRAP JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"

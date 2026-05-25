@@ -31,18 +31,22 @@
         }
 
         img {
-            width: 5%;
-            margin-left: 2rem;
+            width: 80%;
 
             @include respond-to(sm, max) {
-                width: 15% !important;
-                margin-left: $zero !important;
-
+                width: 80% !important;
+                margin-left: -1rem !important;
             }
 
             @include respond-to(lg, max) {
-                width: 8%;
+                width: $width-full !important;
             }
+        }
+    }
+
+    .ka-nav__contact {
+        @include respond-to(lg, max) {
+            display: $none !important;
         }
     }
 }
