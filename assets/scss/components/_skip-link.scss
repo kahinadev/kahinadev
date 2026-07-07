@@ -1,21 +1,13 @@
-// =======================================
+// ===============================================
 // SKIP LINK
-// ======================================= 
-
-// =========== VARIABLES & MIXINS ===========
+// ===============================================
 
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-// =========== GENERAL ===========
-
 .skip-link {
-    width: $width-skip;
-    height: $height-skip;
-    position: $absolute;
-    overflow: $hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
+    @include visually-hidden;
+    pointer-events: all;
 
     &:focus {
         top: 10px;
@@ -23,9 +15,11 @@
         width: $auto;
         height: $auto;
         clip: $auto;
+        position: $fixed;
+        padding: 10px 16px;
+        border: $border;
+        z-index: $z-overlay;
         color: $color-text;
-        font-weight: 900;
-        overflow: visible;
-        white-space: normal;
+        background-color: $color-background;
     }
 }

@@ -2,14 +2,14 @@
 // MIXINS
 // ===============================================
 
-// =========== VARIABLES ===========
-
 @use "variables" as *;
 @use "sass:map";
 
-// =========== RESPONSIVE ===========
+// -----------------------------------------------
+// Responsive - mobile first
+// -----------------------------------------------
 
-@mixin respond-to($breakpoint, $type: max) {
+@mixin respond-to($breakpoint, $type: min) {
     $value: map.get($breakpoints, $breakpoint);
 
     @if $value ==null {
@@ -21,15 +21,17 @@
     }
 }
 
-// =========== BORDER ===========
+// -----------------------------------------------
+// Border
+// -----------------------------------------------
 
-@mixin border-position($position, $color: $color-border, $width: 0.5px, $style: solid) {
+@mixin border-position($position, $color: $color-details, $width: 0.5px, $style: solid) {
     @if $position ==all {
-        border: #{$width} #{$style} #{$color} !important;
+        border: #{$width} #{$style} #{$color};
     }
 
     @else {
-        border-#{$position}: #{$width} #{$style} #{$color} !important;
+        border-#{$position}: #{$width} #{$style} #{$color};
     }
 }
 
@@ -39,98 +41,162 @@
     }
 }
 
-// =========== TITLE ===========
+// -----------------------------------------------
+// Typography
+// -----------------------------------------------
 
-@mixin title($size-mobile: 54px, $size-tablet: 68px, $size-desktop: 98px, $title-weight: 900, $line-height: 1.2) {
-    font-size: $size-desktop;
+@mixin title($size-mobile: 54px, $size-tablet: 110px, $size-desktop: 180px, $title-weight: $font-weight-black, $line-height: 1.2) {
+    font-size: $size-mobile;
     color: $color-text;
+    line-height: $line-height;
     word-break: $break-word;
     font-weight: $title-weight;
     font-family: $font-title;
 
-    @include respond-to(sm, max) {
-        font-size: $size-mobile !important;
-    }
-
-    @include respond-to(lg, max) {
+    @include respond-to(md) {
         font-size: $size-tablet;
     }
+
+    @include respond-to(lg) {
+        font-size: $size-desktop;
+    }
+
 }
 
-// =========== SUBTITLE ===========
-
-@mixin subtitle($size-mobile: 19px, $size-desktop: 19.5px, $subtitle-weight: 800, $spacing: 1.2px) {
-    color: $color-text;
-    font-size: $size-desktop;
+@mixin subtitle($size-mobile: 19px, $size-desktop: 19.5px, $subtitle-weight: $font-weight-bold, $spacing: 3px) {
+    color: $color-accent;
+    font-size: $size-mobile;
     font-weight: $subtitle-weight;
     word-break: $break-word;
     overflow-wrap: $break-word;
     letter-spacing: $spacing;
-    font-family: $font-text !important;
+    font-family: $font-text;
 
-    @include respond-to(sm, max) {
-        font-size: $size-mobile !important;
+    @include respond-to(lg) {
+        font-size: $size-desktop;
     }
+
 }
 
-// =========== TEXT ===========
-
-@mixin text($size-tablet: 18px, $size-desktop: 20px, $text-weight: 300, $spacing: 1px, $line-height: 1.3) {
-    font-size: $size-desktop;
+@mixin text($size-mobile: 16px, $size-desktop: 16px, $text-weight: $font-weight-regular, $spacing: 1px, $line-height: 1.3) {
+    font-size: $size-mobile;
+    color: $color-text;
     line-height: $line-height;
     font-weight: $text-weight;
     letter-spacing: $spacing;
+    font-family: $font-text;
+    line-height: $line-height;
 
     @include respond-to(lg) {
-        font-size: $size-tablet;
+        font-size: $size-desktop;
     }
 }
 
-// =========== LINK ===========
-
-@mixin link {
-    font-size: 55px;
+@mixin link($size-mobile: 50px, $size-desktop: 60px) {
+    font-size: $size-mobile;
     color: $color-text;
     font-family: $font-title;
+    transition: color $transition-base, padding-left $transition-base;
 
     &:hover {
         color: $color-accent;
-        transition: color 0.3s ease-in-out;
+        padding-left: 2rem;
     }
 
-    @include respond-to(320px, max) {
-        font-size: 30px !important;
-    }
-
-    @include respond-to(sm, max) {
-        font-size: 42px;
+    @include respond-to(lg) {
+        font-size: $size-desktop;
     }
 }
 
-// =========== BUTTON ===========
+// -----------------------------------------------
+// Button
+// -----------------------------------------------
 
 @mixin button {
-    gap: $btn-gap;
-    width: fit-content;
+    position: $relative;
+    display: inline-block;
     padding: $btn-padding;
+    width: fit-content;
+    color: $color-text;
     text-decoration: $none;
-    border-radius: $border-r-md;
+    font-size: $btn-size;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: $btn-weight;
+    font-family: $font-title;
+    border: $none;
+    cursor: pointer;
+    background-color: transparent;
+    transition: color $transition-base, text-shadow $transition-base;
+
+    &::before,
+    &::after {
+        content: '';
+        width: 14px;
+        height: 14px;
+        position: $absolute;
+        transition: filter $transition-base;
+    }
+
+    &::before {
+        top: $zero;
+        left: $zero;
+        border-top: $border;
+        border-left: $border;
+    }
+
+    &::after {
+        bottom: 0;
+        right: 0;
+        border-right: $border;
+        border-bottom: $border;
+    }
+
+    &:hover {
+        color: $color-primary;
+        text-shadow: 0 0 8px $color-primary, 0 0 20px $color-primary;
+
+        &::before,
+        &::after {
+            border-color: $color-primary;
+            @include neon-drop;
+        }
+    }
 }
 
-@mixin label {
-    font-size: $btn-size !important;
-    font-weight: $btn-weight !important;
-    font-family: $font-text;
+// -----------------------------------------------
+// Neon effects
+// -----------------------------------------------
+
+@mixin neon-box {
+    box-shadow: 0 0 8px $color-primary, 0 0 20px $color-primary;
 }
 
+@mixin neon-drop {
+    filter: drop-shadow(0 0 6px $color-primary) drop-shadow(0 0 16px $color-primary);
+}
 
-// =========== ANIMATIONS ===========
+// -----------------------------------------------
+// Background image
+// -----------------------------------------------
+
+@mixin bg-cover {
+    background-size: $cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+// -----------------------------------------------
+// Animations - scroll reveal
+// -----------------------------------------------
 
 $reveals: (
     'up': (opacity: 0, transform: translateY(50px)),
+    'down': (opacity: 0, transform: translateY(-50px)),
     'left': (opacity: 0, transform: translateX(-60px)),
     'right': (opacity: 0, transform: translateX(60px)),
     'scale': (opacity: 0, transform: scale(0.92)),
+    'zoom': (opacity: 0, transform: scale(0.7)),
 );
 
 @each $name, $props in $reveals {
@@ -152,4 +218,21 @@ $reveals: (
     .ka-delay-#{$i} {
         transition-delay: #{$i * 0.1}s;
     }
+}
+
+// -----------------------------------------------
+// Accessibility
+// -----------------------------------------------
+
+@mixin visually-hidden {
+    margin: -1px;
+    font-size: 14px;
+    overflow: $hidden;
+    position: $absolute;
+    width: $width-skip;
+    height: $height-skip;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: $zero;
+    font-family: $font-title;
 }

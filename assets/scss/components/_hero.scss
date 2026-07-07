@@ -1,71 +1,43 @@
 // ===============================================
-// SIDEBAR
+// HERO
 // ===============================================
-
-// =========== VARIABLES & MIXINS ===========
 
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-// =========== BASE ===========
-
 .ka-hero {
-    padding-top: 10rem;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-image: url("../../assets/img/banner/kahinadev-background-cyberpunk-banner.webp");
+    overflow: $hidden;
 
-    @include respond-to(sm, max) {
-        padding: 7rem 0.5rem 0rem 0.5rem !important;
-    }
+    .ka-hero__image {
+        inset: -20px;
+        @include bg-cover;
+        background-position: center;
+        position: $absolute;
+        transition: transform 0.2s ease-out;
+        z-index: 1;
+        background-image: url("../../assets/img/banner/kahinadev-cyberpunk-warrior-city-mobile.webp");
 
-    .title {
-        @include respond-to(sm, max) {
-            line-height: 1 !important;
+        @include respond-to(md) {
+            background-image: url("../../assets/img/banner/kahinadev-cyberpunk-armor-burning-city-desktop.webp");
         }
 
-        br {
-            display: $none;
-
-            @include respond-to(sm, max) {
-                display: $block !important;
+        &::before {
+            @include respond-to(xxl) {
+                content: '';
+                inset: 0;
+                z-index: 1;
+                background-color: rgba(0, 0, 0, 0.30);
+                position: $absolute;
             }
         }
     }
 
-    &__img {
-        top: 8rem;
-        width: 45%;
-        margin-left: 10rem;
-        height: 100vh;
-        aspect-ratio: 4/5;
-        position: $fixed !important;
+    &__content {
+        z-index: 2;
+        padding: 2rem;
 
-        @include respond-to(sm, max) {
-            right: 0rem !important;
-            top: 4rem !important;
-            height: 120vh !important;
-        }
-
-        @include respond-to(lg, max) {
-            top: 0rem;
-            width: $width-full !important;
-            margin-left: -5rem !important;
-        }
-    }
-
-    .scroll-indicator {
-        bottom: 50px;
-        position: $absolute;
-
-        @include respond-to(sm, max) {
-            bottom: 60px !important;
-        }
-
-        span {
-            font-weight: 800;
-            color: $color-accent;
+        @include respond-to(xxl) {
+            padding: 0 5rem;
         }
     }
 }

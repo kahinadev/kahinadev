@@ -1,53 +1,82 @@
-// =======================================
+// ===============================================
 // HOME
-// ======================================= 
-
-// =========== VARIABLES & MIXINS ===========
+// ===============================================
 
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-// =========== ABOUT ===========
+// -----------------------------------------------
+// About
+// -----------------------------------------------
 
 .ka-about {
     h2 {
         br {
-            @include respond-to(lg, max) {
-                display: $none !important;
+            @include respond-to(lg) {
+                display: $none;
             }
         }
     }
 
-    p {
-        @include respond-to(lg, max) {
-            margin-bottom: 3rem !important;
+    .ka-tags {
+        margin-top: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    &__img {
+        gap: 15px;
+
+        @include respond-to(lg) {
+            gap: 25px;
+        }
+
+        img {
+            width: calc(50% - 7.5px);
+            height: 300px;
+            min-width: 0;
+
+            @include respond-to(md) {
+                height: 600px;
+            }
+
+            @include respond-to(lg) {
+                width: calc(50% - 12.5px);
+                height: 900px;
+            }
+        }
+    }
+
+    &__content {
+        padding: 0;
+        @include respond-to(xxl) {
+            padding-right: 5rem;
         }
     }
 }
 
-// =========== SERVICES ===========
-
-.ka-services {
-    h3 {
-        @include respond-to(sm, max) {
-            margin-bottom: 1rem !important;
-            padding-block: 0.5rem !important;
-        }
-    }
-}
-
-// =========== PROJECTS ===========
+// -----------------------------------------------
+// Projects
+// -----------------------------------------------
 
 .ka-projects {
-    transform: translateZ(0);
+    .ka-padding-section {
+        padding-top: 0px;
+        padding-bottom: 0px;
 
-    @include respond-to(sm, max) {
-        padding: 30px 0 80px 0 !important;
-    }
-
-    .container {
-        @include respond-to(sm, max) {
-            padding-block: 0.5rem !important;
+        @include respond-to(md) {
+            padding: $section-padding-mobile;
         }
+    }
+}
+
+// -----------------------------------------------
+// Contact
+// -----------------------------------------------
+
+.ka-contact {
+    padding: 80px 2rem;
+
+    h3 {
+        margin-bottom: 2rem;
     }
 }

@@ -1,40 +1,42 @@
-// =======================================
+// ===============================================
 // UTILITIES
-// ======================================= 
-
-// =========== VARIABLES & MIXINS ===========
+// ===============================================
 
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-// =========== HERO ===========
+// -----------------------------------------------
+// Hero height
+// -----------------------------------------------
 
 .ka-h-100 {
-    
-    height: 100svh;
-
-    @include respond-to(sm, max) {
-        height: 96svh !important;
-    }
+    height: 100vh;
 }
 
-// =========== PADDING ===========
+
+// -----------------------------------------------
+// Section padding
+// -----------------------------------------------
 
 .ka-padding-section {
-    padding: 120px 0;
+    padding: $section-padding-mobile;
 
-    @include respond-to(sm, max) {
-        padding: $padding-mobile !important;
+    @include respond-to(lg) {
+        padding: $section-padding-desktop !important;
     }
 }
 
-// =========== TEXT ALIGN ===========
+// -----------------------------------------------
+// Text align 
+// -----------------------------------------------
 
 .text-justify {
     text-align: justify;
 }
 
-// =========== BORDER RADIUS ===========
+// -----------------------------------------------
+// Border radius
+// -----------------------------------------------
 
 .ka-radius-sm {
     border-radius: $border-r-sm;
@@ -48,14 +50,18 @@
     border-radius: $border-r-lg;
 }
 
-// =========== COLOR ===========
+// -----------------------------------------------
+// Colors
+// -----------------------------------------------
 
-.text-primary {
-    color: $color-primary !important;
+.ka-text-primary {
+    color: $color-primary;
 }
 
-// =========== BACKGROUND ===========
+// -----------------------------------------------
+// Background
+// -----------------------------------------------
 
 .bg-accent {
-    background-color: $color-accent !important;
+    background-color: $color-accent;
 }

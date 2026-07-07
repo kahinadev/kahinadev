@@ -2,148 +2,179 @@
 // VARIABLES
 // ===============================================
 
-// =========== COLORS ===========
-
-$color-text: #F0EEFF;
+$color-text: #F0EEFF; 
+$color-primary: #BF83FC; 
+$color-accent: #F18D74; 
+$color-details: #D9674A; 
+$color-border: #f0eeff7e; 
 $color-background: #080808;
-$color-primary: #9B66CC;
-// $color-primary: #9333EA;
-$color-secondary: #C084FC;
-$color-accent: #FF5C35;
-$color-details: #FF7857;
-$color-border: #ee8970a2;
 
-// =========== RESPONSIVE ===========
+
+// -----------------------------------------------
+// Typography
+// -----------------------------------------------
+
+$font-title: "Iceberg", sans-serif;
+$font-text: "Exo 2", sans-serif;
+
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+$strong-weight: 600;
+$break-word: break-word;
+
+// -----------------------------------------------
+// Breakpoints
+// -----------------------------------------------
 
 $breakpoints: (
     xs: 0,
-    sm: 576px,
+    sm: 480px,
     md: 768px,
-    lg: 992px,
-    xl: 1110px,
-    xxl: 1280px,
-    xxxl: 1400px
+    lg: 1024px,
+    xl: 1114px,
+    xxl: 1536px
 );
 
-// =========== RADIUS ===========
+// -----------------------------------------------
+// Radius
+// -----------------------------------------------
 
 $border-r-sm: 0.5rem;
-$border-r-md: 1rem; 
-$border-r-lg: 2rem; 
+$border-r-md: 1rem;
+$border-r-lg: 2rem;
 
-// =========== BORDER ===========
 
-$border-width: 1px; 
-$border-type: solid; 
-$border-radius: $border-r-lg;
-$border-color: $color-accent;
-$border: $border-width $border-type $border-radius;
-$border-positions: top, bottom, left, right, all; 
+// -----------------------------------------------
+// Border
+// -----------------------------------------------
 
-// =========== SKIP LINK ===========
+$border-width: 1px;
+$border-type: solid;
+$border-color: $color-details;
+$border-positions: top, bottom, left, right, all;
+$border: 1px solid $color-text;
+$border-header-frame: 0.3px solid $color-border;
 
-$width-skip: 1px; 
-$height-skip: 1px;
+// -----------------------------------------------
+// Layout
+// -----------------------------------------------
 
-// =========== AUTO ===========
+$width-full: 100%;
+$height-full: 100%;
+$auto : auto;
 
-$auto: auto;
-
-// =========== DISPLAY ===========
+// -----------------------------------------------
+// Display
+// -----------------------------------------------
 
 $flex: flex;
-$none: none;
 $block: block;
-
-// =========== ALIGN ===========
-
-$left: left; 
-$right: right;
-$center: center;
-
-// =========== POSITION ===========
-
-$fixed: fixed; 
-$relative: relative; 
-$absolute: absolute;
-
-// =========== BUTTON BURGER ===========
-
-$burger-gap: 10px; 
-$height-icon: 2px;
-$bottom-line-icon: 5px;
-$width-line-icon-one: 50px; 
-$width-line-icon-two: 40px;
-
-// =========== OVERFLOW ===========
-
+$none: none;
 $hidden: hidden;
-$visible: visible; 
+$visible: visible;
 
-// =========== ZERO ===========
+// -----------------------------------------------
+// Position
+// -----------------------------------------------
 
 $zero: 0;
 
-// =========== WIDTH ===========
+$fixed: fixed;
+$relative: relative;
+$absolute: absolute;
 
-$width-full: 100%; 
-$height-full: 100%;
-$width-badge-n-tags: calc(50% - 7.5px);
-
-// =========== FONTS ===========
-
-$font-title: "Boxing";
-$font-text: "Supreme", sans-serif;
-
-// =========== BREAK ===========
-
-$break-word: break-word;
-
-// =========== WEIGHT ===========
-
-$strong-weight: 600;
-
-// =========== DIRECTION ===========
+$left: left;
+$right: right;
+$center: center;
 
 $column: column;
 
-// =========== BUTTONS ===========
+// -----------------------------------------------
+// Z-index
+// -----------------------------------------------
+
+$z-frame: 10;
+$z-content: 20;
+$z-header: 100;
+$z-lang: 100;
+$z-menu: 200;
+$z-overlay: 300;
+
+// -----------------------------------------------
+// Transitions
+// -----------------------------------------------
+
+$transition-base: 300ms ease;
+$transition-slow: 500ms cubic-bezier(0.16, 1, 0.3, 1);
+
+// -----------------------------------------------
+// Buttons
+// -----------------------------------------------
 
 $btn-h: 1.5rem;
 $btn-v: 1.1rem;
-$btn-size: 13px; 
 $btn-gap: 0.8rem;
+$btn-size: 14px;
 $btn-weight: 600;
-$btn-radius: $border-r-md; 
+$btn-radius: $border-r-md;
 $btn-dot-size: 10px;
 $btn-padding: 0.8rem 1.2rem;
 
-// =========== BADGE ===========
+// -----------------------------------------------
+// Burger
+// -----------------------------------------------
+
+$burger-gap: 10px;
+$burger-height-icon: 2px;
+$burger-bottom-line-icon: 5px;
+$burger-width-line-icone-one: 50px;
+$burger-width-line-icone-two: 40px;
+
+// -----------------------------------------------
+// Badge & tags
+// -----------------------------------------------
 
 $badge-size: 15px;
 $badge-padding: 15px 20px;
+$badge-width-n-tags: calc(50% - 7.5px);
 
-// =========== MARQUEE ===========
+// -----------------------------------------------
+// Marquee
+// -----------------------------------------------
 
 $marquee-gap: 1.2rem;
 $marquee-dot-width: 50px;
 $marquee-dot-height: 50px;
-$marquee-dot-width-mobile: 30px; 
-$marquee-dot-height-mobile: 30px;
 $marquee-dot-radius: 50%;
 $marquee-padding: $zero 0.28em;
+$marquee-dot-width-mobile: 30px;
+$marquee-dot-height-mobile: 30px;
 
-// =========== LANGUAGE ===========
-
-$language-left: 1rem;
-$language-bottom: 1rem;
-
-// =========== SECTION ===========
-
-$padding-mobile: 80px 0.5rem; 
-
-// =========== CARD ===========
+// -----------------------------------------------
+// Card
+// -----------------------------------------------
 
 $card-gap: 8px;
-$transition-base: 300ms ease;
-$transition-slow: 500ms cubic-bezier(0.16, 1, 0.3, 1);
+
+// -----------------------------------------------
+// Section
+// -----------------------------------------------
+
+$section-padding-mobile: 80px 1.5rem;
+$section-padding-desktop: 10rem 5rem;
+
+// -----------------------------------------------
+// Background img
+// -----------------------------------------------
+
+$cover: cover;
+
+// -----------------------------------------------
+// Skip link
+// -----------------------------------------------
+
+$width-skip: 1px;
+$height-skip: 1px;

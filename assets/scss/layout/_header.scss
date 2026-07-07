@@ -1,52 +1,210 @@
-// =======================================
+// ===============================================
 // HEADER
-// ======================================= 
-
-// =========== VARIABLES & MIXINS ===========
+// ===============================================
 
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-// =========== GENERAL ===========
+// -----------------------------------------------
+// Header - fixed frame 
+// -----------------------------------------------
 
 .ka-header {
-    top: 10px;
-    z-index: 150;
-    position: $fixed;
+    inset: 0px;
     width: $width-full;
+    height: 100vh;
+    position: $fixed;
+    z-index: $z-header;
+    pointer-events: $none;
+    border: $border-header-frame;
 
-    @include respond-to(lg, max) {
-        padding: 1rem !important;
+    @include respond-to(md) {
+        inset: 0px;
+        height: 100vh;
     }
 
-    .container {
-        @include respond-to(lg, max) {
-            flex-direction: row-reverse !important;
-        }
+    @include respond-to(xxl) {
+        width: 100%;
     }
 
+    #burger,
+    .ka-lang,
     .ka-nav__logo {
-        @include respond-to(lg, max) {
-            text-align: $left !important;
+        pointer-events: auto;
+    }
+
+    // Status
+    &__status {
+        left: 0rem;
+        bottom: 0rem;
+        gap: 16px;
+        width: 400px;
+        position: $absolute;
+        border-top: $border-header-frame;
+        border-right: $border-header-frame;
+        border-top-right-radius: $border-r-sm;
+
+        a,
+        span {
+            font-size: 14px !important;
         }
 
+        &.is-scrolled {
+            background-color: $color-background;
+        }
+    }
+}
+
+// -----------------------------------------------
+// Navbar
+// -----------------------------------------------
+
+.ka-nav {
+    top: $zero;
+    left: $zero;
+    right: $zero;
+    height: 70px;
+    padding: 0 1rem;
+    margin-bottom: -8px;
+    border-bottom: $border-header-frame;
+
+    @include respond-to(lg) {
+        height: 60px;
+    }
+
+    // Logo 
+    &__logo {
         img {
-            width: 80%;
+            height: 36px !important;
+            height: $auto;
+            transition: filter $transition-base;
+        }
+    }
 
-            @include respond-to(sm, max) {
-                width: 80% !important;
-                margin-left: -1rem !important;
-            }
+    // Burger
+    &__burger {
+        cursor: pointer;
+        gap: $burger-gap;
 
-            @include respond-to(lg, max) {
-                width: $width-full !important;
+        &:hover,
+        &:focus-visible {
+            .icon__line {
+
+                &:nth-child(1),
+                &:nth-child(2) {
+                    width: $burger-width-line-icone-one !important;
+                    background-color: $color-primary;
+                    transition: all 0.3s ease-in-out;
+                }
             }
         }
     }
 
-    .ka-nav__contact {
-        @include respond-to(lg, max) {
-            display: $none !important;
+    // Burger lines
+    .icon__line {
+        height: $burger-height-icon;
+        background-color: $color-text;
+        transition:
+            background 0.35s ease,
+            transform 0.3s cubic-bezier(0.3, 0, 0.2, 1),
+            opacity 0.3s ease,
+            width 0.3s ease;
+
+        &:nth-child(1) {
+            width: $burger-width-line-icone-one;
         }
+
+        &:nth-child(2) {
+            width: $burger-width-line-icone-two;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: $burger-bottom-line-icon;
+        }
+    }
+
+    // System 
+    &__system {
+        height: $height-full;
+        overflow: $hidden;
+        flex: 1;
+        margin: 0 12px;
+        max-width: 360px;
+        border-left: $border-header-frame;
+        border-right: $border-header-frame;
+
+        @include respond-to(xxl) {
+            max-width: 400px;
+        }
+    }
+
+    &__system-text {
+        left: $zero;
+        right: $zero;
+        font-size: 14px;
+        color: $color-accent;
+        overflow: $hidden;
+        position: $absolute;
+        text-overflow: ellipsis;
+        animation: ka-system-cycle 8s infinite;
+
+        &--a {
+            animation-delay: 0s;
+        }
+
+        &--b {
+            animation-delay: -4s;
+
+            br {
+                @include respond-to(md) {
+                    display: $none;
+                }
+            }
+        }
+    }
+
+    &.is-scrolled {
+        background-color: $color-background;
+    }
+}
+
+// -----------------------------------------------
+// Language switcher
+// -----------------------------------------------
+
+.ka-lang {
+    margin-left: -36px;
+    padding: 20px 16px;
+    border-right: $border-header-frame;
+}
+
+// -----------------------------------------------
+// Keyframes
+// -----------------------------------------------
+
+@keyframes ka-system-cycle {
+    0% {
+        transform: translateY(100%);
+        opacity: $zero;
+    }
+
+    5% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    45% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(-100%);
+        opacity: $zero;
+    }
+
+    100% {
+        transform: translateY(-100%);
+        opacity: $zero;
     }
 }

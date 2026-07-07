@@ -2,81 +2,101 @@
 // SIDEBAR
 // ===============================================
 
-// =========== VARIABLES & MIXINS ===========
-
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-// =========== BASE ===========
+// -----------------------------------------------
+// Base
+// -----------------------------------------------
 
 .ka-sidebar {
     top: $zero;
-    left: $zero;
-    z-index: 150;
-    width: 480px;
+    right: $zero;
+    z-index: $z-menu;
+    width: $width-full;
     height: $height-full;
-    max-width: $width-full;
-    pointer-events: $none;
     opacity: $zero;
     overflow-y: $auto;
-    overflow-x: $hidden;
     visibility: $hidden;
-    transform: translateX(-100%);
-    transition: transform 0.6s ease, opacity 0.4s ease;
+    overflow-x: $hidden;
+    border-left: $border-header-frame;
+    transform: translateX(100%);
+    transition: transform 0.6s ease, opacity 0.4s ease, visibility 0.6s ease;
+    background-color: $color-background;
 
-    @include respond-to(sm, max) {
-        width: $width-full !important;
+    @include respond-to(lg) {
+        width: 480px;
     }
 
-    @include respond-to(lg, max) {
-        right: $zero !important;
+    &.active {
+        opacity: 1;
+        transform: translateX(0);
+        visibility: $visible;
+        pointer-events: all;
     }
 
-    &__header,
-    &__footer {
-        border-width: 0.8px !important;
-    }
-
-    &__header {
-        span {
-            font-size: 18px;
-        }
-
-        span,
-        i {
-            color: $color-accent;
-        }
-
-        .ka-sidebar__close {
-            background-color: transparent !important;
-
-            i {
-                font-size: 22px;
-            }
-        }
-    }
-
+    // Inner 
     &__inner {
         width: $width-full;
-        height: $height-full !important;
+        height: $height-full;
     }
 
+    // Header 
+    &__header {
+        height: 70px;
+        padding: 0 1rem;
+        border-bottom: $border-header-frame;
+
+        span {
+            font-size: 14px;
+            font-weight: 300 !important;
+            letter-spacing: 3px;
+            font-family: $font-title;
+            color: $color-border;
+        }
+    }
+
+    // Close button 
+    &__close {
+
+        &:hover,
+        &:focus-visible {
+            i {
+                color: $color-text;
+            }
+        }
+
+        i {
+            font-size: 22px;
+            color: $color-border;
+        }
+    }
+
+    // Body 
     &__body {
         flex: 1;
-        width: $width-full;
 
-        .ka-sidebar__menu {
+        ul {
             width: $width-full;
-            padding-left: 2rem !important;
 
-            @include respond-to(sm, max) {
-                
-                height: 92% !important;
+            @include respond-to(md) {
+                text-align: center;
             }
 
-            @include respond-to(md, min) {
-                height: 96%;
+            @include respond-to(xxl) {
+                text-align: left;
             }
+        }
+    }
+
+    // Menu 
+    &__menu {
+        width: $width-full;
+        height: 92%;
+        padding: 40px 2rem 0;
+
+        @include respond-to(lg) {
+            height: $height-full;
         }
 
         .ka-link {
@@ -84,18 +104,13 @@
         }
     }
 
+    // Footer 
     &__footer {
+        border-top: $border-header-frame;
 
         a {
-            font-size: 15px;
-            color: $color-accent;
+            font-size: 14px;
+            color: $color-border;
         }
-    }
-
-    &.active {
-        transform: translateX(0);
-        opacity: 1;
-        visibility: $visible;
-        pointer-events: $auto;
     }
 }

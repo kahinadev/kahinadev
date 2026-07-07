@@ -1,43 +1,53 @@
-// =======================================
-// STYLE
-// =======================================
+// ===============================================
+// STYLES
+// ===============================================
 
-// =========== ABSTRACTS ===========
+// -----------------------------------------------
+// Abstracts
+// -----------------------------------------------
 
 @use "abstracts/variables" as *;
 @use "abstracts/mixins" as *;
 
-// =========== BASE ===========
+// -----------------------------------------------
+// Base
+// -----------------------------------------------
 
-@use "base/reset"; 
-@use "base/base"; 
-@use "base/typography"; 
+@use "base/reset";
+@use "base/base";
+@use "base/typography";
 @use "base/utilities";
 
-// =========== BASE ===========
+// -----------------------------------------------
+// Layout
+// -----------------------------------------------
 
 @use "layout/header";
 @use "layout/sidebar";
 @use "layout/footer";
 
-// =========== COMPONENTS ===========
+// -----------------------------------------------
+// Components
+// -----------------------------------------------
 
-@use "components/navbar";
-@use "components/buttons";
-@use "components/hero";
-@use "components/marquee";
-@use "components/slider";
-@use "components/card";
-@use "components/languages";
-@use "components/images";
 @use "components/skip-link";
-// @use "components/moving";
+@use "components/hero"; 
+@use "components/tags";
+@use "components/button";
+@use "components/slider";
+@use "components/marquee";
+@use "components/card";
+@use "components/images";
 
-// =========== PAGES ===========
+// -----------------------------------------------
+// Pages
+// -----------------------------------------------
 
 @use "pages/home";
 @use "pages/project";
 
-// =========== VENDORS ===========
+// -----------------------------------------------
+// Vendors
+// -----------------------------------------------
 
 @use "vendors/bootstrap";

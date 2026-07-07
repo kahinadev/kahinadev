@@ -1,11 +1,11 @@
-// =======================================
+// ===============================================
 // SLIDER SERVICES
-// ======================================= 
+// ===============================================
 
 document.addEventListener('DOMContentLoaded', () => {
 
     const track = document.querySelector('.ka-slider__track');
-    const cards = document.querySelectorAll('.ka-slider__card');
+    const slides = document.querySelectorAll('.ka-slider__slide');
     const dots = document.querySelectorAll('.ka-slider__dot');
 
     let current = 0;
@@ -14,15 +14,15 @@ document.addEventListener('DOMContentLoaded', () => {
     let isDrag = false;
 
     function goTo(index) {
-        current = Math.max(0, Math.min(index, cards.length - 1));
+        current = Math.max(0, Math.min(index, slides.length - 1));
 
-        const card = cards[current];
+        const slide = slides[current];
         const trackRect = track.parentElement.getBoundingClientRect();
-        const offset = card.offsetLeft - (trackRect.width / 2 - card.offsetWidth / 2);
+        const offset = slide.offsetLeft - (trackRect.width / 2 - slide.offsetWidth / 2);
 
         track.style.transform = `translateX(${-offset}px)`;
 
-        cards.forEach((c, i) => c.classList.toggle('is-active', i === current));
+        slides.forEach((s, i) => s.classList.toggle('is-active', i === current));
         dots.forEach((d, i) => d.classList.toggle('is-active', i === current));
     }
 

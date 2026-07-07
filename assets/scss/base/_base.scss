@@ -2,18 +2,18 @@
 // BASE
 // ===============================================
 
-// =========== VARIABLES & MIXINS ===========
-
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-// =========== BODY ===========
+// -----------------------------------------------
+// Html & Body
+// -----------------------------------------------
 
 html, 
 body {
     min-height: 100vh;
     overflow-x: $hidden;
-    font-family: $font-text;
+    font-family: $font-text
 }
 
 body {
@@ -21,11 +21,14 @@ body {
     background: $color-background;
 }
 
-// =========== IMAGE ===========
+// -----------------------------------------------
+// Images
+// -----------------------------------------------
 
 img {
     width: $width-full;
     max-width: $width-full;
     height: $auto;
-    object-fit: cover;
+    object-fit: $cover;
+    clip-path: polygon(3% 0%, 97% 0%, 100% 3%, 100% 97%, 97% 100%, 3% 100%, 0% 97%, 0% 3%);
 }

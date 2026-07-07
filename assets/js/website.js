@@ -1,8 +1,6 @@
-// =======================================
+// ===============================================
 // SIDEBAR
-// ======================================= 
-
-// =========== INITIAL ===========
+// ===============================================
 
 const burger = document.getElementById('burger');
 const sidebar = document.getElementById('ka-sidebar');
@@ -15,8 +13,9 @@ const labels = {
     close: isEnglish ? 'Close navigation menu' : 'Fermer le menu de navigation'
 };
 
-
-// =========== OPEN SIDEBAR ===========
+// -----------------------------------------------
+// Open
+// -----------------------------------------------
 
 const openSidebar = () => {
     sidebar.classList.add('active');
@@ -25,7 +24,9 @@ const openSidebar = () => {
     burger.setAttribute('aria-label', labels.close);
 }
 
-// =========== CLOSE SIDEBAR ===========
+// -----------------------------------------------
+// Close
+// -----------------------------------------------
 
 const closeSidebar = () => {
     sidebar.classList.remove('active');
@@ -34,7 +35,9 @@ const closeSidebar = () => {
     burger.setAttribute('aria-label', labels.open);
 }
 
-// =========== EVENT LISTENERS ===========
+// -----------------------------------------------
+// Event listeners
+// -----------------------------------------------
 
 burger.addEventListener('click', openSidebar);
 closeBtn.addEventListener('click', closeSidebar);
@@ -49,9 +52,52 @@ document.addEventListener('click', (e) => {
     }
 });
 
-// =======================================
+// -----------------------------------------------
+// Scramble
+// -----------------------------------------------
+
+const DURATION = 350;
+const STEPS = 10;
+
+function scramble(el) {
+    const original = el.dataset.label || el.textContent.trim();
+    const chars = original.replace(/ /g, '').split('');
+    let frame = 0;
+
+    if (!el.dataset.label) el.dataset.label = original;
+
+    const interval = setInterval(() => {
+        el.textContent = original
+            .split('')
+            .map((char, i) => {
+                if (char === ' ') return ' ';
+                if (i < Math.floor((frame / STEPS) * original.length)) return char;
+                return chars[Math.floor(Math.random() * chars.length)];
+            })
+            .join('');
+
+        frame++;
+
+        if (frame > STEPS) {
+            clearInterval(interval);
+            el.textContent = original;
+        }
+    }, DURATION / STEPS);
+}
+
+sidebarLinks.forEach(link => {
+    link.addEventListener('mouseenter', () => scramble(link));
+});
+
+const btns = document.querySelectorAll('.ka-btn');
+btns.forEach(btn => {
+    const label = btn.querySelector('.ka-btn__label') || btn;
+    btn.addEventListener('mouseenter', () => scramble(label));
+});
+
+// ===============================================
 // ANIMATIONS
-// =======================================
+// ===============================================
 
 const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(({ target, isIntersecting }) => {
@@ -64,3 +110,32 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('[class*="ka-reveal-"]')
     .forEach(el => revealObserver.observe(el));
+
+// =============================================================================
+// HEADER CLOCK
+// =============================================================================
+
+document.addEventListener('DOMContentLoaded', () => {
+    const clockTime = document.getElementById('ka-clock-time');
+    if (clockTime) {
+        const updateClock = () => {
+            const now = new Date();
+            clockTime.textContent = now.toLocaleTimeString('fr-FR', { hour12: false });
+        };
+        updateClock();
+        setInterval(updateClock, 1000);
+    }
+
+    // -----------------------------------------------
+    // Nav & status background on scroll
+    // -----------------------------------------------
+
+    const nav = document.querySelector('.ka-nav');
+    const status = document.querySelector('.ka-header__status');
+
+    window.addEventListener('scroll', () => {
+        const scrolled = window.scrollY > 0;
+        nav.classList.toggle('is-scrolled', scrolled);
+        status.classList.toggle('is-scrolled', scrolled);
+    });
+});

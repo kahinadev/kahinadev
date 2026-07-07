@@ -1,26 +1,30 @@
 // ===============================================
-// IMAGES
+// HERO
 // ===============================================
-
-// =========== VARIABLES & MIXINS ===========
 
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-// =========== BASE ===========
+// -----------------------------------------------
+// Desktop
+// -----------------------------------------------
 
-.img-desktop {
-    display: $block;
+.ka-img-desktop {
+    display: $none; 
 
-    @include respond-to(sm, max) {
-        display: $none !important;
+    @include respond-to(md) {
+        display: $block !important;
     }
 }
 
-.img-mobile {
-    display: $none;
+// -----------------------------------------------
+// Mobile
+// -----------------------------------------------
 
-    @include respond-to(sm, max) {
-        display: $block !important;
+.ka-img-mobile {
+    display: $block;
+
+    @include respond-to(md) {
+        display: $none !important;
     }
 }

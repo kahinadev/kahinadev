@@ -2,36 +2,36 @@
 // CARD
 // ===============================================
 
-// =========== VARIABLES & MIXINS ===========
-
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-// =========== BASE ===========
-
 .ka-card {
-   min-height: 380px;
-   overflow: $hidden;
-   transition: filter $transition-base, transform $transition-base;
+    min-height: 320px;
+    overflow: $hidden;
+    transition: filter $transition-base, transform $transition-base;
 
-   @include respond-to(sm, max) {
-      padding: 2rem !important;
-   }
+    @include respond-to(sm, max) {
+        padding: 2rem !important;
+    }
 
-   strong {
-      font-weight: 800 !important;
-   }
-
-   &__infos {
-      font-size: 18px;
-   }
+    &__infos {
+        font-weight: 800 !important;
+    }
 }
 
 .ka-card__project {
-   display: block;
-   transition: transform 0.4s ease;
+    display: block;
+    transition: transform 0.4s ease;
 
-   &:hover {
-      transform: scale(1.08);
-   }
+    &:hover {
+        transform: scale(1.08);
+    }
+
+    .infos {
+        font-size: 14px !important;
+    }
+
+    .year {
+        color: $color-details;
+    }
 }

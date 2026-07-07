@@ -1,49 +1,27 @@
-// =======================================
-// PROJECT
-// ======================================= 
-
-// =========== VARIABLES & MIXINS ===========
+// ===============================================
+// PROJECTS
+// ===============================================
 
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-// =========== INTRODUCTION ===========
-.project-introduction {
+.ka-project-introduction {
+    padding-top: 8rem;
+
+    @include respond-to(md) {
+        padding: $section-padding-desktop;
+    }
+    
     &__service {
-        padding: $btn-padding;
-        color: $color-details !important;
+        color: $color-details;
         font-size: 14px !important;
     }
 
     h1 {
-        @include respond-to(sm, max) {
-            font-size: 39px !important;
-            margin-top: 2.5rem !important;
+        margin-top: 20px;
+
+        @include respond-to(md) {
+            margin-top: 2rem;
         }
     }
-}
-
-.project-colors {
-    &__bg {
-        gap: 15px;
-        margin-top: 1rem;
-
-        @include respond-to(sm, max) {
-            flex-wrap: wrap;
-
-            span {
-                width: calc(50% - 8px) !important;
-            }
-        }
-
-        span {
-            width: 25%;
-            height: 50px;
-            padding: 5rem;
-        }
-    }
-}
-
-.project-universe {
-    padding-top: 80px;
 }

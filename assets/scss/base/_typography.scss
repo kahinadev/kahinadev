@@ -2,57 +2,51 @@
 // TYPOGRAPHY
 // ===============================================
 
-// =========== VARIABLES & MIXINS ===========
-
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-// =========== IMPORT FONT TITLE ===========
+// -----------------------------------------------
+// Import font
+// -----------------------------------------------
 
 @font-face {
-    font-family: "Boxing";
-    src: url('../../assets/fonts/Boxing/Boxing-Regular.woff2') format('woff2'),
-        url('../../assets/fonts/Boxing/Boxing-Regular.woff') format('woff');
-    font-weight: 400;
-    font-display: swap;
-}
-
-
-// =========== IMPORT FONT TEXT ===========
-
-@font-face {
-    font-family: "Supreme";
-    src: url('../../assets/fonts/Supreme/Supreme-Light.woff2') format('woff2'),
-        url('../../assets/fonts/Supreme/Supreme-Light.woff') format('woff');
-    font-weight: 300;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Supreme";
-    src: url('../../assets/fonts/Supreme/Supreme-Regular.woff2') format('woff2'),
-        url('../../assets/fonts/Supreme/Supreme-Regular.woff') format('woff');
+    font-family: "Iceberg";
+    src: url('../../assets/fonts/Iceberg/Iceberg-Regular.woff2') format('woff2');
     font-weight: 400;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "Supreme";
-    src: url('../../assets/fonts/Supreme/Supreme-Bold.woff2') format('woff2'),
-        url('../../assets/fonts/Supreme/Supreme-Bold.woff') format('woff');
+    font-family: "Exo 2";
+    src: url('../../assets/fonts/Exo-2/Exo2-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Exo 2";
+    src: url('../../assets/fonts/Exo-2/Exo2-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Exo 2";
+    src: url('../../assets/fonts/Exo-2/Exo2-Bold.woff2') format('woff2');
     font-weight: 700;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "Supreme";
-    src: url('../../assets/fonts/Supreme/Supreme-Extrabold.woff2') format('woff2'),
-        url('../../assets/fonts/Supreme/Supreme-Extrabold.woff') format('woff');
-    font-weight: 800;
+    font-family: "Exo 2";
+    src: url('../../assets/fonts/Exo-2/Exo2-Black.woff2') format('woff2');
+    font-weight: 900;
     font-display: swap;
 }
 
-// =========== TITLE ===========
+// -----------------------------------------------
+// Title
+// -----------------------------------------------
 
 h1,
 h2,
@@ -63,16 +57,32 @@ h6 {
     @include title;
 }
 
-// =========== SIZE TITLE ===========
+
+h1 {
+    line-height: 78px; 
+
+    @include respond-to(md) {
+        line-height: 130px;
+    }
+
+    @include respond-to(xl) {
+        font-size: 120px;
+    }
+
+    @include respond-to(xxl) {
+        line-height: 194px;
+        font-size: 180px;
+    }
+}
 
 h2, 
 .details-large {
-    @include title(37px, 72px, 100px);
+    @include title(42px, 72px, 140px);
 }
 
 h3, 
 .details-medium {
-    @include title(31px, 68px, 72px);
+    @include title(31px, 68px, 120px);
 }
 
 h4 {
@@ -80,22 +90,19 @@ h4 {
 }
 
 
-// =========== SUBTITLE ===========
+// -----------------------------------------------
+// Subtitle
+// -----------------------------------------------
 
 .subtitle {
     @include subtitle;
 }
 
-// =========== TEXT ===========
+// -----------------------------------------------
+// Content
+// -----------------------------------------------
 
 p,
-a,
 span {
     @include text;
-}
-
-// =========== STRONG ===========
-
-strong {
-    font-weight: $strong-weight !important;
 }

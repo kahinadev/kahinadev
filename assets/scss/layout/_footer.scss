@@ -1,39 +1,39 @@
 // ===============================================
-// FOOTER
+// Footer
 // ===============================================
-
-// =========== VARIABLES & MIXINS ===========
 
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-// =========== BASE ===========
-
 .ka-footer {
-    @include respond-to(sm, max) {
-        padding: 1rem;
+    padding: 1.5rem;
+    height: 35vh;
+    border-top: $border-header-frame;
+
+    @include respond-to(md) {
+        padding: 5rem;
+        height: 10vh !important;
     }
 
     &__name {
-        font-size: 18px !important;
-        color: $color-accent;
+        font-size: 25px;
+        color: $color-details;
         font-family: $font-title;
     }
 
-    &__logo {
-        width: 10%;
-
-        @include respond-to(sm, max) {
-            width: 25% !important;
-            margin-left: -1rem;
-        }
-
-        @include respond-to(lg, max) {
-            width: 15%;
-        }
+    &__version {
+        font-size: 16px;
     }
 
     &__copyright {
         font-size: 12px !important;
+    }
+
+    .col-v-c {
+        text-align: left;
+
+        @include respond-to(md) {
+            text-align: end;
+        }
     }
 }
