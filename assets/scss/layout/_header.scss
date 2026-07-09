@@ -12,16 +12,11 @@
 .ka-header {
     inset: 0px;
     width: $width-full;
-    height: 100vh;
+    height: 100svh;
     position: $fixed;
     z-index: $z-header;
     pointer-events: $none;
     border: $border-header-frame;
-
-    @include respond-to(md) {
-        inset: 0px;
-        height: 100vh;
-    }
 
     @include respond-to(xxl) {
         width: 100%;
@@ -75,7 +70,7 @@
     // Logo 
     &__logo {
         img {
-            height: 36px !important;
+            width: 36px !important;
             height: $auto;
             transition: filter $transition-base;
         }

@@ -59,30 +59,24 @@ h6 {
 
 
 h1 {
-    line-height: 78px; 
-
-    @include respond-to(md) {
-        line-height: 130px;
-    }
 
     @include respond-to(xl) {
         font-size: 120px;
     }
 
     @include respond-to(xxl) {
-        line-height: 194px;
         font-size: 180px;
     }
 }
 
 h2, 
 .details-large {
-    @include title(42px, 72px, 140px);
+    @include title(42px, 72px, 120px);
 }
 
 h3, 
 .details-medium {
-    @include title(31px, 68px, 120px);
+    @include title(31px, 68px, 110px);
 }
 
 h4 {

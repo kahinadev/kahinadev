@@ -45,10 +45,9 @@
 // Typography
 // -----------------------------------------------
 
-@mixin title($size-mobile: 54px, $size-tablet: 110px, $size-desktop: 180px, $title-weight: $font-weight-black, $line-height: 1.2) {
+@mixin title($size-mobile: 54px, $size-tablet: 110px, $size-desktop: 180px, $title-weight: $font-weight-black) {
     font-size: $size-mobile;
     color: $color-text;
-    line-height: $line-height;
     word-break: $break-word;
     font-weight: $title-weight;
     font-family: $font-title;
