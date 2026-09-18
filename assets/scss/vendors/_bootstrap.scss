@@ -21,6 +21,10 @@
 // Background
 // -----------------------------------------------
 
+.bg-dark {
+    background-color: $color-background !important;
+}
+
 .bg-transparent {
     background-color: transparent;
 }

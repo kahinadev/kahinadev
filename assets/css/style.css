@@ -196,7 +196,7 @@ h6 {
 }
 @media (min-width: 1536px) {
   h1 {
-    font-size: 180px;
+    font-size: 140px;
   }
 }
 
@@ -217,7 +217,7 @@ h2,
 @media (min-width: 1024px) {
   h2,
   .details-large {
-    font-size: 120px;
+    font-size: 100px;
   }
 }
 
@@ -238,7 +238,7 @@ h3,
 @media (min-width: 1024px) {
   h3,
   .details-medium {
-    font-size: 110px;
+    font-size: 90px;
   }
 }
 
@@ -581,7 +581,7 @@ span {
 @media (min-width: 768px) {
   .ka-footer {
     padding: 5rem;
-    height: 10vh !important;
+    height: 150px !important;
   }
 }
 .ka-footer__name {
@@ -721,7 +721,7 @@ span {
 }
 .ka-btn:hover {
   color: #BF83FC;
-  text-shadow: 0 0 8px #BF83FC, 0 0 20px #BF83FC;
+  text-shadow: 0 0 8px #BF83FC, 0 0 10px #BF83FC;
 }
 .ka-btn:hover::before, .ka-btn:hover::after {
   border-color: #BF83FC;
@@ -875,6 +875,61 @@ span {
   }
 }
 
+.list-projects .project-item {
+  border-bottom: 0.3px solid rgba(240, 238, 255, 0.4941176471);
+  transition: all 0.5s ease-in-out;
+}
+.list-projects .project-item:hover {
+  padding: 1.5rem;
+  border-bottom: 1px solid #F18D74 !important;
+}
+@media (min-width: 1024px) {
+  .list-projects .project-item:hover {
+    padding: 4rem !important;
+  }
+}
+.list-projects .project-item:hover .project-number h4 {
+  color: #F18D74;
+}
+.list-projects .project-item:hover .project-image {
+  opacity: 1;
+}
+.list-projects .project-item .project-link {
+  flex-direction: column;
+}
+@media (min-width: 1024px) {
+  .list-projects .project-item .project-link {
+    flex-direction: row !important;
+  }
+}
+.list-projects .project-item .project-link .project-name-content {
+  width: 100%;
+  margin-top: 25px;
+}
+@media (min-width: 1024px) {
+  .list-projects .project-item .project-link .project-name-content .project-name h4,
+  .list-projects .project-item .project-link .project-name-content .project-number h4 {
+    font-size: 80px;
+  }
+}
+.list-projects .project-item .project-link .project-name-content .project-name span {
+  padding: 8px 15px;
+  font-size: 13px;
+}
+@media (min-width: 1024px) {
+  .list-projects .project-item .project-image {
+    opacity: 0;
+    position: absolute;
+    width: 480px;
+    left: 40%;
+    margin: 0 auto;
+    opacity: 0;
+    z-index: 1;
+    margin-top: 2%;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
 @media (min-width: 1024px) {
   .ka-about h2 br {
     display: none;
@@ -961,6 +1016,10 @@ span {
 
 .text-dark {
   color: var(--color-background);
+}
+
+.bg-dark {
+  background-color: #080808 !important;
 }
 
 .bg-transparent {

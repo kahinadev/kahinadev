@@ -1,0 +1,79 @@
+// ===============================================
+// PROJECTS
+// ===============================================
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// -----------------------------------------------
+// Initial
+// -----------------------------------------------
+
+.list-projects {
+    .project-item {
+        border-bottom: $border-header-frame;
+        transition: all 0.5s ease-in-out;
+
+        &:hover {
+            padding: 1.5rem;
+            border-bottom: 1px solid $color-accent !important;
+
+            @include respond-to(lg) {
+                padding: 4rem !important;
+            }
+
+            .project-number {
+                h4 {
+                    color: $color-accent;
+                }
+            }
+
+            .project-image {
+                opacity: 1;
+            }
+        }
+
+        .project-link {
+            flex-direction: column;
+
+            @include respond-to(lg) {
+                flex-direction: row !important;
+            }
+
+            .project-name-content {
+                width: $width-full;
+                margin-top: 25px;
+
+                .project-name,
+                .project-number {
+                    h4 {
+                        @include respond-to(lg) {
+                            font-size: 80px;
+                        }
+                    }
+                }
+
+                .project-name {
+                    span {
+                        padding: 8px 15px;
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+
+        .project-image {
+            @include respond-to(lg) {
+                opacity: 0;
+                position: $absolute;
+                width: 480px;
+                left: 40%;
+                margin: 0 auto;
+                opacity: 0;
+                z-index: 1;
+                margin-top: 2%;
+                transition: all 0.5s ease-in-out;
+            }
+        }
+    }
+}

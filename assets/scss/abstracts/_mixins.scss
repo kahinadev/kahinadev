@@ -153,7 +153,7 @@
 
     &:hover {
         color: $color-primary;
-        text-shadow: 0 0 8px $color-primary, 0 0 20px $color-primary;
+        text-shadow: 0 0 8px $color-primary, 0 0 10px $color-primary;
 
         &::before,
         &::after {

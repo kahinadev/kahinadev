@@ -65,18 +65,18 @@ h1 {
     }
 
     @include respond-to(xxl) {
-        font-size: 180px;
+        font-size: 140px;
     }
 }
 
 h2, 
 .details-large {
-    @include title(42px, 72px, 120px);
+    @include title(42px, 72px, 100px);
 }
 
 h3, 
 .details-medium {
-    @include title(31px, 68px, 110px);
+    @include title(31px, 68px, 90px);
 }
 
 h4 {

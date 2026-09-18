@@ -12,7 +12,7 @@
 
     @include respond-to(md) {
         padding: 5rem;
-        height: 10vh !important;
+        height: 150px !important;
     }
 
     &__name {
