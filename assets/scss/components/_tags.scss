@@ -6,15 +6,5 @@
 @use "../abstracts/mixins" as *;
 
 .ka-tags {
-    gap: 8px;
-
-    @include respond-to(md) {
-        gap: 16px;
-    }
-
-    .ka-tag {
-        font-size: 14px;
-        padding: 8px 16px;
-        color: $color-details;
-    }
+   @include tags;
 }

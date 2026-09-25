@@ -7,9 +7,14 @@
 
 .ka-project-introduction {
     padding-top: 8rem;
+    padding-bottom: 4rem !important;
 
     @include respond-to(md) {
         padding: $section-padding-desktop;
+    }
+
+    .col-infos {
+        border-color: $color-border;
     }
     
     &__service {
@@ -23,5 +28,17 @@
         @include respond-to(md) {
             margin-top: 2rem;
         }
+    }
+
+    .text-decoration-underline {
+        color: $color-accent;
+    }
+}
+
+.ka-project-images {
+    padding-top: 0rem !important;
+
+    h2,h3 {
+        color: $color-primary;
     }
 }

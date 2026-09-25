@@ -8,11 +8,17 @@
 .ka-footer {
     padding: 1.5rem;
     height: 35vh;
+    overflow: $hidden;
+    clip-path: inset(0 7px 0 10px);
     border-top: $border-header-frame;
 
     @include respond-to(md) {
         padding: 5rem;
         height: 150px !important;
+    }
+
+    @include respond-to(xl) {
+        clip-path: inset(0 18px 0 10px);
     }
 
     &__name {

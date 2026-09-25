@@ -12,7 +12,7 @@ if (hero && heroImage) {
         const y = (e.clientY - rect.top) / rect.height - 0.5;
 
         const moveX = x * 60;
-        const moveY = y * 60;
+        const moveY = y * 120;
 
         heroImage.style.transform = `translate(${moveX}px, ${moveY}px)`;
     });

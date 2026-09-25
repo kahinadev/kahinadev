@@ -19,6 +19,7 @@ body {
 body {
     color: $color-text;
     background: $color-background;
+    // cursor: url("../../assets/img/cursor/cursor-gojo.png"), auto;
 }
 
 // -----------------------------------------------
@@ -30,5 +31,6 @@ img {
     max-width: $width-full;
     height: $auto;
     object-fit: $cover;
+    cursor: url("../../assets/img/cursor/cursor-gojo.png"), auto;
     clip-path: polygon(3% 0%, 97% 0%, 100% 3%, 100% 97%, 97% 100%, 3% 100%, 0% 97%, 0% 3%);
 }

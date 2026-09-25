@@ -11,7 +11,7 @@
 
 .ka-sidebar {
     top: $zero;
-    right: $zero;
+    right: 0.5%;
     z-index: $z-menu;
     width: $width-full;
     height: $height-full;
@@ -19,13 +19,15 @@
     overflow-y: $auto;
     visibility: $hidden;
     overflow-x: $hidden;
-    border-left: $border-header-frame;
+    border: $border-header-frame;
     transform: translateX(100%);
     transition: transform 0.6s ease, opacity 0.4s ease, visibility 0.6s ease;
     background-color: $color-background;
 
-    @include respond-to(lg) {
-        width: 480px;
+    @include respond-to(md) {
+        top: 12px;
+        width: 680px;
+        height: 98svh;
     }
 
     &.active {
@@ -39,6 +41,48 @@
     &__inner {
         width: $width-full;
         height: $height-full;
+    }
+
+    // Container
+    &__content {
+        flex: 1;
+        padding: 2rem 1rem;
+        flex-direction: column;
+
+        @include respond-to(lg) {
+            flex-direction: row;
+        }
+    }
+
+    // Content
+    .content-left,
+    .content-right {
+
+        i,
+        span {
+            font-size: 14px;
+        }
+    }
+
+    .content-left {
+        width: 30%;
+
+        @include respond-to(md) {
+            width: 20%;
+        }
+    }
+
+    .content-right {
+        width: 70%;
+
+        @include respond-to(md) {
+            width: 80%;
+        }
+    }
+
+    .ka-sidebar__social,
+    .ka-sidebar__infos {
+        border-top: $border-header-frame;
     }
 
     // Header 
@@ -58,6 +102,8 @@
 
     // Close button 
     &__close {
+        right: 20px;
+        position: $absolute;
 
         &:hover,
         &:focus-visible {
@@ -67,7 +113,7 @@
         }
 
         i {
-            font-size: 22px;
+            font-size: 22px !important;
             color: $color-border;
         }
     }
@@ -91,12 +137,10 @@
 
     // Menu 
     &__menu {
-        width: $width-full;
-        height: 92%;
-        padding: 40px 2rem 0;
+        margin-top: 10px;
 
-        @include respond-to(lg) {
-            height: $height-full;
+        @include respond-to(md) {
+            margin-top: $zero
         }
 
         .ka-link {
@@ -104,13 +148,19 @@
         }
     }
 
-    // Footer 
-    &__footer {
-        border-top: $border-header-frame;
+    // Project & Social 
+    &__project,
+    &__social {
 
+        span,
         a {
             font-size: 14px;
-            color: $color-border;
+            color: $color-text;
         }
+    }
+
+    // Infos 
+    .available {
+        color: $color-primary;
     }
 }

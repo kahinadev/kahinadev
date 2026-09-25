@@ -8,6 +8,7 @@
 .ka-card {
     min-height: 320px;
     overflow: $hidden;
+    border: $border-header-frame;
     transition: filter $transition-base, transform $transition-base;
 
     @include respond-to(sm, max) {
@@ -16,7 +17,30 @@
 
     &__infos {
         font-weight: 800 !important;
+
+        br {
+            display: $none; 
+
+            @include respond-to(md) {
+                display: $block;
+            }
+        }
     }
+}
+
+.ka-card__services {
+    padding: 1rem !important;
+    @include respond-to(lg) {
+        padding: 3rem;
+    }
+    .available {
+        margin-left: 3rem;
+        margin-top: -2rem;
+        font-size: 13px;
+        color: #a975dd;
+        border: $border-header-frame;
+    }
+    
 }
 
 .ka-card__project {

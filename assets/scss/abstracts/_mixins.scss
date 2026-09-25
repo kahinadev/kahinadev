@@ -62,7 +62,7 @@
 
 }
 
-@mixin subtitle($size-mobile: 19px, $size-desktop: 19.5px, $subtitle-weight: $font-weight-bold, $spacing: 3px) {
+@mixin subtitle($size-mobile: 16px, $size-desktop: 16px, $subtitle-weight: $font-weight-bold, $spacing: 1.5px) {
     color: $color-accent;
     font-size: $size-mobile;
     font-weight: $subtitle-weight;
@@ -91,7 +91,7 @@
     }
 }
 
-@mixin link($size-mobile: 50px, $size-desktop: 60px) {
+@mixin link($size-mobile: 40px, $size-desktop: 60px) {
     font-size: $size-mobile;
     color: $color-text;
     font-family: $font-title;
@@ -108,6 +108,29 @@
 }
 
 // -----------------------------------------------
+// Tags
+// -----------------------------------------------
+
+@mixin tags {
+    gap: 8px;
+
+    @include respond-to(md) {
+        gap: 16px;
+    }
+
+    .ka-tag {
+        font-size: 14px;
+        padding: 8px 16px;
+        color: $color-details;
+    }
+
+    i {
+        color: $color-details;
+        font-size: 14px;
+    }
+}
+
+// -----------------------------------------------
 // Button
 // -----------------------------------------------
 
@@ -118,15 +141,32 @@
     width: fit-content;
     color: $color-text;
     text-decoration: $none;
-    font-size: $btn-size;
+    text-align: $center;
     letter-spacing: 2px;
     text-transform: uppercase;
     font-weight: $btn-weight;
     font-family: $font-title;
+    border-radius: $border-r-sm;
     border: $none;
     cursor: pointer;
     background-color: transparent;
     transition: color $transition-base, text-shadow $transition-base;
+
+    span {
+        font-size: $btn-size !important;
+    }
+
+    &:hover {
+        color: $color-primary;
+        border-color: $color-primary;
+        text-shadow: 0 0 8px $color-primary, 0 0 10px $color-primary;
+
+        &::before,
+        &::after {
+            border-color: $color-primary;
+            @include neon-drop;
+        }
+    }
 
     &::before,
     &::after {
@@ -149,17 +189,6 @@
         right: 0;
         border-right: $border;
         border-bottom: $border;
-    }
-
-    &:hover {
-        color: $color-primary;
-        text-shadow: 0 0 8px $color-primary, 0 0 10px $color-primary;
-
-        &::before,
-        &::after {
-            border-color: $color-primary;
-            @include neon-drop;
-        }
     }
 }
 

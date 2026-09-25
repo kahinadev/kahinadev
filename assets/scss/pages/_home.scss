@@ -5,6 +5,17 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
+.ka-stack,
+.ka-projects {
+    overflow: $hidden;
+    clip-path: inset(0 7px 0 10px);
+
+    @include respond-to(xl) {
+        clip-path: inset(0 18px 0 10px);
+    }
+
+}
+
 // -----------------------------------------------
 // About
 // -----------------------------------------------
@@ -48,9 +59,43 @@
 
     &__content {
         padding: 0;
+
         @include respond-to(xxl) {
             padding-right: 5rem;
         }
+    }
+}
+
+// -----------------------------------------------
+// Stack
+// -----------------------------------------------
+
+.ka-stack {
+    padding: 2rem 1rem;
+    border-top: $border-header-frame;
+    border-bottom: $border-header-frame;
+
+    @include respond-to(md) {
+        padding: 3rem 1rem;
+    }
+
+    &__marquee {
+        width: max-content;
+        animation: TextMarquee 25s linear infinite;
+    }
+
+    &__tags {
+        @include tags;
+    }
+}
+
+@keyframes TextMarquee {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-50%);
     }
 }
 
@@ -59,8 +104,9 @@
 // -----------------------------------------------
 
 .ka-projects {
+    padding-top: 5rem;
+
     .ka-padding-section {
-        padding-top: 0px;
         padding-bottom: 0px;
 
         @include respond-to(md) {

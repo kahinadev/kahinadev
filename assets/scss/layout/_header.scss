@@ -10,16 +10,23 @@
 // -----------------------------------------------
 
 .ka-header {
-    inset: 0px;
-    width: $width-full;
-    height: 100svh;
+    inset: 10px;
+    width: 96%;
+    height: 98svh;
     position: $fixed;
     z-index: $z-header;
     pointer-events: $none;
     border: $border-header-frame;
 
+    @include respond-to(md) {
+        width: 98%;
+        inset: 10px;
+        height: 98svh;
+        margin-top: 2px;
+    }
+
     @include respond-to(xxl) {
-        width: 100%;
+        width: 99%;
     }
 
     #burger,
@@ -33,7 +40,7 @@
         left: 0rem;
         bottom: 0rem;
         gap: 16px;
-        width: 400px;
+        width: 170px;
         position: $absolute;
         border-top: $border-header-frame;
         border-right: $border-header-frame;
@@ -44,8 +51,8 @@
             font-size: 14px !important;
         }
 
-        &.is-scrolled {
-            background-color: $color-background;
+        span {
+            margin-left: 8px;
         }
     }
 }
@@ -158,9 +165,9 @@
         }
     }
 
-    &.is-scrolled {
-        background-color: $color-background;
-    }
+    // &.is-scrolled {
+    //     background-color: $color-background;
+    // }
 }
 
 // -----------------------------------------------
