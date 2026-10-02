@@ -71,7 +71,7 @@
         }
 
         .m-full {
-            width: $width-full;
+            width: $width-full !important;
 
             @include respond-to(md) {
                 width: 50%;

@@ -1159,7 +1159,7 @@ p, span {
 .ka-project-infos .ka-tag-first .m-full,
 .ka-project-infos .ka-tag-second .m-full,
 .ka-project-infos .ka-tag-third .m-full {
-  width: 100%;
+  width: 100% !important;
 }
 @media (min-width: 768px) {
   .ka-project-infos .ka-tag-first .m-full,
