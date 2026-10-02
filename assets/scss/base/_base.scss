@@ -13,13 +13,13 @@ html,
 body {
     min-height: 100vh;
     overflow-x: $hidden;
-    font-family: $font-text
+    font-family: $font-text; 
+    scroll-behavior: smooth;
 }
 
 body {
     color: $color-text;
     background: $color-background;
-    // cursor: url("../../assets/img/cursor/cursor-gojo.png"), auto;
 }
 
 // -----------------------------------------------
@@ -31,6 +31,5 @@ img {
     max-width: $width-full;
     height: $auto;
     object-fit: $cover;
-    cursor: url("../../assets/img/cursor/cursor-gojo.png"), auto;
     clip-path: polygon(3% 0%, 97% 0%, 100% 3%, 100% 97%, 97% 100%, 3% 100%, 0% 97%, 0% 3%);
 }

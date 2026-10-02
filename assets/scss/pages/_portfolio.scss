@@ -1,0 +1,22 @@
+// ===============================================
+// PORTFOLIO
+// ===============================================
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// -----------------------------------------------
+// Initial
+// -----------------------------------------------
+
+.ka-portfolio {
+    padding: 10rem 2rem 8rem 2rem !important;
+
+    @include respond-to(xl) {
+        padding-top: 15rem;
+    }
+
+    h1 {
+        margin-bottom: 5rem;
+    }
+}

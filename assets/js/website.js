@@ -1,13 +1,28 @@
 // ===============================================
+// TERMINAL CLOCK
+// ===============================================
+
+document.addEventListener('DOMContentLoaded', () => {
+    const clockTime = document.getElementById('ka-clock-time');
+    if (clockTime) {
+        const updateClock = () => {
+            const now = new Date();
+            clockTime.textContent = now.toLocaleTimeString('fr-FR', { hour12: false });
+        };
+        updateClock();
+        setInterval(updateClock, 1000);
+    }
+});
+
+// ===============================================
 // SIDEBAR
 // ===============================================
 
-const burger = document.getElementById('burger');
-const sidebar = document.getElementById('ka-sidebar');
-const closeBtn = document.getElementById('closeSidebar');
+const burger = document.getElementById("burger");
+const sidebar = document.getElementById("ka-sidebar");
+const closeBtn = document.querySelector('.close-dots');
 const sidebarLinks = document.querySelectorAll('#ka-sidebar .ka-link');
 const isEnglish = document.documentElement.lang === 'en';
-
 const labels = {
     open: isEnglish ? 'Open navigation menu' : 'Ouvrir le menu de navigation',
     close: isEnglish ? 'Close navigation menu' : 'Fermer le menu de navigation'
@@ -110,32 +125,3 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('[class*="ka-reveal-"]')
     .forEach(el => revealObserver.observe(el));
-
-// =============================================================================
-// HEADER CLOCK
-// =============================================================================
-
-document.addEventListener('DOMContentLoaded', () => {
-    const clockTime = document.getElementById('ka-clock-time');
-    if (clockTime) {
-        const updateClock = () => {
-            const now = new Date();
-            clockTime.textContent = now.toLocaleTimeString('fr-FR', { hour12: false });
-        };
-        updateClock();
-        setInterval(updateClock, 1000);
-    }
-
-    // -----------------------------------------------
-    // Nav & status background on scroll
-    // -----------------------------------------------
-
-    const nav = document.querySelector('.ka-nav');
-    const status = document.querySelector('.ka-header__status');
-
-    window.addEventListener('scroll', () => {
-        const scrolled = window.scrollY > 0;
-        nav.classList.toggle('is-scrolled', scrolled);
-        status.classList.toggle('is-scrolled', scrolled);
-    });
-});

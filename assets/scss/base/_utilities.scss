@@ -10,12 +10,16 @@
 // -----------------------------------------------
 
 .ka-h-100 {
-    height: 100svh;
+    min-height: 100svh;
 }
 
 // -----------------------------------------------
 // Button
 // -----------------------------------------------
+
+.m-full {
+    width: $m-full !important;
+}
 
 .w-full {
     width: $width-full !important;
@@ -63,6 +67,10 @@
 
 .ka-text-primary {
     color: $color-primary;
+}
+
+.ka-text-details {
+    color: $color-details;
 }
 
 // -----------------------------------------------

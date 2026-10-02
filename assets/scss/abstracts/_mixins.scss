@@ -153,6 +153,7 @@
     transition: color $transition-base, text-shadow $transition-base;
 
     span {
+        font-weight: $font-weight-black;
         font-size: $btn-size !important;
     }
 
@@ -246,6 +247,17 @@ $reveals: (
     .ka-delay-#{$i} {
         transition-delay: #{$i * 0.1}s;
     }
+}
+
+// -----------------------------------------------
+// 3Effet glass
+// -----------------------------------------------
+
+@mixin glass-effect {
+    background: rgba(8, 8, 8, 0.337);
+    box-shadow: 0 4px 30px rgba(8, 8, 8, 0.297);
+    backdrop-filter: blur(4.5px);
+    -webkit-backdrop-filter: blur(4.5px);
 }
 
 // -----------------------------------------------

@@ -58,20 +58,21 @@ h6 {
 }
 
 
-h1 {
-
+h1, 
+.details-large {
+    @include title;
     @include respond-to(xl) {
         font-size: 120px;
     }
 }
 
 h2, 
-.details-large {
+.details-medium {
     @include title(42px, 72px, 100px);
 }
 
 h3, 
-.details-medium {
+.details-small {
     @include title(31px, 68px, 90px);
 }
 
@@ -92,7 +93,6 @@ h4 {
 // Content
 // -----------------------------------------------
 
-p,
-span {
+p, span {
     @include text;
 }

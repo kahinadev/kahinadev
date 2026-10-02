@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="w45xOYc7Epm-teKxDQT16hDH2MQj7znPr6lc_6Z4cDE" />
 
     <!-- GOOGLE ANALYTICS -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MBNQHYEXHX"></script>
@@ -32,7 +33,7 @@
     <meta property="og:description"
         content="Front-end developer and UI/UX designer based in Paris, I turn your ideas into polished, performant and memorable interfaces." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.kahinadev.com/en/" />
+    <meta property="og:url" content="https://www.kahinadev.com/" />
     <meta property="og:image"
         content="https://www.kahinadev.com/assets/img/open-graph/kahinadev-open-graph-image.png" />
 
@@ -55,9 +56,14 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- PRELOADS -->
-    <link rel="preload" as="image" href="../assets/img/banner/kahinadev-background-cyberpunk-banner.webp">
+    <link rel="preload" as="image" href="../assets/img/banner/kahinadev-cyberpunk-armor-burning-city-desktop.webp">
+    <link rel="preload" href="../assets/fonts/Iceberg/Iceberg-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../assets/fonts/Exo-2/Exo2-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../assets/fonts/Exo-2/Exo2-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../assets/fonts/Exo-2/Exo2-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../assets/fonts/Exo-2/Exo2-Black.woff2" as="font" type="font/woff2" crossorigin>
 
-    <!-- BOOTSTRAP & CSS-->
+    <!-- BOOTSTRAP & CSS -->
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" as="style"
         onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
     <noscript>
@@ -69,48 +75,65 @@
 
 <body>
     <!-- HEADER -->
-    <header id="ka-header" class="ka-header ka-radius-sm" aria-label="Header">
-        <div class="container-fluid p-0">
-            <a href="#about" class="skip-link text-decoration-none text-uppercase">Aller au contenu principal</a>
+    <header id="ka-header" class="ka-header ka-radius-lg border-all mt-3" aria-label="Header">
+        <div class="container-fluid">
+            <a href="#about" class="skip-link text-decoration-none text-uppercase">Skip to the main content</a>
             <nav class="ka-nav d-flex align-items-center justify-content-between" aria-label="Navigation principale">
-                <a href="index.html" class="ka-nav__logo" aria-label="Retour à l'accueil">
-                    <img src="../assets/img/logo/kahinadev-logo.svg" width="36" height="36" alt="Logo KahinaDev">
-                </a>
-                <button id="burger"
-                    class="ka-nav__burger d-flex flex-column justify-content-end align-items-center bg-transparent border-0"
-                    aria-label="Open the menu" aria-expanded="false" aria-controls="ka-sidebar">
-                    <div class="icon d-flex flex-column">
-                        <span class="icon__line ka-radius-md" aria-hidden="true"></span>
-                        <span class="icon__line ka-radius-md" aria-hidden="true"></span>
-                    </div>
-                </button>
-            </nav>
-            <div class="ka-header__status d-flex align-items-center justify-content-center">
-                <a href="../index.html" class="ka-lang text-decoration-none" aria-label="Passer en français"
-                    hreflang="en" rel="alternate">
-                    <span class="ka-lang__label text-uppercase text-nowrap">Fr</span>
-                </a>
-                <div class="ka-clock" id="ka-clock" aria-hidden="true">
-                    <span class="ka-clock__time" id="ka-clock-time">00:00:00</span>
+                <div class="ka-nav__left">
+                    <a href="index.html" class="logo" aria-label="Retour à l'accueil">
+                        <img src="../assets/img/logo/logo-kahinadev.svg" width="36" height="36" alt="Logo KahinaDev">
+                    </a>
                 </div>
-            </div>
+                <div class="ka-nav__right d-flex justify-content-between align-items-center">
+                    <div class="language-toggle">
+                        <a href="../index.html" class="text-decoration-none text-uppercase"
+                            aria-label="Switch to English" hreflang="en" rel="alternate">Fr</a>
+                    </div>
+                    <button id="burger"
+                        class="burger d-flex flex-column justify-content-end align-items-center bg-transparent border-0"
+                        aria-label="Menu">
+                        <div class="burger-row burger-row-top d-flex justify-content-end align-items-center">
+                            <span class="circle me-1 border-all"></span>
+                            <span class="circle border-all"></span>
+                        </div>
+                        <div class="burger-row burger-row-bottom d-flex justify-content-end align-items-center">
+                            <span class="circle me-1 border-all"></span>
+                            <span class="circle border-all"></span>
+                        </div>
+                    </button>
+                </div>
+            </nav>
         </div>
     </header>
 
+    <!-- TERMINAL -->
+    <div class="ka-terminal d-flex justify-content-center position-fixed border-all ka-radius-md">
+        <div class="ka-terminal__content">
+            <p class="line d-flex align-items-center time" aria-hidden="true">
+                <span class="subtitle text-uppercase me-1">Time :</span>
+                <span id="ka-clock-time">00:00:00</span>
+            </p>
+            <p class="line d-flex align-items-center status">
+                <span class="subtitle text-uppercase me-1">Statuts :</span>
+                <span class="text-uppercase"><strong>Available</strong></span>
+            </p>
+            <p class="line d-flex align-items-center mode">
+                <span class="subtitle text-uppercase me-1">Mode :</span>
+                <span class="text-uppercase"><strong>Apprenticeship</strong></span>
+            </p>
+        </div>
+    </div>
+
     <!-- SIDEBAR -->
-    <div id="ka-sidebar" class="ka-sidebar position-fixed ka-radius-sm" role="dialog" aria-hidden="true"
-        aria-label="Menu de navigation" aria-modal="true">
+    <div id="ka-sidebar" class="ka-sidebar position-fixed ka-radius-sm border-all" role="dialog" aria-hidden="true"
+        aria-label="Sidebar menu" aria-modal="true">
         <div class="ka-sidebar__inner d-flex flex-column">
             <div class="ka-sidebar__content d-flex justify-content-start">
                 <div class="content-left">
                     <i class="fa-solid fa-square"></i>
                     <span class="text-uppercase">Menu</span>
-                    <button id="closeSidebar" class="ka-sidebar__close p-0 border-0 bg-transparent"
-                        aria-label="Close the menu" aria-controls="ka-sidebar" tabindex="-1">
-                        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-                    </button>
                 </div>
-                 <div class="content-right">
+                <div class="content-center">
                     <div class="ka-sidebar__menu">
                         <ul class="list-unstyled">
                             <li class="ka-item"><a class="ka-link text-uppercase text-decoration-none"
@@ -124,8 +147,19 @@
                         </ul>
                     </div>
                 </div>
+                <div class="content-right d-flex justify-content-end">
+                    <svg class="close close-dots" viewBox="-4 -4 32 32" width="55" height="55"
+                        aria-label="Fermer le menu" aria-controls="ka-sidebar" tabindex="-1">
+                        <circle cx="4" cy="4" r="3" />
+                        <circle cx="12" cy="12" r="3" />
+                        <circle cx="20" cy="20" r="3" />
+                        <circle cx="20" cy="4" r="3" />
+                        <circle cx="12" cy="12" r="3" />
+                        <circle cx="4" cy="20" r="3" />
+                    </svg>
+                </div>
             </div>
-            <div class="ka-sidebar__social p-3 d-flex justify-content-start">
+            <div class="ka-sidebar__social border-top p-3 d-flex justify-content-start">
                 <div class="content-left">
                     <i class="fa-solid fa-square"></i>
                     <span class="text-uppercase">Social</span>
@@ -145,21 +179,6 @@
                     </a>
                 </div>
             </div>
-            <div class="ka-sidebar__infos p-3 d-flex justify-content-start">
-                <div class="content-left">
-                    <i class="fa-solid fa-square"></i>
-                    <span class="text-uppercase">Infos</span>
-                </div>
-                <div class="content-right">
-                    <span class="text-uppercase">
-                        <strong class="available">Available for work</strong>
-                        <br>
-                        <strong>System v4.0.1 - 2026</strong>
-                        <br>
-                        <strong>LAT 48.8566° N LNG 2.3522° E</strong>
-                    </span>
-                </div>
-            </div>
         </div>
     </div>
 
@@ -167,131 +186,90 @@
     <main id="main" class="main" aria-label="Main">
         <section id="introduction" class="ka-hero ka-h-100 position-relative d-flex align-items-center"
             aria-label="Introduction">
-            <div class="ka-hero__image" id="heroImg"></div>
+            <div id="heroImg" class="ka-hero__image"></div>
             <div class="container-fluid ka-hero__content position-relative">
                 <div class="row">
                     <div class="col-lg-1"></div>
                     <div class="col-lg-11 col-md-12">
-                        <h1 class="title text-uppercase">
-                            Dream.
+                        <h1 class="title text-uppercase ka-reveal-down ka-delay-4">
+                            { Dream.
                             <br>
                             Create.
                             <br>
-                            Deploy.
+                            <span class="details-large ka-text-primary">Deploy. }</span>
                         </h1>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="stack" class="ka-stack position-relative" aria-label="Stack">
-            <div class="ka-stack__marquee d-flex" aria-hidden="true">
-                <div class="ka-stack__track">
-                    <div class="ka-stack__tags d-flex align-items-center">
-                        <span class="ka-tag text-uppercase border-all ka-radius-sm">Html</span>
-                        <span class="ka-tag text-uppercase border-all ka-radius-sm">Css</span>
-                        <span class="ka-tag text-uppercase border-all ka-radius-sm">Sass</span>
-                        <span class="ka-tag text-uppercase border-all ka-radius-sm">JavaScript</span>
-                        <span class="ka-tag text-uppercase border-all ka-radius-sm">WordPress</span>
-                        <span class="ka-tag text-uppercase border-all ka-radius-sm">Shopify</span>
-                        <span class="ka-tag text-uppercase border-all ka-radius-sm">Framer</span>
-                        <span class="ka-tag text-uppercase border-all ka-radius-sm">Figma</span>
-                        <span class="ka-tag text-uppercase border-all ka-radius-sm">Illustrator</span>
-                        <span class="ka-tag text-uppercase border-all ka-radius-sm">Photoshop</span>
-                        <span class="ka-tag text-uppercase border-all ka-radius-sm">Premiere pro</span>
-                        <span class="ka-tag text-uppercase border-all ka-radius-sm">Canva</span>
-                        <span class="ka-tag text-uppercase border-all ka-radius-sm">Miro</span>
-                        <span class="ka-tag text-uppercase border-all ka-radius-sm">Html</span>
-                        <span class="ka-tag text-uppercase border-all ka-radius-sm">Css</span>
-                        <span class="ka-tag text-uppercase border-all ka-radius-sm">Sass</span>
-                        <span class="ka-tag text-uppercase border-all ka-radius-sm">JavaScript</span>
-                        <span class="ka-tag text-uppercase border-all ka-radius-sm">WordPress</span>
-                        <span class="ka-tag text-uppercase border-all ka-radius-sm">Shopify</span>
-                        <span class="ka-tag text-uppercase border-all ka-radius-sm">Framer</span>
-                        <span class="ka-tag text-uppercase border-all ka-radius-sm">Figma</span>
-                        <span class="ka-tag text-uppercase border-all ka-radius-sm">Illustrator</span>
-                        <span class="ka-tag text-uppercase border-all ka-radius-sm">Photoshop</span>
-                        <span class="ka-tag text-uppercase border-all ka-radius-sm">Premiere pro</span>
-                        <span class="ka-tag text-uppercase border-all ka-radius-sm">Canva</span>
-                        <span class="ka-tag text-uppercase border-all ka-radius-sm">Miro</span>
-                        <span class="ka-tag text-uppercase border-all ka-radius-sm">Html</span>
-                        <span class="ka-tag text-uppercase border-all ka-radius-sm">Css</span>
-                        <span class="ka-tag text-uppercase border-all ka-radius-sm">Sass</span>
-                        <span class="ka-tag text-uppercase border-all ka-radius-sm">JavaScript</span>
-                        <span class="ka-tag text-uppercase border-all ka-radius-sm">WordPress</span>
-                        <span class="ka-tag text-uppercase border-all ka-radius-sm">Shopify</span>
-                        <span class="ka-tag text-uppercase border-all ka-radius-sm">Framer</span>
-                        <span class="ka-tag text-uppercase border-all ka-radius-sm">Figma</span>
-                        <span class="ka-tag text-uppercase border-all ka-radius-sm">Illustrator</span>
-                        <span class="ka-tag text-uppercase border-all ka-radius-sm">Photoshop</span>
-                        <span class="ka-tag text-uppercase border-all ka-radius-sm">Premiere pro</span>
-                        <span class="ka-tag text-uppercase border-all ka-radius-sm">Canva</span>
-                        <span class="ka-tag text-uppercase border-all ka-radius-sm">Miro</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="about" class="ka-about position-relative ka-padding-section" aria-label="About me">
+        <section id="about" class="ka-about position-relative ka-h-100 ka-padding-section" aria-label="About me">
             <div class="container-fluid">
                 <div class="row align-items-center">
-                    <div class="col-lg-12 mb-5">
-                        <h2 class="text-uppercase text-center ka-reveal-left ka-delay-3">
-                            { Creative <br> <span class="details-large ka-text-primary">& passionate }</span>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-11 col-md-12 col-sm-12">
+                        <h2 class="text-uppercase ka-reveal-left ka-delay-3">
+                            { Creative <br> <span class="details-medium ka-text-primary">& passionate }</span>
                         </h2>
                     </div>
                     <div class="col-lg-1"></div>
                     <div class="col-lg-6 col-md-12 p-0">
                         <div class="ka-about__img d-flex justify-content-between">
                             <img src="../assets/img/portrait/desktop/kahina-frontend-developer-holographic-ui-cyberpunk-city-desktop.webp"
-                                class="ka-reveal-zoom ka-delay-3 ka-img-desktop" width="834" height="1112"
-                                loading="lazy" decoding="async"
+                                class="mt-5 border-all ka-reveal-zoom ka-delay-3 ka-img-desktop" width="834"
+                                height="1112" loading="lazy" decoding="async"
                                 alt="Kahina, front-end developer, holding a holographic interface on a rooftop overlooking a neon cyberpunk city at night">
                             <img src="../assets/img/portrait/desktop/kahina-frontend-developer-coding-cyberpunk-setup-desktop.webp"
-                                class="ka-reveal-zoom ka-delay-3 ka-img-desktop" width="834" height="1112"
-                                loading="lazy" decoding="async"
+                                class="mt-5 border-all ka-reveal-zoom ka-delay-3 ka-img-desktop" width="834"
+                                height="1112" loading="lazy" decoding="async"
                                 alt="Kahina, front-end developer, coding at a neon-lit keyboard in a dark cyberpunk workspace">
                             <img src="../assets/img/portrait/mobile/kahina-frontend-developer-holographic-ui-cyberpunk-city-mobile.webp"
-                                class="ka-reveal-zoom ka-delay-3 ka-img-mobile" width="175" height="310" loading="lazy"
-                                decoding="async"
+                                class="mt-5 border-all ka-reveal-zoom ka-delay-3 ka-img-mobile" width="175" height="310"
+                                loading="lazy" decoding="async"
                                 alt="Kahina, front-end developer, holding a holographic interface on a rooftop overlooking a neon cyberpunk city at night">
                             <img src="../assets/img/portrait/mobile/kahina-frontend-developer-coding-cyberpunk-setup-mobile.webp"
-                                class="ka-reveal-zoom ka-delay-3 ka-img-mobile" width="175" height="310" loading="lazy"
-                                decoding="async"
+                                class="mt-5 border-all ka-reveal-zoom ka-delay-3 ka-img-mobile" width="175" height="310"
+                                loading="lazy" decoding="async"
                                 alt="Kahina, front-end developer, coding at a neon-lit keyboard in a dark cyberpunk workspace">
                         </div>
                     </div>
                     <div class="col-lg-1"></div>
                     <div class="col-lg-4 col-md-12">
                         <div class="ka-about__content">
-                            <div class="ka-tags d-flex flex-wrap ka-reveal-right ka-delay-3">
-                                <span class="ka-tag text-uppercase border-all ka-radius-sm">UI/UX</span>
-                                <span class="ka-tag text-uppercase border-all ka-radius-sm">Design</span>
-                                <span class="ka-tag text-uppercase border-all ka-radius-sm">2 year apprenticeship</span>
+                            <div class="ka-tags d-flex flex-wrap">
+                                <span
+                                    class="ka-tag text-uppercase border-all ka-radius-sm ka-reveal-right ka-delay-3">UI/UX</span>
+                                <span
+                                    class="ka-tag text-uppercase border-all ka-radius-sm ka-reveal-right ka-delay-3">Design</span>
+                                <span class="ka-tag text-uppercase border-all ka-radius-sm ka-reveal-right ka-delay-3">2
+                                    year Apprenticeship</span>
                             </div>
-                            <span class="subtitle text-uppercase ka-reveal-right ka-delay-3">From front-end & UI/IX, toward marketing 
-                                and communication
-                            </span>
+                            <span class="subtitle text-uppercase ka-reveal-right ka-delay-3">From front-end & UI/UX,
+                                toward marketing & communication</span>
                             <p class="mt-3 ka-reveal-right ka-delay-3">
-                                I design web experiences where technique and aesthetics are one. A successful website 
-                                never sacrifices one for the other. Every visual choice has a purpose, every line of 
-                                code serves an intention. Today, I want to go further. Code and design taught me how 
-                                to build, but I also wan to learn how to bring what I create to life. 
+                                I design web experiences where technique and aesthetics are one. A successful site never
+                                sacrifices for the other. Every visual choice has a purpose, each line of code serves an
+                                intention. Today, I want to go further. Code and design have taught me how to build, but
+                                I also want to learn how to bring what I create to life.
                                 <br>
                                 <br>
-                                That's why I'm looking for a <strong>apprenticeship in marketing and communication for my master's degree</strong>. 
-                                I want to understand how an interface becomes a brand, how a product finds its audience, how a story is told 
-                                beyond the screen. 
+                                That’s why I’m looking for <strong>an apprenticeship in marketing and communication for
+                                    my
+                                    master’s degree</strong>. I would like to understand how an interface becomes a
+                                brand, how a
+                                product finds its audience, how a story is told beyond the screen.
                                 <br>
                                 <br>
-                                My profile is multifaceted because my curiosity is too. Code, design, marketing, it all feeds the same vision : 
-                                creation things that have meaning and that move people. That's my strength. I'm still at the beginning of something 
-                                bigger. Every project is another brick in a universe I'm building my own way, and an invitation to build what comes 
-                                next together.
+                                My profile is multiple because my curiosity is too. Code, design, marketing, all of this
+                                feeds the same vision: to create things that make sense and move people. It’s my
+                                strength. I’m still at the beginning of something bigger. Each project is one more brick
+                                in a universe that I build in my own way, and an invitation to build the sequel
+                                together.
                                 <br>
                                 <br>
-                                <strong>This portfolio is just a glimpse of what's taking shape.</strong>
+                                <strong>This is just a glimpse of what is taking shape.</strong>
                             </p>
-                            <div class="ka-reveal-right ka-delay-3">
-                                <a href="#projects" class="ka-btn mt-3" type="button">
+                            <div class="mt-3 ka-reveal-right ka-delay-3">
+                                <a href="#projects" class="ka-btn border-all align-items-center mt-3" type="button">
                                     <span class="ka-btn__label">View my work</span>
                                 </a>
                             </div>
@@ -300,7 +278,7 @@
                 </div>
             </div>
         </section>
-        <section id="projects" class="ka-projects position-relative" aria-label="Projets">
+        <section id="projects" class="ka-projects position-relative ka-h-100" aria-label="Projects">
             <div class="ka-marquee d-flex flex-column mb-5" aria-hidden="true">
                 <div class="ka-marquee__track">
                     <div class="ka-marquee__row d-flex text-nowrap ka-marquee__row--1"></div>
@@ -310,72 +288,132 @@
                 </div>
             </div>
             <div class="ka-padding-section">
-                <div class="container">
+                <div class="container-fluid">
                     <div class="row">
-                        <div class="col-lg-12 col-md-12">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10 col-md-12 mb-5 d-flex justify-content-end">
+                            <a href="portfolio.html" class="ka-btn border-all align-items-center mt-3 ka-reveal-down ka-delay-3" type="button">
+                                <span class="ka-btn__label">All the projects</span>
+                            </a>
+                        </div>
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10 col-md-12">
                             <ul class="list-projects list-unstyled">
-                                <li class="project-item mb-3 p-3 ka-reveal-right ka-delay-3">
-                                    <a href="#"
+                                <li class="project-item mb-3 border-bottom ka-reveal-down ka-delay-3">
+                                    <a href="project-bntcook.html"
                                         class="text-decoration-none project-link d-flex justify-content-between align-items-center">
-                                        <img src="../assets/img/projects/portfolio/kahinadev-portfolio-mockup-iphone-15-pro.webp"
-                                            class="project-image" width="687" height="516" loading="lazy"
-                                            decoding="async"
-                                            alt="iPhone 15 Pro mockup showcasing the KahinaDev portfolio on mobile">
-                                        <div class="project-name-content d-flex justify-content-between">
-                                            <div class="project-name mb-3">
-                                                <h4 class="text-uppercase">Portfolio</h4>
-                                                 <span class="tag border-all ka-radius-sm subtitle text-uppercase">In progress</span>
-                                            </div>
-                                            <div class="project-number">
+                                        <img src="../assets/img/projects/bntcook/Flyer - BntCook.webp"
+                                            class="project-image border-all" width="687" height="516" loading="lazy"
+                                            decoding="async" alt="Mockup flyer pour bntcook">
+                                        <div class="project-content w-full">
+                                            <div class="project-name w-full d-flex justify-content-between">
+                                                <h4 class="text-uppercase">BNTCOOK</h4>
                                                 <h4 class="text-uppercase">01</h4>
                                             </div>
+                                            <div class="project-tags ka-tags">
+                                                <span
+                                                    class="ka-tag border-all ka-radius-sm subtitle text-uppercase me-1">2026</span>
+                                                <span
+                                                    class="ka-tag border-all ka-radius-sm subtitle text-uppercase me-1">Flyer</span>
+                                                <span
+                                                    class="ka-tag border-all ka-radius-sm subtitle text-uppercase me-1">Food</span>
+                                                <span
+                                                    class="ka-tag border-all ka-radius-sm subtitle text-uppercase">Colorful</span>
+                                            </div>
                                         </div>
                                     </a>
                                 </li>
-                                <li class="project-item mb-3 p-3 ka-reveal-right ka-delay-3">
-                                    <a href="#"
+                                <li class="project-item mb-3 border-bottom ka-reveal-down ka-delay-3">
+                                    <a href="project-portfolio.html"
                                         class="text-decoration-none project-link d-flex justify-content-between align-items-center">
-                                        <div class="project-name-content d-flex justify-content-between">
-                                            <div class="project-name mb-3">
-                                                <h4 class="text-uppercase">History</h4>
-                                                <span class="tag border-all ka-radius-sm subtitle text-uppercase">In progress</span>
-                                            </div>
-                                            <div class="project-number">
+                                        <img src="../assets/img/projects/portfolio/kahinadev-mockup-portfolio-iphone-15-pro.webp"
+                                            class="project-image border-all" width="687" height="516" loading="lazy"
+                                            decoding="async"
+                                            alt="iPhone 15 Pro mockup showcasing the KahinaDev portfolio on mobile" 
+                                            aria-label="iPhone 15 Pro mockup showcasing the KahinaDev portfolio on mobile">
+                                        <div class="project-content w-full">
+                                            <div class="project-name w-full d-flex justify-content-between">
+                                                <h4 class="text-uppercase">PORTFOLIO</h4>
                                                 <h4 class="text-uppercase">02</h4>
                                             </div>
+                                            <div class="project-tags ka-tags">
+                                                <span
+                                                    class="ka-tag border-all ka-radius-sm subtitle text-uppercase me-1">2026</span>
+                                                <span
+                                                    class="ka-tag border-all ka-radius-sm subtitle text-uppercase me-1">Redesign</span>
+                                                <span
+                                                    class="ka-tag border-all ka-radius-sm subtitle text-uppercase me-1">Futuristic</span>
+                                                <span
+                                                    class="ka-tag border-all ka-radius-sm subtitle text-uppercase me-1">Urban</span>
+                                                <span
+                                                    class="ka-tag border-all ka-radius-sm subtitle text-uppercase">Personal</span>
+                                            </div>
                                         </div>
                                     </a>
                                 </li>
-                                <li class="project-item mb-3 p-3 ka-reveal-right ka-delay-3">
+                                <li class="project-item mb-3 border-bottom ka-reveal-down ka-delay-3">
+                                    <a href="project-sayorane.html"
+                                        class="text-decoration-none project-link d-flex justify-content-between align-items-center">
+                                        <img src="../assets/img/projects/sayorane/mockup-carnets-sayorane.webp"
+                                            class="project-image border-all" width="687" height="516" loading="lazy"
+                                            decoding="async"
+                                            alt="Mockups of three notebooks featuring Sayorane's colors and logo" 
+                                            aria-label="Mockups of three notebooks featuring Sayorane's colors and logo">
+                                        <div class="project-content w-full">
+                                            <div class="project-name w-full d-flex justify-content-between">
+                                                <h4 class="text-uppercase">Sayorane</h4>
+                                                <h4 class="text-uppercase">03</h4>
+                                            </div>
+                                            <div class="project-tags ka-tags">
+                                                <span
+                                                    class="ka-tag border-all ka-radius-sm subtitle text-uppercase">In progress</span>
+                                                <span
+                                                    class="ka-tag border-all ka-radius-sm subtitle text-uppercase me-1">2026</span>
+                                                <span
+                                                    class="ka-tag border-all ka-radius-sm subtitle text-uppercase me-1">Redesign</span>
+                                                <span
+                                                    class="ka-tag border-all ka-radius-sm subtitle text-uppercase me-1">Branding identity</span>
+                                                <span
+                                                    class="ka-tag border-all ka-radius-sm subtitle text-uppercase">Agency</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="project-item mb-3 border-bottom ka-reveal-down ka-delay-3">
                                     <a href="#"
                                         class="text-decoration-none project-link d-flex justify-content-between align-items-center">
-                                        <div class="project-name-content d-flex justify-content-between">
-                                            <div class="project-name mb-3">
-                                                <h4 class="text-uppercase mb-3">Agency</h4>
-                                                <span class="tag border-all ka-radius-sm subtitle text-uppercase">In progress</span>
+                                        <div class="project-content w-full">
+                                            <div class="project-name w-full d-flex justify-content-between">
+                                                <h4 class="text-uppercase">History</h4>
+                                                <h4 class="text-uppercase">04</h4>
                                             </div>
-                                            <div class="project-number">
-                                                <h4 class="text-uppercase">03</h4>
+                                            <div class="project-tags ka-tags">
+                                                <span class="ka-tag border-all ka-radius-sm subtitle text-uppercase">In progress</span>
                                             </div>
                                         </div>
                                     </a>
                                 </li>
                             </ul>
                         </div>
+                        <div class="col-lg-1"></div>
                     </div>
                 </div>
             </div>
         </section>
         <section id="contact" class="ka-contact position-relative ka-padding-section" aria-label="Contact">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row align-items-center">
-                    <div class="col-lg-12 col-md-12">
-                        <h3 class="text-uppercase ka-reveal-down ka-delay-3">
-                            { Let's work <span class="details-medium ka-text-primary">together }</span>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-7">
+                        <h3 class="text-uppercase ka-reveal-left ka-delay-3">
+                            { Let's talk <br> <span class="details-small ka-text-primary">together }</span>
                         </h3>
-                        <div class="buttons-contact ka-reveal-right ka-delay-3">
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="ka-card border-all ka-radius-md p-5 align-items-center ka-reveal-right ka-delay-3">
                             <a href="https://www.linkedin.com/in/kahinaouali/"
-                                class="ka-btn ka-btn-contact d-flex justify-content-center border-all align-items-center"
+                                class="ka-btn ka-btn-contact mt-3 d-flex justify-content-center border-all align-items-center"
                                 aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
                                 <i class="fa-brands fa-linkedin-in ka-btn__icon" aria-hidden="true"></i>
                                 <span class="ka-btn__label">Linkedin</span>
@@ -392,30 +430,32 @@
                                 <i class="fa-brands fa-github ka-btn__icon" aria-hidden="true"></i>
                                 <span class="ka-btn__label">Github</span>
                             </a>
-                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfWb9ck4rc9IzAendfF2HTHi82gyLILwLsSSAIupzS8bBDDaw/viewform?usp=publish-editor"
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSffInFZsos0Rr9HBHYujyc4R7UhdB_4rIbG5Wyfqo9-XkNKXw/viewform?usp=publish-editor"
                                 class="ka-btn ka-btn-contact d-flex justify-content-center border-all align-items-center"
-                                aria-label="Envoyer un mail" target="_blank" rel="noopener noreferrer">
+                                aria-label="Send a mail" target="_blank" rel="noopener noreferrer">
                                 <i class="fa-solid fa-envelope-open ka-btn__icon" aria-hidden="true"></i>
                                 <span class="ka-btn__label">Contact</span>
                             </a>
                         </div>
                     </div>
+                    <div class="col-lg-1"></div>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- FOOTER -->
-    <footer class="ka-footer position-relative py-5">
+    <footer class="ka-footer position-relative py-5 border-top" aria-label="Footer">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12">
                     <span class="ka-footer__name text-uppercase">KahinaDev</span>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-v-c">
-                    <span class="ka-footer__version">V4</span>
+                    <span class="ka-footer__version">v4.0.2</span>
                     <br>
-                    <span class="ka-footer__copyright subtitle text-uppercase">© 2023-2026 KAHINADEV - All rights reserved</span>
+                    <span class="ka-footer__copyright subtitle text-uppercase">© 2023-2026 KAHINADEV - All rights
+                        reserved</span>
                 </div>
             </div>
         </div>
@@ -432,7 +472,6 @@
     <!-- PERSONAL JS -->
     <script src="../assets/js/website.js"></script>
     <script src="../assets/js/hero.js"></script>
-    <script src="../assets/js/slide.js"></script>
     <script src="../assets/js/titles.js"></script>
     <script src="https://kit.fontawesome.com/6744aeacbc.js" crossorigin="anonymous"></script>
 
@@ -442,8 +481,8 @@
             "@context": "https://schema.org", 
             "@type": "Person", 
             "name": "Kahina", 
-            "url": "https://www.kahinadev.com/en/",
-            "jobTitle": "Front-End Developer & UI/UX Designer", 
+            "url": "https://www.kahinadev.com/",
+            "jobTitle": "KahinaDev | Front-end developer & UI/UX designer", 
             "sameAs": [
                 "https://www.linkedin.com/in/kahinaouali/", 
                 "https://github.com/kahinadev", 

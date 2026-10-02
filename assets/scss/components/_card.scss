@@ -6,9 +6,8 @@
 @use "../abstracts/mixins" as *;
 
 .ka-card {
-    min-height: 320px;
     overflow: $hidden;
-    border: $border-header-frame;
+    border-color: $color-border;
     transition: filter $transition-base, transform $transition-base;
 
     @include respond-to(sm, max) {
@@ -38,7 +37,6 @@
         margin-top: -2rem;
         font-size: 13px;
         color: #a975dd;
-        border: $border-header-frame;
     }
     
 }

@@ -8,9 +8,7 @@
 .ka-footer {
     padding: 1.5rem;
     height: 35vh;
-    overflow: $hidden;
-    clip-path: inset(0 7px 0 10px);
-    border-top: $border-header-frame;
+    border-color: $color-border !important;
 
     @include respond-to(md) {
         padding: 5rem;

@@ -5,40 +5,120 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
+// -----------------------------------------------
+// Introduction 
+// -----------------------------------------------
 .ka-project-introduction {
     padding-top: 8rem;
-    padding-bottom: 4rem !important;
+    padding-bottom: 0rem !important;
 
-    @include respond-to(md) {
-        padding: $section-padding-desktop;
-    }
-
-    .col-infos {
-        border-color: $color-border;
-    }
-    
-    &__service {
-        color: $color-details;
-        font-size: 14px !important;
+    @include respond-to(lg) {
+        padding-top: 10rem;
     }
 
     h1 {
-        margin-top: 20px;
+        margin-bottom: 1rem;
+    }
+
+    img {
+        border-color: $color-border;
+        margin-top: 2rem !important;
 
         @include respond-to(md) {
-            margin-top: 2rem;
+            margin-top: 3rem !important;
         }
     }
 
-    .text-decoration-underline {
-        color: $color-accent;
+    .ka-tags {
+        flex-direction: column;
+
+        @include respond-to(lg) {
+            flex-direction: row;
+        }
+
+        .ka-tag {
+            width: $width-full;
+
+            @include respond-to(lg) {
+                width: auto !important;
+            }
+        }
+    }
+
+    .ka-btn {
+        width: $width-full;
+
+        @include respond-to(lg) {
+            width: auto !important;
+        }
     }
 }
 
-.ka-project-images {
-    padding-top: 0rem !important;
+// -----------------------------------------------
+// Infos 
+// -----------------------------------------------
+.ka-project-infos {
+    padding-top: 30px !important;
+    padding-bottom: 0rem !important;
 
-    h2,h3 {
-        color: $color-primary;
+    .ka-tag-first,
+    .ka-tag-second,
+    .ka-tag-third {
+        flex-direction: column;
+
+        @include respond-to(md) {
+            flex-direction: row;
+        }
+
+        .m-full {
+            width: $width-full;
+
+            @include respond-to(md) {
+                width: 50%;
+            }
+        }
+    }
+}
+
+// -----------------------------------------------
+// Images 
+// -----------------------------------------------
+.ka-project-images {
+    padding: 0rem;
+
+    @include respond-to(xl) {
+        padding: 0rem 5rem !important;
+    }
+
+    img {
+        margin-top: 1rem;
+        border-color: $color-border;
+
+        @include respond-to(xl) {
+            margin-top: 3rem;
+        }
+    }
+}
+
+// -----------------------------------------------
+// Buttons 
+// -----------------------------------------------
+.ka-project-buttons {
+    padding: 0 1rem;
+
+    @include respond-to(md) {
+        padding: 2rem 1.5rem;
+    }
+
+    @include respond-to(xl) {
+        padding: 0 1.5rem 2rem 1.5rem;
+    }
+
+    .ka-btn {
+        width: $width-full;
+
+        @include respond-to(lg) {
+            width: 50%;
+        }
     }
 }

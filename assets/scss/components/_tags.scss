@@ -8,3 +8,8 @@
 .ka-tags {
    @include tags;
 }
+
+.tag-perso {
+   color: $color-background !important;
+   background-color: $color-details;
+}

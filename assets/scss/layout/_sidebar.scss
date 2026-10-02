@@ -6,30 +6,26 @@
 @use "../abstracts/mixins" as *;
 
 // -----------------------------------------------
-// Base
+// Initial
 // -----------------------------------------------
 
 .ka-sidebar {
-    top: $zero;
+    top: 16px;
     right: 0.5%;
     z-index: $z-menu;
+    border-color: $color-border;
     width: $width-full;
     height: $height-full;
+    @include glass-effect;
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
     opacity: $zero;
     overflow-y: $auto;
     visibility: $hidden;
     overflow-x: $hidden;
-    border: $border-header-frame;
     transform: translateX(100%);
     transition: transform 0.6s ease, opacity 0.4s ease, visibility 0.6s ease;
-    background-color: $color-background;
-
-    @include respond-to(md) {
-        top: 12px;
-        width: 680px;
-        height: 98svh;
-    }
-
+    
     &.active {
         opacity: 1;
         transform: translateX(0);
@@ -37,7 +33,13 @@
         pointer-events: all;
     }
 
-    // Inner 
+    @include respond-to(md) {
+        top: 16px;
+        width: 680px;
+        height: 98svh;
+    }
+
+    // Inner
     &__inner {
         width: $width-full;
         height: $height-full;
@@ -54,16 +56,6 @@
         }
     }
 
-    // Content
-    .content-left,
-    .content-right {
-
-        i,
-        span {
-            font-size: 14px;
-        }
-    }
-
     .content-left {
         width: 30%;
 
@@ -72,65 +64,40 @@
         }
     }
 
-    .content-right {
-        width: 70%;
+    .content-center {
+        width: 60%;
 
         @include respond-to(md) {
-            width: 80%;
+            width: 70%;
         }
     }
 
-    .ka-sidebar__social,
-    .ka-sidebar__infos {
-        border-top: $border-header-frame;
-    }
-
-    // Header 
-    &__header {
-        height: 70px;
-        padding: 0 1rem;
-        border-bottom: $border-header-frame;
-
-        span {
-            font-size: 14px;
-            font-weight: 300 !important;
-            letter-spacing: 3px;
-            font-family: $font-title;
-            color: $color-border;
-        }
-    }
-
-    // Close button 
-    &__close {
-        right: 20px;
-        position: $absolute;
-
-        &:hover,
-        &:focus-visible {
-            i {
-                color: $color-text;
-            }
+    .content-right {
+        .close {
+            top: 20px;
+            position: $absolute;
         }
 
-        i {
-            font-size: 22px !important;
-            color: $color-border;
+        @include respond-to(md) {
+            width: 10%;
         }
-    }
 
-    // Body 
-    &__body {
-        flex: 1;
+        .close-dots {
+            position: absolute;
 
-        ul {
-            width: $width-full;
-
-            @include respond-to(md) {
-                text-align: center;
+            circle {
+                fill: $none;
+                stroke: $color-border;
+                stroke-width: $border-width;
+                transition: all 0.3s ease;
             }
 
-            @include respond-to(xxl) {
-                text-align: left;
+            &:hover,
+            &:focus {
+                circle {
+                    r: 4.6;
+                    stroke: $color-primary;
+                }
             }
         }
     }
@@ -140,7 +107,7 @@
         margin-top: 10px;
 
         @include respond-to(md) {
-            margin-top: $zero
+            margin-top: -14px;
         }
 
         .ka-link {
@@ -148,19 +115,15 @@
         }
     }
 
-    // Project & Social 
-    &__project,
     &__social {
+        border-top: $border-frame !important;
 
         span,
+        i,
         a {
             font-size: 14px;
             color: $color-text;
         }
     }
 
-    // Infos 
-    .available {
-        color: $color-primary;
-    }
 }

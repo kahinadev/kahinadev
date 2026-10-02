@@ -6,207 +6,126 @@
 @use "../abstracts/mixins" as *;
 
 // -----------------------------------------------
-// Header - fixed frame 
+// Header 
 // -----------------------------------------------
 
 .ka-header {
-    inset: 10px;
-    width: 96%;
-    height: 98svh;
+    width: 94%;
+    padding: 0.5rem 1rem;
     position: $fixed;
-    z-index: $z-header;
-    pointer-events: $none;
-    border: $border-header-frame;
+    z-index: $z-frame;
+    left: 50%;
+    transform: translateX(-50%);
+    border: $border-frame;
+    @include glass-effect;
+    pointer-events: auto;
 
-    @include respond-to(md) {
+    @include respond-to(xl) {
         width: 98%;
-        inset: 10px;
-        height: 98svh;
-        margin-top: 2px;
     }
 
-    @include respond-to(xxl) {
-        width: 99%;
-    }
 
-    #burger,
-    .ka-lang,
-    .ka-nav__logo {
-        pointer-events: auto;
-    }
-
-    // Status
-    &__status {
-        left: 0rem;
-        bottom: 0rem;
-        gap: 16px;
-        width: 170px;
-        position: $absolute;
-        border-top: $border-header-frame;
-        border-right: $border-header-frame;
-        border-top-right-radius: $border-r-sm;
-
-        a,
-        span {
-            font-size: 14px !important;
-        }
-
-        span {
-            margin-left: 8px;
-        }
-    }
 }
 
 // -----------------------------------------------
-// Navbar
+// Navigation
 // -----------------------------------------------
 
 .ka-nav {
-    top: $zero;
-    left: $zero;
-    right: $zero;
-    height: 70px;
-    padding: 0 1rem;
-    margin-bottom: -8px;
-    border-bottom: $border-header-frame;
+    &__left {
 
-    @include respond-to(lg) {
-        height: 60px;
-    }
-
-    // Logo 
-    &__logo {
-        img {
-            width: 36px !important;
-            height: $auto;
-            transition: filter $transition-base;
-        }
-    }
-
-    // Burger
-    &__burger {
-        cursor: pointer;
-        gap: $burger-gap;
-
-        &:hover,
-        &:focus-visible {
-            .icon__line {
-
-                &:nth-child(1),
-                &:nth-child(2) {
-                    width: $burger-width-line-icone-one !important;
-                    background-color: $color-primary;
-                    transition: all 0.3s ease-in-out;
-                }
+        // Logo 
+        .logo {
+            img {
+                width: 36px !important;
+                height: $auto;
+                transition: filter $transition-base;
             }
         }
     }
 
-    // Burger lines
-    .icon__line {
-        height: $burger-height-icon;
-        background-color: $color-text;
-        transition:
-            background 0.35s ease,
-            transform 0.3s cubic-bezier(0.3, 0, 0.2, 1),
-            opacity 0.3s ease,
-            width 0.3s ease;
+    &__right {
+        // Initial 
+        gap: 10px;
+        margin-bottom: 10px;
 
-        &:nth-child(1) {
-            width: $burger-width-line-icone-one;
+        // Language toggle 
+        .language-toggle {
+            margin-top: 6px;
+
+            a {
+                font-size: 20px;
+                color: $color-text;
+                font-family: $font-title;
+            }
         }
 
-        &:nth-child(2) {
-            width: $burger-width-line-icone-two;
-        }
+        // Burger
+        .burger {
+            gap: $burger-gap;
+            width: $burger-width;
+            height: $burger-height;
+            cursor: pointer;
+            transition: $burger-transition;
 
-        &:not(:last-child) {
-            margin-bottom: $burger-bottom-line-icon;
-        }
-    }
-
-    // System 
-    &__system {
-        height: $height-full;
-        overflow: $hidden;
-        flex: 1;
-        margin: 0 12px;
-        max-width: 360px;
-        border-left: $border-header-frame;
-        border-right: $border-header-frame;
-
-        @include respond-to(xxl) {
-            max-width: 400px;
-        }
-    }
-
-    &__system-text {
-        left: $zero;
-        right: $zero;
-        font-size: 14px;
-        color: $color-accent;
-        overflow: $hidden;
-        position: $absolute;
-        text-overflow: ellipsis;
-        animation: ka-system-cycle 8s infinite;
-
-        &--a {
-            animation-delay: 0s;
-        }
-
-        &--b {
-            animation-delay: -4s;
-
-            br {
-                @include respond-to(md) {
-                    display: $none;
+            &:hover {
+                .circle {
+                    transform: scale(2);
+                    border-color: $color-primary !important;
                 }
+
+            }
+        }
+
+        .burger-row {
+            width: $width-full;
+
+            .circle {
+                width: $burger-circle-width;
+                height: $burger-circle-height;
+                border-radius: 50%;
+                border-color: $color-border;
+                transition: $burger-circle-transition;
             }
         }
     }
-
-    // &.is-scrolled {
-    //     background-color: $color-background;
-    // }
 }
 
 // -----------------------------------------------
-// Language switcher
+// Terminal
 // -----------------------------------------------
 
-.ka-lang {
-    margin-left: -36px;
-    padding: 20px 16px;
-    border-right: $border-header-frame;
-}
+.ka-terminal {
+    left: 1rem;
+    bottom: 1rem;
+    z-index: $z-frame;
+    border-color: $color-border;
+    padding: 1.2rem 1rem 0.5rem 1rem;
+    @include glass-effect;
 
-// -----------------------------------------------
-// Keyframes
-// -----------------------------------------------
+    &__content {
+        p {
+            &:not(:last-child) {
+                margin-bottom: 8px;
+            }
 
-@keyframes ka-system-cycle {
-    0% {
-        transform: translateY(100%);
-        opacity: $zero;
-    }
+            &::before {
+                content: "";
+                width: 0.5rem;
+                height: 0.5rem;
+                flex-shrink: $zero;
+                background-color: $color-primary;
+            }
 
-    5% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+            .subtitle {
+                color: $color-primary;
+                margin-left: 5px;
+            }
 
-    45% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+            span {
+                font-size: 14px !important;
+            }
 
-    50% {
-        transform: translateY(-100%);
-        opacity: $zero;
-    }
-
-    100% {
-        transform: translateY(-100%);
-        opacity: $zero;
+        }
     }
 }

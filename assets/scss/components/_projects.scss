@@ -10,16 +10,17 @@
 // -----------------------------------------------
 
 .list-projects {
+    // Item 
     .project-item {
-        border-bottom: $border-header-frame;
-        transition: all 0.5s ease-in-out;
+        transition: $transition-list-projects;
+        border-color: $color-border !important;
 
         &:hover {
             padding: 1.5rem;
             border-bottom: 1px solid $color-accent !important;
 
             @include respond-to(lg) {
-                padding: 4rem !important;
+                padding: 2rem !important;
             }
 
             .project-name,
@@ -33,48 +34,56 @@
                 opacity: 1;
             }
         }
+    }
 
-        .project-link {
-            flex-direction: column;
+    // Link
+    .project-link {
+        flex-direction: column;
+
+        @include respond-to(lg) {
+            flex-direction: row;
+        }
+    }
+
+    // Content 
+    .project-content {
+        margin: 2rem 0;
+
+        @include respond-to(lg) {
+            margin-top: 0rem;
+        }
+
+        // Name & number 
+        h4 {
+            font-size: 40px;
 
             @include respond-to(lg) {
-                flex-direction: row !important;
-            }
-
-            .project-name-content {
-                width: $width-full;
-                margin-top: 25px;
-
-                .project-name,
-                .project-number {
-                    h4 {
-                        @include respond-to(lg) {
-                            font-size: 80px;
-                        }
-                    }
-                }
-
-                .project-name {
-                    span {
-                        padding: 8px 15px;
-                        font-size: 13px;
-                    }
-                }
+                font-size: 80px;
             }
         }
 
-        .project-image {
-            @include respond-to(lg) {
-                opacity: 0;
-                position: $absolute;
-                width: 480px;
-                left: 40%;
-                margin: 0 auto;
-                opacity: 0;
-                z-index: 1;
-                margin-top: 2%;
-                transition: all 0.5s ease-in-out;
-            }
+        // Tags 
+        .project-tags {
+            display: $flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    // Image 
+    .project-image {
+        border-color: $color-border;
+
+        @include respond-to(md) {
+            opacity: $zero;
+            position: $absolute;
+            width: 480px;
+            left: 50%;
+            transform: translateX(-50%);
+            margin: $zero auto;
+            opacity: $zero;
+            z-index: 1;
+            margin-top: 2%;
+            transition: all 0.5s ease-in-out;
         }
     }
 }
