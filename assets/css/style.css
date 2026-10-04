@@ -573,11 +573,6 @@ p, span {
     height: 150px !important;
   }
 }
-@media (min-width: 1114px) {
-  .ka-footer {
-    clip-path: inset(0 18px 0 10px);
-  }
-}
 .ka-footer__name {
   font-size: 25px;
   color: #D9674A;
@@ -913,7 +908,7 @@ p, span {
   border-color: rgba(240, 238, 255, 0.4941176471) !important;
 }
 .list-projects .project-item:hover {
-  padding: 1.5rem;
+  padding: 0rem;
   border-bottom: 1px solid #F18D74 !important;
 }
 @media (min-width: 1024px) {
@@ -925,9 +920,6 @@ p, span {
 .list-projects .project-item:hover .project-number h4 {
   color: #F18D74;
 }
-.list-projects .project-item:hover .project-image {
-  opacity: 1;
-}
 .list-projects .project-link {
   flex-direction: column;
 }
@@ -937,7 +929,7 @@ p, span {
   }
 }
 .list-projects .project-content {
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 @media (min-width: 1024px) {
   .list-projects .project-content {
@@ -957,21 +949,17 @@ p, span {
   flex-wrap: wrap;
 }
 .list-projects .project-image {
+  opacity: 0;
+  position: absolute;
+  width: 480px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0 auto;
+  opacity: 0;
+  z-index: 1;
+  margin-top: 2%;
+  transition: all 0.5s ease-in-out;
   border-color: rgba(240, 238, 255, 0.4941176471);
-}
-@media (min-width: 768px) {
-  .list-projects .project-image {
-    opacity: 0;
-    position: absolute;
-    width: 480px;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 0 auto;
-    opacity: 0;
-    z-index: 1;
-    margin-top: 2%;
-    transition: all 0.5s ease-in-out;
-  }
 }
 
 @media (min-width: 1024px) {
@@ -1210,15 +1198,26 @@ p, span {
 }
 
 .ka-portfolio {
-  padding: 10rem 2rem 8rem 2rem !important;
+  padding-top: 8rem;
 }
 @media (min-width: 1114px) {
   .ka-portfolio {
-    padding-top: 15rem;
+    padding: 15rem 0 8rem 0rem;
   }
 }
 .ka-portfolio h1 {
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
+}
+@media (min-width: 1024px) {
+  .ka-portfolio h1 {
+    margin-bottom: 5rem;
+  }
+}
+.ka-portfolio .project-item:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.ka-portfolio .project-item .project-link {
+  margin-bottom: 1rem;
 }
 
 .text-light {

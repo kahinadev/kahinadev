@@ -10,13 +10,14 @@
 // -----------------------------------------------
 
 .list-projects {
+
     // Item 
     .project-item {
         transition: $transition-list-projects;
         border-color: $color-border !important;
 
         &:hover {
-            padding: 1.5rem;
+            padding: 0rem;
             border-bottom: 1px solid $color-accent !important;
 
             @include respond-to(lg) {
@@ -28,10 +29,6 @@
                 h4 {
                     color: $color-accent;
                 }
-            }
-
-            .project-image {
-                opacity: 1;
             }
         }
     }
@@ -47,7 +44,7 @@
 
     // Content 
     .project-content {
-        margin: 2rem 0;
+        margin: 1rem 0;
 
         @include respond-to(lg) {
             margin-top: 0rem;
@@ -71,19 +68,16 @@
 
     // Image 
     .project-image {
+        opacity: $zero;
+        position: $absolute;
+        width: 480px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: $zero auto;
+        opacity: $zero;
+        z-index: 1;
+        margin-top: 2%;
+        transition: all 0.5s ease-in-out;
         border-color: $color-border;
-
-        @include respond-to(md) {
-            opacity: $zero;
-            position: $absolute;
-            width: 480px;
-            left: 50%;
-            transform: translateX(-50%);
-            margin: $zero auto;
-            opacity: $zero;
-            z-index: 1;
-            margin-top: 2%;
-            transition: all 0.5s ease-in-out;
-        }
     }
 }
