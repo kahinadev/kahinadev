@@ -1,0 +1,46 @@
+// ===============================================
+// ===============================================
+// ANIMATIONS
+// ===============================================
+// ===============================================
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "sass:map";
+
+// -----------------------------------------------
+// INITIALIZATION 
+// -----------------------------------------------
+
+$reveals: (
+    'up': (opacity: $zero, transform: translateY(50px)), 
+    'down': (opacity: $zero, transform: translateY(-50px)), 
+    'left': (opacity: $zero, transform: translateX(-60px)), 
+    'right': (opacity: $zero, transform: translatX(60px)),
+    'scale': (opacity: $zero, transform: scale(0.92)),
+    'zoom': (opacity: $zero, transform: scale(0.7)),
+);
+
+// -----------------------------------------------
+// BOUCLE FOR CLASS FOR ANIMATIONS
+// -----------------------------------------------
+
+@each $name, $props in $reveals {
+    .ka-reveal-#{$name} {
+        opacity: $zero; 
+        transform: map.get($props, transform);
+        transition: 
+            opacity 2s cubic-bezier(0.16, 1, 0.3, 1), 
+            transform 2s cubic-bezier(0.16, 1, 0.3, 1);
+        &.is-visible {
+            opacity: 1;
+            transform: $none;
+        }
+    }
+}
+
+@for $i from 1 through 4 {
+    .ka-delay-#{$i} {
+        transition-delay: #{$i * 0.1}s;
+    }
+}

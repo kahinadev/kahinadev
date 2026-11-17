@@ -1,0 +1,84 @@
+// ===============================================
+// ===============================================
+// THEMES
+// ===============================================
+// ===============================================
+
+@use "../abstracts/variables" as *;
+
+// -----------------------------------------------
+// INITIALIZATION 
+// -----------------------------------------------
+
+$themes: (
+    light: (
+        text: #080808,
+        background: #F0EEFF, 
+        primary: #6B03D3, 
+        secondary: #40037C, 
+        accent: #B54326,
+        details: #D9674A,
+        border: #08080899,
+        glass: rgba(#F0EEFF, 0.337),
+        glass-shadow: rgba(#F0EEFF, 0.297),
+        glass-strong: rgba(#F0EEFF, 0.85),
+    ),
+    dark: (
+        text: #F0EEFF, 
+        background: #080808, 
+        primary: #BF83FC,
+        secondary: #CDB2E9, 
+        accent: #D9674A,
+        details: #b54326,
+        border: #F0EEFF7D,
+        glass: rgba(#080808, 0.337),
+        glass-shadow: rgba(#080808, 0.297),
+        glass-strong: rgba(#080808, 0.85),
+    ),
+);
+
+// -----------------------------------------------
+// CSS VARIABLES FOR EACH THEME 
+// -----------------------------------------------
+
+@each $name, $colors in $themes {
+    [data-theme="#{$name}"] {
+        @each $key, $value in $colors {
+            --#{$key}: #{$value};
+        }
+    }
+};
+
+// -----------------------------------------------
+// DARK THEME
+// -----------------------------------------------
+
+[data-theme="dark"] {
+    .icon-moon {display: $none;}
+    .icon-sun {display: $block;}
+
+    .logo-light {display: $none;}
+    .logo-dark {display: $block;}
+}
+
+// -----------------------------------------------
+// LOGOS & ICON "MOON"
+// -----------------------------------------------
+
+[data-theme="light"] {
+    .icon-sun {display: $none;}
+    .icon-moon {display: $block;}
+
+    .logo-dark {display: $none;}
+    .logo-light {display: $block;}
+}
+
+// -----------------------------------------------
+// SWITCH
+// -----------------------------------------------
+
+body {
+    color: var(--text);
+    background-color: var(--background);
+    transition: $transition-body;
+}

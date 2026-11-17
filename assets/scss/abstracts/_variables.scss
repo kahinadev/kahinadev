@@ -1,4 +1,4 @@
- // ===============================================
+// ===============================================
 // VARIABLES
 // ===============================================
 
@@ -18,6 +18,7 @@ $font-text: "Exo 2", sans-serif;
 
 $font-weight-regular: 400;
 $font-weight-medium: 500;
+$font-weight-semibold: 600;
 $font-weight-bold: 700;
 $font-weight-black: 900;
 
@@ -41,9 +42,13 @@ $breakpoints: (
 // Radius
 // -----------------------------------------------
 
-$border-r-sm: 0.5rem;
-$border-r-md: 1rem;
-$border-r-lg: 1.5rem;
+$border-r-none: 0;
+$border-r-xs: 4px;
+$border-r-sm: 8px;    
+$border-r-md: 12px;  
+$border-r-lg: 16px;    
+$border-r-xl: 24px;  
+$border-r-full: 32px; 
 
 // -----------------------------------------------
 // Border
@@ -51,10 +56,9 @@ $border-r-lg: 1.5rem;
 
 $border-width: 1px;
 $border-type: solid;
-$border-color: $color-details;
+$border-color: $color-border;
 $border-positions: top, bottom, left, right, all;
-$border: 1px solid $color-text;
-$border-frame: 0.3px solid $color-border;
+$border: 1px solid var(--text);
 
 // -----------------------------------------------
 // Layout
@@ -80,15 +84,9 @@ $visible: visible;
 // -----------------------------------------------
 
 $zero: 0;
-
-$fixed: fixed;
-$relative: relative;
-$absolute: absolute;
-
 $left: left;
 $right: right;
 $center: center;
-
 $column: column;
 
 // -----------------------------------------------
@@ -96,19 +94,20 @@ $column: column;
 // -----------------------------------------------
 
 $z-frame: 10;
-$z-content: 20;
-$z-header: 100;
-$z-lang: 100;
 $z-menu: 200;
 $z-overlay: 300;
+$z-project-image: 10;
 
 // -----------------------------------------------
 // Transitions
 // -----------------------------------------------
 
 $transition-base: 300ms ease;
+$transition-btn: color $transition-base, text-shadow $transition-base;
+$transition-body: background 0.3s ease, color 0.3s ease;
+$transition-link: color $transition-base, padding-left $transition-base;
 $transition-slow: 500ms cubic-bezier(0.16, 1, 0.3, 1);
-$transition-list-projects: all 0.5s ease-in-out;
+$transition-projects-list: all 0.5s ease-in-out;
 
 // -----------------------------------------------
 // Buttons
@@ -117,11 +116,9 @@ $transition-list-projects: all 0.5s ease-in-out;
 $btn-h: 1.5rem;
 $btn-v: 1.1rem;
 $btn-gap: 0.8rem;
-$btn-size: 14px;
-$btn-weight: 600;
 $btn-radius: $border-r-md;
 $btn-dot-size: 10px;
-$btn-padding: 0.8rem 1.2rem;
+
 
 // -----------------------------------------------
 // Burger
@@ -139,8 +136,8 @@ $burger-circle-transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 // Badge & tags
 // -----------------------------------------------
 
-$badge-size: 15px;
-$badge-padding: 15px 20px;
+$badge-size: 10px;
+$badge-padding: 8px 16px;
 $badge-width-n-tags: calc(50% - 7.5px);
 
 // -----------------------------------------------
@@ -165,7 +162,7 @@ $card-gap: 8px;
 // Section
 // -----------------------------------------------
 
-$section-padding-mobile: 80px 1rem;
+$section-padding-mobile: 40px 1rem;
 $section-padding-desktop: 10rem 5rem;
 
 // -----------------------------------------------
@@ -178,8 +175,17 @@ $cover: cover;
 // Skip link
 // -----------------------------------------------
 
+$size-skip: 14px;
 $width-skip: 1px;
 $height-skip: 1px;
+
+// -----------------------------------------------
+// Accordion
+// -----------------------------------------------
+
+$accordion-closed-w: 86px; 
+$accordion-speed: 0.7s; 
+$accordion-animation: cubic-bezier(0.22, 1, 0.36, 1);
 
 // -----------------------------------------------
 // Project item
@@ -188,3 +194,10 @@ $height-skip: 1px;
 $project-item-gap: 10px;
 $project-item-size: 12px;
 $project-item-padding: 8px 15px;
+
+// -----------------------------------------------
+// NAVBAR LINK
+// -----------------------------------------------
+
+$padding-link-mobile: 1rem;
+$padding-link-desktop: 0rem;

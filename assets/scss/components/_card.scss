@@ -1,59 +1,8 @@
 // ===============================================
+// ===============================================
 // CARD
+// ===============================================
 // ===============================================
 
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
-
-.ka-card {
-    overflow: $hidden;
-    border-color: $color-border;
-    transition: filter $transition-base, transform $transition-base;
-
-    @include respond-to(sm, max) {
-        padding: 2rem !important;
-    }
-
-    &__infos {
-        font-weight: 800 !important;
-
-        br {
-            display: $none; 
-
-            @include respond-to(md) {
-                display: $block;
-            }
-        }
-    }
-}
-
-.ka-card__services {
-    padding: 1rem !important;
-    @include respond-to(lg) {
-        padding: 3rem;
-    }
-    .available {
-        margin-left: 3rem;
-        margin-top: -2rem;
-        font-size: 13px;
-        color: #a975dd;
-    }
-    
-}
-
-.ka-card__project {
-    display: block;
-    transition: transform 0.4s ease;
-
-    &:hover {
-        transform: scale(1.08);
-    }
-
-    .infos {
-        font-size: 14px !important;
-    }
-
-    .year {
-        color: $color-details;
-    }
-}

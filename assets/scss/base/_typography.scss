@@ -59,7 +59,8 @@ h6 {
 
 
 h1, 
-.details-large {
+.title-span,
+.ka-details-large {
     @include title;
     @include respond-to(xl) {
         font-size: 120px;
@@ -67,17 +68,17 @@ h1,
 }
 
 h2, 
-.details-medium {
-    @include title(42px, 72px, 100px);
+.ka-details-medium {
+    @include title(42px, 63px, 100px);
 }
 
 h3, 
-.details-small {
-    @include title(31px, 68px, 90px);
+.ka-details-small {
+    @include title(40px, 60px, 90px);
 }
 
 h4 {
-    @include title(25px, 30px, 30px);
+    @include title(25px, 30px, 80px);
 }
 
 

@@ -6,11 +6,15 @@
 @use "../abstracts/mixins" as *;
 
 // -----------------------------------------------
-// Hero height
+// Height
 // -----------------------------------------------
 
 .ka-h-100 {
     min-height: 100svh;
+}
+
+.h-full {
+    height: $height-full;
 }
 
 // -----------------------------------------------
@@ -49,6 +53,10 @@
 // Border radius
 // -----------------------------------------------
 
+.ka-radius-xs {
+    border-radius: $border-r-xs;
+}
+
 .ka-radius-sm {
     border-radius: $border-r-sm;
 }
@@ -61,16 +69,24 @@
     border-radius: $border-r-lg;
 }
 
+.ka-radius-xl {
+    border-radius: $border-r-xl;
+}
+
+.ka-radius-full {
+    border-radius: $border-r-full;
+}
+
 // -----------------------------------------------
 // Colors
 // -----------------------------------------------
 
 .ka-text-primary {
-    color: $color-primary;
+    color: var(--primary);
 }
 
 .ka-text-details {
-    color: $color-details;
+    color: var(--details);
 }
 
 // -----------------------------------------------
@@ -78,5 +94,5 @@
 // -----------------------------------------------
 
 .bg-accent {
-    background-color: $color-accent;
+    background-color: var(--accent);
 }

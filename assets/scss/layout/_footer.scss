@@ -1,35 +1,40 @@
 // ===============================================
-// Footer
+// ===============================================
+// HEADER
+// ===============================================
 // ===============================================
 
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
+// -----------------------------------------------
+// INITIALIZARION 
+// -----------------------------------------------
+
 .ka-footer {
-    padding: 1.5rem;
-    height: 35vh;
-    border-color: $color-border !important;
+    padding: 2.5rem 1rem;
 
-    @include respond-to(md) {
-        padding: 5rem;
-        height: 150px !important;
+    h5 {
+        font-size: 14px !important;
     }
 
-    &__name {
-        font-size: 25px;
-        color: $color-details;
-        font-family: $font-title;
+    p, a {
+        font-size: 11px;
     }
 
-    &__version {
-        font-size: 16px;
+    &__link {
+        color: var(--text);
+
+        &:hover {
+            color: var(--accent);
+        }
+
+        &:visited {
+            text-decoration: line;
+        }
     }
 
-    &__copyright {
-        font-size: 12px !important;
-    }
-
-    .col-v-c {
+    &__other-infos {
         text-align: left;
 
         @include respond-to(md) {

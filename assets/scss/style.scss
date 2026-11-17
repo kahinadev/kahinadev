@@ -3,6 +3,12 @@
 // ===============================================
 
 // -----------------------------------------------
+// Thèmes
+// -----------------------------------------------
+
+@use "theme/theme";
+
+// -----------------------------------------------
 // Abstracts
 // -----------------------------------------------
 
@@ -17,6 +23,7 @@
 @use "base/base";
 @use "base/typography";
 @use "base/utilities";
+@use "base/animations";
 
 // -----------------------------------------------
 // Layout
@@ -31,10 +38,11 @@
 // -----------------------------------------------
 
 @use "components/skip-link";
-@use "components/hero"; 
-@use "components/tags";
+@use "components/particles";
 @use "components/button";
-@use "components/slider";
+@use "components/terminal";
+@use "components/tags";
+@use "components/accordion";
 @use "components/marquee";
 @use "components/card";
 @use "components/images";
@@ -46,7 +54,6 @@
 
 @use "pages/home";
 @use "pages/project";
-@use "pages/portfolio";
 
 // -----------------------------------------------
 // Vendors

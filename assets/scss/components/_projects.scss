@@ -1,83 +1,96 @@
 // ===============================================
-// PROJECTS
+// ===============================================
+// PROJECTS - COMPONENTS
+// ===============================================
 // ===============================================
 
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
 // -----------------------------------------------
-// Initial
+// INITIALIZATION 
 // -----------------------------------------------
 
-.list-projects {
+.projects-list,
+.ka-project-intro {
+    .ka-tag {
+        color: var(--border);
+    }
+}
 
-    // Item 
-    .project-item {
-        transition: $transition-list-projects;
-        border-color: $color-border !important;
+.projects-list {
+    &__item {
+        padding-bottom: 1.5rem !important;
+        border-color: var(--border) !important;
+        transition: $transition-projects-list;
 
-        &:hover {
-            padding: 0rem;
-            border-bottom: 1px solid $color-accent !important;
+        @include respond-to(lg) {
+            padding-bottom: 2rem;
+        }
+
+        h4 {
+            font-size: 40px !important;
 
             @include respond-to(lg) {
-                padding: 2rem !important;
+                font-size: 80px !important;
+            }
+        }
+
+        &:hover {
+            padding: 0.5rem;
+            border-color: var(--secondary) !important;
+
+            @include respond-to(lg) {
+                padding: 1rem 3rem;
             }
 
-            .project-name,
-            .project-number {
-                h4 {
-                    color: $color-accent;
-                }
+            h4,
+            .ka-tag {
+                color: var(--secondary);
+            }
+
+            .ka-tag,
+            img {
+                border-color: var(--secondary);
+            }
+
+            .projects-list__image {
+                opacity: 1;
             }
         }
     }
 
-    // Link
-    .project-link {
-        flex-direction: column;
+    &__link {
+        flex-direction: $column;
 
         @include respond-to(lg) {
             flex-direction: row;
         }
     }
 
-    // Content 
-    .project-content {
-        margin: 1rem 0;
+    &__content {
+        margin-top: 1rem;
 
         @include respond-to(lg) {
-            margin-top: 0rem;
+            margin-top: $zero;
         }
 
-        // Name & number 
-        h4 {
-            font-size: 40px;
-
-            @include respond-to(lg) {
-                font-size: 80px;
-            }
-        }
-
-        // Tags 
-        .project-tags {
-            display: $flex;
-            flex-wrap: wrap;
-        }
     }
 
-    // Image 
-    .project-image {
-        opacity: $zero;
-        position: $absolute;
-        width: 480px;
-        left: 50%;
-        transform: translateX(-50%);
-        margin: $zero auto;
-        opacity: $zero;
-        z-index: 1;
-        margin-top: 2%;
-        transition: all 0.5s ease-in-out;
-        border-color: $color-border;
+    img {
+        position: relative;
+        margin-top: 1.5rem;
+
+        @include respond-to(lg) {
+            left: 50%;
+            opacity: $zero;
+            width: 580px;
+            position: absolute;
+            border-color: var(--border);
+            z-index: $z-project-image;
+            margin: $zero $auto;
+            transform: translateX(-50%);
+            transition: $transition-projects-list;
+        }
     }
 }

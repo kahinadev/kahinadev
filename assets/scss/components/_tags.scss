@@ -1,15 +1,20 @@
 // ===============================================
+// ===============================================
 // TAGS
+// ===============================================
 // ===============================================
 
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-.ka-tags {
+// -----------------------------------------------
+// INITIALIZATION 
+// -----------------------------------------------
+
+.ka-tags, .ka-accordion__tags {
    @include tags;
 }
 
-.tag-perso {
-   color: $color-background !important;
-   background-color: $color-details;
+.ka-tag-perso {
+   border-color: var(--details);
 }

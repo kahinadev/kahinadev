@@ -1,12 +1,14 @@
 // ===============================================
+// ===============================================
 // SKIP LINK
+// ===============================================
 // ===============================================
 
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
 .skip-link {
-    @include visually-hidden;
+    @include accessibility;
     pointer-events: all;
 
     &:focus {
@@ -15,11 +17,10 @@
         width: $auto;
         height: $auto;
         clip: $auto;
-        position: $fixed;
+        position: fixed;
         padding: 10px 16px;
-        border: $border;
         z-index: $z-overlay;
-        color: $color-text;
-        background-color: $color-background;
+        color: var(--text);
+        background-color: var(--background);
     }
 }

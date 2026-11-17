@@ -1,12 +1,17 @@
 // ===============================================
+// ===============================================
 // MARQUEE
+// ===============================================
 // ===============================================
 
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
+// -----------------------------------------------
+// INITIALIZATION 
+// -----------------------------------------------
+
 .ka-marquee {
-    width: $width-full;
     overflow: $hidden;
     display: $flex;
     gap: 1rem;
@@ -38,8 +43,8 @@
         margin: $zero 2.6em;
         border-radius: $marquee-dot-radius;
         display: inline-block;
-        position: $relative;
-        background: $color-accent;
+        position: relative;
+        background: var(--accent);
         vertical-align: middle;
 
         @include respond-to(sm, max) {
@@ -52,10 +57,10 @@
 
 .ka-marquee__row {
     &--1 .ka-marquee__item {
-        color: $color-text;
+        color: var(--text);
     }
 
     &--2 .ka-marquee__item {
-        color: $color-primary;
+        color: var(--primary);
     }
 }

@@ -1,12 +1,14 @@
 // ===============================================
+// ===============================================
 // BUTTONS
+// ===============================================
 // ===============================================
 
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
 // -----------------------------------------------
-// General
+// INITIALIZATION 
 // -----------------------------------------------
 
 .ka-btn {
@@ -14,14 +16,29 @@
 }
 
 // -----------------------------------------------
-// Contact
+// BUTTON - CORNERS
 // -----------------------------------------------
 
-.ka-btn-contact {
-    width: $width-full !important;
-    border: $none !important;
+.ka-btn-corners {
+    @include button-corners;
+}
 
-    i {
-        margin-right: 15px;
-    }
+// -----------------------------------------------
+// LANGUAGE & SWITCH
+// -----------------------------------------------
+
+.ka-language-button {
+    padding: 1rem;
+    width: 52px;
+}
+
+.ka-switch-button {
+    padding: 1.2rem;
+}
+
+.ka-language-button, 
+.ka-switch-button, 
+.ka-burger {
+    border-top: $none !important;
+    border-bottom: $none !important;
 }

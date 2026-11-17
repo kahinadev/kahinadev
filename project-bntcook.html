@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -74,107 +74,164 @@
 </head>
 
 <body>
+    <canvas id="ka-particles" class="ka-particles position-fixed h-full w-full" aria-hidden="true"></canvas>
+
     <!-- HEADER -->
-    <header id="ka-header" class="ka-header ka-radius-lg border-all mt-3" aria-label="Header">
-        <div class="container-fluid">
-            <a href="#infos" class="skip-link text-decoration-none text-uppercase">Aller au contenu principal</a>
-            <nav class="ka-nav d-flex align-items-center justify-content-between" aria-label="Navigation principale">
+    <header id="ka-header" class="ka-header">
+        <a href="#infos-projet" class="skip-link position-absolute text-decoration-none text-uppercase">Aller au contenu
+            principal</a>
+        <div class="container">
+            <nav class="ka-nav mt-3 d-flex justify-content-between align-items-center ka-border-all ka-radius-xl"
+                aria-label="Navigation principale">
                 <div class="ka-nav__left">
                     <a href="index.html" class="logo" aria-label="Retour à l'accueil">
-                        <img src="assets/img/logo/logo-kahinadev.svg" width="36" height="36" alt="Logo KahinaDev">
+                        <img class="logo-dark" src="assets/img/logo/logo-kahinadev-theme-dark.svg" width="36"
+                            height="36" alt="Logo KahinaDev">
+                        <img class="logo-light" src="assets/img/logo/logo-kahinadev-theme-light.svg" width="36"
+                            height="36" alt="Logo KahinaDev">
                     </a>
                 </div>
-                <div class="ka-nav__right d-flex justify-content-between align-items-center">
-                    <div class="language-toggle">
-                        <a href="en/project-bntcook.html" class="text-decoration-none text-uppercase"
-                            aria-label="Switch to English" hreflang="en" rel="alternate">En</a>
+                <div class="ka-nav__center">
+                    <ul class="list-unstyled ka-list d-flex">
+                        <li class="ka-item">
+                            <a href="index.html#introduction" class="ka-link text-decoration-none text-uppercase">
+                                Introduction
+                            </a>
+                        </li>
+                        <li class="ka-item">
+                            <a href="index.html#a-propos" class="ka-link text-decoration-none text-uppercase">
+                                À propos
+                            </a>
+                        </li>
+                        <li class="ka-item">
+                            <a href="index.html#services" class="ka-link text-decoration-none text-uppercase">
+                                Services
+                            </a>
+                        </li>
+                        <li class="ka-item">
+                            <a href="index.html#portfolio" class="ka-link text-decoration-none text-uppercase">
+                                Portfolio
+                            </a>
+                        </li>
+                        <li class="ka-item">
+                            <a href="index.html#contact" class="ka-link text-decoration-none text-uppercase">
+                                Me contacter
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="ka-nav__right">
+                    <div class="ka-buttons-toggle d-flex align-items-center">
+                        <a href="en/project-bntcook.html"
+                            class="ka-btn ka-language-button ka-border-all ms-1 ka-radius-full me-1 text-decoration-none text-uppercase"
+                            aria-label="Switch to English" hreflang="en" rel="alternate">
+                            <span class="ka-btn__label">En</span>
+                        </a>
+                        <button type="button" id="theme-toggle"
+                            class="ka-btn ka-switch-button ka-border-all ka-radius-full" aria-label="Changer de thème">
+                            <!-- ICON SUN -->
+                            <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="12" cy="12" r="4.2" />
+                                <path
+                                    d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4" />
+                            </svg>
+                            <!-- ICON MOON -->
+                            <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M20.5 13.2A8.5 8.5 0 1 1 10.8 3.5 7.5 7.5 0 0 0 20.5 13.2z" />
+                            </svg>
+                        </button>
+                        <button type="button" id="ka-burger"
+                            class="ka-burger ms-1 ka-border-all ka-radius-full d-flex justify-content-center"
+                            aria-label="Ouvrir le menu de navigation" aria-expanded="false">
+                            <div class="icon-burger d-flex flex-column">
+                                <span class="line-burger ka-radius-sm"></span>
+                                <span class="line-burger ka-radius-sm"></span>
+                                <span class="line-burger ka-radius-sm"></span>
+                            </div>
+                        </button>
                     </div>
-                    <button id="burger"
-                        class="burger d-flex flex-column justify-content-end align-items-center bg-transparent border-0"
-                        aria-label="Menu">
-                        <div class="burger-row burger-row-top d-flex justify-content-end align-items-center">
-                            <span class="circle me-1 border-all"></span>
-                            <span class="circle border-all"></span>
-                        </div>
-                        <div class="burger-row burger-row-bottom d-flex justify-content-end align-items-center">
-                            <span class="circle me-1 border-all"></span>
-                            <span class="circle border-all"></span>
-                        </div>
-                    </button>
                 </div>
             </nav>
         </div>
     </header>
 
-    <!-- TERMINAL -->
-    <div class="ka-terminal d-flex justify-content-center position-fixed border-all ka-radius-md">
-        <div class="ka-terminal__content">
-            <p class="line d-flex align-items-center time" aria-hidden="true">
-                <span class="subtitle text-uppercase me-1">Time :</span>
-                <span id="ka-clock-time">00:00:00</span>
-            </p>
-            <p class="line d-flex align-items-center status">
-                <span class="subtitle text-uppercase me-1">Statuts :</span>
-                <span class="text-uppercase"><strong>Disponible</strong></span>
-            </p>
-            <p class="line d-flex align-items-center mode">
-                <span class="subtitle text-uppercase me-1">Mode :</span>
-                <span class="text-uppercase"><strong>Alternance</strong></span>
-            </p>
-        </div>
-    </div>
-
     <!-- SIDEBAR -->
-    <div id="ka-sidebar" class="ka-sidebar position-fixed ka-radius-sm border-all" role="dialog" aria-hidden="true"
-        aria-label="Sidebar de navigation" aria-modal="true">
-        <div class="ka-sidebar__inner d-flex flex-column">
-            <div class="ka-sidebar__content d-flex justify-content-start">
+    <div id="ka-sidebar" class="ka-sidebar position-fixed ka-radius-sm ka-border-all" role="dialog" aria-hidden="true"
+        aria-label="Sidebar menu" aria-modal="true">
+        <div class="ka-sidebar__inner d-flex flex-column h-full w-full">
+            <div class="ka-sidebar__content d-flex flex-column justify-content-start">
                 <div class="content-left">
                     <i class="fa-solid fa-square"></i>
                     <span class="text-uppercase">Menu</span>
                 </div>
                 <div class="content-center">
-                    <div class="ka-sidebar__menu">
+                    <div class="sidebar-menu">
                         <ul class="list-unstyled">
-                            <li class="ka-item"><a class="ka-link text-uppercase text-decoration-none"
-                                    href="index.html#introduction" tabindex="-1">Intro</a></li>
-                            <li class="ka-item"><a class="ka-link text-uppercase text-decoration-none"
-                                    href="index.html#about" tabindex="-1">À propos</a></li>
-                            <li class="ka-item"><a class="ka-link text-uppercase text-decoration-none"
-                                    href="index.html#projects" tabindex="-1">Projets</a></li>
-                            <li class="ka-item"><a class="ka-link text-uppercase text-decoration-none"
-                                    href="index.html#contact" tabindex="-1">Contact</a></li>
+                            <li class="ka-item">
+                                <a href="index.html#introduction" class="ka-link text-uppercase text-decoration-none"
+                                    tabindex="-1">
+                                    Introduction
+                                </a>
+                            </li>
+                            <li class="ka-item">
+                                <a href="index.html#a-propos" class="ka-link text-uppercase text-decoration-none"
+                                    tabindex="-1">
+                                    À propos
+                                </a>
+                            </li>
+                            <li class="ka-item">
+                                <a href="index.html#services" class="ka-link text-uppercase text-decoration-none"
+                                    tabindex="-1">
+                                    Services
+                                </a>
+                            </li>
+                            <li class="ka-item">
+                                <a href="index.html#portfolio" class="ka-link text-uppercase text-decoration-none"
+                                    tabindex="-1">
+                                    Portfolio
+                                </a>
+                            </li>
+                            <li class="ka-item">
+                                <a href="index.html#contact" class="ka-link text-uppercase text-decoration-none"
+                                    tabindex="-1">
+                                    Me contacter
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
                 <div class="content-right d-flex justify-content-end">
-                    <svg class="close close-dots" viewBox="-4 -4 32 32" width="55" height="55"
-                        aria-label="Fermer le menu" aria-controls="ka-sidebar" tabindex="-1">
-                        <circle cx="4" cy="4" r="3" />
-                        <circle cx="12" cy="12" r="3" />
-                        <circle cx="20" cy="20" r="3" />
-                        <circle cx="20" cy="4" r="3" />
-                        <circle cx="12" cy="12" r="3" />
-                        <circle cx="4" cy="20" r="3" />
-                    </svg>
+                    <button type="button" id="ka-sidebar-close"
+                        class="ka-close-btn ka-border-all ka-radius-full position-absolute" aria-label="Fermer le menu"
+                        aria-controls="ka-sidebar">
+                        <svg class="close-icon" xmlns="http://www.w3.org/2000/svg" width="35" height="35"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                            <path d="M6 6l12 12M18 6L6 18" />
+                        </svg>
+                    </button>
                 </div>
             </div>
-            <div class="ka-sidebar__social border-top p-3 d-flex justify-content-start">
-                <div class="content-left">
+            <div class="ka-sidebar__social ka-border-top p-3 d-flex justify-content-start">
+                <div class="content-left me-5">
                     <i class="fa-solid fa-square"></i>
-                    <span class="text-uppercase">Réseaux</span>
+                    <span class="text-uppercase">Social</span>
                 </div>
                 <div class="content-right d-flex flex-column">
                     <a href="https://www.behance.net/kahinadev" class="text-uppercase text-decoration-none"
-                        target="_blank" rel="noopener noreferrer" aria-label="Voir mon Behance" tabindex="-1">
+                        target="_blank" rel="noopener noreferrer" aria-label="See my Behance" tabindex="-1">
                         <strong>Béhance</strong>
                     </a>
                     <a href="https://www.linkedin.com/in/kahinaouali/" class="text-uppercase text-decoration-none"
-                        target="_blank" rel="noopener noreferrer" aria-label="Voir mon LinkedIn" tabindex="-1">
+                        target="_blank" rel="noopener noreferrer" aria-label="See my LinkedIn" tabindex="-1">
                         <strong>LinkedIn</strong>
                     </a>
                     <a href="https://github.com/kahinadev" class="text-uppercase text-decoration-none" target="_blank"
-                        rel="noopener noreferrer" aria-label="Voir mon GitHub" tabindex="-1">
+                        rel="noopener noreferrer" aria-label="See my GitHub" tabindex="-1">
                         <strong>Github</strong>
                     </a>
                 </div>
@@ -182,166 +239,144 @@
         </div>
     </div>
 
+    <!-- TERMINAL -->
+    <div class="ka-terminal">
+        <div class="dropdown dropup">
+            <button class="ka-btn ka-btn-corners " type="button" data-bs-toggle="dropdown" data-bs-display="static"
+                aria-expanded="false">
+                <span class="ka-btn__label">Système</span>
+            </button>
+            <ul class="dropdown-menu ka-border-all mb-3 ka-radius-md">
+                <li><span class="dropdown-item-text d-flex align-items-center"><strong class="me-1 text-uppercase">Heure
+                            :</strong> <span id="ka-clock-time">13:23:43</span></span></li>
+                <li><span class="dropdown-item-text d-flex align-items-center"><strong
+                            class="me-1 text-uppercase">Version :</strong> v5.0</span></span></li>
+                <li><span class="dropdown-item-text d-flex align-items-center"><strong
+                            class="me-1 text-uppercase">Statuts :</strong> Disponible</span></span></li>
+                <li><span class="dropdown-item-text d-flex align-items-center"><strong class="me-1 text-uppercase">Mise
+                            à jour :</strong> 16/11/26</span></span></li>
+            </ul>
+        </div>
+    </div>
+
     <!-- MAIN -->
     <main id="main" class="main" aria-label="Main">
-        <section id="intro" class="ka-project-introduction position-relative ka-padding-section"
-            aria-label="Introduction du projet">
+        <section id="infos-projet" class="ka-project-intro position-relative ka-padding-section">
             <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12 mb-3">
-                        <a href="portfolio.html" class="text-light text-uppercase text-decoration-none"><i
-                                class="fa-solid fa-arrow-left-long me-1"></i> Voir les projets</a>
-                    </div>
+                <div class="row align-items-center">
                     <div class="col-lg-1"></div>
-                    <div class="col-lg-10 text-center">
-                        <h1 class="title text-uppercase mt-3 ka-reveal-down ka-delay-3">
-                            { Bnt<span class="details-large ka-text-primary">Cook }</span>
+                    <div class="col-lg-10 col-md-12 col-sm-12 text-center mb-5">
+                        <h1 class="title text-uppercase">
+                            { Bnt<span class="ka-details-large ka-text-primary">Cook }</span>
                         </h1>
-                        <div class="ka-tags ka-tags-intro d-flex justify-content-center align-items-center">
-                            <span
-                                class="subtitle border-all ka-radius-sm ka-tag text-uppercase ka-reveal-down ka-delay-3">2026</span>
-                            <span
-                                class="subtitle border-all ka-radius-sm ka-tag text-uppercase me-1 ka-reveal-down ka-delay-3">Culinaire</span>
-                            <span
-                                class="subtitle border-all ka-radius-sm ka-tag text-uppercase me-1 ka-reveal-down ka-delay-3">Flyer</span>
-                            <span
-                                class="subtitle border-all ka-radius-sm ka-tag text-uppercase ka-reveal-down ka-delay-3">Coloré</span>
+                        <div class="ka-tags d-flex flex-wrap justify-content-center">
+                            <span data-category="all"
+                                class="ka-tag ka-border-all ka-radius-sm subtitle text-uppercase me-1">Tous</span>
+                            <span data-category="flyer"
+                                class="ka-tag ka-border-all ka-radius-sm subtitle text-uppercase me-1">Flyer</span>
+                            <span data-category="food"
+                                class="ka-tag ka-border-all ka-radius-sm subtitle text-uppercase me-1">Nourriture</span>
                         </div>
                     </div>
                     <div class="col-lg-1"></div>
-                    <div class="col-lg-12">
-                        <img src="assets/img/projects/bntcook/Flyer - BntCook.webp" width="1456" height="816"
-                            class="mt-5 ka-reveal-zoom ka-delay-3 border-all" alt="Flyer pour BNTCOOK"
-                            aria-label="Flyer pour BNTCOOK">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="infos" class="ka-project-infos position-relative ka-padding-section" aria-label="Infos du projet">
-            <div class="container-fluid">
-                <div class="row">
                     <div class="col-lg-1"></div>
-                    <div class="col-lg-3 col-md-4 col-sm-12">
-                        <h2 class="subtitle text-uppercase ka-reveal-left ka-delay-3">
-                            Contexte
-                        </h2>
-                        <p class="ka-reveal-left ka-delay-3">
-                            Ce flyer à été créé pour <strong>BntCook, la maison des pastels</strong>, lancée par la
-                            cousine d'une amie.
-                            <br>
-                            <br>
-                            <strong class="ka-text-details">Objectif</strong> : mettre en avant son savoir-faire
-                            culinaire malien avec une identité visuelle qui reflète ses origines.
-                            <br>
-                            <br>
-                            Le flyer a été envoyé le <strong>dimanche 27 septembre</strong>, et l'enjeu était de capter
-                            l'attention rapidement, avec un design clair,
-                            chaleureux et reconnaissable, pensé pour faciliter la prise de commande dès la première
-                            lecture.
-                        </p>
+                    <div class="col-lg-5 col-md-12 col-sm-12">
+                        <img src="assets/img/projects/bntcook/Flyer - BntCook.webp"
+                            class="projects-list__image ka-border-all mb-3" width="687" height="516" loading="lazy"
+                            decoding="async" alt="Mockup flyer pour bntcook" aria-label="Mockup flyer pour bntcook">
                     </div>
-                    <div class="col-lg-3 col-md-4 col-sm-12">
-                        <h3 class="subtitle text-uppercase ka-reveal-left ka-delay-3">
-                            Direction artistique
-                        </h3>
-                        <p class="ka-reveal-left ka-delay-3">
+                    <div class="col-lg-5 col-md-12 col-sm-12">
+                        <h2 class="subtitle text-uppercase">Contexte</h2>
+                        <p>
+                            Ce flyer à été créer pour <strong>BNTCOOK, la maison des pastels</strong>, lancée par la
+                            cousine d'une amie.
+                            L'idée était de mettre en avant son savoir-faire culinaire malien avec une identité visuelle
+                            qui reflète ses origines, tout en restant épuré.
+                        </p>
+                        <h3 class="subtitle text-uppercase">Direction artistique</h3>
+                        <p>
                             Le visuel à été fait avec des couleurs chaudes et des motifs inspirés de l'Afrique et du
-                            Mali, pour ancrer la marque de ses racines
-                            tout en restant élégant et moderne. La palette évoque la chaleur et la générosité de la
-                            cuisine faite maison.
+                            Mali, pour ancrer la marque de ses racines tout en restant
+                            élégant et moderne. La palette évoque la chaleur et la générosité de la cuisine faite
+                            maison.
                             <br>
                             Le logo structure la composition, tandis que la mise en page aérée rend le menu, les tarifs
-                            et les informations pratiques ( retrait, livraison, commande WhatsApp )
-                            lisibles d'un coup d'œil. Le tout vise un équilibre entre authenticité culturelle et
-                            efficacité commerciale.
+                            et les informations pratiques
+                            ( retrait, livraison, commande WhatsApp ) lisibles d'un coup d'œil. Le tout vise un
+                            équilibre entre authenticité culturelle
+                            et efficacité commerciale.
                         </p>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-12">
-                        <h4 class="subtitle text-uppercase ka-reveal-left ka-delay-3">
-                            Résultats
-                        </h4>
-                        <p class="ka-reveal-left ka-delay-3">
-                            Le flyer a rencontré un succès dès sa diffusion le dimanche 27 septembre 2026 :
-                            <br>
-                            <span class="ka-tags ka-tag-first d-flex justify-content-between mt-3 mb-3">
-                                <span class="ka-tag bg-accent text-dark ka-radius-sm m-full text-center text-uppercase">
-                                    <strong>10 commandes</strong>
-                                </span>
-                                <span class="ka-tag bg-accent text-dark ka-radius-sm m-full text-center text-uppercase">
-                                    <strong>270 pastels vendus</strong>
-                                </span>
-                            </span>
-                            Sur snapchat ( le compte de mon amie ) :
-                            <span class="ka-tags ka-tag-second d-flex justify-content-between mt-3 mb-3">
-                                <span
-                                    class="ka-tag bg-primary text-dark ka-radius-sm m-full text-center text-uppercase">
-                                    <strong>387 vues</strong>
-                                </span>
-                                <span
-                                    class="ka-tag bg-primary text-dark ka-radius-sm m-full text-center text-uppercase">
-                                    <strong>188 sepctateurs.rices</strong>
-                                </span>
-                            </span>
-                            <span class="ka-tags ka-tag-third d-flex justify-content-between mt-3 mb-3">
-                                <span
-                                    class="ka-tag bg-primary text-dark ka-radius-sm m-full text-center text-uppercase">
-                                    <strong>11 captures d'écran</strong>
-                                </span>
-                                <span
-                                    class="ka-tag bg-primary text-dark ka-radius-sm m-full text-center text-uppercase">
-                                    <strong>15 réponses</strong>
-                                </span>
-                            </span>
-                            <span class="ka-tags d-flex justify-content-between mt-3 mb-3">
-                                <span
-                                    class="ka-tag bg-primary text-dark ka-radius-sm w-full text-center text-uppercase">
-                                    <strong>349 interactions</strong>
-                                </span>
-                            </span>
-                            Les autres résultats des autres réseaux sociaux ne sont pas disponibles, car les commandes
-                            ont dû être arrêtées face à l'afflux.
+                        <h3 class="subtitle text-uppercase">Résultats</h3>
+                        <p>Le flyer a recontré un succès dès sa diffusion le <strong>dimanche 27 septembre 2026</strong>
+                            :</p>
+                        <span class="ka-tags ka-tag-first d-flex justify-content-between mb-3">
+                            <span class="ka-tag bg-secondary ka-radius-md m-full text-center text-uppercase"><strong>10
+                                    commandes</strong></span>
+                            <span class="ka-tag bg-secondary ka-radius-md m-full text-center text-uppercase"><strong>270
+                                    pastels vendus</strong></span>
+                        </span>
+                        <p>Sur snapchat ( le compte de mon amie ) :</p>
+                        <span class="ka-tags ka-tag-second d-flex justify-content-between">
+                            <span class="ka-tag bg-accent ka-radius-md m-full text-center text-uppercase"><strong>387
+                                    vues</strong></span>
+                            <span class="ka-tag bg-accent ka-radius-md m-full text-center text-uppercase"><strong>188
+                                    sepctateurs.rices</strong></span>
+                        </span>
+                        <span class="ka-tags ka-tag-third d-flex justify-content-between mt-3">
+                            <span class="ka-tag bg-accent ka-radius-md m-full text-center text-uppercase"><strong>11
+                                    captures d'écran</strong></span>
+                            <span class="ka-tag bg-accent ka-radius-md m-full text-center text-uppercase"><strong>15
+                                    réponses</strong></span>
+                        </span>
+                        <span class="ka-tags ka-tag-fourth d-flex justify-content-between mt-3">
+                            <span class="ka-tag bg-accent ka-radius-md m-full text-center text-uppercase"><strong>349
+                                    interactions</strong></span>
+                        </span>
+                        <p class="mt-3">
+                            Les autres résultats des autres réseaux sociaux ne sont pas disponibles, car les commandes 
+                            ont dû être arrêtées face à l'afflux de pastels vendus. 
                         </p>
                     </div>
                     <div class="col-lg-1"></div>
-                </div>
-            </div>
-        </section>
-        <section id="buttons" class="ka-project-buttons position-relative mb-5"
-            aria-label="Boutons pour changer de projet">
-            <div class="container-fluid">
-                <div class="row">
                     <div class="col-lg-1"></div>
-                    <div class="col-lg-5 col-md-6 col-sm-12">
-                        <a href="project-portfolio.html"
-                            class="ka-btn d-flex justify-content-center border-all align-items-center mt-3"
-                            type="button">
-                            <span class="ka-btn__label">Projet précédent</span>
-                        </a>
+                    <div class="col-lg-10 col-md-12 col-sm-12">
+                        <div class="d-flex justify-content-between mt-5 ka-project-intro__buttons">
+                            <a href="project-portfolio.html" class="ka-btn ka-btn-corners w-full">
+                                <span class="ka-btn__label">Projet précédent</span>
+                            </a>
+                            <a href="project-portfolio-salah.html" class="ka-btn ka-btn-corners w-full">
+                                <span class="ka-btn__label">Projet suivant</span>
+                            </a>
+                        </div>
                     </div>
-                    <div class="col-lg-5 col-md-6 col-sm-12 d-flex justify-content-end">
-                        <a href="project-sayorane.html" class="ka-btn border-all align-items-center mt-3" type="button">
-                            <span class="ka-btn__label">Projet suivant</span>
-                        </a>
-                    </div>
-                    <div class="col-lg-1"></div>
+                    <div class="co-lg-1"></div>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- FOOTER -->
-    <footer class="ka-footer position-relative py-5 border-top">
-        <div class="container">
+    <footer class="ka-footer position-relative ka-border-top" aria-label="Footer">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <span class="ka-footer__name text-uppercase">KahinaDev</span>
+                <div class="col-lg-2"></div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <h5 class="subtitle text-uppercase">{ Profil }</h5>
+                    <p>
+                        <strong>Nom du site / Marque :</strong> KAHINADEV
+                        <br>
+                        <strong>Slogan :</strong> Là où le code rencontre la créativité.
+                    </p>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 col-v-c">
-                    <span class="ka-footer__version">V4</span>
-                    <br>
-                    <span class="ka-footer__copyright subtitle text-uppercase">© 2023-2026 KAHINADEV - Tous droits
-                        réservés</span>
+                <div class="col-lg-4 col-md-6 col-sm-12 ka-footer__other-infos">
+                    <h5 class="subtitle text-uppercase">{ Infos }</h5>
+                    <p>
+                        <strong>Version :</strong> v5.0
+                        <br>
+                        <strong>Copyright :</strong> © 2023-2026 KAHINADEV - Tous droits réservés
+                    </p>
                 </div>
+                <div class="col-lg-2"></div>
             </div>
         </div>
     </footer>
@@ -356,6 +391,7 @@
 
     <!-- PERSONAL JS -->
     <script src="assets/js/website.js"></script>
+    <script src="assets/js/portfolio.js"></script>
     <script src="https://kit.fontawesome.com/6744aeacbc.js" crossorigin="anonymous"></script>
 
     <!-- SCHEMA.ORG -->

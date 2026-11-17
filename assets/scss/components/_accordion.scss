@@ -1,0 +1,187 @@
+// ===============================================
+// ===============================================
+// ACCORDION
+// ===============================================
+// ===============================================
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// -----------------------------------------------
+// INITIALIZATION 
+// -----------------------------------------------
+
+.ka-accordion {
+    overflow: $hidden;
+    @include init-tags;
+    flex-direction: $column;
+
+    @include respond-to(lg) {
+        height: clamp(34rem, 80vh, 46rem);
+        flex-direction: row;
+    }
+
+    &__panel {
+        @include glass-effect;
+
+        &.is-active {
+            @include init-tags;
+        }
+
+        @include respond-to(lg) {
+            flex: 0 0 $accordion-closed-w;
+            min-width: $zero;
+            transition: flex-grow $accordion-speed $accordion-animation;
+
+            &.is-active {
+                flex-grow: 0.4;
+            }
+        }
+    }
+
+    &__trigger {
+        cursor: pointer;
+        width: $width-full;
+        border: $none !important;
+        background-color: transparent !important;
+
+        @include respond-to(lg) {
+            width: $auto;
+            padding: $auto;
+            flex-shrink: $zero;
+        }
+
+        .ka-label {
+            margin-right: $auto;
+            margin-left: 16px;
+            font-weight: $font-weight-bold;
+            transition: opacity 0.3s;
+
+            .is-active & {
+                opacity: $zero;
+            }
+
+            @include respond-to(lg) {
+                margin: $zero;
+                writing-mode: vertical-rl;
+                transform: rotate(180deg);
+            }
+        }
+
+        .ka-icon {
+            transition: opacity 0.5s;
+
+            .is-active & {
+                opacity: $zero;
+            }
+        }
+    }
+
+    &__body {
+        max-height: $zero;
+        opacity: $zero;
+        overflow: $hidden;
+        pointer-events: $none;
+        transition: max-height $accordion-speed $accordion-animation, opacity 0.3s;
+
+        .is-active & {
+            max-height: 30rem;
+            opacity: 1;
+            padding-top: 1.5rem;
+            pointer-events: $auto;
+        }
+
+        @include respond-to(lg) {
+            flex: 1 1 0;
+            min-width: $zero;
+            max-height: $none;
+
+            .is-active & {
+                max-height: $none;
+                padding-top: $zero !important;
+            }
+
+            >* {
+                min-width: 20rem;
+            }
+        }
+    }
+
+    .ka-accordion-tags {
+        @include tags;
+        margin-bottom: 3rem;
+        display: $none !important;
+
+        @include respond-to(lg) {
+            margin-top: 10px;
+            margin-bottom: 0rem;
+            display: $flex !important;
+        }
+
+        .ka-tag {
+            color: var(--text) !important;
+        }
+    }
+
+    .ka-accordion-title {
+        display: $block;
+        line-height: 1.05;
+        font-weight: $font-weight-bold;
+        margin-bottom: 0.75rem;
+        font-size: clamp(1.75rem, 4vw, 1.85rem);
+    }
+
+    .ka-accordion-copy {
+        @include respond-to(lg) {
+            height: 340px;
+        }
+    }
+
+    .ka-accordion-copy p {
+        max-width: $width-full;
+
+        @include respond-to(lg) {
+            width: 25rem;
+        }
+    }
+
+    .ka-reveal {
+        opacity: $zero;
+        transform: translateY(1rem);
+        transition: opacity 0.3s, transform 0.3s;
+    }
+
+    &__panel.is-active .ka-reveal {
+        opacity: 1;
+        transform: $none;
+        transition: opacity 0.4s, transform 0.7s $accordion-animation;
+
+        &.ka-accordion-title {
+            transition-delay: 0.25s;
+        }
+
+        &.ka-accordion-button {
+            transition-delay: 0.45s;
+        }
+    }
+
+    &__panel.is-active .ka-accordion-copy p.ka-reveal {
+        transition-delay: 0.35s;
+    }
+
+    &__panel.is-active .ka-accordion-tags .ka-reveal {
+        @for $i from 1 through 4 {
+            &:nth-child(#{$i}) {
+                transition-delay: 0.1s + 0.08s * $i;
+            }
+        }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .ka-accordion,
+    .ka-accordion * {
+        transition: $none !important;
+    }
+}

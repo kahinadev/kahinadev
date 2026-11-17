@@ -62,77 +62,47 @@
 }
 
 // -----------------------------------------------
-// Stack
-// -----------------------------------------------
-
-.ka-stack {
-    padding: 2rem 1rem;
-
-    @include respond-to(md) {
-        padding: 3rem 1rem;
-    }
-
-    &__marquee {
-        width: max-content;
-        animation: TextMarquee 25s linear infinite;
-    }
-
-    &__tags {
-        @include tags;
-    }
-}
-
-@keyframes TextMarquee {
-    0% {
-        transform: translateX(0%);
-    }
-
-    100% {
-        transform: translateX(-50%);
-    }
-}
-
-// -----------------------------------------------
-// Projects
+// PROJECTS
 // -----------------------------------------------
 
 .ka-projects {
-    min-height: 90svh;
-
-    @include respond-to(xxl) {
-        min-height: 100svh;
-    }
-
     .ka-padding-section {
-        padding-top: 0rem !important;
-    }
-
-    .ka-btn {
-        width: $width-full;
-
-        @include respond-to(lg) {
-            width: 20%;
-        }
+        padding-top: 0px;
     }
 }
 
-// -----------------------------------------------
-// Contact
-// -----------------------------------------------
+// // -----------------------------------------------
+// // Stack
+// // -----------------------------------------------
 
-.ka-contact {
-    padding: 0px 1rem 6rem;
+// .ka-stack {
+//     padding: 2rem 1rem;
 
+//     @include respond-to(md) {
+//         padding: 3rem 1rem;
+//     }
 
-    @include respond-to(lg) {
-        padding: 80px 2rem;
-    }
+//     &__marquee {
+//         width: max-content;
+//         animation: TextMarquee 25s linear infinite;
+//     }
 
-    .ka-padding-section {
-        padding-top: 0rem !important;
-    }
+//     &__tags {
+//         @include tags;
+//     }
+// }
 
-    h3 {
-        margin-bottom: 2rem;
-    }
-}
+// @keyframes TextMarquee {
+//     0% {
+//         transform: translateX(0%);
+//     }
+
+//     100% {
+//         transform: translateX(-50%);
+//     }
+// }
+
+// // -----------------------------------------------
+// // Projects
+// // -----------------------------------------------
+

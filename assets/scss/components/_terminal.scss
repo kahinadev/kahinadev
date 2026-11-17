@@ -1,0 +1,85 @@
+// ===============================================
+// ===============================================
+// TERMINAL
+// ===============================================
+// ===============================================
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// -----------------------------------------------
+// INITIALIZATION 
+// -----------------------------------------------
+
+.ka-terminal {
+    left: 1rem;
+    z-index: 10;
+    bottom: 1rem;
+    position: fixed;
+
+    .ka-btn,
+    .dropdown-menu {
+        background-color: var(--glass);
+        backdrop-filter: blur(12px) saturate(180%);
+        -webkit-backdrop-filter: blur(12px) saturate(180%);
+    }
+
+    .ka-btn {
+        border: 0px;
+        width: 8rem;
+        padding-left: 5px;
+        padding-inline: 18px;
+
+    }
+
+    .dropdown {
+        position: relative !important;
+
+        &::before,
+        &::after {
+            top: 50%;
+            z-index: 1;
+            position: absolute;
+            pointer-events: $none;
+            transform: translateY(-50%);
+        }
+
+        &::before {
+            left: 12px;
+            @include square;
+        }
+
+        &::after {
+            content: "+";
+            right: 12px;
+            font-weight: $font-weight-bold;
+            font-size: 1.2rem;
+        }
+
+        &:hover::after,
+        &:has(.ka-btn.show)::after {
+            content: "-";
+            color: var(--secondary);
+        }
+    }
+
+    .dropdown-item-text::before {
+        @include square;
+        display: inline-block;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+
+    .dropdown-menu {
+        width: 12.5rem;
+
+        .dropdown-item-text {
+            color: var(--text);
+            font-size: 12px !important;
+
+            a {
+                color: var(--primary);
+            }
+        }
+    }
+}

@@ -10,11 +10,11 @@
 // -----------------------------------------------
 
 .text-light {
-    color: var(--color-text);
+    color: var(--text);
 }
 
 .text-dark {
-    color: var(--color-background);
+    color: var(--background);
 }
 
 // -----------------------------------------------
@@ -22,7 +22,7 @@
 // -----------------------------------------------
 
 .bg-dark {
-    background-color: $color-background !important;
+    background-color: var(--background)!important;
 }
 
 .bg-transparent {
@@ -30,9 +30,13 @@
 }
 
 .bg-primary {
-    background-color: $color-primary !important;
+    background-color: var(--primary) !important;
 }
 
 .bg-secondary {
-    background-color: $color-details !important;
+    background-color: var(--secondary) !important;
+}
+
+.bg-details {
+    background-color: var(--details);
 }

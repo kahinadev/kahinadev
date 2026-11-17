@@ -1,129 +1,78 @@
 // ===============================================
+// ===============================================
 // SIDEBAR
+// ===============================================
 // ===============================================
 
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
 // -----------------------------------------------
-// Initial
+// INITIALIZATION
 // -----------------------------------------------
 
 .ka-sidebar {
-    top: 16px;
-    right: 0.5%;
-    z-index: $z-menu;
-    border-color: $color-border;
-    width: $width-full;
-    height: $height-full;
-    @include glass-effect;
-    backdrop-filter: blur(5.5px);
-    -webkit-backdrop-filter: blur(5.5px);
-    opacity: $zero;
-    overflow-y: $auto;
-    visibility: $hidden;
-    overflow-x: $hidden;
-    transform: translateX(100%);
-    transition: transform 0.6s ease, opacity 0.4s ease, visibility 0.6s ease;
-    
-    &.active {
-        opacity: 1;
-        transform: translateX(0);
-        visibility: $visible;
-        pointer-events: all;
-    }
+    @include sidebar;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    background-color: var(--glass-strong) !important;
 
-    @include respond-to(md) {
-        top: 16px;
-        width: 680px;
-        height: 98svh;
-    }
-
-    // Inner
-    &__inner {
-        width: $width-full;
-        height: $height-full;
-    }
-
-    // Container
     &__content {
         flex: 1;
         padding: 2rem 1rem;
-        flex-direction: column;
 
         @include respond-to(lg) {
-            flex-direction: row;
-        }
-    }
-
-    .content-left {
-        width: 30%;
-
-        @include respond-to(md) {
-            width: 20%;
-        }
-    }
-
-    .content-center {
-        width: 60%;
-
-        @include respond-to(md) {
-            width: 70%;
-        }
-    }
-
-    .content-right {
-        .close {
-            top: 20px;
-            position: $absolute;
+            flex-direction: row !important;
         }
 
-        @include respond-to(md) {
-            width: 10%;
+        .content-left {
+            width: 30%;
+
+            @include respond-to(md) {
+                width: 20%;
+            }
         }
 
-        .close-dots {
-            position: absolute;
+        .content-center {
+            width: $width-full;
+            margin-top: 2rem;
 
-            circle {
-                fill: $none;
-                stroke: $color-border;
-                stroke-width: $border-width;
-                transition: all 0.3s ease;
+            @include respond-to(md) {
+                width: 70%;
             }
 
-            &:hover,
-            &:focus {
-                circle {
-                    r: 4.6;
-                    stroke: $color-primary;
+            .ka-link {
+                @include navbarLink;
+            }
+        }
+
+        .content-right {
+            .ka-close-btn {
+                top: 25px;
+                right: 20px;
+                padding: 5px;
+                background-color: transparent !important;
+
+                .close-icon {
+                    color: var(--border);
+
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        color: var(--primary);
+                    }
                 }
             }
         }
     }
 
-    // Menu 
-    &__menu {
-        margin-top: 10px;
-
-        @include respond-to(md) {
-            margin-top: -14px;
-        }
-
-        .ka-link {
-            @include link;
-        }
-    }
-
     &__social {
-        border-top: $border-frame !important;
 
         span,
         i,
         a {
             font-size: 14px;
-            color: $color-text;
+            color: var(--text);
         }
     }
-
 }
